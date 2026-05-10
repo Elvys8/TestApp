@@ -122,6 +122,10 @@ function render() {
       `).join("")}
     </div>
 
+    ${display.explicacion && display.explicacion.trim() ? `
+      <p class="explanation">${ui.escapeHtml(display.explicacion)}</p>
+    ` : ""}
+
     ${edited ? `
       <p class="muted tiny" style="margin: 12px 0 0;">
         ✎ Esta pregunta ya tiene correcciones. Se descargarán al finalizar la sesión.
@@ -249,7 +253,7 @@ function openEditForm(q) {
 
       if (!enunciado) { showError("El enunciado no puede estar vacío."); return; }
       if (opciones.some((o) => !o)) { showError("Todas las opciones deben tener texto."); return; }
-      if (!Number.isInteger(correcta) || correcta < 0 || correcta >= opciones.length) {
+      if (!Number.isInteger(correcta) || correcta < 0 || correcta > 3) {
         showError("Marca cuál de las opciones es la correcta.");
         return;
       }
