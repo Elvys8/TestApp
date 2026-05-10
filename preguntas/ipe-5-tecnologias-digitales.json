@@ -8,14 +8,20 @@
     {
       "id": "ipei05-001",
       "enunciado": "La competencia digital no es relevante para configurar un entorno personal de aprendizaje orientado a mejorar la empleabilidad, ya que el aprendizaje y el desarrollo profesional se pueden lograr sin herramientas digitales.",
-      "opciones": ["Verdadero", "Falso"],
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
       "correcta": 1,
       "explicacion": ""
     },
     {
       "id": "ipei05-002",
       "enunciado": "Utilizar herramientas de gestión de proyectos digitales, como Trello o Asana, no contribuye a desarrollar la competencia digital en el contexto de la empleabilidad.",
-      "opciones": ["Verdadero", "Falso"],
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
       "correcta": 1,
       "explicacion": ""
     },
@@ -154,21 +160,30 @@
     {
       "id": "ipei05-014",
       "enunciado": "Las herramientas de aprendizaje autónomo pueden ser aplicadas de manera efectiva para el desarrollo personal y profesional, permitiendo a los individuos gestionar su progreso y adquirir competencias relevantes de forma independiente.",
-      "opciones": ["Verdadero", "Falso"],
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
       "correcta": 0,
       "explicacion": ""
     },
     {
       "id": "ipei05-015",
       "enunciado": "La justificación del diseño de un entorno de aprendizaje debe basarse exclusivamente en preferencias personales, sin considerar cómo este mejora la empleabilidad o responde a las demandas del mercado laboral.",
-      "opciones": ["Verdadero", "Falso"],
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
       "correcta": 1,
       "explicacion": ""
     },
     {
       "id": "ipei05-016",
       "enunciado": "Las tecnologías digitales no son necesarias para el aprendizaje autónomo, ya que el aprendizaje independiente puede lograrse sin el uso de herramientas tecnológicas en la mayoría de los casos.",
-      "opciones": ["Verdadero", "Falso"],
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
       "correcta": 1,
       "explicacion": ""
     },
@@ -199,14 +214,20 @@
     {
       "id": "ipei05-019",
       "enunciado": "La empleabilidad se refiere a tener un título universitario o una formación específica.",
-      "opciones": ["Verdadero", "Falso"],
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
       "correcta": 1,
       "explicacion": ""
     },
     {
       "id": "ipei05-020",
       "enunciado": "Utilizar plataformas de aprendizaje online como Coursera o Udemy para adquirir nuevas habilidades y conocimientos…",
-      "opciones": ["Verdadero", "Falso"],
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
       "correcta": 0,
       "explicacion": ""
     },
@@ -261,7 +282,10 @@
     {
       "id": "ipei05-025",
       "enunciado": "La empleabilidad se define exclusivamente como la capacidad de adaptación al entorno laboral.",
-      "opciones": ["Verdadero", "Falso"],
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
       "correcta": 1,
       "explicacion": ""
     },
@@ -292,8 +316,11 @@
     {
       "id": "ipei05-028",
       "enunciado": "Las plataformas de e-learning como Moodle y Blackboard son ejemplos de herramientas digitales que pueden ser utilizadas en el aprendizaje autónomo, facilitando el acceso a recursos y la gestión del propio proceso de aprendizaje.",
-      "opciones": ["Verdadero", "Falso"],
-      "correcta": 1,
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 0,
       "explicacion": ""
     },
     {
@@ -311,7 +338,10 @@
     {
       "id": "ipei05-030",
       "enunciado": "Leer libros y artículos sobre temas relevantes para tu campo profesional no se considera una herramienta de aprendizaje autónomo, ya que el aprendizaje autónomo se limita al uso de plataformas digitales y cursos formales.",
-      "opciones": ["Verdadero", "Falso"],
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
       "correcta": 1,
       "explicacion": ""
     },
@@ -342,21 +372,30 @@
     {
       "id": "ipei05-033",
       "enunciado": "Un entorno personal de aprendizaje enfocado exclusivamente en el desarrollo de habilidades técnicas garantiza la empleabilidad.",
-      "opciones": ["Verdadero", "Falso"],
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
       "correcta": 1,
       "explicacion": ""
     },
     {
       "id": "ipei05-034",
       "enunciado": "El aprendizaje autónomo es aquel en el que el estudiante toma el control de su propio proceso de aprendizaje, incluyendo la planificación, selección de recursos y evaluación de su progreso.",
-      "opciones": ["Verdadero", "Falso"],
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
       "correcta": 0,
       "explicacion": ""
     },
     {
       "id": "ipei05-035",
       "enunciado": "Crear un perfil en LinkedIn es un ejemplo de cómo se puede utilizar la competencia digital para construir un entorno personal de aprendizaje.",
-      "opciones": ["Verdadero", "Falso"],
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
       "correcta": 0,
       "explicacion": ""
     },
@@ -387,7 +426,10 @@
     {
       "id": "ipei05-038",
       "enunciado": "La empleabilidad se mantiene estática a lo largo de la vida profesional.",
-      "opciones": ["Verdadero", "Falso"],
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
       "correcta": 1,
       "explicacion": ""
     },
@@ -406,7 +448,10 @@
     {
       "id": "ipei05-040",
       "enunciado": "La inclusión de cursos online sobre habilidades blandas (como comunicación, liderazgo y trabajo en equipo) en un entorno personal de aprendizaje puede justificarse por su impacto positivo en la empleabilidad y el desarrollo profesional continuo.",
-      "opciones": ["Verdadero", "Falso"],
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
       "correcta": 0,
       "explicacion": ""
     }
