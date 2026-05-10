@@ -84,10 +84,13 @@ function buildPool(config) {
     if (Number.isFinite(n) && n > 0) questions = questions.slice(0, n);
   }
 
-  return questions.map((q) => ({
-    q,
-    optionsOrder: shuffleArray([0, 1, 2, 3]),
-  }));
+  return questions.map((q) => {
+    const indices = q.opciones.map((_, i) => i);
+    // Las preguntas Verdadero/Falso (2 opciones) se muestran siempre en el
+    // orden del JSON; el resto se barajan en cada sesión.
+    const optionsOrder = q.opciones.length === 2 ? indices : shuffleArray(indices);
+    return { q, optionsOrder };
+  });
 }
 
 function shuffleInPlace(arr) {

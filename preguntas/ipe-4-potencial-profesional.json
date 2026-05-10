@@ -1,0 +1,1019 @@
+{
+  "schema_version": 1,
+  "id": "ipe-4-potencial-profesional",
+  "asignatura": "Formación y Orientación Laboral",
+  "asignatura_color": "#2c4a6b",
+  "tema": "UD4. El potencial profesional y sus intereses para guiarse en el proceso de autoorientación.",
+  "preguntas": [
+    {
+      "id": "fol-ipei04-001",
+      "enunciado": "¿Por qué es importante conocer nuestros intereses personales?",
+      "opciones": [
+        "Para mejorar nuestras habilidades técnicas.",
+        "Para aumentar nuestros ingresos.",
+        "Para evitar el estrés.",
+        "Para identificar aquellas áreas en las que es más probable que disfrutemos, al tiempo que facilita la toma de decisiones informadas sobre nuestra carrera y vida personal, alineando nuestras acciones con lo que realmente nos apasiona."
+      ],
+      "correcta": 3,
+      "explicacion": ""
+    },
+    {
+      "id": "fol-ipei04-002",
+      "enunciado": "El trabajo en equipo se limita a cumplir con las propias tareas individuales sin necesidad de colaborar activamente con otros miembros para alcanzar los objetivos comunes.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 1,
+      "explicacion": "El trabajo en equipo va más allá de completar las tareas individuales; implica colaborar activamente con otros miembros, compartir ideas, y ofrecer apoyo para lograr objetivos comunes. La verdadera efectividad en equipo se logra cuando todos los miembros participan, se comunican y se adaptan para superar juntos los desafíos y alcanzar resultados de manera coordinada."
+    },
+    {
+      "id": "fol-ipei04-003",
+      "enunciado": "¿Cuál de las siguientes afirmaciones describe mejor cómo identificar tus intereses profesionales?",
+      "opciones": [
+        "Elegir una carrera que otros te recomienden sin considerar tus propias preferencias.",
+        "Participar en cualquier actividad que se presente sin reflexionar.",
+        "Evitar cuestionarios y herramientas de interés vocacional.",
+        "Reflexionar sobre las actividades y temas que te apasionan y te motivan."
+      ],
+      "correcta": 3,
+      "explicacion": "Identificar tus intereses profesionales implica una reflexión consciente sobre las actividades que disfrutas y los temas que te motivan. Utilizar herramientas como cuestionarios de intereses vocacionales también puede ser muy útil para estructurar tus preferencias y explorar posibles campos profesionales."
+    },
+    {
+      "id": "fol-ipei04-004",
+      "enunciado": "La adaptabilidad no es una competencia fundamental en el entorno laboral actual, ya que la estabilidad en las funciones y procedimientos minimiza la necesidad de ajustarse a cambios constantes.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 1,
+      "explicacion": "La adaptabilidad es, de hecho, una competencia esencial en el entorno laboral actual debido a la naturaleza cambiante de las industrias y a la rápida evolución de tecnologías, procedimientos y expectativas. Los profesionales que son adaptables pueden ajustarse más fácilmente a nuevas herramientas, roles y metodologías, lo cual aumenta su capacidad de contribuir eficazmente y de mantenerse relevantes en un mercado laboral en constante transformación."
+    },
+    {
+      "id": "fol-ipei04-005",
+      "enunciado": "¿Qué papel juega la autoevaluación en el desarrollo personal y profesional?",
+      "opciones": [
+        "Solo es útil en contextos académicos.",
+        "Reduce la necesidad de formación externa.",
+        "Ningún papel significativo.",
+        "Permite una comprensión profunda de nuestras fortalezas y áreas de mejora."
+      ],
+      "correcta": 3,
+      "explicacion": ""
+    },
+    {
+      "id": "fol-ipei04-006",
+      "enunciado": "¿Por qué es importante considerar las expectativas de futuro al analizar competencias, intereses y destrezas personales en tu sector profesional?",
+      "opciones": [
+        "Ayuda a alinear la carrera con objetivos personales.",
+        "Ninguna respuesta es correcta.",
+        "No es necesario planificar el futuro laboral.",
+        "Las expectativas cambian constantemente."
+      ],
+      "correcta": 0,
+      "explicacion": "Considerar las expectativas de futuro facilita la alineación de la carrera con los objetivos personales en tu sector profesional."
+    },
+    {
+      "id": "fol-ipei04-007",
+      "enunciado": "El liderazgo incluye no solo la capacidad de inspirar y guiar, sino también la habilidad de fomentar un entorno de confianza y empoderamiento que permite a los miembros del equipo desarrollar su potencial al máximo.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 0,
+      "explicacion": "Un liderazgo completo y efectivo va más allá de inspirar y guiar. Implica también crear un ambiente donde los miembros del equipo se sientan seguros y valorados, lo cual fomenta la confianza y el empoderamiento. Este entorno positivo permite a cada persona aprovechar al máximo sus habilidades, tomar decisiones autónomas, y contribuir creativamente al logro de las metas comunes. Los líderes que generan este tipo de ambiente impulsan el desarrollo continuo y fortalecen la cohesión del equipo."
+    },
+    {
+      "id": "fol-ipei04-008",
+      "enunciado": "¿Cuál es una estrategia efectiva para evaluar el autoconocimiento en la formación profesional en tu sector profesional en Galicia?",
+      "opciones": [
+        "Ignorar la retroalimentación de los demás.",
+        "No considerar las preferencias personales.",
+        "Reflexionar sobre experiencias pasadas.",
+        "Todas las respuestas son correctas."
+      ],
+      "correcta": 2,
+      "explicacion": "Reflexionar sobre experiencias anteriores es una estrategia efectiva para evaluar el autoconocimiento en el contexto profesional."
+    },
+    {
+      "id": "fol-ipei04-009",
+      "enunciado": "¿Qué cualidades y competencias personales son esenciales para la inserción profesional?",
+      "opciones": [
+        "Todas las aptitudes técnicas, sin importar el contexto, son esenciales.",
+        "Ninguna respuesta es correcta.",
+        "La cualidades y competencias que estén alineadas con el perfil profesional del sector profesional pretendido, son esenciales.",
+        "Todos los conocimientos teóricos, exclusivamente, son esenciales."
+      ],
+      "correcta": 2,
+      "explicacion": "Las cualidades y competencias deben estar alineadas con el perfil profesional específico en tu sector profesional."
+    },
+    {
+      "id": "fol-ipei04-010",
+      "enunciado": "El análisis de tus cualidades y competencias personales es opcional y no influye significativamente en tu éxito profesional, ya que el éxito depende únicamente de las oportunidades externas y de las habilidades técnicas adquiridas.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 1,
+      "explicacion": "El análisis de cualidades y competencias personales influye directamente en el éxito profesional. Más allá de las habilidades técnicas, las competencias personales y cualidades como la resiliencia, la empatía y la adaptabilidad juegan un papel importante en el rendimiento y la satisfacción laboral. Este autoconocimiento permite un desarrollo equilibrado, facilitando tanto el crecimiento en el rol actual como la preparación para futuros retos y oportunidades."
+    },
+    {
+      "id": "fol-ipei04-011",
+      "enunciado": "Cuestionario 1 IPEI04 (El potencial profesional y sus intereses para guiarse en el proceso de autoorientación) Habilidades blandas versus habilidades duras: las habilidades blandas\\...",
+      "opciones": [
+        "Son fundamentales para desempeñar funciones específicas y completar tareas técnicas.",
+        "Ninguna respuesta es correcta.",
+        "Suelen ser subjetivas y más difíciles de medir objetivamente.",
+        "Comprenden las habilidades técnicas específicas y cuantificables relacionadas con tareas específicas."
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "fol-ipei04-012",
+      "enunciado": "La resiliencia en el entorno laboral implica mantener una actitud positiva ante la adversidad, sin que sea necesario aprender de los obstáculos enfrentados ni desarrollar estrategias de adaptación para futuros desafíos.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 1,
+      "explicacion": "La resiliencia en el entorno laboral no se limita a una actitud positiva; también implica la capacidad de aprender de las dificultades y desarrollar estrategias de adaptación que preparen al individuo para futuros retos. La resiliencia incluye tanto la aceptación de situaciones difíciles como el crecimiento personal a partir de ellas, lo que permite a las personas fortalecerse y mejorar su capacidad de respuesta ante problemas similares en el futuro. Esto es fundamental para el éxito y la sostenibilidad en entornos de trabajo cambiantes y exigentes."
+    },
+    {
+      "id": "fol-ipei04-013",
+      "enunciado": "¿Qué significa el análisis DAFO en el contexto de la inserción profesional?",
+      "opciones": [
+        "Fortalezas, debilidades, oportunidades y amenazas.",
+        "Análisis de competidores en el mercado laboral.",
+        "Fortalezas, diseño, ocupación y atención.",
+        "Técnicas de venta personal."
+      ],
+      "correcta": 0,
+      "explicacion": "El análisis DAFO ayuda a identificar aspectos críticos para la inserción profesional."
+    },
+    {
+      "id": "fol-ipei04-014",
+      "enunciado": "¿Por qué es importante realizar una evaluación profunda de tus competencias, intereses y destrezas personales para establecer expectativas de futuro en la inserción profesional?",
+      "opciones": [
+        "Porque ayuda a alinear tus aspiraciones profesionales con las oportunidades del mercado laboral.",
+        "No hay ninguna razón específica para hacerlo.",
+        "Porque es una tarea obligatoria en la Universidad.",
+        "Porque no es preciso conocer tus competencias y destrezas para encontrar trabajo."
+      ],
+      "correcta": 0,
+      "explicacion": "Realizar una evaluación profunda de tus competencias, intereses y destrezas personales te ayuda a alinear tus aspiraciones profesionales con las oportunidades reales del mercado laboral."
+    },
+    {
+      "id": "fol-ipei04-015",
+      "enunciado": "La evaluación de 360 grados solo recopila opiniones de los supervisores del evaluado, sin involucrar a otros compañeros o colaboradores en el proceso de retroalimentación.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 1,
+      "explicacion": "La evaluación de 360 grados se caracteriza precisamente por su enfoque integral, recopilando opiniones de múltiples fuentes, no solo de los supervisores. Este tipo de evaluación incluye la retroalimentación de compañeros, subordinados, supervisores, y en algunos casos, clientes o colaboradores externos. Este enfoque busca ofrecer una visión completa del desempeño del evaluado, reflejando una variedad de perspectivas que pueden ayudarle a entender cómo es percibido en diferentes aspectos de su rol y a identificar áreas de mejora."
+    },
+    {
+      "id": "fol-ipei04-016",
+      "enunciado": "¿Qué elemento es fundamental en el proceso de autoorientación profesional?",
+      "opciones": [
+        "La evaluación del autoconocimiento",
+        "No tener expectativas laborales.",
+        "No sentirse superior a otros candidatos.",
+        "No sentirse inferior a otros candidatos."
+      ],
+      "correcta": 0,
+      "explicacion": "La evaluación del autoconocimiento es un componente fundamental en el proceso de autoorientación profesional. Conocer tus intereses, motivaciones, habilidades y destrezas te permitirá tomar decisiones informadas sobre tu carrera y maximizar tu potencial profesional. Para su evaluación debes conocer tus Intereses, Motivaciones, Habilidades y Destrezas."
+    },
+    {
+      "id": "fol-ipei04-017",
+      "enunciado": "¿Cómo se suelen evaluar las habilidades duras?",
+      "opciones": [
+        "Se evalúan de manera más objetiva y concreta.",
+        "Son más difíciles de medir objetivamente.",
+        "Se desarrollan exclusivamente en situaciones informales.",
+        "No se pueden medir a través de pruebas o certificaciones."
+      ],
+      "correcta": 0,
+      "explicacion": ""
+    },
+    {
+      "id": "fol-ipei04-018",
+      "enunciado": "¿Cuál de las siguientes NO es una estrategia efectiva para fortalecer la autoestima?",
+      "opciones": [
+        "Ninguna lo es.",
+        "Participar en cursos y talleres.",
+        "Mantener un diario de logros.",
+        "Evitar la autocrítica constructiva."
+      ],
+      "correcta": 3,
+      "explicacion": "La autocrítica constructiva es importante para el crecimiento personal. Evitarla no ayuda a fortalecer la autoestima; en cambio, reconocer y trabajar en áreas de mejora sí lo hace."
+    },
+    {
+      "id": "fol-ipei04-019",
+      "enunciado": "¿Cuál de las siguientes acciones NO contribuye al desarrollo de la autonomía y autogestión?",
+      "opciones": [
+        "Utilizar herramientas de gestión del tiempo.",
+        "Buscar tareas que requieran autonomía.",
+        "Establecer rutinas diarias.",
+        "Buscar siempre la aprobación antes de tomar cualquier decisión."
+      ],
+      "correcta": 3,
+      "explicacion": "La autonomía y autogestión se desarrollan trabajando de manera independiente y gestionando eficazmente el tiempo y los recursos. Buscar siempre la aprobación limita la capacidad de tomar decisiones informadas y gestionar de manera independiente."
+    },
+    {
+      "id": "fol-ipei04-020",
+      "enunciado": "¿Por qué es crucial alinear nuestras habilidades con nuestras metas profesionales?",
+      "opciones": [
+        "Para reducir el estrés laboral.",
+        "Para disminuir nuestra carga de trabajo.",
+        "Para asegurar que estamos bien equipados para alcanzar nuestros objetivos.",
+        "Para mejorar el trabajo en equipo."
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "fol-ipei04-021",
+      "enunciado": "La empatía no es importante en el entorno laboral.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 1,
+      "explicacion": "La empatía es crucial para entender y relacionarse mejor con colegas y clientes, mejorando las relaciones laborales y el ambiente de trabajo."
+    },
+    {
+      "id": "fol-ipei04-022",
+      "enunciado": "La matriz DAFO es una herramienta utilizada para identificar fortalezas, debilidades, oportunidades y amenazas personales.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 0,
+      "explicacion": "No es correcto. La matriz DAFO es, de hecho, una herramienta utilizada para analizar fortalezas, debilidades, oportunidades y amenazas tanto a nivel organizacional como personal. En un análisis personal, esta matriz ayuda a identificar las cualidades internas y los factores externos que pueden influir en el crecimiento y desarrollo. Es una herramienta útil para entender las áreas de mejora y potencial y para planificar acciones estratégicas que maximicen las fortalezas y oportunidades."
+    },
+    {
+      "id": "fol-ipei04-023",
+      "enunciado": "Las competencias técnicas adquiridas a través de la formación profesional son un elemento clave para identificar aquellas fortalezas personales que pueden contribuir al desarrollo profesional.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 0,
+      "explicacion": "Las competencias técnicas obtenidas a través de la formación profesional son esenciales para reconocer fortalezas personales en el ámbito laboral. Estas permiten a los individuos identificar sus capacidades específicas, lo que a su vez contribuye a su desarrollo profesional y mejora su empleabilidad en áreas especializadas. Su identificación puede ser un gran recurso para avanzar y diferenciarse en el mercado laboral."
+    },
+    {
+      "id": "fol-ipei04-024",
+      "enunciado": "El autoconocimiento solo es importante para el desarrollo personal, no para el desarrollo profesional, ya que las habilidades técnicas son las únicas relevantes en el ámbito laboral.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 1,
+      "explicacion": "El autoconocimiento es fundamental tanto para el desarrollo personal como para el profesional. Conocer tus fortalezas, debilidades, valores y motivaciones permite tomar decisiones de carrera más informadas, elegir entornos laborales en los que puedas prosperar y trabajar en áreas que requieran desarrollo. Este conocimiento personal ayuda a mejorar habilidades de comunicación, liderazgo y colaboración, lo que es clave para el éxito en el entorno laboral."
+    },
+    {
+      "id": "fol-ipei04-025",
+      "enunciado": "La resolución de conflictos implica manejar y resolver desacuerdos de manera constructiva sin necesidad de comprender las perspectivas de las partes involucradas o de buscar soluciones que beneficien a todas.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 1,
+      "explicacion": "La resolución de conflictos efectiva no solo se trata de resolver desacuerdos, sino de comprender las perspectivas de todas las partes involucradas y buscar soluciones que sean constructivas y satisfactorias para todos. Un enfoque constructivo en la resolución de conflictos implica empatía, escucha activa y colaboración para alcanzar un acuerdo que minimice el resentimiento y mejore las relaciones a largo plazo en el entorno laboral."
+    },
+    {
+      "id": "fol-ipei04-026",
+      "enunciado": "Una buena gestión del tiempo en el entorno laboral solo implica completar las tareas asignadas en el menor tiempo posible, sin necesidad de priorizar o considerar el impacto en el equipo o los objetivos a largo plazo de la organización.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 1,
+      "explicacion": "La gestión del tiempo no se trata únicamente de terminar las tareas rápidamente, sino de priorizar y organizar las actividades de manera que se alineen con los objetivos del equipo y de la organización a largo plazo. Una gestión del tiempo efectiva implica decidir qué tareas son más importantes para el avance de los proyectos y cómo la eficiencia individual afecta la colaboración y los resultados del grupo. Esto asegura que el trabajo no solo se complete, sino que se haga con un impacto positivo y estratégico."
+    },
+    {
+      "id": "fol-ipei04-027",
+      "enunciado": "¿Cuál es la diferencia entre habilidades y destrezas?",
+      "opciones": [
+        "Las habilidades son específicas y las destrezas son generales.",
+        "Las destrezas son innatas y las habilidades se aprenden.",
+        "Ninguna respuesta es correcta.",
+        "No hay diferencias."
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "fol-ipei04-028",
+      "enunciado": "Realizar entrevistas informativas y participar en programas de \"shadowing\" no son métodos útiles para investigar diferentes áreas profesionales, ya que proporcionan solo una comprensión superficial de los roles y funciones.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 1,
+      "explicacion": "Realizar entrevistas informativas y participar en programas de \"shadowing\" son métodos altamente recomendados para explorar diferentes áreas profesionales, ya que permiten obtener información directa sobre el día a día en diversas ocupaciones y comprender las habilidades y competencias requeridas. Estas experiencias ofrecen una visión interna de los roles, facilitan la creación de redes de contacto y ayudan a tomar decisiones informadas sobre el desarrollo profesional."
+    },
+    {
+      "id": "fol-ipei04-029",
+      "enunciado": "¿Qué papel juegan las competencias personales y sociales en el empleo dentro de tu sector profesional?",
+      "opciones": [
+        "Ninguna respuesta es correcta",
+        "No son relevantes para el éxito profesional.",
+        "Contribuyen significativamente al valor laboral.",
+        "Solo son útiles en trabajos de atención al público."
+      ],
+      "correcta": 2,
+      "explicacion": "Las competencias personales y sociales son fundamentales para el éxito en el empleo dentro de tu sector profesional."
+    },
+    {
+      "id": "fol-ipei04-030",
+      "enunciado": "El análisis DAFO se utiliza para identificar factores internos y externos que afectan la inserción laboral, proporcionando una visión completa de las fortalezas, debilidades, oportunidades y amenazas relacionadas con el desarrollo profesional.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 0,
+      "explicacion": "El análisis DAFO identifica tanto factores internos (fortalezas y debilidades) como externos (oportunidades y amenazas)."
+    },
+    {
+      "id": "fol-ipei04-031",
+      "enunciado": "¿Qué métodos se pueden utilizar para identificar nuestras habilidades y destrezas?",
+      "opciones": [
+        "Autoevaluaciones, feedback de colegas, pruebas de aptitud y experiencia práctica.",
+        "Mantener un Diario de Autoevaluación.",
+        "Solo feedback de colegas.",
+        "Solo autoevaluaciones."
+      ],
+      "correcta": 0,
+      "explicacion": ""
+    },
+    {
+      "id": "fol-ipei04-032",
+      "enunciado": "¿Cuál de los siguientes es un ejemplo de una habilidad dura?",
+      "opciones": [
+        "Resolución de conflictos.",
+        "Programación informática.",
+        "Liderazgo.",
+        "Comunicación efectiva."
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "fol-ipei04-033",
+      "enunciado": "Las certificaciones o titulaciones profesionales representan únicamente una formalidad académica y no son relevantes para valorar los hitos alcanzados por una persona en su trayectoria vital y profesional, ya que no reflejan el verdadero desarrollo de habilidades o competencias prácticas.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 1,
+      "explicacion": "Las certificaciones y titulaciones profesionales son mucho más que una simple formalidad académica. Representan logros concretos de aprendizaje y desarrollo de competencias específicas que son valoradas en el ámbito profesional. Estas acreditaciones demuestran el compromiso de la persona con su desarrollo y, a menudo, señalan el dominio de habilidades prácticas y conocimientos aplicables en su campo. Como hitos en la trayectoria vital, marcan etapas importantes de crecimiento y preparación para asumir responsabilidades mayores."
+    },
+    {
+      "id": "fol-ipei04-034",
+      "enunciado": "¿Qué aspecto es fundamental en el marco de un proceso de autoconocimiento?",
+      "opciones": [
+        "Mejorar nuestra experiencia técnica.",
+        "Identificar nuestros intereses, motivaciones, habilidades y destrezas.",
+        "Adquirir conocimientos teóricos avanzados.",
+        "Mejorar nuestras conocimientos teóricos."
+      ],
+      "correcta": 1,
+      "explicacion": "El autoconocimiento incluye comprender las motivaciones personales y desarrollar habilidades blandas fundamentales para tu sector profesional."
+    },
+    {
+      "id": "fol-ipei04-035",
+      "enunciado": "¿Qué son los hitos importantes en la trayectoria vital con valor profesionalizador?",
+      "opciones": [
+        "Logros de la empresa en la que te gustaría trabajar.",
+        "Eventos sociales sin relevancia laboral, pero que son importantes a la hora de relacionarse con los clientes.",
+        "Experiencias personales relevantes que contribuyen al desarrollo profesional.",
+        "Ninguna respuesta es correcta."
+      ],
+      "correcta": 2,
+      "explicacion": "Los hitos importantes son experiencias significativas que aportan valor al desarrollo profesional en tu sector profesional."
+    },
+    {
+      "id": "fol-ipei04-036",
+      "enunciado": "¿Cuál de las siguientes opciones describe mejor las habilidades blandas?",
+      "opciones": [
+        "Conocimientos técnicos que se desarrollan en un curso profesional.",
+        "Habilidades que solo se adquieren mediante la educación formal.",
+        "Características personales relacionadas con la forma de interactuar, trabajar y comunicarse.",
+        "Habilidades técnicas específicas relacionadas con tareas prácticas."
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "fol-ipei04-037",
+      "enunciado": "Las habilidades blandas se desarrollan únicamente a través de experiencias personales, mientras que las habilidades duras se adquieren exclusivamente mediante educación formal y formación técnica, sin influencia de la experiencia práctica.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 1,
+      "explicacion": "Aunque las habilidades blandas suelen desarrollarse mediante experiencias personales y profesionales, y las habilidades duras suelen adquirirse mediante educación formal y formación técnica, ambos tipos de habilidades también se benefician de la experiencia práctica. Las habilidades blandas, como la comunicación y la adaptabilidad, se refinan con el tiempo en diferentes contextos, mientras que las habilidades duras, como el manejo de herramientas técnicas o software, mejoran y se profundizan con la práctica en situaciones reales de trabajo."
+    },
+    {
+      "id": "fol-ipei04-038",
+      "enunciado": "¿Por qué es importante establecer un cronograma detallado al planificar tus itinerarios formativos?",
+      "opciones": [
+        "Para evitar tener que realizar ajustes en tu planificación.",
+        "Para demostrar a los empleadores que eres organizado.",
+        "Para completar los cursos lo más rápido posible.",
+        "Para asegurar que puedes cumplir con los requisitos de tiempo y estudio."
+      ],
+      "correcta": 3,
+      "explicacion": ""
+    },
+    {
+      "id": "fol-ipei04-039",
+      "enunciado": "¿Por qué son importantes las habilidades blandas en el lugar de trabajo?",
+      "opciones": [
+        "Porque son fundamentales para completar tareas técnicas específicas.",
+        "Porque son cruciales para el éxito en las interacciones interpersonales y la cultura organizacional.",
+        "Porque permiten realizar funciones operativas en una máquina.",
+        "Porque se adquieren a través de la formación técnica."
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "fol-ipei04-040",
+      "enunciado": "¿Cómo se adquieren generalmente las habilidades blandas?",
+      "opciones": [
+        "Mediante el uso de herramientas tecnológicas.",
+        "A lo largo del tiempo a través de experiencias personales y profesionales.",
+        "Solo a través de formación específica en el lugar de trabajo.",
+        "Mediante la educación formal y la formación técnica."
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "fol-ipei04-041",
+      "enunciado": "La comunicación efectiva en el entorno profesional se basa únicamente en transmitir información de manera clara y precisa, sin necesidad de considerar el contexto emocional de los interlocutores ni adaptar el mensaje según las reacciones o el perfil de la audiencia.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 1,
+      "explicacion": "La comunicación efectiva va más allá de la claridad en la transmisión de información. En el entorno profesional, es crucial considerar el contexto emocional, adaptar el mensaje a la audiencia y prestar atención a las reacciones de los interlocutores. La empatía y la habilidad de ajustar el mensaje según el perfil de cada persona ayudan a crear un ambiente colaborativo y de confianza, facilitando el entendimiento y aumentando el impacto positivo de la comunicación."
+    },
+    {
+      "id": "fol-ipei04-042",
+      "enunciado": "¿Por qué es esencial trazar un plan de acción para desarrollar áreas de mejora y potenciar fortalezas personales?",
+      "opciones": [
+        "No es necesario mejorar habilidades.",
+        "Las fortalezas personales no tienen impacto en el empleo.",
+        "Ninguna respuesta es correcta.",
+        "Contribuye a aumentar la empleabilidad y las condiciones laborales."
+      ],
+      "correcta": 3,
+      "explicacion": "Desarrollar un plan de acción para mejorar y potenciar fortalezas personales es crucial para mejorar la empleabilidad en cualquier sector profesional."
+    },
+    {
+      "id": "fol-ipei04-043",
+      "enunciado": "Las cualidades innatas incluyen la creatividad, la resiliencia, la atención al detalle, la empatía y la capacidad de trabajar bajo presión, y no requieren desarrollo ni práctica para mejorar en el entorno laboral.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 1,
+      "explicacion": "Aunque algunas personas pueden tener una predisposición natural hacia cualidades como la creatividad, la resiliencia, la atención al detalle, la empatía y la capacidad de trabajar bajo presión, estas habilidades también pueden desarrollarse y fortalecerse con la práctica y la experiencia. En el entorno laboral, estas cualidades se perfeccionan mediante la formación y la exposición a distintos desafíos, lo que permite que cada individuo las ajuste y mejore en función de sus necesidades y metas profesionales."
+    },
+    {
+      "id": "fol-ipei04-044",
+      "enunciado": "¿Cuál de las siguientes características pertenece a las habilidades duras?",
+      "opciones": [
+        "Se desarrollan exclusivamente mediante experiencias personales.",
+        "Son necesarias solo para trabajos en equipo.",
+        "Se adquieren a través de educación formal, formación técnica y experiencia práctica.",
+        "Son subjetivas y difíciles de medir objetivamente."
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "fol-ipei04-045",
+      "enunciado": "Utilizar cuestionarios de preferencia profesional es una herramienta efectiva para identificar tus preferencias laborales y puede proporcionar información valiosa para orientar decisiones de carrera.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 0,
+      "explicacion": "Los cuestionarios de preferencia profesional son herramientas efectivas para identificar intereses y preferencias laborales, ya que ayudan a clarificar áreas de interés, valores y habilidades personales. Al proporcionar una visión estructurada de las preferencias, estos cuestionarios pueden orientar mejor las decisiones de carrera y apoyar en la búsqueda de roles y entornos laborales alineados con los intereses personales."
+    },
+    {
+      "id": "fol-ipei04-046",
+      "enunciado": "Habilidades blandas versus habilidades duras: las Habilidades Duras\\...",
+      "opciones": [
+        "Comprenden las características personales relacionadas con la forma de trabajar, interactuar y comunicarse.",
+        "Son cruciales para el éxito en las interacciones interpersonales y en la cultura organizacional.",
+        "Todas las respuestas son correctas.",
+        "Pueden ser evaluadas de manera más objetiva y concreta."
+      ],
+      "correcta": 3,
+      "explicacion": ""
+    },
+    {
+      "id": "fol-ipei04-047",
+      "enunciado": "¿Qué se entiende por habilidades duras en el contexto profesional de tu sector profesional?",
+      "opciones": [
+        "Habilidades de comunicación.",
+        "Habilidades técnicas genéricas.",
+        "Habilidades técnicas específicas para realizar tareas.",
+        "Habilidades de liderazgo."
+      ],
+      "correcta": 2,
+      "explicacion": "Las habilidades duras son competencias técnicas específicas requeridas en tu sector profesional."
+    },
+    {
+      "id": "fol-ipei04-048",
+      "enunciado": "Las competencias técnicas incluyen únicamente habilidades prácticas, sin abarcar conocimientos especializados adquiridos durante la formación profesional.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 1,
+      "explicacion": "Las competencias técnicas no se limitan a habilidades prácticas; también incluyen conocimientos especializados adquiridos durante la formación profesional. Estos conocimientos permiten a una persona entender los principios y fundamentos de su área de trabajo, lo cual es esencial para aplicar las habilidades prácticas de manera efectiva. Las competencias técnicas completas combinan tanto las habilidades como el conocimiento profundo en el campo específico."
+    },
+    {
+      "id": "fol-ipei04-049",
+      "enunciado": "Cuestionario 2 IPEI04 (El potencial profesional y sus intereses para guiarse en el proceso de autoorientación) Las prácticas profesionales ofrecen la oportunidad de aprender y adquirir habilidades relevantes para tu campo de estudio.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 0,
+      "explicacion": "Las prácticas profesionales son cruciales para el desarrollo de habilidades y son hitos importantes en tu trayectoria profesional."
+    },
+    {
+      "id": "fol-ipei04-050",
+      "enunciado": "Una amenaza identificada en el análisis DAFO es la alta demanda en el sector de FP.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 1,
+      "explicacion": "La alta demanda en el sector de FP es una oportunidad, no una amenaza."
+    },
+    {
+      "id": "fol-ipei04-051",
+      "enunciado": "Las competencias blandas no son tan importantes como las competencias técnicas en el mercado laboral.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 1,
+      "explicacion": "Las competencias blandas, como la comunicación y el trabajo en equipo, son tan importantes como las competencias técnicas, ya que son altamente valoradas por los empleadores y fundamentales para el éxito profesional."
+    },
+    {
+      "id": "fol-ipei04-052",
+      "enunciado": "Participar en programas de mentoría y networking es una estrategia recomendada en un PDP.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 0,
+      "explicacion": "La mentoría y el networking ayudan a expandir la red de contactos y a obtener orientación profesional valiosa."
+    },
+    {
+      "id": "fol-ipei04-053",
+      "enunciado": "La definición de metas a corto, medio y largo plazo no es importante en un PDP.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 1,
+      "explicacion": "Establecer metas a diferentes plazos es crucial para mantener el enfoque y el progreso continuo."
+    },
+    {
+      "id": "fol-ipei04-054",
+      "enunciado": "El monitoreo y la evaluación continua no son necesarios una vez que se ha establecido un PDP.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 1,
+      "explicacion": "El monitoreo y la evaluación continua son esenciales para asegurar el progreso y ajustar el plan según sea necesario."
+    },
+    {
+      "id": "fol-ipei04-055",
+      "enunciado": "La hoja de ruta para la inserción profesional basada en el análisis DAFO no incluye estrategias para el desarrollo de habilidades.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 1,
+      "explicacion": "La hoja de ruta incluye estrategias específicas para el desarrollo de habilidades, entre otros aspectos."
+    },
+    {
+      "id": "fol-ipei04-056",
+      "enunciado": "Realizar entrevistas informativas y participar en programas de \"shadowing\" son métodos recomendados para investigar diferentes áreas profesionales.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 0,
+      "explicacion": "Realizar entrevistas informativas y participar en programas de \"shadowing\" permite obtener una visión directa del trabajo en distintos campos profesionales, facilitando la identificación de preferencias laborales."
+    },
+    {
+      "id": "fol-ipei04-057",
+      "enunciado": "Las cualidades innatas incluyen la creatividad, la resiliencia, la atención al detalle, la empatía y la capacidad de trabajar bajo presión.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 0,
+      "explicacion": "Estas cualidades personales naturales pueden influir significativamente en tu éxito en determinadas profesiones."
+    },
+    {
+      "id": "fol-ipei04-058",
+      "enunciado": "Es importante evaluar tanto las cualidades innatas como las desarrolladas para comprender mejor el valor que puedes aportar al mercado laboral.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 0,
+      "explicacion": "Evaluar tanto las cualidades innatas como las desarrolladas te ayuda a identificar cómo puedes aportar valor en diferentes contextos laborales y permite una autocomprensión más completa."
+    },
+    {
+      "id": "fol-ipei04-059",
+      "enunciado": "Las competencias técnicas incluyen habilidades prácticas y conocimientos especializados adquiridos durante tu formación profesional.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 0,
+      "explicacion": "Las competencias técnicas son específicas de tu área de estudio, como el manejo de maquinaria, programación, diseño gráfico, entre otros."
+    },
+    {
+      "id": "fol-ipei04-060",
+      "enunciado": "La resolución de conflictos implica manejar y resolver desacuerdos de manera constructiva.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 0,
+      "explicacion": "Resolver conflictos de manera constructiva es esencial para mantener un ambiente de trabajo armonioso y productivo."
+    },
+    {
+      "id": "fol-ipei04-061",
+      "enunciado": "Las metas en un PDP deben ser específicas, medibles, alcanzables, relevantes y con un marco temporal definido (SMART).",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 0,
+      "explicacion": "Las metas SMART aseguran que los objetivos sean claros y alcanzables."
+    },
+    {
+      "id": "fol-ipei04-062",
+      "enunciado": "La autoestima no tiene un impacto significativo en el proceso de búsqueda de empleo.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 1,
+      "explicacion": "La autoestima juega un papel crucial en la confianza y seguridad durante la búsqueda de empleo, influyendo directamente en cómo te presentas en entrevistas y enfrentas los desafíos laborales."
+    },
+    {
+      "id": "fol-ipei04-063",
+      "enunciado": "¿Por qué es importante la evaluación y ajuste continuo en un plan de acción profesional?",
+      "opciones": [
+        "Todas las respuestas son correctas",
+        "Para medir el progreso y adaptar el plan según sea necesario.",
+        "Para seguir siempre los mismos pasos.",
+        "Para tener siempre una dirección fija que seguir."
+      ],
+      "correcta": 1,
+      "explicacion": "Para evaluar periódicamente tu progreso y ajustar tu plan de acción según tus experiencias y aprendizajes, asegurando que estés en el camino correcto hacia tus objetivos profesionales."
+    },
+    {
+      "id": "fol-ipei04-064",
+      "enunciado": "Mejorar habilidades técnicas y blandas es parte importante de la formulación de objetivos profesionales.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 0,
+      "explicacion": "Identificar las competencias técnicas y blandas que necesitas desarrollar te ayudará a crecer profesionalmente y adaptarte a las demandas cambiantes del mercado laboral."
+    },
+    {
+      "id": "fol-ipei04-065",
+      "enunciado": "El primer paso en un plan de acción es reconocer las áreas de mejora, ya que nos permite enfocarnos en desarrollar las habilidades necesarias.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 0,
+      "explicacion": "Identificar las áreas de mejora es esencial para saber en qué aspectos debes concentrarte y desarrollar competencias clave que aumentarán tu valor en el mercado laboral."
+    },
+    {
+      "id": "fol-ipei04-066",
+      "enunciado": "Una Hoja de Ruta para la Inserción Profesional basada en el Análisis DAFO ayuda a identificar fortalezas, debilidades, oportunidades y amenazas para crear un plan de acción estratégico.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 0,
+      "explicacion": "El Análisis DAFO permite comprender tu situación personal y profesional, lo que te ayuda a trazar una hoja de ruta para mejorar tu empleabilidad."
+    },
+    {
+      "id": "fol-ipei04-067",
+      "enunciado": "Una de las fortalezas identificadas en el análisis DAFO para un alumno de FP es la falta de experiencia laboral.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 1,
+      "explicacion": "La falta de experiencia laboral es una debilidad, no una fortaleza."
+    },
+    {
+      "id": "fol-ipei04-068",
+      "enunciado": "El trabajo en equipo es colaborar con otros de manera efectiva para alcanzar objetivos comunes.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 0,
+      "explicacion": "Trabajar en equipo permite combinar habilidades y esfuerzos, logrando resultados que difícilmente se podrían alcanzar individualmente."
+    },
+    {
+      "id": "fol-ipei04-069",
+      "enunciado": "El análisis DAFO se centra exclusivamente en identificar oportunidades externas para el alumno.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 1,
+      "explicacion": "El análisis DAFO identifica tanto factores internos (fortalezas y debilidades) como externos (oportunidades y amenazas)."
+    },
+    {
+      "id": "fol-ipei04-070",
+      "enunciado": "El liderazgo consiste en inspirar y guiar a otros hacia el logro de metas.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 0,
+      "explicacion": "Un buen liderazgo motiva al equipo, establece una visión clara y guía a los miembros hacia el logro de objetivos comunes, aumentando la cohesión y el rendimiento del equipo."
+    },
+    {
+      "id": "fol-ipei04-071",
+      "enunciado": "El análisis de competencias y destrezas personales es opcional al establecer metas profesionales.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 1,
+      "explicacion": "Analizar tus competencias y destrezas personales es fundamental para establecer metas profesionales realistas y efectivas, asegurando que puedas desarrollar tus habilidades y alcanzar tus objetivos."
+    },
+    {
+      "id": "fol-ipei04-072",
+      "enunciado": "Un plan de acción para mejorar en áreas específicas debe centrarse solo en adquirir nuevas habilidades técnicas, sin prestar atención a las fortalezas ya adquiridas.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 1,
+      "explicacion": "Es importante tanto desarrollar nuevas habilidades como potenciar tus fortalezas personales, ya que estas aportan un valor único en el empleo y te permiten sobresalir en tu carrera."
+    },
+    {
+      "id": "fol-ipei04-073",
+      "enunciado": "La Hoja de Ruta Profesional para el desarrollo de fortalezas personales y áreas de mejora debe incluir un cronograma para organizar los pasos hacia el logro de metas.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 0,
+      "explicacion": "Un cronograma es esencial para estructurar los pasos y establecer plazos claros para cumplir con los objetivos profesionales dentro de un marco de tiempo adecuado."
+    },
+    {
+      "id": "fol-ipei04-074",
+      "enunciado": "Es importante identificar las habilidades técnicas y blandas adquiridas durante tus estudios y experiencias laborales.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 0,
+      "explicacion": "Identificar las habilidades técnicas y blandas te ayuda a comprender tus competencias y fortalezas profesionales."
+    },
+    {
+      "id": "fol-ipei04-075",
+      "enunciado": "La resiliencia es la capacidad para superar obstáculos y mantener una actitud positiva ante las adversidades.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 0,
+      "explicacion": "La resiliencia permite a los empleados afrontar y recuperarse rápidamente de situaciones difíciles, manteniendo la productividad y la moral alta."
+    },
+    {
+      "id": "fol-ipei04-076",
+      "enunciado": "Basta hablar claramente para que una comunicación sea efectiva.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 1,
+      "explicacion": "La comunicación efectiva también implica escuchar activamente y adaptar el mensaje según el receptor, asegurando una comprensión mutua."
+    },
+    {
+      "id": "fol-ipei04-077",
+      "enunciado": "El potencial profesional y los intereses personales no deben influir en el trazado de un Plan de Acción para el Desarrollo Profesional.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 1,
+      "explicacion": "El potencial profesional y los intereses personales son fundamentales para guiar el PDP y asegurar que el plan sea motivador y relevante."
+    },
+    {
+      "id": "fol-ipei04-078",
+      "enunciado": "El equilibrio entre vida laboral y personal no es relevante al establecer metas personales y profesionales.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 1,
+      "explicacion": "Es fundamental establecer metas que promuevan un equilibrio saludable entre tu vida laboral y personal. Esto incluye dedicar tiempo al crecimiento personal, la familia y el bienestar emocional, lo cual impacta directamente en tu desempeño profesional."
+    },
+    {
+      "id": "fol-ipei04-079",
+      "enunciado": "Las oportunidades en el análisis DAFO incluyen programas de formación continua y certificaciones.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 0,
+      "explicacion": "Los programas de formación continua y certificaciones son oportunidades que pueden aprovecharse."
+    },
+    {
+      "id": "fol-ipei04-080",
+      "enunciado": "Revisar periódicamente tu progreso hacia tus objetivos es importante para ajustar tu plan de acción según sea necesario.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 0,
+      "explicacion": "Programar revisiones regulares te permite evaluar tu progreso, identificar áreas de mejora y ajustar tu plan de acción según tus circunstancias cambiantes o nuevas prioridades."
+    },
+    {
+      "id": "fol-ipei04-081",
+      "enunciado": "Un Plan de Desarrollo Profesional solo debe centrarse en mejorar las habilidades técnicas.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 1,
+      "explicacion": "Un PDP debe incluir tanto habilidades técnicas como habilidades blandas, como la comunicación y el liderazgo."
+    },
+    {
+      "id": "fol-ipei04-082",
+      "enunciado": "Una hoja de ruta efectiva para la inserción profesional basada en el análisis DAFO facilita una transición más fluida al mundo laboral.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 1,
+      "explicacion": "Incorrecto La hoja de ruta ayuda a guiar al alumno en su desarrollo profesional, facilitando una inserción más exitosa en el mercado laboral."
+    },
+    {
+      "id": "fol-ipei04-083",
+      "enunciado": "La identificación de intereses profesionales es clave para establecer una hoja de ruta profesional que esté alineada con tus metas a largo plazo.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 0,
+      "explicacion": "Los intereses profesionales influyen directamente en la dirección de tu carrera, asegurando que tu hoja de ruta esté enfocada en actividades que te apasionen y te mantengan motivado."
+    },
+    {
+      "id": "fol-ipei04-084",
+      "enunciado": "La gestión del tiempo no tiene impacto en la eficiencia del trabajo.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 1,
+      "explicacion": "Gestionar el tiempo de manera eficiente es clave para cumplir con los plazos y aumentar la productividad, lo cual es esencial en cualquier empleo."
+    },
+    {
+      "id": "fol-ipei04-085",
+      "enunciado": "La actitud positiva y la motivación del alumno son consideradas como debilidades en el análisis DAFO.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 1,
+      "explicacion": "La actitud positiva y la motivación son consideradas fortalezas en el análisis DAFO."
+    },
+    {
+      "id": "fol-ipei04-086",
+      "enunciado": "Un Plan de Desarrollo Profesional (PDP) debe ser adaptado a las necesidades y objetivos individuales.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 0,
+      "explicacion": "Un PDP debe estar personalizado para reflejar las metas y circunstancias únicas de cada individuo."
+    },
+    {
+      "id": "fol-ipei04-087",
+      "enunciado": "Una buena estrategia en un PDP incluye completar cursos, certificaciones y participar en talleres.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 0,
+      "explicacion": "La educación y la formación continua son componentes esenciales de un PDP efectivo."
+    },
+    {
+      "id": "fol-ipei04-088",
+      "enunciado": "Establecer un cronograma en el plan de acción es importante para asegurar que las metas se alcancen dentro de un marco de tiempo adecuado.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 0,
+      "explicacion": "Un cronograma ayuda a organizar los plazos para alcanzar tus objetivos, lo que garantiza que progreses de manera estructurada y dentro del tiempo previsto."
+    },
+    {
+      "id": "fol-ipei04-089",
+      "enunciado": "El análisis de tus cualidades y competencias personales es opcional y no influye significativamente en tu éxito profesional.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 1,
+      "explicacion": "El análisis de cualidades y competencias personales es esencial para determinar tu idoneidad para determinadas profesiones y para destacar en el mercado laboral."
+    },
+    {
+      "id": "fol-ipei04-090",
+      "enunciado": "El análisis DAFO ayuda a maximizar las fortalezas y minimizar las debilidades y amenazas",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 0,
+      "explicacion": "Incorrecto El objetivo del análisis DAFO es formular estrategias que maximicen las fortalezas y oportunidades, y minimicen las debilidades y amenazas."
+    },
+    {
+      "id": "fol-ipei04-091",
+      "enunciado": "La competencia con candidatos más experimentados es una debilidad identificada en el análisis DAFO.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 1,
+      "explicacion": "Incorrecto. La competencia con candidatos más experimentados es una amenaza, no una debilidad."
+    },
+    {
+      "id": "fol-ipei04-092",
+      "enunciado": "El autoconocimiento solo es importante para el desarrollo personal, no para el profesional.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 1,
+      "explicacion": "El autoconocimiento es crucial tanto para el desarrollo personal como profesional, ayudando en la toma de decisiones y en el crecimiento en ambos ámbitos."
+    },
+    {
+      "id": "fol-ipei04-093",
+      "enunciado": "Utilizar cuestionarios de preferencia profesional es una herramienta efectiva para identificar tus preferencias laborales",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 0,
+      "explicacion": "Herramientas como el Inventario de Intereses de Strong o el Test de Preferencias Vocacionales son útiles para identificar preferencias laborales y ayudar a tomar decisiones informadas sobre la carrera."
+    },
+    {
+      "id": "fol-ipei04-094",
+      "enunciado": "¿Qué aspecto es fundamental al elaborar un plan de acción para el desarrollo profesional?",
+      "opciones": [
+        "Encontrar un mentor exclusivamente.",
+        "Ninguna respuesta es correcta.",
+        "Identificar áreas de mejora y fortalezas personales.",
+        "Establecer objetivos a largo plazo."
+      ],
+      "correcta": 2,
+      "explicacion": "Identificar tanto las áreas en las que necesitas mejorar como tus fortalezas personales es crucial para diseñar estrategias efectivas que potencien tu empleabilidad y desarrollo profesional."
+    },
+    {
+      "id": "fol-ipei04-095",
+      "enunciado": "La autoevaluación continua ayuda a identificar áreas de mejora y ajustar el PDP.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 0,
+      "explicacion": "La autoevaluación continua es clave para el desarrollo profesional efectivo."
+    }
+  ]
+}

@@ -67,14 +67,15 @@ export function validateSchema(json) {
       if (typeof q.enunciado !== "string" || !q.enunciado.trim()) {
         errors.push(`${tag}: falta 'enunciado'`);
       }
-      if (!Array.isArray(q.opciones) || q.opciones.length !== 4) {
-        errors.push(`${tag}: 'opciones' debe tener exactamente 4 elementos`);
+      if (!Array.isArray(q.opciones) || (q.opciones.length !== 2 && q.opciones.length !== 4)) {
+        errors.push(`${tag}: 'opciones' debe tener 2 o 4 elementos`);
       } else if (q.opciones.some((o) => typeof o !== "string" || !o.trim())) {
         errors.push(`${tag}: alguna opción está vacía o no es texto`);
       }
+      const nOpc = Array.isArray(q.opciones) ? q.opciones.length : 0;
       if (typeof q.correcta !== "number" || !Number.isInteger(q.correcta) ||
-          q.correcta < 0 || q.correcta > 3) {
-        errors.push(`${tag}: 'correcta' debe ser un entero entre 0 y 3`);
+          q.correcta < 0 || q.correcta >= nOpc) {
+        errors.push(`${tag}: 'correcta' debe ser un entero entre 0 y ${Math.max(nOpc - 1, 0)}`);
       }
     });
   }

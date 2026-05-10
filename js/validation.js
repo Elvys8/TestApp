@@ -249,7 +249,7 @@ function openEditForm(q) {
 
       if (!enunciado) { showError("El enunciado no puede estar vacío."); return; }
       if (opciones.some((o) => !o)) { showError("Todas las opciones deben tener texto."); return; }
-      if (!Number.isInteger(correcta) || correcta < 0 || correcta > 3) {
+      if (!Number.isInteger(correcta) || correcta < 0 || correcta >= opciones.length) {
         showError("Marca cuál de las opciones es la correcta.");
         return;
       }
