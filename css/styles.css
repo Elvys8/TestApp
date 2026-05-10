@@ -20,8 +20,8 @@ body {
 
 body {
   font-family: var(--font-sans);
-  font-size: 15px;
-  line-height: 1.55;
+  font-size: 16px;
+  line-height: 1.35;
   color: var(--text-primary);
   background: var(--bg-page);
   -webkit-font-smoothing: antialiased;
@@ -150,10 +150,11 @@ ul {
 }
 
 .btn--ghost {
-  background: transparent;
+  background: rgba(255,255,255,.5);
   color: var(--text-secondary);
-  border-color: var(--border-default);
+  /* border-color: var(--border-default); */
 }
+	:root[data-theme="light"] .btn--ghost { background:rgba(255,255,255,.1); }
 
 .btn--ghost:hover {
   background: var(--bg-surface-hover);
@@ -400,7 +401,7 @@ ul {
 .test-question {
   font-family: var(--font-serif);
   font-size: 17px;
-  line-height: 1.5;
+  line-height: 1.35;
   margin: 0 0 18px;
 }
 
