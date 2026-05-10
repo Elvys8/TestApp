@@ -1,8 +1,9 @@
 {
   "files": [
-    "ipe-4-potencial-profesional.json",
-    "ipe-5-tecnologias-digitales.json",
-    "si-6.1.2-servicios-infraestructura-red.json",
-    "si-6.1.3-servicios-comparticion-ficheros.json"
+  	"ipe-4-potencial-profesional.json",
+  	"ipe-5-tecnologias-digitales.json",
+  	"si-6.1.1-arquitectura-cliente-servidor.json",
+  	"si-6.1.2-servicios-infraestructura-red.json",
+  	"si-6.1.3-servicios-comparticion-ficheros.json"
   ]
 }
