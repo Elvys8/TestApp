@@ -1,0 +1,415 @@
+{
+  "schema_version": 1,
+  "id": "ipe-5-tecnologias-digitales",
+  "asignatura": "IPE: Itinerario persoal para a empregabilidade",
+  "asignatura_color": "#8D211E",
+  "tema": "UD5. Tecnologías Digitales como Herramientas de Aprendizaje Autónomo.
+Destacado",
+  "preguntas": [
+    {
+      "id": "ipei05-001",
+      "enunciado": "La competencia digital no es relevante para configurar un entorno personal de aprendizaje orientado a mejorar la empleabilidad, ya que el aprendizaje y el desarrollo profesional se pueden lograr sin herramientas digitales.",
+      "opciones": ["Verdadero", "Falso"],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "ipei05-002",
+      "enunciado": "Utilizar herramientas de gestión de proyectos digitales, como Trello o Asana, no contribuye a desarrollar la competencia digital en el contexto de la empleabilidad.",
+      "opciones": ["Verdadero", "Falso"],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "ipei05-003",
+      "enunciado": "¿Cuál es la función principal de un portfolio digital en la mejora de la empleabilidad en tu ámbito profesional?",
+      "opciones": [
+        "Evitar la sobreexposición en el mercado laboral.",
+        "Mostrar los logros y competencias de manera visual y organizada.",
+        "La protección de los datos personales.",
+        "Recalcar las actividades no profesionales."
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "ipei05-004",
+      "enunciado": "¿Cuál de las siguientes afirmaciones refleja mejor la toma de conciencia sobre la responsabilidad individual en el desarrollo profesional?",
+      "opciones": [
+        "Esperar a que la empresa brinde todas las oportunidades de capacitación necesarias para el crecimiento profesional.",
+        "Identificar en los factores externos que impiden el avance en la carrera profesional la falta de soluciones.",
+        "Adoptar una actitud de aprendizaje continuo, buscando activamente oportunidades para desarrollar nuevas habilidades y competencias.",
+        "Ninguna respuesta es correcta."
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "ipei05-005",
+      "enunciado": "¿Cuál de las siguientes herramientas es más eficaz para mejorar la empleabilidad a través de la formación continua?",
+      "opciones": [
+        "Foros de entretenimiento.",
+        "Plataformas de aprendizaje en línea como Coursera o edX.",
+        "Blogs personales.",
+        "Redes sociales generales."
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "ipei05-006",
+      "enunciado": "¿Cómo puede una identidad digital bien gestionada impactar positivamente en la empleabilidad?",
+      "opciones": [
+        "Mediante la creación de una red profesional sólida.",
+        "Reduciendo la presencia en línea.",
+        "Limitando el acceso a oportunidades laborales.",
+        "Aumentando la privacidad y el anonimato."
+      ],
+      "correcta": 0,
+      "explicacion": ""
+    },
+    {
+      "id": "ipei05-007",
+      "enunciado": "¿Qué componente es esencial en el diseño de un entorno personal de aprendizaje (PLE) para mejorar la empleabilidad?",
+      "opciones": [
+        "Integración de herramientas de entretenimiento.",
+        "Integración de herramientas de aprendizaje en línea y redes profesionales.",
+        "Integración de actividades recreativas.",
+        "Uso de herramientas digitales."
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "ipei05-008",
+      "enunciado": "¿Cuál es el principal objetivo de un Plan de Desarrollo Individual (PDI) en el contexto de tu sector profesional?",
+      "opciones": [
+        "Reducir la necesidad de formación continua.",
+        "Aumentar la estabilidad en el empleo actual.",
+        "Identificar y desarrollar competencias y habilidades necesarias para futuros roles laborales.",
+        "Ninguna respuesta es correcta."
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "ipei05-009",
+      "enunciado": "¿Qué característica debe tener un entorno de aprendizaje para ser eficaz en el logro del Plan de Desarrollo Individual (PDI)?",
+      "opciones": [
+        "Evitar el uso de herramientas tecnológicas contrastadas.",
+        "Ser inflexible e inmutable.",
+        "Ser adaptable y personalizable.",
+        "Focalizarse en contenidos estéticos."
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "ipei05-010",
+      "enunciado": "¿Cuál de los siguientes elementos no es fundamental al diseñar un entorno de aprendizaje efectivo para lograr las metas de tu PDI?",
+      "opciones": [
+        "Crear un espacio de aprendizaje libre de distracciones y con los materiales necesarios.",
+        "Identificar recursos y herramientas de aprendizaje relevantes para tus objetivos.",
+        "Establecer un horario rígido y estricto para todas tus actividades de aprendizaje.",
+        "Ninguna respuesta es correcta."
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "ipei05-011",
+      "enunciado": "¿Cuál de las siguientes acciones demuestra un mejor entendimiento sobre la configuración de un entorno personal de aprendizaje para la empleabilidad?",
+      "opciones": [
+        "Explorar diversas herramientas, fuentes de información y conexiones para construir un plan de aprendizaje personalizado y relevante para el mercado laboral actual.",
+        "Utilizar fuentes de información tradicionales como libros y revistas especializadas.",
+        "Ninguna respuesta es correcta.",
+        "Seguir los cursos y capacitaciones ofrecidos por la empresa, sin buscar recursos adicionales."
+      ],
+      "correcta": 0,
+      "explicacion": ""
+    },
+    {
+      "id": "ipei05-012",
+      "enunciado": "¿Cuál de los siguientes elementos es el más importante a considerar al gestionar tu identidad digital para mejorar tu empleabilidad?",
+      "opciones": [
+        "La cantidad de seguidores y conexiones en redes sociales.",
+        "Ninguna respuesta es correcta.",
+        "La frecuencia con la que actualizas tus perfiles y compartes contenido.",
+        "La coherencia y profesionalidad de tu presencia online."
+      ],
+      "correcta": 3,
+      "explicacion": ""
+    },
+    {
+      "id": "ipei05-013",
+      "enunciado": "¿Cuál de las siguientes acciones es esencial al elaborar un plan de desarrollo individual (PDI) para mejorar la empleabilidad?",
+      "opciones": [
+        "Establecer metas generales, como \"mejorar mis habilidades\" o \"encontrar un mejor trabajo\".",
+        "Copiar el PDI de un compañero o compañera que haya tenido éxito al aplicarlo.",
+        "Identificar fortalezas, debilidades y áreas de mejora, estableciendo metas SMART (Específicas, Medibles, Alcanzables, Relevantes y con plazos definidos) para desarrollar nuevas competencias y habilidades.",
+        "Todas las respuestas son correctas."
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "ipei05-014",
+      "enunciado": "Las herramientas de aprendizaje autónomo pueden ser aplicadas de manera efectiva para el desarrollo personal y profesional, permitiendo a los individuos gestionar su progreso y adquirir competencias relevantes de forma independiente.",
+      "opciones": ["Verdadero", "Falso"],
+      "correcta": 0,
+      "explicacion": ""
+    },
+    {
+      "id": "ipei05-015",
+      "enunciado": "La justificación del diseño de un entorno de aprendizaje debe basarse exclusivamente en preferencias personales, sin considerar cómo este mejora la empleabilidad o responde a las demandas del mercado laboral.",
+      "opciones": ["Verdadero", "Falso"],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "ipei05-016",
+      "enunciado": "Las tecnologías digitales no son necesarias para el aprendizaje autónomo, ya que el aprendizaje independiente puede lograrse sin el uso de herramientas tecnológicas en la mayoría de los casos.",
+      "opciones": ["Verdadero", "Falso"],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "ipei05-017",
+      "enunciado": "¿Cuál de las siguientes herramientas es más útil para el aprendizaje autónomo en el desarrollo personal y profesional?",
+      "opciones": [
+        "Plataformas de juegos en línea.",
+        "Herramientas de gestión de proyectos como Trello o Asana.",
+        "Foros de debate general.",
+        "Aplicaciones de mensajería instantánea."
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "ipei05-018",
+      "enunciado": "¿Cuál de las siguientes estrategias es la más efectiva para evaluar el impacto de tu entorno de aprendizaje en el logro de tus objetivos del PDI?",
+      "opciones": [
+        "Comparar tus resultados con los de otras personas que están siguiendo un plan similar.",
+        "Solicitar la opinión de amigos y familiares sobre la efectividad de tu entorno de aprendizaje.",
+        "Llevar un registro detallado de tus progresos y analizar periódicamente los resultados obtenidos.",
+        "Ninguna respuesta es correcta."
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "ipei05-019",
+      "enunciado": "La empleabilidad se refiere a tener un título universitario o una formación específica.",
+      "opciones": ["Verdadero", "Falso"],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "ipei05-020",
+      "enunciado": "Utilizar plataformas de aprendizaje online como Coursera o Udemy para adquirir nuevas habilidades y conocimientos…",
+      "opciones": ["Verdadero", "Falso"],
+      "correcta": 0,
+      "explicacion": ""
+    },
+    {
+      "id": "ipei05-021",
+      "enunciado": "¿Cuál de las siguientes opciones refleja mejor la importancia de la actitud de aprendizaje permanente en el ámbito de tu sector profesional?",
+      "opciones": [
+        "Aumenta la capacidad de delegar tareas.",
+        "Facilita la adaptación a cambios y nuevas tecnologías en el entorno laboral.",
+        "Reduce la necesidad de formación continua.",
+        "Permite reducir el tiempo dedicado al trabajo."
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "ipei05-022",
+      "enunciado": "¿Cuál de las siguientes acciones refleja mejor una actitud de aprendizaje permanente para el desarrollo profesional?",
+      "opciones": [
+        "Ninguna respuesta es correcta.",
+        "Leer un libro sobre un tema relevante para tu campo y aplicar los conocimientos adquiridos en tu trabajo.",
+        "Asistir a un curso online obligatorio de la empresa y olvidar rápidamente su contenido.",
+        "Cambiar de trabajo cada pocos años en busca de nuevas experiencias, sin profundizar en ninguna área."
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "ipei05-023",
+      "enunciado": "¿Cuál de las siguientes acciones no contribuye positivamente a construir una identidad digital sólida para la empleabilidad?",
+      "opciones": [
+        "Ninguna respuesta es correcta.",
+        "Publicar fotos y comentarios personales en todas tus redes sociales.",
+        "Participar en discusiones online relevantes para tu campo de interés.",
+        "Compartir logros y proyectos profesionales en redes sociales como LinkedIn."
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "ipei05-024",
+      "enunciado": "¿Qué competencia digital es clave para configurar un entorno personal de aprendizaje (PLE) eficaz?",
+      "opciones": [
+        "Capacidad de desconexión tecnológica.",
+        "Gestión de la información y aprendizaje en línea.",
+        "Uso de redes sociales.",
+        "Uso de software de entretenimiento."
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "ipei05-025",
+      "enunciado": "La empleabilidad se define exclusivamente como la capacidad de adaptación al entorno laboral.",
+      "opciones": ["Verdadero", "Falso"],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "ipei05-026",
+      "enunciado": "¿Qué factor es esencial para mejorar la empleabilidad en un entorno laboral cambiante?",
+      "opciones": [
+        "Recurso al uso de tecnologías conocidas.",
+        "Capacidad de aprendizaje y adaptación.",
+        "Conformismo gregario.",
+        "Estilismo proactivo."
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "ipei05-027",
+      "enunciado": "¿Cuál de las siguientes afirmaciones refleja una comprensión precisa del impacto de la identidad digital en la empleabilidad?",
+      "opciones": [
+        "Todas las respuestas son correctas.",
+        "La identidad digital es un factor clave en la empleabilidad, ya que los empleadores utilizan la información en línea para evaluar a los candidatos y tomar decisiones de contratación.",
+        "La identidad digital es fruto de una construcción personal espontánea.",
+        "Se deben utilizar \"cámaras eco\" para reafirmar nuestras opiniones."
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "ipei05-028",
+      "enunciado": "Las plataformas de e-learning como Moodle y Blackboard son ejemplos de herramientas digitales que pueden ser utilizadas en el aprendizaje autónomo, facilitando el acceso a recursos y la gestión del propio proceso de aprendizaje.",
+      "opciones": ["Verdadero", "Falso"],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "ipei05-029",
+      "enunciado": "¿Por qué es fundamental mantener una actitud de aprendizaje permanente en el entorno laboral actual?",
+      "opciones": [
+        "Para favorecer la movilidad funcional descendente.",
+        "Para adaptarse a los cambios tecnológicos y del mercado, y desarrollar nuevas competencias.",
+        "Para evitar el \"burn out\".",
+        "Todas las respuestas son correctas."
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "ipei05-030",
+      "enunciado": "Leer libros y artículos sobre temas relevantes para tu campo profesional no se considera una herramienta de aprendizaje autónomo, ya que el aprendizaje autónomo se limita al uso de plataformas digitales y cursos formales.",
+      "opciones": ["Verdadero", "Falso"],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "ipei05-031",
+      "enunciado": "¿Cuál de las siguientes combinaciones representa mejor un entorno personal de aprendizaje (EPA) sólido para la empleabilidad?",
+      "opciones": [
+        "Uso de plataformas de aprendizaje online, participación en comunidades de práctica y creación de una red de contactos profesionales.",
+        "Lectura diaria de noticias, participación en grupos de LinkedIn y asistencia a conferencias relevantes.",
+        "Suscripción a una revista especializada, asistencia a un curso online masivo y creación de un blog personal.",
+        "Ninguna respuesta es correcta."
+      ],
+      "correcta": 0,
+      "explicacion": ""
+    },
+    {
+      "id": "ipei05-032",
+      "enunciado": "¿Cuál de las siguientes estrategias sería la más efectiva para diseñar un entorno de aprendizaje que facilite el logro de tu plan de desarrollo individual (PDI)?",
+      "opciones": [
+        "Aislarse y evitar interactuar con otros profesionales, ya que el aprendizaje es un proceso individual y personal.",
+        "Todas las respuestas son correctas.",
+        "Conformarse con los recursos disponibles en el lugar de trabajo, sin buscar fuentes externas de información y conocimiento.",
+        "Crear un espacio de aprendizaje diverso y enriquecedor, combinando recursos en línea, libros, mentores, redes de contactos y experiencias prácticas relevantes para tus metas."
+      ],
+      "correcta": 3,
+      "explicacion": ""
+    },
+    {
+      "id": "ipei05-033",
+      "enunciado": "Un entorno personal de aprendizaje enfocado exclusivamente en el desarrollo de habilidades técnicas garantiza la empleabilidad.",
+      "opciones": ["Verdadero", "Falso"],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "ipei05-034",
+      "enunciado": "El aprendizaje autónomo es aquel en el que el estudiante toma el control de su propio proceso de aprendizaje, incluyendo la planificación, selección de recursos y evaluación de su progreso.",
+      "opciones": ["Verdadero", "Falso"],
+      "correcta": 0,
+      "explicacion": ""
+    },
+    {
+      "id": "ipei05-035",
+      "enunciado": "Crear un perfil en LinkedIn es un ejemplo de cómo se puede utilizar la competencia digital para construir un entorno personal de aprendizaje.",
+      "opciones": ["Verdadero", "Falso"],
+      "correcta": 0,
+      "explicacion": ""
+    },
+    {
+      "id": "ipei05-036",
+      "enunciado": "¿Cuál de las siguientes estrategias es la más efectiva para mantener actualizado tu plan de desarrollo individual y asegurar su relevancia para tu empleabilidad?",
+      "opciones": [
+        "Mantenerse fiel a la hoja de ruta diseñada.",
+        "Compartirlo con amigos y familiares para obtener su opinión y sugerencias.",
+        "Revisarlo una vez al año y realizar ajustes menores si es necesario.",
+        "Establecer revisiones periódicas y adaptarlo a medida que evolucionan tus metas y el mercado laboral."
+      ],
+      "correcta": 3,
+      "explicacion": ""
+    },
+    {
+      "id": "ipei05-037",
+      "enunciado": "¿Cuál de las siguientes herramientas no es esencial para la configuración de un entorno personal de aprendizaje para la empleabilidad?",
+      "opciones": [
+        "Aplicaciones de mensajería instantánea como WhatsApp.",
+        "Plataformas de cursos en línea (MOOCs) como Coursera o edX.",
+        "Redes sociales profesionales como LinkedIn.",
+        "Todas las herramientas son esenciales."
+      ],
+      "correcta": 0,
+      "explicacion": ""
+    },
+    {
+      "id": "ipei05-038",
+      "enunciado": "La empleabilidad se mantiene estática a lo largo de la vida profesional.",
+      "opciones": ["Verdadero", "Falso"],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "ipei05-039",
+      "enunciado": "¿Cuál de las siguientes acciones es la más efectiva para garantizar el éxito de tu PDI y mejorar tus perspectivas laborales?",
+      "opciones": [
+        "Establecer un sistema de recompensas que te motive a cumplir tus metas.",
+        "Ninguna respuesta es correcta.",
+        "Revisar y actualizar tu PDI periódicamente, adaptándolo a los cambios del mercado.",
+        "Compartir tu PDI con amigos y familiares para obtener retroalimentación."
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "ipei05-040",
+      "enunciado": "La inclusión de cursos online sobre habilidades blandas (como comunicación, liderazgo y trabajo en equipo) en un entorno personal de aprendizaje puede justificarse por su impacto positivo en la empleabilidad y el desarrollo profesional continuo.",
+      "opciones": ["Verdadero", "Falso"],
+      "correcta": 0,
+      "explicacion": ""
+    }
+  ]
+}
