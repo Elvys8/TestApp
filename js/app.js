@@ -501,9 +501,11 @@ function renderStats() {
       <div class="stat-tema-list">
         ${a.temas.map((t) => `
           <div class="stat-tema-row">
-            <span class="stat-tema-row__name">${ui.escapeHtml(t.tema)}</span>
-            <span class="stat-tema-row__pct">${t.accuracy === null ? "—" : t.accuracy + "%"}</span>
-            <span class="stat-tema-row__meta">${t.masteredCount}/${t.questionCount} dominadas</span>
+            <div class="stat-tema-row__info">
+              <span class="stat-tema-row__name">${ui.escapeHtml(t.tema)}</span>
+              <span class="stat-tema-row__pct">${t.accuracy === null ? "—" : t.accuracy + "%"}</span>
+              <span class="stat-tema-row__meta">${t.masteredCount}/${t.questionCount} dominadas</span>
+            </div>
             <button class="icon-btn icon-btn--tiny" type="button"
                     data-reset-tema-stats="${ui.escapeHtml(t.id)}"
                     aria-label="Reiniciar estadísticas del tema"
