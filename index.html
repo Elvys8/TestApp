@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Estudio</title>
+  <link rel="stylesheet" href="css/themes.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Aplicamos el tema antes de pintar para evitar el "flash" claro->oscuro.
+       Este script NO es módulo a propósito: corre antes de que se cargue
+       cualquier JS de la app y antes de que el navegador pinte. -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("estudio:theme");
+        var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        var theme = saved || (prefersDark ? "dark" : "light");
+        document.documentElement.setAttribute("data-theme", theme);
+      } catch (e) {
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+    })();
+  </script>
+</head>
+<body>
+  <div class="app-shell">
+
+    <header class="app-header">
+      <div class="app-header__section app-header__section--left">
+        <a class="icon-btn home-btn" href="#/" aria-label="Inicio" title="Inicio">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 11.5L12 4l9 7.5"/>
+            <path d="M5 10v9.5h4.5V14h5v5.5H19V10"/>
+          </svg>
+        </a>
+        <div id="header-left-slot"></div>
+      </div>
+
+      <div class="app-header__section app-header__section--right">
+        <a class="icon-btn" href="#/stats" aria-label="Estadísticas" title="Estadísticas">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="6" y1="20" x2="6" y2="12"/>
+            <line x1="12" y1="20" x2="12" y2="6"/>
+            <line x1="18" y1="20" x2="18" y2="14"/>
+          </svg>
+        </a>
+        <button class="icon-btn theme-toggle" type="button" aria-label="Cambiar modo claro/oscuro">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main class="app-main" id="app">
+      <p class="muted tiny">Cargando…</p>
+    </main>
+  </div>
+
+  <!-- Entrada principal: el resto de módulos se importan desde aquí. -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

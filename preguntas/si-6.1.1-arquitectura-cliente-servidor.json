@@ -1,0 +1,609 @@
+{
+  "schema_version": 1,
+  "id": "si-6.1.1-arquitectura-cliente-servidor",
+  "asignatura": "Sistemas Informáticos",
+  "asignatura_color": "#1C3C6F",
+  "tema": "6.1.1 Arquitectura cliente-servidor",
+  "preguntas": [
+    {
+      "id": "si-6.1.1-001",
+      "enunciado": "¿Qué son los servicios en un sistema informático?",
+      "opciones": [
+        "Procesos o programas en ejecución que suelen ejecutarse de forma transparente al usuario.",
+        "Aplicaciones de escritorio que requieren intervención constante del usuario.",
+        "Dispositivos físicos conectados al ordenador.",
+        "Archivos de configuración del sistema operativo."
+      ],
+      "correcta": 0,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.1-002",
+      "enunciado": "¿En qué momentos se activan habitualmente los servicios?",
+      "opciones": [
+        "Únicamente cuando el usuario los inicia manualmente desde un menú.",
+        "Solo al cerrar la sesión actual.",
+        "De forma automática al inicio del sistema operativo o tras una petición, en función del rendimiento del equipo o del tráfico de red.",
+        "Solo cuando se conecta un nuevo dispositivo al equipo."
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.1-003",
+      "enunciado": "¿Cómo se define la arquitectura cliente-servidor?",
+      "opciones": [
+        "Un único programa que atiende todas las funciones del sistema.",
+        "Una topología de red física definida por el cableado.",
+        "Un modelo de aplicación distribuida que reparte las tareas entre proveedores de servicios (servidores) y solicitantes (clientes).",
+        "Un protocolo específico de transmisión por Internet."
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.1-004",
+      "enunciado": "En la arquitectura cliente-servidor, ¿quién realiza las peticiones y quién responde?",
+      "opciones": [
+        "El servidor realiza las peticiones y el cliente las atiende.",
+        "Cliente y servidor se turnan automáticamente.",
+        "El cliente realiza peticiones y el servidor las atiende dando respuesta.",
+        "Los clientes se comunican entre sí sin pasar por el servidor."
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.1-005",
+      "enunciado": "¿Cómo es la separación entre cliente y servidor?",
+      "opciones": [
+        "Una separación física obligatoria: deben estar en máquinas distintas.",
+        "Una separación lógica: el servidor no se ejecuta necesariamente sobre una sola máquina ni es necesariamente un único programa.",
+        "Una separación temporal: el servidor solo está activo en horario laboral.",
+        "Una separación de red: deben estar en distintas subredes."
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.1-006",
+      "enunciado": "¿Qué es un proceso servidor?",
+      "opciones": [
+        "Un equipo físico dedicado exclusivamente a alojar servicios.",
+        "Aquel que otorga un servicio a otros (clientes), estén en la misma máquina o en otra diferente.",
+        "Un programa que solo puede ejecutarse en sistemas operativos de servidor.",
+        "Una conexión persistente entre dos ordenadores."
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.1-007",
+      "enunciado": "¿Cuál de los siguientes es un ejemplo de proceso servidor típicamente local (en la misma máquina)?",
+      "opciones": [
+        "HTTP",
+        "SSH",
+        "X.Org",
+        "FTP"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.1-008",
+      "enunciado": "¿Cuál de los siguientes es un ejemplo de proceso servidor que típicamente atiende a clientes en una máquina diferente?",
+      "opciones": [
+        "X.Org",
+        "Wayland",
+        "SSH",
+        "El compositor de ventanas"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.1-009",
+      "enunciado": "¿Qué se entiende por \"ordenador servidor\"?",
+      "opciones": [
+        "Cualquier equipo con conexión a Internet.",
+        "Un equipo preparado para instalar en él procesos servidores.",
+        "Un equipo que solo puede ejecutar un proceso servidor a la vez.",
+        "Un dispositivo de red sin capacidad de cómputo propia."
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.1-010",
+      "enunciado": "¿Qué identifica a los equipos conectados a una red, sean clientes o servidores?",
+      "opciones": [
+        "El nombre del usuario activo.",
+        "El número de serie del equipo.",
+        "Una dirección IP.",
+        "El tipo de sistema operativo instalado."
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.1-011",
+      "enunciado": "¿Qué son los puertos virtuales o lógicos?",
+      "opciones": [
+        "Conectores físicos del ordenador como USB o HDMI.",
+        "Identificadores que solo existen virtualmente en el ordenador, gestionados por el sistema operativo, distintos de los puertos físicos.",
+        "Direcciones MAC asignadas por el fabricante de la tarjeta de red.",
+        "Carpetas compartidas dentro de una red local."
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.1-012",
+      "enunciado": "¿Cuál de los siguientes ejemplos corresponde a un puerto físico?",
+      "opciones": [
+        "El puerto 80 utilizado por el servicio web.",
+        "El puerto 25 utilizado por el correo electrónico.",
+        "HDMI.",
+        "Un puerto del rango 49152-65535."
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.1-013",
+      "enunciado": "¿De cuántos puertos virtuales dispone aproximadamente un sistema operativo?",
+      "opciones": [
+        "Más de 1.000.",
+        "Más de 10.000.",
+        "Más de 65.000.",
+        "Más de 1.000.000."
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.1-014",
+      "enunciado": "¿Cómo se obtienen y gestionan los puertos virtuales?",
+      "opciones": [
+        "Los programas los abren directamente sin intervención del sistema operativo.",
+        "Los puertos están preasignados a las aplicaciones por el fabricante del hardware.",
+        "Los programas los solicitan y el sistema operativo los gestiona para establecer conexiones lógicas.",
+        "El usuario debe configurarlos manualmente desde el panel de control."
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.1-015",
+      "enunciado": "La gestión de puertos virtuales por parte del sistema operativo permite que dos equipos puedan comunicarse:",
+      "opciones": [
+        "Solo a través de servidores intermedios.",
+        "Punto a punto, estableciendo una conexión lógica.",
+        "Únicamente cuando comparten la misma red local.",
+        "Mediante difusión a toda la red."
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.1-016",
+      "enunciado": "Toda comunicación entre dos dispositivos en Internet se traduce, en última instancia, en:",
+      "opciones": [
+        "Un cable físico que une los equipos.",
+        "Un flujo de datos entre dos puertos virtuales abiertos por alguna aplicación, una cliente y otra servidora.",
+        "Una conexión a través del router únicamente.",
+        "Un único proceso compartido entre los dos equipos."
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.1-017",
+      "enunciado": "¿Cómo se llama un programa que inicia la comunicación abriendo una conexión en un puerto?",
+      "opciones": [
+        "Cliente.",
+        "Servidor.",
+        "Daemon.",
+        "Router."
+      ],
+      "correcta": 0,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.1-018",
+      "enunciado": "¿Cómo se llama un programa que está siempre usando un puerto esperando que otros se conecten? Se dice también que está...",
+      "opciones": [
+        "Cliente — atendiendo.",
+        "Servidor — escuchando.",
+        "Cliente — escuchando.",
+        "Proceso zombi — esperando."
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.1-019",
+      "enunciado": "¿Qué puerto utiliza por convención histórica un servidor web para esperar conexiones entrantes?",
+      "opciones": [
+        "21",
+        "25",
+        "80",
+        "443"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.1-020",
+      "enunciado": "¿Es obligatorio que un servidor web utilice el puerto 80?",
+      "opciones": [
+        "Sí, es una imposición técnica del protocolo HTTP.",
+        "Sí, los navegadores no pueden conectar a otros puertos.",
+        "No, es una convención histórica; podría utilizarse cualquier otro puerto.",
+        "Solo es obligatorio en sistemas Linux."
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.1-021",
+      "enunciado": "Cuando un navegador (cliente) se conecta a un servidor web, ¿qué puerto usa el navegador en su lado de la conexión?",
+      "opciones": [
+        "Siempre el 80, igual que el servidor.",
+        "Un puerto cualquiera de los 65.000 disponibles.",
+        "Siempre el 443.",
+        "Un puerto fijo del rango 0-1023."
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.1-022",
+      "enunciado": "¿Con cuántos bits se codifica el número de puerto y cuántos puertos posibles existen en total?",
+      "opciones": [
+        "8 bits, 256 puertos.",
+        "16 bits, 65536 puertos.",
+        "24 bits, 16,7 millones de puertos.",
+        "32 bits, más de 4.000 millones de puertos."
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.1-023",
+      "enunciado": "¿Qué nombre reciben los puertos del rango 0-1023?",
+      "opciones": [
+        "Puertos registrados.",
+        "Puertos dinámicos y/o privados.",
+        "Puertos conocidos o reservados.",
+        "Puertos prohibidos por el sistema operativo."
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.1-024",
+      "enunciado": "¿A quién están reservados los puertos del rango 0-1023?",
+      "opciones": [
+        "A los clientes.",
+        "A los servidores.",
+        "A los administradores de red exclusivamente.",
+        "Únicamente a los servicios web."
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.1-025",
+      "enunciado": "¿Puede un administrador de red asignar servicios a puertos distintos a los habituales del rango 0-1023?",
+      "opciones": [
+        "No, los puertos del 0 al 1023 son fijos y no se pueden reasignar.",
+        "Sí, un administrador de red puede conectar servicios con puertos de su elección.",
+        "Solo si reinicia el equipo en modo seguro.",
+        "Solo si el sistema operativo es Windows Server."
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.1-026",
+      "enunciado": "¿Qué nombre reciben los puertos del rango 1024-49151?",
+      "opciones": [
+        "Puertos conocidos.",
+        "Puertos registrados.",
+        "Puertos dinámicos.",
+        "Puertos privados exclusivos del cliente."
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.1-027",
+      "enunciado": "¿Quiénes suelen utilizar los puertos registrados?",
+      "opciones": [
+        "Los administradores de red al instalar la red.",
+        "Los programadores cuando programan un servicio.",
+        "Los usuarios finales al abrir un navegador.",
+        "Únicamente los servicios oficiales del sistema operativo."
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.1-028",
+      "enunciado": "¿Qué nombre reciben los puertos del rango 49152-65535?",
+      "opciones": [
+        "Puertos conocidos.",
+        "Puertos registrados.",
+        "Puertos dinámicos y/o privados.",
+        "Puertos legacy reservados al fabricante."
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.1-029",
+      "enunciado": "¿Para qué se utilizan los puertos dinámicos y/o privados?",
+      "opciones": [
+        "Para alojar servicios oficiales de Internet.",
+        "Para comunicaciones muy cortas, de ahí su nombre de \"dinámico\".",
+        "Para comunicaciones permanentes de larga duración.",
+        "Para conexiones que requieren autorización del administrador."
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.1-030",
+      "enunciado": "¿Cómo elige el cliente el puerto que utiliza para iniciar una conexión?",
+      "opciones": [
+        "Siempre el mismo puerto que el servidor.",
+        "De forma aleatoria entre los disponibles, nunca entre los puertos 0 y 1023.",
+        "Manualmente por parte del usuario en cada conexión.",
+        "Siempre del rango 0-1023 por ser los más rápidos."
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.1-031",
+      "enunciado": "¿Por qué el cliente nunca elige un puerto del rango 0-1023?",
+      "opciones": [
+        "Porque están reservados para los servidores.",
+        "Porque son puertos físicos, no virtuales.",
+        "Porque son demasiado lentos para la comunicación cliente.",
+        "Porque son privados del fabricante del hardware."
+      ],
+      "correcta": 0,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.1-032",
+      "enunciado": "Indica la afirmación INCORRECTA sobre los tramos de puertos.",
+      "opciones": [
+        "Hay 65536 puertos posibles porque se codifican con 16 bits.",
+        "Los puertos del 1024 al 49151 son los \"registrados\".",
+        "Los puertos del 49152 al 65535 son los \"dinámicos y/o privados\".",
+        "El cliente elige siempre un puerto del rango 0-1023."
+      ],
+      "correcta": 3,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.1-033",
+      "enunciado": "¿Qué servicio o aplicación está asociado al puerto 80?",
+      "opciones": [
+        "FTP",
+        "SMTP",
+        "HTTP",
+        "POP3"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.1-034",
+      "enunciado": "¿Qué servicio o aplicación está asociado al puerto 25?",
+      "opciones": [
+        "Telnet",
+        "SMTP",
+        "DNS",
+        "IMAP"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.1-035",
+      "enunciado": "¿Qué servicio o aplicación está asociado al puerto 53?",
+      "opciones": [
+        "HTTP",
+        "DNS",
+        "Telnet",
+        "FTP"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.1-036",
+      "enunciado": "¿Qué servicio o aplicación está asociado al puerto 23?",
+      "opciones": [
+        "FTP",
+        "Telnet",
+        "SMTP",
+        "NNTP"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.1-037",
+      "enunciado": "¿Qué servicio o aplicación está asociado al puerto 110?",
+      "opciones": [
+        "IMAP",
+        "NNTP",
+        "POP3",
+        "HTTP"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.1-038",
+      "enunciado": "¿Qué servicio o aplicación está asociado al puerto 143?",
+      "opciones": [
+        "POP3",
+        "DNS",
+        "IMAP",
+        "Telnet"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.1-039",
+      "enunciado": "¿Qué servicio o aplicación está asociado al puerto 119?",
+      "opciones": [
+        "IMAP",
+        "NNTP",
+        "SMTP",
+        "HTTP"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.1-040",
+      "enunciado": "El protocolo FTP utiliza dos puertos, uno de control y otro de datos. ¿Cuáles son?",
+      "opciones": [
+        "20 control y 21 datos.",
+        "21 control y 20 datos.",
+        "80 control y 443 datos.",
+        "Ambos en el puerto 21."
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.1-041",
+      "enunciado": "Indica la asociación puerto-servicio CORRECTA.",
+      "opciones": [
+        "Puerto 21 → DNS",
+        "Puerto 25 → SMTP",
+        "Puerto 80 → POP3",
+        "Puerto 110 → HTTP"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.1-042",
+      "enunciado": "Indica la asociación puerto-servicio INCORRECTA.",
+      "opciones": [
+        "80 → HTTP",
+        "53 → DNS",
+        "25 → IMAP",
+        "23 → Telnet"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.1-043",
+      "enunciado": "¿Qué puerto utiliza el servicio HTTP?",
+      "opciones": [
+        "25",
+        "53",
+        "80",
+        "110"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.1-044",
+      "enunciado": "¿Qué puerto utiliza el servicio SMTP?",
+      "opciones": [
+        "21",
+        "25",
+        "53",
+        "110"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.1-045",
+      "enunciado": "¿Qué puerto utiliza el servicio DNS?",
+      "opciones": [
+        "21",
+        "25",
+        "53",
+        "110"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.1-046",
+      "enunciado": "¿Qué puerto utiliza el servicio Telnet?",
+      "opciones": [
+        "21",
+        "23",
+        "25",
+        "53"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.1-047",
+      "enunciado": "¿Qué puerto utiliza el servicio POP3?",
+      "opciones": [
+        "80",
+        "110",
+        "119",
+        "143"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.1-048",
+      "enunciado": "¿Qué puerto utiliza el servicio IMAP?",
+      "opciones": [
+        "110",
+        "119",
+        "143",
+        "80"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.1-049",
+      "enunciado": "¿Qué puerto utiliza el servicio NNTP?",
+      "opciones": [
+        "110",
+        "119",
+        "143",
+        "80"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.1-050",
+      "enunciado": "¿Qué puerto utiliza el servicio FTP para los datos?",
+      "opciones": [
+        "20",
+        "21",
+        "22",
+        "25"
+      ],
+      "correcta": 0,
+      "explicacion": ""
+    }
+  ]
+}

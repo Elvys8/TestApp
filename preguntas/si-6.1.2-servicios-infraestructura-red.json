@@ -1,0 +1,1065 @@
+{
+  "schema_version": 1,
+  "id": "si-6.1.2-servicios-infraestructura-red",
+  "asignatura": "Sistemas Informáticos",
+  "asignatura_color": "#1C3C6F",
+  "tema": "6.1.2 Servicios de infraestructura de red",
+  "preguntas": [
+    {
+      "id": "si-6.1.2-001",
+      "enunciado": "¿Qué servicio permite a un servidor actuar como router para permitir la comunicación entre dos o más redes?",
+      "opciones": [
+        "Servidor DHCP",
+        "Encaminamiento",
+        "Servidor DNS",
+        "Servidor de dominio"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-002",
+      "enunciado": "¿Qué es normalmente la puerta de enlace por la que saldremos a Internet?",
+      "opciones": [
+        "La dirección IP del servidor DNS",
+        "La dirección MAC del equipo",
+        "La dirección del router",
+        "La dirección IP del servidor DHCP"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-003",
+      "enunciado": "¿Cuál es la función principal del servidor DHCP?",
+      "opciones": [
+        "Traducir direcciones web a direcciones IP",
+        "Permitir la comunicación entre redes distintas",
+        "Asignar automáticamente la configuración IP a los equipos clientes",
+        "Almacenar las páginas web visitadas por los clientes"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-004",
+      "enunciado": "¿Por qué normalmente al conectar un ordenador en casa no es necesario configurar la dirección IP de forma manual?",
+      "opciones": [
+        "Porque el sistema operativo asigna una IP por defecto",
+        "Porque los routers de las compañías telefónicas suelen tener instalado un servidor DHCP",
+        "Porque los ordenadores domésticos no necesitan dirección IP",
+        "Porque la IP se obtiene del servidor DNS"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-005",
+      "enunciado": "¿Qué servicio traduce las direcciones web utilizadas en los navegadores a las direcciones IP correspondientes?",
+      "opciones": [
+        "Servidor DHCP",
+        "Servidor de encaminamiento",
+        "Servidor DNS",
+        "Servidor proxy"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-006",
+      "enunciado": "¿A qué se compara el funcionamiento de un servidor DNS?",
+      "opciones": [
+        "A un fichero de configuración del router",
+        "A una agenda telefónica de números MAC",
+        "A un diccionario con 2 columnas: direcciones web y direcciones IP",
+        "A un árbol jerárquico de carpetas y ficheros"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-007",
+      "enunciado": "¿Por qué en los ordenadores de domicilios particulares no suele ser necesario especificar la IP del servidor DNS?",
+      "opciones": [
+        "Porque los navegadores web la incluyen de fábrica",
+        "Porque suele estar indicada en los routers",
+        "Porque el servidor DHCP no la necesita",
+        "Porque no se utiliza el DNS en redes domésticas"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-008",
+      "enunciado": "¿Qué significan las siglas DHCP?",
+      "opciones": [
+        "Domain Host Configuration Protocol",
+        "Dynamic Host Connection Protocol",
+        "Dynamic Host Configuration Protocol",
+        "Direct Host Configuration Protocol"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-009",
+      "enunciado": "¿Cómo se traduce DHCP al castellano?",
+      "opciones": [
+        "Protocolo de distribución de host configurables",
+        "Protocolo de configuración de equipo dinámica",
+        "Protocolo dinámico de host conectados",
+        "Protocolo de host con dirección configurada"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-010",
+      "enunciado": "¿Cómo es el mantenimiento y la configuración de la red de los equipos en una red pequeña?",
+      "opciones": [
+        "Imposible sin un servidor DHCP",
+        "Muy costoso en tiempo",
+        "Relativamente fácil",
+        "Idéntico al de una red grande"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-011",
+      "enunciado": "En una red grande, ¿qué supone cualquier cambio en la configuración de red (dirección IP, puerta de enlace, DNS)?",
+      "opciones": [
+        "Es imperceptible para los usuarios",
+        "Conlleva un excesivo tiempo para ejecutar la tarea",
+        "Solo afecta al servidor DNS",
+        "No requiere intervención del administrador"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-012",
+      "enunciado": "¿Qué inconveniente principal tiene utilizar IPs estáticas (IP fijas) en una red?",
+      "opciones": [
+        "Que no permiten conectarse a Internet",
+        "Que pueden obtener un mal aprovechamiento de las direcciones IP de la red",
+        "Que son incompatibles con el servidor DNS",
+        "Que solo funcionan en redes pequeñas"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-013",
+      "enunciado": "¿Cuántos equipos se pueden tener como máximo en una red de clase C?",
+      "opciones": [
+        "128",
+        "254",
+        "512",
+        "1024"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-014",
+      "enunciado": "¿Qué ventaja aporta configurar las direcciones IP de forma dinámica frente a estática?",
+      "opciones": [
+        "Que permite usar más de un servidor DNS",
+        "Que se pueden reutilizar las direcciones IP en otros equipos",
+        "Que no requiere puerta de enlace",
+        "Que mejora la velocidad de navegación"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-015",
+      "enunciado": "En el ejemplo de la empresa con bastantes ordenadores portátiles (más de 254), ¿qué ocurre cuando un equipo se apaga?",
+      "opciones": [
+        "Su dirección IP se reserva permanentemente para ese equipo",
+        "Su dirección IP queda libre para otro ordenador",
+        "El servidor DHCP se reinicia",
+        "Se pierde la configuración del servidor DNS"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-016",
+      "enunciado": "¿Cuál de los siguientes datos NO está entre los mínimos que un servidor DHCP proporciona a un cliente?",
+      "opciones": [
+        "Dirección IP",
+        "Máscara de red",
+        "Dirección MAC",
+        "Dirección IP de la puerta de enlace"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-017",
+      "enunciado": "¿Cómo se denomina también la puerta de enlace?",
+      "opciones": [
+        "Proxy",
+        "Broadcast",
+        "Gateway",
+        "Loopback"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-018",
+      "enunciado": "¿Qué dato relacionado con la resolución de nombres web proporciona el servidor DHCP entre sus datos mínimos?",
+      "opciones": [
+        "El nombre de dominio del cliente",
+        "La dirección IP del servidor DNS",
+        "La tabla `hosts` del cliente",
+        "El FQDN del servidor DHCP"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-019",
+      "enunciado": "¿Cuál de los siguientes es uno de los datos mínimos proporcionados por el servidor DHCP relacionado con el direccionamiento de la subred?",
+      "opciones": [
+        "La dirección de broadcast",
+        "La máscara de red",
+        "La dirección de loopback",
+        "El identificador de VLAN"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-020",
+      "enunciado": "Además de la dirección IP, la máscara de red y la dirección IP del servidor DNS, ¿qué otro dato mínimo entrega el servidor DHCP al cliente?",
+      "opciones": [
+        "La dirección MAC del router",
+        "El nombre del dominio",
+        "La dirección IP de la puerta de enlace o gateway",
+        "La velocidad máxima de la conexión"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-021",
+      "enunciado": "Indica la afirmación correcta sobre los datos mínimos que un servidor DHCP entrega al cliente.",
+      "opciones": [
+        "Incluyen la dirección MAC y la máscara de red",
+        "Incluyen la dirección IP, máscara de red, IP de la puerta de enlace e IP del servidor DNS",
+        "Solo incluyen la dirección IP y la máscara de red",
+        "Incluyen la dirección IP del cliente y la del servidor primario DNS, pero no la del gateway"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-022",
+      "enunciado": "¿Cuántos métodos de asignación de direcciones IP incluye el protocolo DHCP?",
+      "opciones": [
+        "Uno",
+        "Dos",
+        "Tres",
+        "Cuatro"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-023",
+      "enunciado": "¿En qué consiste la asignación dinámica del protocolo DHCP?",
+      "opciones": [
+        "En asignar siempre la misma IP a un equipo concreto",
+        "En asignar direcciones IP libres de un rango establecido por el administrador",
+        "En asignar direcciones IP en función de la dirección MAC",
+        "En que el cliente elige libremente su propia dirección IP"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-024",
+      "enunciado": "¿En qué consiste el método de reserva por dirección IP?",
+      "opciones": [
+        "En reservar un rango libre de direcciones IP para futuros equipos",
+        "En asignar siempre la misma IP a un equipo concreto",
+        "En reservar la dirección del servidor DNS para los clientes",
+        "En reservar las IPs de los servidores primarios"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-025",
+      "enunciado": "¿Qué dato del equipo se utiliza en el método de reserva por dirección IP para asignar siempre la misma IP?",
+      "opciones": [
+        "El nombre del equipo (hostname)",
+        "El número de serie del fabricante",
+        "La dirección MAC",
+        "El FQDN del equipo"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-026",
+      "enunciado": "¿Quién establece el rango de direcciones del que se asignan las IPs libres en la asignación dinámica?",
+      "opciones": [
+        "El propio cliente DHCP",
+        "El servidor DNS",
+        "El administrador",
+        "El proveedor de Internet de forma automática"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-027",
+      "enunciado": "¿Por qué es deseable que una impresora en red tenga siempre la misma dirección IP?",
+      "opciones": [
+        "Porque las impresoras no admiten configuración dinámica de IP",
+        "Porque si cambia de IP habría que configurarla nuevamente en todos los equipos clientes que la utilicen",
+        "Porque consume menos ancho de banda",
+        "Porque solo así puede registrarse en el servidor DNS"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-028",
+      "enunciado": "¿Cuál de los siguientes es un caso típico que se beneficia del método de reserva por dirección IP?",
+      "opciones": [
+        "Un ordenador portátil de un empleado que se mueve por la oficina",
+        "Una impresora en red",
+        "Un equipo invitado que se conecta puntualmente",
+        "Un servidor DNS externo a la red local"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-029",
+      "enunciado": "¿Qué significan las siglas DNS?",
+      "opciones": [
+        "Dynamic Name Service",
+        "Domain Network System",
+        "Domain Name System",
+        "Direct Name Service"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-030",
+      "enunciado": "¿Cómo se traduce DNS al castellano?",
+      "opciones": [
+        "Servicio de nombres dinámicos",
+        "Sistema de nombres de dominio",
+        "Servidor de nombres directos",
+        "Sistema de direcciones de red"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-031",
+      "enunciado": "Si ejecutamos `ping www.educa.madrid.org`, ¿qué dirección IP responde según el ejemplo del material?",
+      "opciones": [
+        "192.168.1.1",
+        "213.229.137.36",
+        "213.137.229.36",
+        "127.0.0.1"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-032",
+      "enunciado": "¿Qué ventaja, además de la facilidad de memorización, ofrece usar nombres de dominio en lugar de direcciones IP?",
+      "opciones": [
+        "Mayor velocidad de carga",
+        "Mayor seguridad frente a ataques",
+        "Mayor flexibilidad ante cambios de alojamiento de la página web",
+        "Menor consumo de ancho de banda"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-033",
+      "enunciado": "Si cambia el alojamiento de una página web y por tanto su dirección IP, ¿qué notan los clientes que la visitan por su nombre de dominio?",
+      "opciones": [
+        "Tienen que actualizar manualmente su navegador",
+        "No notan ningún cambio, siguen navegando en la misma dirección web",
+        "Reciben un mensaje de error hasta que se actualicen los DNS",
+        "Deben cambiar la IP en su fichero hosts"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-034",
+      "enunciado": "Inicialmente, ¿dónde se realizaba la asociación entre nombres y direcciones IP?",
+      "opciones": [
+        "En el router de la red local",
+        "En un servidor central por país",
+        "En un fichero de los propios ordenadores",
+        "En el navegador web"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-035",
+      "enunciado": "¿Cuál era la ruta del fichero de asociación nombre-IP en Windows?",
+      "opciones": [
+        "/etc/hosts",
+        "\\winnt\\system32\\driver\\etc\\hosts",
+        "\\windows\\system\\hosts.txt",
+        "\\winnt\\dns\\hosts.cfg"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-036",
+      "enunciado": "¿Cuál es la ruta del fichero de asociación nombre-IP en Linux?",
+      "opciones": [
+        "/var/log/hosts",
+        "/usr/local/etc/hosts",
+        "/etc/hosts",
+        "/etc/dns/hosts"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-037",
+      "enunciado": "¿Qué problema presentaba la asociación nombre-IP mediante un fichero local en cada ordenador?",
+      "opciones": [
+        "Que solo funcionaba en redes pequeñas con menos de 254 equipos",
+        "Que cualquier cambio significaba cambiar el fichero en todos los ordenadores de la red",
+        "Que no era compatible con el protocolo DHCP",
+        "Que requería una IP fija en cada equipo"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-038",
+      "enunciado": "¿Qué características aporta el sistema DNS basado en dominios frente al fichero `hosts` local?",
+      "opciones": [
+        "Centralización para la sincronización y un sistema jerárquico de administración focalizada y descentralizada",
+        "Menor consumo de IPs en redes de clase C",
+        "Asignación automática de direcciones IP a los clientes",
+        "Asignación de direcciones MAC a cada nombre de dominio"
+      ],
+      "correcta": 0,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-039",
+      "enunciado": "¿Cómo se estructura el sistema de nombres de dominios?",
+      "opciones": [
+        "Como una lista plana de nombres y direcciones IP",
+        "Como una tabla relacional con clave primaria",
+        "Como un árbol jerárquico",
+        "Como un grafo cíclico de dominios"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-040",
+      "enunciado": "¿Con qué se compara la organización del sistema de nombres de dominios en el material?",
+      "opciones": [
+        "Con la organización de los ficheros en los sistemas operativos",
+        "Con la estructura de las redes Ethernet",
+        "Con la base de datos de un servidor DHCP",
+        "Con la tabla de enrutamiento de un router"
+      ],
+      "correcta": 0,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-041",
+      "enunciado": "¿Cómo se denominan las distintas ramas del árbol jerárquico del sistema de nombres?",
+      "opciones": [
+        "Hojas",
+        "Nodos",
+        "Subdominios de servicio",
+        "Dominios"
+      ],
+      "correcta": 3,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-042",
+      "enunciado": "¿Qué significa FQDN?",
+      "opciones": [
+        "Es el nombre completo de un equipo, equivalente al path absoluto",
+        "Es el nombre del dominio de primer nivel",
+        "Es el nombre abreviado del servidor DNS",
+        "Es la dirección IP en formato textual"
+      ],
+      "correcta": 0,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-043",
+      "enunciado": "En la analogía con un sistema de ficheros, ¿a qué equivale el FQDN o nombre completo de un equipo?",
+      "opciones": [
+        "Al nombre de una carpeta",
+        "Al nombre de un fichero",
+        "A la unidad de disco",
+        "Al sistema de archivos completo"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-044",
+      "enunciado": "¿Cómo se obtiene el FQDN de un equipo?",
+      "opciones": [
+        "Recorriendo los dominios desde la raíz del árbol hasta las hojas",
+        "Recorriendo los dominios desde las hojas hasta la raíz del árbol",
+        "Concatenando solo el dominio de primer nivel y el de segundo",
+        "Tomando únicamente el dominio donde reside el equipo"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-045",
+      "enunciado": "¿Qué carácter se utiliza como separador entre los dominios al construir un FQDN?",
+      "opciones": [
+        "La barra '/'",
+        "El guion '-'",
+        "El punto '.'",
+        "Los dos puntos ':'"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-046",
+      "enunciado": "¿De qué depende que se hable de dominios de primer, segundo o tercer nivel?",
+      "opciones": [
+        "De la cantidad de servidores DNS implicados",
+        "De la profundidad del árbol",
+        "Del número de caracteres del nombre",
+        "Del tipo de organización propietaria del dominio"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-047",
+      "enunciado": "Según el ejemplo del material, ¿de qué nivel es el dominio www.microsoft.com?",
+      "opciones": [
+        "De primer nivel",
+        "De segundo nivel",
+        "De tercer nivel",
+        "De cuarto nivel"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-048",
+      "enunciado": "¿Cómo son los nombres de los nodos del primer nivel del árbol de dominios?",
+      "opciones": [
+        "Los elige libremente cada propietario",
+        "Están establecidos de antemano",
+        "Los asigna automáticamente el servidor DHCP",
+        "Cambian periódicamente cada año"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-049",
+      "enunciado": "¿Qué dos tipos de divisiones existen en el primer nivel del árbol de dominios?",
+      "opciones": [
+        "Pública y privada",
+        "Primaria y secundaria",
+        "Geográfica y organizativa",
+        "Estática y dinámica"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-050",
+      "enunciado": "¿Qué criterio se aplica en la división geográfica del primer nivel?",
+      "opciones": [
+        "Una rama por continente",
+        "Una rama por idioma",
+        "Una rama por país",
+        "Una rama por proveedor de Internet"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-051",
+      "enunciado": "¿Qué dominio de primer nivel corresponde a España?",
+      "opciones": [
+        ".sp",
+        ".esp",
+        ".es",
+        ".eu"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-052",
+      "enunciado": "¿Qué dominio de primer nivel corresponde a Gran Bretaña?",
+      "opciones": [
+        ".gb",
+        ".uk",
+        ".br",
+        ".en"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-053",
+      "enunciado": "¿Qué dominio de primer nivel corresponde a Alemania?",
+      "opciones": [
+        ".al",
+        ".ge",
+        ".ale",
+        ".de"
+      ],
+      "correcta": 3,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-054",
+      "enunciado": "¿A qué país pertenece el dominio de primer nivel `.es`?",
+      "opciones": [
+        "Estados Unidos",
+        "España",
+        "Estonia",
+        "Eslovaquia"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-055",
+      "enunciado": "¿A qué país pertenece el dominio de primer nivel `.uk`?",
+      "opciones": [
+        "Ucrania",
+        "Uruguay",
+        "Gran Bretaña",
+        "Estados Unidos"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-056",
+      "enunciado": "¿A qué país pertenece el dominio de primer nivel `.de`?",
+      "opciones": [
+        "Dinamarca",
+        "Alemania",
+        "República Dominicana",
+        "Bélgica"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-057",
+      "enunciado": "¿Qué dominio de primer nivel se utiliza para empresas, independientemente del país en el que se encuentren?",
+      "opciones": [
+        ".org",
+        ".int",
+        ".com",
+        ".edu"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-058",
+      "enunciado": "¿Qué dominio de primer nivel se utiliza para organizaciones establecidas mediante tratados internacionales?",
+      "opciones": [
+        ".org",
+        ".int",
+        ".gov",
+        ".com"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-059",
+      "enunciado": "¿Qué dominio de primer nivel se utiliza para organizaciones no gubernamentales?",
+      "opciones": [
+        ".gov",
+        ".int",
+        ".ngo",
+        ".org"
+      ],
+      "correcta": 3,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-060",
+      "enunciado": "¿Qué dominio de primer nivel se utiliza para organizaciones educativas?",
+      "opciones": [
+        ".edu",
+        ".org",
+        ".esc",
+        ".gov"
+      ],
+      "correcta": 0,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-061",
+      "enunciado": "¿Qué dominio de primer nivel se utiliza para el gobierno de EE.UU.?",
+      "opciones": [
+        ".usa",
+        ".gov",
+        ".gob",
+        ".mil"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-062",
+      "enunciado": "¿Qué dominio de primer nivel se utiliza para el ejército de EE.UU.?",
+      "opciones": [
+        ".arm",
+        ".gov",
+        ".mil",
+        ".usa"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-063",
+      "enunciado": "¿A qué tipo de organizaciones corresponde el dominio `.com`?",
+      "opciones": [
+        "A empresas, independientemente del país en el que se encuentren",
+        "Solo a empresas estadounidenses",
+        "A organizaciones comunitarias",
+        "A organizaciones no gubernamentales"
+      ],
+      "correcta": 0,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-064",
+      "enunciado": "¿A qué corresponde el dominio de primer nivel `.int`?",
+      "opciones": [
+        "A empresas internacionales privadas",
+        "A organizaciones establecidas mediante tratados internacionales",
+        "A intranets corporativas",
+        "A proveedores de Internet"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-065",
+      "enunciado": "¿A qué corresponde el dominio de primer nivel `.org`?",
+      "opciones": [
+        "A organizaciones no gubernamentales",
+        "A organismos del gobierno",
+        "A empresas establecidas mediante tratados",
+        "A organizaciones educativas"
+      ],
+      "correcta": 0,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-066",
+      "enunciado": "¿A qué corresponde el dominio de primer nivel `.edu`?",
+      "opciones": [
+        "A editoriales",
+        "A organizaciones educativas",
+        "A organizaciones del estado de Edimburgo",
+        "A entidades de formación profesional únicamente"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-067",
+      "enunciado": "¿A qué corresponde el dominio de primer nivel `.mil`?",
+      "opciones": [
+        "Al ejército de EE.UU.",
+        "A organizaciones milenarias",
+        "A asociaciones militares de tratados internacionales",
+        "A miles de empresas certificadas"
+      ],
+      "correcta": 0,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-068",
+      "enunciado": "¿Qué dominio de primer nivel introducido posteriormente se utiliza para nombres de personas?",
+      "opciones": [
+        ".info",
+        ".web",
+        ".name",
+        ".per"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-069",
+      "enunciado": "¿Qué dominio de primer nivel introducido posteriormente se utiliza para proveedores de servicios de información?",
+      "opciones": [
+        ".web",
+        ".info",
+        ".name",
+        ".com"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-070",
+      "enunciado": "¿Qué dominio de primer nivel introducido posteriormente se utiliza para empresas relativas a servicios web?",
+      "opciones": [
+        ".info",
+        ".name",
+        ".net",
+        ".web"
+      ],
+      "correcta": 3,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-071",
+      "enunciado": "Indica la afirmación correcta sobre las divisiones del primer nivel de dominios.",
+      "opciones": [
+        "El dominio `.com` solo puede ser utilizado por empresas estadounidenses",
+        "Los dominios `.gov` y `.mil` corresponden al gobierno y al ejército de EE.UU. respectivamente",
+        "El dominio `.org` está reservado a organizaciones gubernamentales",
+        "`.int` se utiliza para empresas con presencia en varios países"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-072",
+      "enunciado": "¿En quién se delega la asignación de nombres de cada rama del árbol jerárquico?",
+      "opciones": [
+        "En el cliente DHCP de cada red",
+        "En un responsable",
+        "En el servidor DNS más cercano",
+        "En el organismo internacional ICANN, en todos los casos"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-073",
+      "enunciado": "¿Qué empresa mantiene la rama `.es` en España?",
+      "opciones": [
+        "Telefónica",
+        "RED.ES",
+        "AEPD",
+        "DNS.ES"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-074",
+      "enunciado": "¿Qué tipo de empresa es RED.ES?",
+      "opciones": [
+        "Una empresa privada de telecomunicaciones",
+        "Una empresa pública",
+        "Una organización no gubernamental",
+        "Una empresa extranjera con sede en España"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-075",
+      "enunciado": "¿Puede RED.ES delegar la resolución de nombres de las distintas ramas en las que se divide?",
+      "opciones": [
+        "No, debe gestionarlas todas directamente",
+        "Sí, puede delegarla en otras corporaciones",
+        "Solo si lo autoriza el gobierno central",
+        "Solo en empresas extranjeras"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-076",
+      "enunciado": "¿Cuál es una característica crucial del servicio DNS?",
+      "opciones": [
+        "La máxima velocidad de respuesta",
+        "La máxima compatibilidad con DHCP",
+        "La máxima disponibilidad",
+        "La máxima capacidad de almacenamiento"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-077",
+      "enunciado": "¿Cómo se consigue la máxima disponibilidad del servicio DNS?",
+      "opciones": [
+        "Reduciendo el tamaño del fichero hosts",
+        "Existiendo varios servidores capaces de realizar el mismo servicio",
+        "Eliminando los dominios de tercer nivel",
+        "Asignando una IP fija a cada nombre de dominio"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-078",
+      "enunciado": "¿En qué servidor sigue recayendo la autoridad de resolución de nombres de zona?",
+      "opciones": [
+        "En el servidor secundario",
+        "En cualquier servidor disponible",
+        "En un servidor principal",
+        "En el router de la red"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-079",
+      "enunciado": "¿Cómo se denominan los servidores DNS con autoridad?",
+      "opciones": [
+        "Servidores raíz",
+        "Servidores primarios",
+        "Servidores principales delegados",
+        "Servidores de zona"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-080",
+      "enunciado": "¿Cómo se denominan los servidores DNS que no tienen autoridad de resolución de nombres de zona?",
+      "opciones": [
+        "Servidores delegados",
+        "Servidores espejo",
+        "Servidores secundarios",
+        "Servidores caché"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-081",
+      "enunciado": "¿Qué debe ocurrir cada vez que se modifica un dato del servidor primario?",
+      "opciones": [
+        "Debe reiniciarse el servidor primario",
+        "Debe transmitirse a todos los secundarios",
+        "Debe notificarse únicamente al administrador",
+        "Debe esperarse 24 horas para propagarse automáticamente"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-082",
+      "enunciado": "¿Por qué los cambios del servidor primario deben transmitirse a todos los secundarios?",
+      "opciones": [
+        "Para reducir el consumo de IPs",
+        "Para evitar problemas de sincronización y garantizar el correcto funcionamiento del sistema",
+        "Para autorizarlos como nuevos servidores principales",
+        "Para que cada secundario los rechace si están desactualizados"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-083",
+      "enunciado": "Según la reglamentación española, ¿quién puede solicitar el registro de un dominio?",
+      "opciones": [
+        "Solo las empresas multinacionales",
+        "Solo personas físicas residentes en la Unión Europea",
+        "Cualquier persona física con residencia en España y empresas constituidas según la legislación española",
+        "Solo organismos públicos del Estado"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-084",
+      "enunciado": "¿A través de quién se solicita el registro de un dominio en España?",
+      "opciones": [
+        "Directamente a través de RED.ES",
+        "A través de los agentes registradores acreditados",
+        "A través del proveedor de Internet del solicitante",
+        "A través de la Agencia Tributaria"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-085",
+      "enunciado": "¿Cuál de los siguientes NO está permitido por la reglamentación española como nombre de dominio?",
+      "opciones": [
+        "El nombre o abreviatura de una empresa que la identifique de forma inequívoca",
+        "Un nombre comercial o de marca",
+        "Una palabra inventada sin relación con el solicitante",
+        "El nombre de una persona tal y como aparece en su DNI"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-086",
+      "enunciado": "Según la reglamentación española, ¿cuál es el número máximo de caracteres permitido para el nombre de personas tal y como aparecen en su DNI?",
+      "opciones": [
+        "30 caracteres",
+        "50 caracteres",
+        "60 caracteres",
+        "100 caracteres"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-087",
+      "enunciado": "¿Cuál de los siguientes es un nombre de dominio permitido por la reglamentación española relacionado con la actividad profesional?",
+      "opciones": [
+        "Cualquier término genérico relativo a un sector profesional",
+        "Nombres de profesiones junto con el apellido o nombre del profesional o del nombre del establecimiento",
+        "Solo el nombre del colegio profesional correspondiente",
+        "El número de colegiado del profesional"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.2-088",
+      "enunciado": "Indica la afirmación correcta sobre los servidores DNS y el registro de dominios.",
+      "opciones": [
+        "Los servidores secundarios poseen la autoridad de resolución de nombres de zona",
+        "En España, RED.ES mantiene la rama .es y puede delegar la resolución de nombres en otras corporaciones",
+        "El registro de dominios en España solo se realiza directamente ante RED.ES, sin agentes intermedios",
+        "Los cambios del servidor primario no necesitan transmitirse a los secundarios"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    }
+  ]
+}

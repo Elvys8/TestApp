@@ -1,0 +1,621 @@
+{
+  "schema_version": 1,
+  "id": "si-6.1.3-servicios-comparticion-ficheros",
+  "asignatura": "Sistemas Informáticos",
+  "asignatura_color": "#1C3C6F",
+  "tema": "6.1.3 Servicios de compartición de ficheros",
+  "preguntas": [
+    {
+      "id": "si-6.1.3-001",
+      "enunciado": "¿Cuál es la función principal de un servidor de ficheros?",
+      "opciones": [
+        "Ejecutar aplicaciones de forma centralizada para los clientes",
+        "Almacenar y organizar archivos de forma centralizada permitiendo el acceso compartido",
+        "Gestionar las direcciones IP de los dispositivos de la red",
+        "Proporcionar acceso a Internet a los equipos de la red"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.3-002",
+      "enunciado": "¿Cuáles son los protocolos de acceso a archivos mencionados como soporte habitual de un servidor de ficheros?",
+      "opciones": [
+        "HTTP, FTP y SMTP",
+        "SMB/CIFS, NFS y FTP",
+        "SSH, NFS y HTTP",
+        "FTP, SMTP y SMB/CIFS"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.3-003",
+      "enunciado": "¿Qué característica de un servidor de ficheros hace referencia a SMB/CIFS, NFS y FTP?",
+      "opciones": [
+        "Gestión centralizada de datos",
+        "Funciones de copia de seguridad y recuperación",
+        "Soporte para múltiples protocolos de acceso a archivos",
+        "Mejora de la seguridad al centralizar el control de acceso"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.3-004",
+      "enunciado": "Un servidor de ficheros mejora la seguridad de la red principalmente porque…",
+      "opciones": [
+        "Cifra todas las comunicaciones entre cliente y servidor",
+        "Centraliza el control de acceso a los archivos",
+        "Impide el uso de protocolos no seguros como FTP",
+        "Distribuye los archivos entre varios nodos para evitar fallos"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.3-005",
+      "enunciado": "¿Cuál de las siguientes afirmaciones sobre un servidor de ficheros es correcta?",
+      "opciones": [
+        "Su función principal es gestionar cuentas de usuario y contraseñas",
+        "Solo permite el acceso a archivos desde un único dispositivo a la vez",
+        "Facilita la colaboración entre usuarios al permitir el acceso compartido a archivos",
+        "Requiere que cada usuario almacene una copia local de los archivos"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.3-006",
+      "enunciado": "¿Cuál de las siguientes es una característica aportada por un servidor de ficheros?",
+      "opciones": [
+        "Procesamiento distribuido de tareas",
+        "Gestión independiente de datos en cada equipo cliente",
+        "Ejecución centralizada de aplicaciones",
+        "Funciones de copia de seguridad y recuperación"
+      ],
+      "correcta": 3,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.3-007",
+      "enunciado": "¿Cuál es la función principal de un NAS?",
+      "opciones": [
+        "Proporcionar acceso a nivel de bloque a datos almacenados",
+        "Replicar ficheros entre múltiples servidores distribuidos",
+        "Ser un servidor dedicado a la compartición de ficheros en red",
+        "Ofrecer almacenamiento basado en la nube con alta disponibilidad"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.3-008",
+      "enunciado": "¿Qué tipo de servidor proporciona acceso a nivel de bloque a datos almacenados?",
+      "opciones": [
+        "NAS",
+        "SAN",
+        "Servidor de ficheros distribuidos",
+        "Servidor de ficheros basado en SO"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.3-009",
+      "enunciado": "¿En qué se diferencia un SAN de un NAS?",
+      "opciones": [
+        "El SAN comparte ficheros en red mientras que el NAS da acceso a nivel de bloque",
+        "El NAS da acceso a nivel de bloque mientras que el SAN comparte ficheros en red",
+        "El SAN da acceso a nivel de bloque mientras que el NAS da acceso a nivel de archivo",
+        "El NAS usa Fibre Channel mientras que el SAN usa SMB/CIFS"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.3-010",
+      "enunciado": "¿Qué proveedores se mencionan como ejemplos de servicios de almacenamiento en la nube?",
+      "opciones": [
+        "TrueNAS, OpenMediaVault y Nextcloud",
+        "Google Drive, Dropbox y OneDrive",
+        "Filezilla, VSftpd e IIS",
+        "Nextcloud, OneDrive y TrueNAS"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.3-011",
+      "enunciado": "¿Qué tipo de servidor permite crear una infraestructura propia de replicación de ficheros de forma distribuida?",
+      "opciones": [
+        "NAS",
+        "SAN",
+        "Servicios de almacenamiento en la nube",
+        "Servidores de ficheros distribuidos"
+      ],
+      "correcta": 3,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.3-012",
+      "enunciado": "¿En qué se distinguen los servidores de ficheros basados en Sistemas Operativos de un NAS?",
+      "opciones": [
+        "Los basados en SO usan Fibre Channel mientras que el NAS usa SMB/CIFS",
+        "Los basados en SO son servidores dedicados exclusivamente a compartir ficheros",
+        "Los basados en SO comparten ficheros a través de SMB/CIFS o NFS pero sin que sea su funcionalidad principal",
+        "Los basados en SO proporcionan acceso a nivel de bloque a diferencia del NAS"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.3-013",
+      "enunciado": "¿Qué característica define a los servidores de ficheros basados en Sistemas Operativos frente a un NAS?",
+      "opciones": [
+        "Son dispositivos específicamente diseñados para la compartición de ficheros",
+        "Son servidores que, además de compartir ficheros, tienen otras funcionalidades",
+        "Solo soportan el protocolo NFS para la compartición de ficheros",
+        "Utilizan una red dedicada de alta velocidad para el acceso al almacenamiento"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.3-014",
+      "enunciado": "Los servidores de ficheros distribuidos son similares en concepto a la nube porque…",
+      "opciones": [
+        "Usan proveedores externos como Google Drive o Dropbox",
+        "Permiten acceder a ficheros sin conocer exactamente su ubicación en un servidor concreto",
+        "Proporcionan acceso a nivel de bloque desde cualquier ubicación",
+        "Requieren un sistema operativo específico como TrueNAS o OpenMediaVault"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.3-015",
+      "enunciado": "¿Cuál es la funcionalidad principal de un NAS?",
+      "opciones": [
+        "Ejecutar aplicaciones para los clientes de la red",
+        "Gestionar las direcciones IP de los dispositivos conectados",
+        "La compartición de ficheros en red",
+        "Proporcionar acceso a nivel de bloque a los datos almacenados"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.3-016",
+      "enunciado": "¿Qué tipo de hardware se menciona como componente habitual en dispositivos NAS específicamente diseñados para esa tarea?",
+      "opciones": [
+        "Una controladora RAID por software",
+        "Una controladora SAS o similar",
+        "Una tarjeta gráfica dedicada",
+        "Un procesador de señal digital"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.3-017",
+      "enunciado": "¿Es posible utilizar un ordenador convencional como NAS?",
+      "opciones": [
+        "No, un NAS siempre requiere hardware específicamente diseñado para esa tarea",
+        "Sí, siempre que disponga de suficiente almacenamiento para ser compartido",
+        "Sí, pero solo si se instala Windows Server como sistema operativo",
+        "No, un ordenador convencional no puede ejecutar sistemas operativos NAS"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.3-018",
+      "enunciado": "¿Qué característica distingue habitualmente a un NAS de otros servidores?",
+      "opciones": [
+        "El uso de una red dedicada de alta velocidad como Fibre Channel",
+        "Disponer de múltiples tarjetas de red para balanceo de carga",
+        "Utilizar un sistema operativo preparado específicamente para la compartición de ficheros",
+        "Soportar únicamente el protocolo SMB/CIFS para el acceso a archivos"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.3-019",
+      "enunciado": "¿Cuál de los siguientes es un ejemplo de sistema operativo para NAS basado en Linux (Debian)?",
+      "opciones": [
+        "TrueNAS",
+        "Windows Server",
+        "Nextcloud",
+        "OpenMediaVault"
+      ],
+      "correcta": 3,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.3-020",
+      "enunciado": "¿Para qué se menciona Nextcloud en el contexto de los NAS?",
+      "opciones": [
+        "Para gestionar usuarios y permisos en entornos Windows",
+        "Para crear una nube privada",
+        "Como sistema operativo basado en Debian para NAS",
+        "Como cliente FTP para acceder al NAS de forma remota"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.3-021",
+      "enunciado": "¿De qué depende el protocolo que se utiliza en un NAS?",
+      "opciones": [
+        "Del fabricante del hardware y del tipo de controladora instalada",
+        "Del número de usuarios que acceden simultáneamente al NAS",
+        "Del sistema operativo instalado y de las funcionalidades que se deseen otorgar",
+        "Del tipo de red (LAN o WAN) a la que está conectado el NAS"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.3-022",
+      "enunciado": "¿Cuáles son los protocolos mencionados que puede utilizar un NAS?",
+      "opciones": [
+        "HTTP, SMTP y FTP",
+        "FTP, NFS y SMB/CIFS",
+        "SSH, NFS y HTTP",
+        "SMB/CIFS, iSCSI y FTP"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.3-023",
+      "enunciado": "¿Para qué sirve el servicio SAMBA?",
+      "opciones": [
+        "Para transferir ficheros entre cliente y servidor mediante doble conexión TCP",
+        "Para compartir recursos entre máquinas Windows y Linux",
+        "Para proporcionar acceso remoto seguro mediante cifrado SSH",
+        "Para gestionar direcciones IP en redes mixtas Windows y Linux"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.3-024",
+      "enunciado": "¿Qué protocolo utiliza SAMBA para compartir recursos?",
+      "opciones": [
+        "NFS",
+        "FTP",
+        "SMB/CIFS",
+        "iSCSI"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.3-025",
+      "enunciado": "¿Qué puertos utiliza el servicio Samba con protocolo UDP?",
+      "opciones": [
+        "139 y 445",
+        "137 y 139",
+        "138 y 445",
+        "137 y 138"
+      ],
+      "correcta": 3,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.3-026",
+      "enunciado": "¿Qué puertos utiliza el servicio Samba con protocolo TCP?",
+      "opciones": [
+        "137 y 138",
+        "139 y 445",
+        "137 y 445",
+        "138 y 139"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.3-027",
+      "enunciado": "¿Cómo se complementa la configuración de seguridad básica de Samba?",
+      "opciones": [
+        "Con el cifrado de todos los ficheros almacenados en el servidor",
+        "Con la seguridad local",
+        "Con la integración obligatoria con Active Directory",
+        "Con el uso exclusivo del protocolo TCP para todas las comunicaciones"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.3-028",
+      "enunciado": "¿Qué ventaja aporta la integración de Samba con Active Directory?",
+      "opciones": [
+        "Permite usar el protocolo NFS en entornos Windows",
+        "Elimina la necesidad de configurar puertos UDP en el servidor",
+        "Permite a los usuarios iniciar sesión con sus credenciales de Windows",
+        "Proporciona cifrado de extremo a extremo en todas las transferencias"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.3-029",
+      "enunciado": "¿Qué permite NFS a un equipo cliente?",
+      "opciones": [
+        "Transferir ficheros mediante una doble conexión TCP al servidor",
+        "Acceder a archivos de un servidor de manera similar a como lo haría con su almacenamiento local",
+        "Compartir recursos entre máquinas Windows y Linux usando credenciales de Active Directory",
+        "Acceder a datos almacenados a nivel de bloque en una red SAN"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.3-030",
+      "enunciado": "¿Qué permisos utiliza NFS para el acceso a los archivos del servidor?",
+      "opciones": [
+        "Permisos propios del protocolo, independientes del sistema operativo",
+        "Permisos definidos por el administrador en el servidor FTP",
+        "Los mismos permisos de seguridad que el almacenamiento local",
+        "Permisos gestionados exclusivamente por Active Directory"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.3-031",
+      "enunciado": "¿En qué sistemas operativos es NFS el protocolo nativo para compartir ficheros?",
+      "opciones": [
+        "Windows Server",
+        "Linux",
+        "macOS",
+        "Windows y Linux por igual"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.3-032",
+      "enunciado": "¿En qué situación se recomienda usar NFS en lugar de SMB?",
+      "opciones": [
+        "Cuando la red tiene máquinas Windows y Linux mezcladas",
+        "Cuando se necesita integración con Active Directory",
+        "Cuando todos los equipos de la red son Linux",
+        "Cuando se requiere acceso a nivel de bloque a los datos"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.3-033",
+      "enunciado": "¿Es NFS compatible con Windows?",
+      "opciones": [
+        "No, NFS es exclusivo de sistemas Linux y no puede usarse en Windows",
+        "Sí, aunque para redes mixtas Windows-Linux es preferible usar SMB",
+        "Sí, y es la opción recomendada frente a SMB en redes mixtas",
+        "No, en redes mixtas siempre se debe usar FTP como alternativa"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.3-034",
+      "enunciado": "¿Qué permite hacer el protocolo FTP?",
+      "opciones": [
+        "Compartir recursos entre máquinas Windows y Linux mediante SMB/CIFS",
+        "Acceder a archivos de un servidor como si fueran almacenamiento local",
+        "Conectarse a un servidor y transferir ficheros en ambos sentidos",
+        "Proporcionar acceso a nivel de bloque a datos almacenados en red"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.3-035",
+      "enunciado": "¿Qué tipo de conexión establece el protocolo FTP entre cliente y servidor?",
+      "opciones": [
+        "Una conexión UDP simple",
+        "Una doble conexión TCP",
+        "Una conexión TCP cifrada mediante SSH",
+        "Una doble conexión UDP"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.3-036",
+      "enunciado": "¿Para qué sirve la conexión de control en FTP?",
+      "opciones": [
+        "Para la transferencia de ficheros hacia o desde el servidor",
+        "Para cifrar las comunicaciones entre cliente y servidor",
+        "Para indicarle al servidor las operaciones que se quieren llevar a cabo",
+        "Para autenticar al usuario con sus credenciales de Windows"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.3-037",
+      "enunciado": "¿Qué puerto utiliza habitualmente la conexión de control en FTP?",
+      "opciones": [
+        "Puerto 20",
+        "Puerto 22",
+        "Puerto 21",
+        "Puerto 445"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.3-038",
+      "enunciado": "¿Para qué sirve la conexión de datos en FTP?",
+      "opciones": [
+        "Para indicarle al servidor las operaciones que se quieren realizar",
+        "Para la transferencia de ficheros hacia o desde el servidor",
+        "Para autenticar al usuario antes de iniciar la transferencia",
+        "Para cifrar los datos durante la transmisión"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.3-039",
+      "enunciado": "¿Qué puerto utiliza habitualmente la conexión de datos en FTP?",
+      "opciones": [
+        "Puerto 21",
+        "Puerto 445",
+        "Puerto 22",
+        "Puerto 20"
+      ],
+      "correcta": 3,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.3-040",
+      "enunciado": "¿Qué privilegios tiene un usuario que se conecta al servidor FTP de forma anónima?",
+      "opciones": [
+        "Acceso completo a todos los directorios del servidor",
+        "Acceso a su directorio predeterminado con posibilidad de escritura",
+        "Muy pocos privilegios, confinado a un directorio público sin poder escribir ni modificar ficheros",
+        "Los mismos privilegios que un usuario autorizado pero sin contraseña"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.3-041",
+      "enunciado": "¿Cómo se llama habitualmente el directorio público al que se confina al usuario anónimo en FTP?",
+      "opciones": [
+        "home",
+        "public",
+        "shared",
+        "pub"
+      ],
+      "correcta": 3,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.3-042",
+      "enunciado": "¿Qué ocurre cuando un usuario se conecta al servidor FTP con acceso autorizado?",
+      "opciones": [
+        "Se le confina al directorio pub con permisos de solo lectura",
+        "Obtiene acceso completo a todos los directorios del servidor",
+        "Se le confina a su directorio predeterminado desde donde puede descargar y, si la política lo permite, también escribir",
+        "Se le asignan los mismos privilegios que a un usuario anónimo"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.3-043",
+      "enunciado": "¿Para qué se menciona el acceso autorizado por FTP como opción ampliamente utilizada?",
+      "opciones": [
+        "Para compartir ficheros públicos sin necesidad de autenticación",
+        "Para acceder a los ficheros propios o actualizar de forma remota un portal web",
+        "Para integrar la autenticación con Active Directory en entornos Windows",
+        "Para proporcionar acceso de solo lectura a directorios compartidos"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.3-044",
+      "enunciado": "¿Dónde se establecen el tipo de autenticación y los permisos en FTP?",
+      "opciones": [
+        "En el cliente FTP, durante el proceso de conexión",
+        "En el sistema operativo del equipo cliente",
+        "En la configuración del sitio FTP en el equipo servidor",
+        "En el servidor DNS que resuelve el nombre del servidor FTP"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.3-045",
+      "enunciado": "¿Cuál es el servidor FTP mencionado como propio de equipos Windows Server?",
+      "opciones": [
+        "VSftpd",
+        "Filezilla Server",
+        "IIS",
+        "cuteFtp"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.3-046",
+      "enunciado": "¿Qué servidor FTP es compatible tanto con Windows como con Linux?",
+      "opciones": [
+        "IIS",
+        "VSftpd",
+        "cuteFtp",
+        "Filezilla Server"
+      ],
+      "correcta": 3,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.3-047",
+      "enunciado": "¿Qué servidor FTP se menciona como específico para servidores Linux?",
+      "opciones": [
+        "IIS",
+        "Filezilla Server",
+        "VSftpd",
+        "cuteFtp"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.3-048",
+      "enunciado": "¿Cuál es la función de un cliente FTP?",
+      "opciones": [
+        "Almacenar y gestionar los ficheros compartidos en la red",
+        "Configurar los permisos y la autenticación del servidor FTP",
+        "Conectarse al servidor FTP para transferir ficheros",
+        "Proporcionar acceso a nivel de bloque a los datos del servidor"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.3-049",
+      "enunciado": "¿Cuáles son los clientes FTP mencionados en el material?",
+      "opciones": [
+        "IIS, Filezilla y VSftpd",
+        "Filezilla, cuteFtp, vsFtp y los navegadores web",
+        "Filezilla Server, cuteFtp y los navegadores web",
+        "Filezilla, IIS, vsFtp y las terminales de comandos"
+      ],
+      "correcta": 1,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.3-050",
+      "enunciado": "¿Qué comando se utiliza en la terminal para conectarse a un servidor FTP?",
+      "opciones": [
+        "ssh nombre_servidor",
+        "connect nombre_servidor",
+        "ftp nombre_servidor",
+        "sftp nombre_servidor"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    },
+    {
+      "id": "si-6.1.3-051",
+      "enunciado": "¿Qué sistemas operativos incluyen un cliente FTP en su terminal de comandos?",
+      "opciones": [
+        "Solo GNU/Linux",
+        "Solo Windows Server",
+        "Windows y GNU/Linux",
+        "Windows, GNU/Linux y macOS"
+      ],
+      "correcta": 2,
+      "explicacion": ""
+    }
+  ]
+}

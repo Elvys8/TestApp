@@ -1,0 +1,113 @@
+/* ============================================================
+   themes.css
+   Variables de color, tipografía y mecánica de modo claro/oscuro.
+   El color de acento por asignatura se establece dinámicamente
+   desde JavaScript escribiendo --asignatura-color y --asignatura-rgb
+   en :root cuando el usuario entra en una asignatura concreta.
+   ============================================================ */
+
+:root {
+  /* ----- Tipografía ----- */
+  --font-serif: Georgia, "Times New Roman", "DejaVu Serif", serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+               "Helvetica Neue", Arial, sans-serif;
+
+  /* ----- Radios y espaciado ----- */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+
+  /* ----- Color de asignatura por defecto -----
+     Estos dos valores los sobrescribe JavaScript con el color del
+     JSON activo. Aquí dejamos el de FOL como fallback. */
+  --asignatura-color: #2c4a6b;
+  --asignatura-rgb: 44, 74, 107;
+}
+
+/* ----------------------------------------------------------
+   Modo claro (por defecto)
+   ---------------------------------------------------------- */
+:root,
+:root[data-theme="light"] {
+  /* Fondos */
+  --bg-page: #f5f3ed;                                 /* neutro cuando no hay asignatura activa */
+  --bg-page-tinted: rgba(var(--asignatura-rgb), 0.10); /* fondo tintado cuando se estudia una asignatura */
+  --bg-surface: #ffffff;
+  --bg-surface-hover: #faf8f3;
+
+  /* Texto */
+  --text-primary: #1f1f1f;
+  --text-secondary: #6c6c6c;
+  --text-tertiary: #9a9a9a;
+  --text-on-accent: #ffffff;
+
+  /* Bordes */
+  --border-default: #e2dfd5;
+  --border-strong: #c9c5b8;
+
+  /* Acento (modo claro = color del JSON tal cual) */
+  --accent: var(--asignatura-color);
+  --accent-rgb: var(--asignatura-rgb);
+  --accent-soft: rgba(var(--asignatura-rgb), 0.10);
+
+  /* Estados acierto/fallo (universales, NO cambian con la asignatura) */
+  --success: #2d8a3e;
+  --success-bg: #e8f5ec;
+  --success-text: #1f5e2c;
+  --success-border: #2d8a3e;
+
+  --danger: #c0392b;
+  --danger-bg: #fbe8e8;
+  --danger-text: #8a2620;
+  --danger-border: #c0392b;
+
+  /* Sombra sutil (solo para menús desplegables y modales) */
+  --shadow-pop: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* ----------------------------------------------------------
+   Modo oscuro
+   En oscuro aclaramos automáticamente el color de la asignatura
+   con color-mix para mantener contraste sin que el usuario tenga
+   que dar dos hex distintos.
+   ---------------------------------------------------------- */
+:root[data-theme="dark"] {
+  --bg-page: #0e1016;
+  --bg-page-tinted: color-mix(in srgb, var(--asignatura-color) 8%, #0e1016);
+  --bg-surface: #1c2230;
+  --bg-surface-hover: #232a3a;
+
+  --text-primary: #e6e2dc;
+  --text-secondary: #a0a8b4;
+  --text-tertiary: #707880;
+  --text-on-accent: #0e1016;
+
+  --border-default: #2a3243;
+  --border-strong: #3a4555;
+
+  /* En oscuro mezclamos el color con blanco al 45% para subir la luminancia */
+  --accent: color-mix(in srgb, var(--asignatura-color) 55%, #ffffff);
+  --accent-rgb: var(--asignatura-rgb); /* el rgb sigue valiendo para opacidades suaves */
+  --accent-soft: color-mix(in srgb, var(--asignatura-color) 12%, transparent);
+
+  --success: #4ade80;
+  --success-bg: rgba(74, 222, 128, 0.14);
+  --success-text: #b8f0c5;
+  --success-border: #4ade80;
+
+  --danger: #f87171;
+  --danger-bg: rgba(248, 113, 113, 0.14);
+  --danger-text: #f5b8b8;
+  --danger-border: #f87171;
+
+  --shadow-pop: 0 6px 20px rgba(0, 0, 0, 0.45);
+}
+
+/* ----------------------------------------------------------
+   Cuando el usuario está estudiando una asignatura concreta
+   añadimos data-tinted="true" al <body> y el fondo de la página
+   pasa a llevar el tinte del color de la asignatura al 10%.
+   ---------------------------------------------------------- */
+body[data-tinted="true"] {
+  background: var(--bg-page-tinted);
+}

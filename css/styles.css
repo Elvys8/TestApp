@@ -1,0 +1,1054 @@
+/* ============================================================
+   styles.css
+   Reset suave, tipografía, layout y componentes base.
+   Los colores se controlan desde themes.css mediante variables.
+   ============================================================ */
+
+/* ----- Reset suave ----- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--text-primary);
+  background: var(--bg-page);
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 200ms ease;
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ----- Layout ----- */
+.app-shell {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  padding: 12px 24px;
+  border-bottom: 0.5px solid var(--border-default);
+  background: var(--bg-surface);
+}
+
+.app-header__section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.app-header__section--left  { justify-content: flex-start; }
+.app-header__section--right { justify-content: flex-end; }
+
+.home-btn {
+  flex-shrink: 0;
+}
+
+.app-main {
+  flex: 1;
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 32px 24px 64px;
+}
+
+.page-title {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  font-weight: 500;
+  margin: 0 0 20px;
+}
+
+/* ----- Botón icono (cabecera, menús "...") ----- */
+.icon-btn {
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: background-color 150ms ease, color 150ms ease;
+}
+
+.icon-btn:hover {
+  background: var(--bg-surface-hover);
+  color: var(--text-primary);
+}
+
+.icon-btn svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+/* El icono "luna" sólo se ve en claro y el "sol" en oscuro */
+.theme-toggle .icon-sun { display: none; }
+.theme-toggle .icon-moon { display: block; }
+:root[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+:root[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+
+/* ----- Botones ----- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  font-weight: 500;
+  border: 0.5px solid transparent;
+  transition: background-color 150ms ease, border-color 150ms ease,
+              color 150ms ease, transform 100ms ease;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn--primary {
+  background: var(--accent);
+  color: var(--text-on-accent);
+}
+
+.btn--primary:hover {
+  filter: brightness(1.05);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--text-secondary);
+  border-color: var(--border-default);
+}
+
+.btn--ghost:hover {
+  background: var(--bg-surface-hover);
+  color: var(--text-primary);
+}
+
+.btn--danger-text {
+  color: var(--danger);
+  background: transparent;
+}
+
+.btn--danger-text:hover {
+  background: var(--danger-bg);
+}
+
+/* ============================================================
+   Listado de asignaturas (pantalla de inicio)
+   ============================================================ */
+.subject-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.subject-row {
+  position: relative;
+  background: var(--bg-surface);
+  border: 0.5px solid var(--border-default);
+  border-left: 3px solid var(--subject-color, var(--accent));
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  transition: background-color 150ms ease, border-color 150ms ease;
+}
+
+.subject-row:hover {
+  background: var(--bg-surface-hover);
+}
+
+.subject-row__info {
+  flex: 1;
+  min-width: 0;
+  text-align: left;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: inherit;
+  font: inherit;
+}
+
+.subject-row__name {
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0 0 2px;
+  color: var(--text-primary);
+}
+
+.subject-row__meta {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.menu-host {
+  position: relative;
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   Menú desplegable "..." (genérico)
+   Se muestra cuando el .menu-host padre tiene la clase .is-open.
+   ============================================================ */
+.menu-popover {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  min-width: 240px;
+  background: var(--bg-surface);
+  border: 0.5px solid var(--border-default);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-pop);
+  padding: 12px;
+  z-index: 10;
+  display: none;
+}
+
+.menu-host.is-open .menu-popover {
+  display: block;
+}
+
+.menu-popover__label {
+  font-size: 11px;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 8px;
+  font-weight: 500;
+}
+
+.color-palette {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.color-swatch {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 0.5px solid rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+  transition: transform 100ms ease;
+}
+
+.color-swatch:hover {
+  transform: scale(1.08);
+}
+
+.color-swatch.is-active {
+  box-shadow: 0 0 0 2px var(--bg-surface), 0 0 0 4px currentColor;
+}
+
+.color-swatch--custom {
+  background: var(--bg-surface);
+  border: 0.5px dashed var(--border-strong);
+  color: var(--text-secondary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.menu-popover__divider {
+  height: 0.5px;
+  background: var(--border-default);
+  margin: 8px 0;
+}
+
+.menu-popover__action {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  padding: 6px 4px;
+  font-size: 13px;
+  color: var(--text-primary);
+  border-radius: var(--radius-sm);
+  text-align: left;
+}
+
+.menu-popover__action:hover {
+  background: var(--bg-surface-hover);
+}
+
+.menu-popover__action--danger {
+  color: var(--danger);
+}
+
+/* ============================================================
+   Componentes que usaremos en la pantalla del test.
+   Se dejan definidos aquí para que cuando montemos test.js
+   ya no haya que tocar CSS. Por ahora no se renderizan.
+   ============================================================ */
+
+.test-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  color: var(--text-secondary);
+  padding-bottom: 12px;
+  margin-bottom: 18px;
+  border-bottom: 0.5px solid rgba(var(--accent-rgb), 0.20);
+}
+
+.test-header__controls {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.test-header__star,
+.test-header__close {
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  color: var(--text-tertiary);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 150ms ease, color 150ms ease;
+}
+
+.test-header__star:hover,
+.test-header__close:hover {
+  background: var(--bg-surface-hover);
+  color: var(--text-primary);
+}
+
+.test-header__star.is-starred {
+  color: var(--accent);
+}
+
+.test-header__star svg,
+.test-header__close svg {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+/* Desplegable para saltar a una pregunta concreta dentro de la
+   sesión de validación. Aparece a la derecha del contador. */
+.question-jump {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 500;
+  background: var(--bg-page);
+  color: var(--accent);
+  border: 0.5px solid rgba(var(--accent-rgb), 0.35);
+  border-radius: var(--radius-sm);
+  padding: 3px 8px;
+  cursor: pointer;
+}
+
+.question-jump:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px var(--accent-soft);
+}
+
+.test-question {
+  font-family: var(--font-serif);
+  font-size: 17px;
+  line-height: 1.5;
+  margin: 0 0 18px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.option {
+  width: 100%;
+  text-align: left;
+  background: var(--bg-surface);
+  border: 0.5px solid var(--border-default);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  font-size: 14px;
+  color: var(--text-primary);
+  transition: background-color 120ms ease, border-color 120ms ease;
+}
+
+@media (hover: hover) {
+  .option:not(.option--readonly):hover {
+    background: var(--bg-surface-hover);
+  }
+}
+
+.option--readonly {
+  cursor: default;
+}
+
+.option.is-correct {
+  background: var(--success-bg);
+  border-color: var(--success-border);
+  border-left-color: var(--success-border);
+  color: var(--success-text);
+}
+
+.option.is-wrong {
+  background: var(--danger-bg);
+  border-color: var(--danger-border);
+  border-left-color: var(--danger-border);
+  color: var(--danger-text);
+}
+
+.option:disabled {
+  cursor: default;
+}
+
+.test-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+
+/* ============================================================
+   Cabecera de página (título + acciones)
+   ============================================================ */
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.page-header .page-title { margin: 0; }
+
+.page-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* Estado vacío (sin asignaturas todavía) */
+.empty-state {
+  background: var(--bg-surface);
+  border: 0.5px dashed var(--border-strong);
+  border-radius: var(--radius-md);
+  padding: 28px 20px;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.empty-state p { margin: 0 0 12px; }
+
+/* ============================================================
+   Insignia "Pendiente de validación" sobre asignaturas/temas
+   ============================================================ */
+.badge {
+  display: inline-block;
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+.badge--pending {
+  background: color-mix(in srgb, var(--danger) 14%, transparent);
+  color: var(--danger);
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+.badge--validated {
+  background: color-mix(in srgb, var(--success) 14%, transparent);
+  color: var(--success);
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+/* Cuando la pastilla actúa como botón (clic para validar) */
+.badge--clickable {
+  cursor: pointer;
+  border: 0.5px solid transparent;
+  font-family: inherit;
+  transition: background-color 120ms ease, border-color 120ms ease;
+}
+
+.badge--clickable:hover {
+  background: color-mix(in srgb, var(--danger) 22%, transparent);
+  border-color: color-mix(in srgb, var(--danger) 40%, transparent);
+}
+
+/* ============================================================
+   Detalle de asignatura
+   ============================================================ */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  margin-bottom: 16px;
+  padding: 4px 8px 4px 4px;
+  border-radius: var(--radius-sm);
+}
+
+.back-link:hover {
+  color: var(--text-primary);
+  background: var(--bg-surface-hover);
+}
+
+/* Variante usada dentro del slot izquierdo de la cabecera (sin margin-bottom) */
+.back-link--header {
+  margin-bottom: 0;
+}
+
+.asignatura-name {
+  font-family: var(--font-serif);
+  font-size: 26px;
+  font-weight: 500;
+  margin: 0 0 4px;
+  color: var(--accent);
+}
+
+.asignatura-sub {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin: 0 0 28px;
+}
+
+/* ============================================================
+   Panel (caja con título + contenido)
+   ============================================================ */
+.panel {
+  background: var(--bg-surface);
+  border: 0.5px solid var(--border-default);
+  border-radius: var(--radius-md);
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+
+.panel__title {
+  font-family: var(--font-serif);
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 0 12px;
+}
+
+.panel__field {
+  margin-bottom: 14px;
+}
+
+.panel__label {
+  display: block;
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  font-weight: 500;
+}
+
+/* Grupos de radios/chips para tamaño de sesión */
+.choice-group {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.choice-chip {
+  font-size: 13px;
+  padding: 6px 12px;
+  border: 0.5px solid var(--border-default);
+  border-radius: var(--radius-md);
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: background-color 120ms ease, border-color 120ms ease;
+}
+
+.choice-chip:hover { background: var(--bg-surface-hover); }
+
+.choice-chip.is-active {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--accent);
+  font-weight: 500;
+}
+
+/* Checkbox plano */
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-primary);
+  padding: 4px 0;
+  cursor: pointer;
+}
+
+.checkbox-row input { accent-color: var(--accent); }
+
+/* ============================================================
+   Filas de tema (dentro del detalle de asignatura)
+   ============================================================ */
+.tema-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tema-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: var(--bg-surface);
+  border: 0.5px solid var(--border-default);
+  border-radius: var(--radius-md);
+  padding: 10px 14px;
+}
+
+.tema-row__info {
+  flex: 1;
+  min-width: 0;
+}
+
+.tema-row__name {
+  font-size: 14px;
+  margin: 0 0 2px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tema-row__meta {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* ============================================================
+   Sesión de test (estrella, explicación, resumen)
+   ============================================================ */
+.explanation {
+  background: var(--accent-soft);
+  border-left: 3px solid var(--accent);
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  line-height: 1.55;
+  margin: 0 0 12px;
+  color: var(--text-primary);
+}
+
+.test-summary {
+  text-align: center;
+  padding: 28px 20px;
+}
+
+.test-summary__metric {
+  font-family: var(--font-serif);
+  font-size: 44px;
+  font-weight: 500;
+  margin: 0;
+  color: var(--accent);
+  line-height: 1.1;
+}
+
+.test-summary p.muted {
+  margin: 8px 0 0;
+}
+
+/* ============================================================
+   Estadísticas
+   ============================================================ */
+.stats-section-title {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin: 28px 0 10px;
+}
+
+.stat-overall {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 22px 20px;
+}
+
+.stat-overall__pct {
+  font-family: var(--font-serif);
+  font-size: 44px;
+  font-weight: 500;
+  line-height: 1;
+  margin: 0;
+  color: var(--accent);
+}
+
+.stat-overall__meta {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.stat-asignatura {
+  background: var(--bg-surface);
+  border: 0.5px solid var(--border-default);
+  border-left: 3px solid var(--asignatura-accent, var(--accent));
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  margin-bottom: 12px;
+}
+
+.stat-asignatura__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+.stat-asignatura__name {
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.stat-asignatura__pct {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--asignatura-accent, var(--accent));
+}
+
+.stat-asignatura__meta {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin: 0 0 12px;
+}
+
+.stat-tema-list {
+  border-top: 0.5px solid var(--border-default);
+  padding-top: 8px;
+}
+
+.stat-tema-row {
+  display: grid;
+  grid-template-columns: 1fr auto auto auto;
+  align-items: center;
+  gap: 12px;
+  padding: 6px 0;
+  font-size: 13px;
+}
+
+.stat-tema-row__name { color: var(--text-primary); }
+.stat-tema-row__pct  { color: var(--text-secondary); font-variant-numeric: tabular-nums; min-width: 44px; text-align: right; }
+.stat-tema-row__meta { color: var(--text-tertiary); font-size: 12px; min-width: 110px; text-align: right; }
+
+.icon-btn--tiny {
+  width: 26px;
+  height: 26px;
+  font-size: 14px;
+  color: var(--text-tertiary);
+}
+.icon-btn--tiny:hover { color: var(--danger); }
+
+.top-failed-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.top-failed-row {
+  background: var(--bg-surface);
+  border: 0.5px solid var(--border-default);
+  border-radius: var(--radius-md);
+  padding: 10px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.top-failed-row__text {
+  flex: 1;
+  min-width: 0;
+}
+
+.top-failed-row__q {
+  font-size: 13px;
+  margin: 0 0 2px;
+  color: var(--text-primary);
+  /* truncar a 2 líneas */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.top-failed-row__ctx {
+  font-size: 11px;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.top-failed-row__count {
+  font-family: var(--font-serif);
+  font-size: 16px;
+  color: var(--danger);
+  font-variant-numeric: tabular-nums;
+}
+
+.top-failed-row__count small {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: var(--text-tertiary);
+}
+
+.data-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* ============================================================
+   Sesión de validación (pantalla dedicada + formulario de edición)
+   ============================================================ */
+.validation-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.validation-actions .btn {
+  flex: 1;
+  padding: 12px 16px;
+  font-size: 14px;
+  justify-content: center;
+}
+
+/* Formulario de edición dentro del modal */
+.modal-card--wide { max-width: 580px; }
+
+.edit-label {
+  display: block;
+  font-size: 11px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  margin: 14px 0 6px;
+}
+
+.edit-label:first-child { margin-top: 0; }
+
+.edit-textarea,
+.edit-option-input {
+  width: 100%;
+  background: var(--bg-page);
+  border: 0.5px solid var(--border-default);
+  border-radius: var(--radius-sm);
+  padding: 8px 10px;
+  font-family: inherit;
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+.edit-textarea {
+  resize: vertical;
+  min-height: 60px;
+  font-family: var(--font-serif);
+  line-height: 1.5;
+}
+
+.edit-textarea:focus,
+.edit-option-input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px var(--accent-soft);
+}
+
+.edit-option-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.edit-option-row input[type="radio"] {
+  flex-shrink: 0;
+  accent-color: var(--accent);
+  width: 16px;
+  height: 16px;
+  margin: 0;
+}
+
+.edit-option-input { flex: 1; }
+
+.edit-error {
+  margin: 12px 0 0;
+  padding: 8px 10px;
+  font-size: 12px;
+  color: var(--danger);
+  background: var(--danger-bg);
+  border-left: 3px solid var(--danger);
+  border-radius: var(--radius-sm);
+}
+
+/* ============================================================
+   Modal genérico (overlay + card)
+   ============================================================ */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.42);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 200;
+  opacity: 0;
+  transition: opacity 150ms ease;
+}
+
+.modal-overlay.is-visible { opacity: 1; }
+
+.modal-card {
+  background: var(--bg-surface);
+  border: 0.5px solid var(--border-default);
+  border-radius: var(--radius-md);
+  padding: 22px 24px;
+  max-width: 480px;
+  width: 100%;
+  box-shadow: var(--shadow-pop);
+}
+
+.modal-title {
+  font-family: var(--font-serif);
+  font-size: 17px;
+  font-weight: 500;
+  margin: 0 0 14px;
+}
+
+.modal-body {
+  font-size: 14px;
+  line-height: 1.55;
+  margin-bottom: 18px;
+  color: var(--text-primary);
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* ============================================================
+   Toasts
+   ============================================================ */
+#toast-host {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.toast {
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  border: 0.5px solid var(--border-default);
+  border-radius: var(--radius-md);
+  padding: 10px 14px;
+  font-size: 13px;
+  box-shadow: var(--shadow-pop);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 200ms ease, transform 200ms ease;
+  pointer-events: auto;
+}
+
+.toast.is-visible { opacity: 1; transform: translateY(0); }
+
+.toast--success { border-left: 3px solid var(--success); }
+.toast--danger  { border-left: 3px solid var(--danger);  }
+.toast--info    { border-left: 3px solid var(--accent);  }
+
+/* ============================================================
+   Utilidades varias
+   ============================================================ */
+.muted { color: var(--text-secondary); }
+.tiny { font-size: 12px; }
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
