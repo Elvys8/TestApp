@@ -790,11 +790,14 @@ ul {
 .stat-tema-row {
   display: grid;
   grid-template-columns: 1fr auto auto auto;
+  grid-template-columns: repeat(3, 1fr);
   align-items: center;
   gap: 12px;
   padding: 6px 0;
   font-size: 13px;
 }
+	.stat-tema-row > :first-child { grid-column:1 / -1; }
+
 
 .stat-tema-row__name { color: var(--text-primary); }
 .stat-tema-row__pct  { color: var(--text-secondary); font-variant-numeric: tabular-nums; min-width: 44px; text-align: right; }
