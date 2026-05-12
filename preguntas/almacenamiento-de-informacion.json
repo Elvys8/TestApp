@@ -1,0 +1,296 @@
+{
+  "schema_version": 1,
+  "id": "lmsgi-06-almacenamiento-de-informacion",
+  "asignatura": "Lenguajes de Marcas y Sistemas de Gestión de Información",
+  "asignatura_color": "#66266D",
+  "tema": "UD 6.- Almacenamiento de información",
+  "preguntas": [
+    {
+      "id": "lmsgi06-001",
+      "enunciado": "¿Cuáles de las siguientes son características de los sistemas centrados en los documentos?",
+      "opciones": [
+        "Contiene varios tipos de datos y tienen reglas flexibles para campos opcionales.",
+        "Contiene datos con una estructura muy definida y es apropiada para publicidad.",
+        "Los datos pueden actualizarse y contiene datos con una estructura muy definida.",
+        "Es apropiada para publicidad y contiene varios tipos de datos."
+      ],
+      "correcta": 0,
+      "explicacion": "Los sistemas centrados en documentos contienen varios tipos de datos y tienen reglas flexibles para campos opcionales."
+    },
+    {
+      "id": "lmsgi06-002",
+      "enunciado": "Un dato que en una base de datos representa a un atributo no clave y no nulo se convierte en un tipo de dato _______ en el esquema del documento XML.",
+      "opciones": [
+        "requerido",
+        "opcional",
+        "nulo",
+        "derivado"
+      ],
+      "correcta": 0,
+      "explicacion": "Un atributo no clave y no nulo se convierte en un tipo de dato requerido en el esquema del documento XML."
+    },
+    {
+      "id": "lmsgi06-003",
+      "enunciado": "El formar una base de datos mediante colecciones de documentos con una estructura determinada proporciona…",
+      "opciones": [
+        "rigidez",
+        "flexibilidad",
+        "redundancia",
+        "atomicidad"
+      ],
+      "correcta": 1,
+      "explicacion": "Formar una base de datos mediante colecciones de documentos con una estructura determinada proporciona flexibilidad."
+    },
+    {
+      "id": "lmsgi06-004",
+      "enunciado": "¿Qué hace la función concat() en XQuery/XPath?",
+      "opciones": [
+        "Devuelve la cantidad de caracteres que forman una cadena de texto.",
+        "Transforma todas las letras de una cadena a mayúsculas.",
+        "Construye una cadena formada al unir dos dadas.",
+        "Transforma todas las letras de una cadena a minúsculas."
+      ],
+      "correcta": 2,
+      "explicacion": "concat() construye una cadena formada al unir dos cadenas dadas."
+    },
+    {
+      "id": "lmsgi06-005",
+      "enunciado": "¿Qué hace la función upper-case() en XQuery/XPath?",
+      "opciones": [
+        "Construye una cadena formada al unir dos dadas.",
+        "Devuelve la cantidad de caracteres que forman una cadena de texto.",
+        "Transforma todas las letras de una cadena a minúsculas.",
+        "Transforma todas las letras de una cadena a mayúsculas."
+      ],
+      "correcta": 3,
+      "explicacion": "upper-case() transforma todas las letras de una cadena a mayúsculas."
+    },
+    {
+      "id": "lmsgi06-006",
+      "enunciado": "¿Qué hace la función string-length() en XQuery/XPath?",
+      "opciones": [
+        "Construye una cadena formada al unir dos dadas.",
+        "Devuelve la cantidad de caracteres que forman una cadena de texto.",
+        "Transforma todas las letras de una cadena a mayúsculas.",
+        "Transforma todas las letras de una cadena a minúsculas."
+      ],
+      "correcta": 1,
+      "explicacion": "string-length() devuelve la cantidad de caracteres que forman una cadena de texto."
+    },
+    {
+      "id": "lmsgi06-007",
+      "enunciado": "¿Qué hace la función lower-case() en XQuery/XPath?",
+      "opciones": [
+        "Construye una cadena formada al unir dos dadas.",
+        "Devuelve la cantidad de caracteres que forman una cadena de texto.",
+        "Transforma todas las letras de una cadena a minúsculas.",
+        "Transforma todas las letras de una cadena a mayúsculas."
+      ],
+      "correcta": 2,
+      "explicacion": "lower-case() transforma todas las letras de una cadena a minúsculas."
+    },
+    {
+      "id": "lmsgi06-008",
+      "enunciado": "¿Cuáles de las siguientes son características de los sistemas centrados en datos?",
+      "opciones": [
+        "Contiene datos con una estructura no muy definida y tiene reglas flexibles para campos opcionales.",
+        "Es apropiada para publicidad, los datos pueden actualizarse y contiene datos con una estructura muy definida.",
+        "Contiene varios tipos de datos y no es apropiada para publicidad.",
+        "Tiene reglas flexibles para campos opcionales y los datos pueden actualizarse."
+      ],
+      "correcta": 1,
+      "explicacion": "Los sistemas centrados en datos son apropiados para publicidad, permiten actualizar los datos y contienen datos con una estructura muy definida."
+    },
+    {
+      "id": "lmsgi06-009",
+      "enunciado": "¿Sobre qué tipo de datos se aplica la función distinct-values() en XQuery/XPath?",
+      "opciones": [
+        "Solo numéricos.",
+        "Solo cadenas de texto.",
+        "Cualquiera.",
+        "Solo booleanos."
+      ],
+      "correcta": 2,
+      "explicacion": "distinct-values() se puede aplicar sobre cualquier tipo de dato."
+    },
+    {
+      "id": "lmsgi06-010",
+      "enunciado": "¿Sobre qué tipo de datos se aplica la función starts-with() en XQuery/XPath?",
+      "opciones": [
+        "Numéricos.",
+        "Cadenas de texto.",
+        "Cualquiera.",
+        "Booleanos."
+      ],
+      "correcta": 1,
+      "explicacion": "starts-with() se aplica sobre cadenas de texto."
+    },
+    {
+      "id": "lmsgi06-011",
+      "enunciado": "¿Sobre qué tipo de datos se aplica la función max() en XQuery/XPath?",
+      "opciones": [
+        "Cadenas de texto.",
+        "Cualquiera.",
+        "Numéricos.",
+        "Booleanos."
+      ],
+      "correcta": 2,
+      "explicacion": "max() se aplica sobre datos numéricos."
+    },
+    {
+      "id": "lmsgi06-012",
+      "enunciado": "Toda sentencia XQuery es una sentencia XPath. ¿Verdadero o falso?",
+      "opciones": ["Verdadero", "Falso"],
+      "correcta": 1,
+      "explicacion": "No toda sentencia XQuery es una sentencia XPath; XQuery es un lenguaje más amplio que extiende XPath."
+    },
+    {
+      "id": "lmsgi06-013",
+      "enunciado": "Toda sentencia XPath es una sentencia XQuery. ¿Verdadero o falso?",
+      "opciones": ["Verdadero", "Falso"],
+      "correcta": 0,
+      "explicacion": "Toda sentencia XPath es válida en XQuery, ya que XQuery incorpora XPath como subconjunto."
+    },
+    {
+      "id": "lmsgi06-014",
+      "enunciado": "Marca la afirmación correcta sobre las bases de datos XML nativas.",
+      "opciones": [
+        "Admiten el almacenamiento basado en texto, pero no soportan el almacenamiento basado en el modelo.",
+        "No soportan acceso multiusuario.",
+        "Su diseño está creado especialmente para almacenar documentos XML.",
+        "No soportan transacciones."
+      ],
+      "correcta": 2,
+      "explicacion": "Las bases de datos XML nativas están diseñadas especialmente para almacenar documentos XML."
+    },
+    {
+      "id": "lmsgi06-015",
+      "enunciado": "Para la transferencia de información entre documentos XML y bases de datos relacionales existen numerosos _______.",
+      "opciones": [
+        "middlewares",
+        "parsers",
+        "esquemas",
+        "triggers"
+      ],
+      "correcta": 0,
+      "explicacion": "Para la transferencia de información entre documentos XML y bases de datos relacionales existen numerosos middlewares."
+    },
+    {
+      "id": "lmsgi06-016",
+      "enunciado": "El hecho de que el uso de las bases de datos relacionales esté muy extendido es uno de los motivos por los que se utilizan para almacenar datos XML. ¿Verdadero o falso?",
+      "opciones": ["Verdadero", "Falso"],
+      "correcta": 0,
+      "explicacion": "La amplia extensión del uso de bases de datos relacionales es uno de los motivos por los que se emplean para almacenar datos XML."
+    },
+    {
+      "id": "lmsgi06-017",
+      "enunciado": "Una de las principales diferencias entre SQL y XQuery es que para XQuery es importante el orden en que los datos aparecen dentro del documento XML, mientras que en SQL el orden no importa. ¿Verdadero o falso?",
+      "opciones": ["Verdadero", "Falso"],
+      "correcta": 0,
+      "explicacion": "En XQuery el orden de los datos en el documento XML es relevante, a diferencia de SQL donde el orden no importa."
+    },
+    {
+      "id": "lmsgi06-018",
+      "enunciado": "¿Cuáles de los siguientes NO son componentes del estándar Orientación a Objetos?",
+      "opciones": [
+        "XQuery y XQL.",
+        "Java y ODL.",
+        "XQuery y ODL.",
+        "XQL y Java."
+      ],
+      "correcta": 0,
+      "explicacion": "XQuery y XQL no son componentes del estándar de Orientación a Objetos; Java y ODL sí lo son."
+    },
+    {
+      "id": "lmsgi06-019",
+      "enunciado": "¿Cuál es el orden correcto de los pasos para transformar una base de datos relacional a almacenamiento XML?",
+      "opciones": [
+        "1º Crear claves primarias → 2º Crear el esquema XML → 3º Establecer relaciones de clave migrada.",
+        "1º Crear el esquema XML → 2º Crear claves primarias → 3º Establecer relaciones de clave migrada.",
+        "1º Establecer relaciones de clave migrada → 2º Crear claves primarias → 3º Crear el esquema XML.",
+        "1º Crear el esquema XML → 2º Establecer relaciones de clave migrada → 3º Crear claves primarias."
+      ],
+      "correcta": 1,
+      "explicacion": "El orden correcto es: 1º Crear el esquema XML, 2º Crear claves primarias, 3º Establecer relaciones de clave migrada."
+    },
+    {
+      "id": "lmsgi06-020",
+      "enunciado": "El esquema XML que representa una base de datos relacional es único. ¿Verdadero o falso?",
+      "opciones": ["Verdadero", "Falso"],
+      "correcta": 1,
+      "explicacion": "El esquema XML que representa una base de datos relacional no es único; pueden existir múltiples esquemas válidos para la misma base de datos."
+    },
+    {
+      "id": "lmsgi06-021",
+      "enunciado": "¿Cuál de las siguientes afirmaciones es cierta sobre el lenguaje XQuery?",
+      "opciones": [
+        "Transforma estructuras de datos XML en cualquier otra estructura.",
+        "Es el único lenguaje que permite transformar datos XML en otro formato como HTML o PDF.",
+        "Permite obtener información de documentos XML.",
+        "Solo nos permite trabajar con tipos de datos simples."
+      ],
+      "correcta": 2,
+      "explicacion": "XQuery permite obtener información de documentos XML."
+    },
+    {
+      "id": "lmsgi06-022",
+      "enunciado": "En un esquema XML correspondiente a una base de datos, un tipo de dato ID se corresponde con una _______ en la Base de Datos Relacional.",
+      "opciones": [
+        "clave ajena",
+        "clave primaria",
+        "clave alternativa",
+        "clave compuesta"
+      ],
+      "correcta": 1,
+      "explicacion": "En un esquema XML, un tipo de dato ID se corresponde con una clave primaria en la Base de Datos Relacional."
+    },
+    {
+      "id": "lmsgi06-023",
+      "enunciado": "¿Cuáles de las siguientes afirmaciones son correctas sobre la tecnología XML?",
+      "opciones": [
+        "Hace que el compartir información sea más cómodo, permite tratar los ficheros como bases de datos y facilita el desarrollo de aplicaciones al tener el esquema independiente de los datos.",
+        "Permite el acceso directo a los datos sin recorrer todo el archivo y hace que compartir información sea más cómodo.",
+        "Facilita el desarrollo de aplicaciones y permite el acceso directo a los datos sin recorrer todo el archivo.",
+        "Todas las afirmaciones anteriores son correctas."
+      ],
+      "correcta": 0,
+      "explicacion": "La tecnología XML permite tratar ficheros como bases de datos, facilita el desarrollo de aplicaciones con el esquema independiente de los datos y hace más cómodo compartir información. No permite acceso directo sin recorrer el archivo."
+    },
+    {
+      "id": "lmsgi06-024",
+      "enunciado": "¿Cuáles de las siguientes herramientas se relacionan directamente con XQuery?",
+      "opciones": [
+        "Xquark-Bridge y Saxon.",
+        "MySQL y Oracle.",
+        "Saxon y Oracle.",
+        "Xquark-Bridge y MySQL."
+      ],
+      "correcta": 0,
+      "explicacion": "Xquark-Bridge y Saxon son herramientas relacionadas directamente con XQuery."
+    },
+    {
+      "id": "lmsgi06-025",
+      "enunciado": "¿Cuáles son las características principales de las bases de datos XML Nativas?",
+      "opciones": [
+        "Disparadores, creación de índices y consultas.",
+        "Consultas, creación de índices y creación de identificadores únicos.",
+        "Disparadores, consultas y creación de identificadores únicos.",
+        "Creación de índices, disparadores y creación de identificadores únicos."
+      ],
+      "correcta": 1,
+      "explicacion": "Las BD XML Nativas se caracterizan principalmente por: consultas, creación de índices y creación de identificadores únicos."
+    },
+    {
+      "id": "lmsgi06-026",
+      "enunciado": "¿Cuáles de las siguientes afirmaciones son correctas sobre las bases de datos XML?",
+      "opciones": [
+        "Integran sistemas de información basados en documentos, integran sistemas de información estructurados y la información se estructura siguiendo esquemas definidos previamente.",
+        "Garantizan la actualización eficiente e integran sistemas de información basados en documentos.",
+        "La información se estructura siguiendo esquemas definidos previamente y garantizan la actualización eficiente.",
+        "Integran solo sistemas de información estructurados y garantizan la actualización eficiente."
+      ],
+      "correcta": 0,
+      "explicacion": "Las bases de datos XML integran sistemas de información basados en documentos y estructurados, y la información se estructura siguiendo esquemas definidos previamente. No garantizan necesariamente la actualización eficiente."
+    }
+  ]
+}

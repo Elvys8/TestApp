@@ -183,7 +183,7 @@ ul {
   position: relative;
   background: var(--bg-surface);
   border: 0.0312em solid var(--border-default);
-  border-left: 0.1875em solid var(--subject-color, var(--accent));
+  border-left: 0.3em solid var(--subject-color, var(--accent));
   border-radius: var(--radius-md);
   padding: 0.875em 1em;
   display: flex;
