@@ -120,11 +120,17 @@ function renderQuestion() {
   const item = items[currentIdx];
   const q = item.q;
   const isStarred = storage.isStarred(q.id);
+  const hasInfo = q.explicacion && q.explicacion.trim();
 
   mountEl.innerHTML = `
     <div class="test-header">
       <span>Pregunta ${currentIdx + 1} / ${items.length}</span>
       <div class="test-header__controls">
+        ${hasInfo ? `
+        <button class="test-header__info" id="info-btn" type="button"
+                aria-label="Ver explicación" title="Ver explicación">
+          ${infoIcon()}
+        </button>` : ""}
         <button class="test-header__star ${isStarred ? "is-starred" : ""}"
                 id="star-btn" type="button"
                 aria-label="${isStarred ? "Quitar marca" : "Marcar para revisar"}"
@@ -173,6 +179,18 @@ function attachQuestionHandlers() {
     btn.setAttribute("title", newState ? "Quitar marca" : "Marcar para revisar");
     ui.toast(newState ? "Marcada para revisar" : "Marca quitada", "info");
   });
+
+  // Icono "i": muestra la explicación de la pregunta en un modal
+  const infoBtn = mountEl.querySelector("#info-btn");
+  if (infoBtn) {
+    infoBtn.addEventListener("click", () => {
+      ui.modal({
+        title: "Explicación",
+        body: `<p style="margin: 0;">${ui.escapeHtml(q.explicacion)}</p>`,
+        actions: [{ id: "ok", label: "Cerrar", kind: "btn--ghost" }],
+      });
+    });
+  }
 
   mountEl.querySelectorAll("#options-list .option").forEach((btn) => {
     btn.addEventListener("click", () => {
@@ -305,6 +323,14 @@ function closeIcon() {
   return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
     <line x1="6" y1="6" x2="18" y2="18"/>
     <line x1="18" y1="6" x2="6" y2="18"/>
+  </svg>`;
+}
+
+function infoIcon() {
+  return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <circle cx="12" cy="12" r="9"/>
+    <line x1="12" y1="11" x2="12" y2="16"/>
+    <line x1="12" y1="8" x2="12.01" y2="8"/>
   </svg>`;
 }
 

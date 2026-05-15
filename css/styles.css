@@ -152,7 +152,7 @@ ul {
 .btn--ghost {
   background: rgba(255,255,255,.5);
   color: var(--text-secondary);
-  /* border-color: var(--border-default); */
+  border-color: var(--border-default);
 }
 	:root[data-theme="dark"] .btn--ghost { background:rgba(255,255,255,.1); }
 
@@ -210,7 +210,7 @@ ul {
 }
 
 .subject-row__name {
-  font-size: 0.9375em;
+  font-size: 0.9375em; line-height: 1.2em;
   font-weight: 500;
   margin: 0 0 0.125em;
   color: var(--text-primary);
@@ -342,11 +342,12 @@ ul {
 .test-header__controls {
   display: flex;
   align-items: center;
-  gap: 0.25em;
+  gap:1em;
 }
 
 .test-header__star,
-.test-header__close {
+.test-header__close,
+.test-header__info {
   width: 1.75em;
   height: 1.75em;
   display: inline-flex;
@@ -362,7 +363,8 @@ ul {
 }
 
 .test-header__star:hover,
-.test-header__close:hover {
+.test-header__close:hover,
+.test-header__info:hover {
   background: var(--bg-surface-hover);
   color: var(--text-primary);
 }
@@ -372,7 +374,8 @@ ul {
 }
 
 .test-header__star svg,
-.test-header__close svg {
+.test-header__close svg,
+.test-header__info svg {
   width: 1em;
   height: 1em;
   display: block;
@@ -724,6 +727,20 @@ ul {
   margin: 1.75em 0 0.625em;
 }
 
+/* Cabecera de sección con título a la izquierda y acción a la derecha */
+.stats-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75em;
+  margin: 1.75em 0 0.625em;
+}
+
+.btn--small {
+  padding: 0.25em 0.75em;
+  font-size: 0.8125em;
+}
+
 .stat-overall {
   display: flex;
   align-items: baseline;
@@ -841,6 +858,10 @@ ul {
 }
 
 .top-failed-row {
+  width: 100%;
+  text-align: left;
+  font: inherit;
+  color: inherit;
   background: var(--bg-surface);
   border: 0.0312em solid var(--border-default);
   border-radius: var(--radius-md);
@@ -849,6 +870,15 @@ ul {
   justify-content: space-between;
   align-items: center;
   gap: 0.75em;
+  cursor: pointer;
+  transition: background-color 120ms ease, border-color 120ms ease;
+}
+
+@media (hover: hover) {
+  .top-failed-row:hover {
+    background: var(--bg-surface-hover);
+    border-color: var(--border-strong);
+  }
 }
 
 .top-failed-row__text {

@@ -150,6 +150,21 @@ export function clearProgressFor(questionIds) {
   if (changed) saveAllProgress(all);
 }
 
+/* Pone a 0 SOLO el contador de fallos (totalWrong) de todas las
+   preguntas. No toca aciertos ni rachas. Usado por el botón
+   "Reiniciar" junto a "Preguntas más falladas". */
+export function resetAllWrongCounts() {
+  const all = getAllProgress();
+  let changed = false;
+  for (const id of Object.keys(all)) {
+    if (all[id].totalWrong > 0) {
+      all[id] = { ...all[id], totalWrong: 0 };
+      changed = true;
+    }
+  }
+  if (changed) saveAllProgress(all);
+}
+
 export function isMastered(questionId) {
   return getProgress(questionId).streak >= MASTERY_THRESHOLD;
 }

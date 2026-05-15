@@ -100,12 +100,16 @@ export function getTopFailed(limit = 10) {
   const baseList = storage.getTopFailed(limit * 3); // margen para descartes
   const files = library.getAllFiles();
 
-  // Indexar todas las preguntas por id
+  // Indexar todas las preguntas por id (con la pregunta completa, para
+  // poder mostrarla en el modal de vista previa al hacer clic)
   const idx = new Map();
   for (const file of files) {
     for (const q of file.preguntas) {
       idx.set(q.id, {
         enunciado: q.enunciado,
+        opciones: q.opciones,
+        correcta: q.correcta,
+        explicacion: q.explicacion || "",
         asignatura: file.asignatura,
         tema: file.tema,
         color: library.resolveAsignaturaColor(file.asignatura),
@@ -120,6 +124,9 @@ export function getTopFailed(limit = 10) {
       return {
         id: item.id,
         enunciado: meta.enunciado,
+        opciones: meta.opciones,
+        correcta: meta.correcta,
+        explicacion: meta.explicacion,
         asignatura: meta.asignatura,
         tema: meta.tema,
         color: meta.color,

@@ -520,8 +520,9 @@ function renderStats() {
     ? `<div class="empty-state"><p>No hay preguntas con fallos registrados todavía.</p></div>`
     : `
       <div class="top-failed-list">
-        ${topFailed.map((q) => `
-          <div class="top-failed-row" style="border-left: 3px solid ${ui.escapeHtml(q.color)};">
+        ${topFailed.map((q, i) => `
+          <button class="top-failed-row" type="button" data-failed-idx="${i}"
+                  style="border-left: 3px solid ${ui.escapeHtml(q.color)};">
             <div class="top-failed-row__text">
               <p class="top-failed-row__q">${ui.escapeHtml(q.enunciado)}</p>
               <p class="top-failed-row__ctx">${ui.escapeHtml(q.asignatura)} · ${ui.escapeHtml(q.tema)}</p>
@@ -529,7 +530,7 @@ function renderStats() {
             <div class="top-failed-row__count">
               ${q.totalWrong}<small>fallos</small>
             </div>
-          </div>
+          </button>
         `).join("")}
       </div>
     `;
@@ -542,7 +543,12 @@ function renderStats() {
     <p class="stats-section-title">Por asignatura</p>
     ${byAsigHtml}
 
-    <p class="stats-section-title">Preguntas más falladas</p>
+    <div class="stats-section-header">
+      <p class="stats-section-title" style="margin: 0;">Preguntas más falladas</p>
+      ${topFailed.length > 0
+        ? '<button class="btn btn--ghost btn--small" id="reset-failed-btn" type="button">Reiniciar</button>'
+        : ""}
+    </div>
     ${topFailedHtml}
 
     <p class="stats-section-title">Datos</p>
@@ -557,10 +563,10 @@ function renderStats() {
     </p>
   `;
 
-  attachStatsHandlers();
+  attachStatsHandlers(topFailed);
 }
 
-function attachStatsHandlers() {
+function attachStatsHandlers(topFailed) {
   const exportBtn = ROOT.querySelector("#export-btn");
   const importBtn = ROOT.querySelector("#import-btn");
   const importInput = ROOT.querySelector("#import-input");
@@ -595,6 +601,96 @@ function attachStatsHandlers() {
       renderRoute();
     });
   });
+
+  // Clic en una pregunta más fallada → vista previa en modal
+  ROOT.querySelectorAll("[data-failed-idx]").forEach((row) => {
+    row.addEventListener("click", () => {
+      const idx = parseInt(row.getAttribute("data-failed-idx"), 10);
+      const q = topFailed && topFailed[idx];
+      if (q) showQuestionPreview(q);
+    });
+  });
+
+  // Reiniciar contadores de fallos (no toca aciertos ni rachas)
+  const resetFailedBtn = ROOT.querySelector("#reset-failed-btn");
+  if (resetFailedBtn) {
+    resetFailedBtn.addEventListener("click", () => {
+      const yes = window.confirm(
+        "¿Poner a cero los contadores de fallos de todas las preguntas?\n" +
+        "Solo se borran los fallos; los aciertos, las rachas y las preguntas dominadas se mantienen."
+      );
+      if (!yes) return;
+      storage.resetAllWrongCounts();
+      ui.toast("Contadores de fallos reiniciados", "success");
+      renderRoute();
+    });
+  }
+}
+
+/* ============================================================
+   VISTA PREVIA DE UNA PREGUNTA (modal)
+   Permite responder una pregunta como en un test, pero sin
+   registrar nada en el progreso. Se usa desde "Preguntas más
+   falladas" en la pantalla de estadísticas.
+   ============================================================ */
+function showQuestionPreview(q) {
+  // Orden aleatorio de las opciones, como en un test real.
+  const order = q.opciones.map((_, i) => i);
+  for (let i = order.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [order[i], order[j]] = [order[j], order[i]];
+  }
+
+  const hasExpl = q.explicacion && q.explicacion.trim();
+
+  const optionsHtml = order
+    .map((origIdx) => `
+      <button class="option" type="button" data-opt-idx="${origIdx}">
+        ${ui.escapeHtml(q.opciones[origIdx])}
+      </button>
+    `)
+    .join("");
+
+  const overlay = document.createElement("div");
+  overlay.className = "modal-overlay";
+  overlay.innerHTML = `
+    <div class="modal-card modal-card--wide">
+      <p class="muted tiny" style="text-transform: uppercase; letter-spacing: 0.4px; margin: 0 0 8px;">
+        Vista previa · no cuenta para tus estadísticas
+      </p>
+      <p class="test-question" style="font-size: 16px; margin: 0 0 14px;">${ui.escapeHtml(q.enunciado)}</p>
+      <div class="options" id="preview-options">${optionsHtml}</div>
+      ${hasExpl ? `<p class="explanation" id="preview-expl" style="display:none;">${ui.escapeHtml(q.explicacion)}</p>` : ""}
+      <div class="modal-actions" style="margin-top: 16px;">
+        <button class="btn btn--ghost" id="preview-close" type="button">Cerrar</button>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(overlay);
+  void overlay.offsetWidth;
+  overlay.classList.add("is-visible");
+
+  const close = () => {
+    overlay.classList.remove("is-visible");
+    setTimeout(() => overlay.remove(), 150);
+  };
+
+  overlay.querySelectorAll("#preview-options .option").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const chosen = parseInt(btn.getAttribute("data-opt-idx"), 10);
+      overlay.querySelectorAll("#preview-options .option").forEach((b) => {
+        b.disabled = true;
+        const origIdx = parseInt(b.getAttribute("data-opt-idx"), 10);
+        if (origIdx === q.correcta) b.classList.add("is-correct");
+        if (origIdx === chosen && chosen !== q.correcta) b.classList.add("is-wrong");
+      });
+      if (hasExpl) {
+        overlay.querySelector("#preview-expl").style.display = "block";
+      }
+    });
+  });
+
+  overlay.querySelector("#preview-close").addEventListener("click", close);
 }
 
 function exportProgress() {
