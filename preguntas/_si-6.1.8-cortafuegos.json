@@ -9,45 +9,40 @@
       "id": "si-6.1.8-001",
       "enunciado": "¿Qué es un cortafuegos?",
       "opciones": [
-        "Un sistema para gestionar direcciones IP de los dispositivos",
+        "Un sistema para gestionar copias de seguridad de datos",
         "Un sistema para optimizar el rendimiento de la red",
-        "Un sistema de seguridad de red diseñado para prevenir accesos no autorizados",
-        "Un sistema para gestionar copias de seguridad de datos"
+        "Un sistema para gestionar direcciones IP de los dispositivos",
+        "Un sistema de seguridad de red diseñado para prevenir accesos no autorizados"
       ],
-      "correcta": 2,
+      "correcta": 3,
       "explicacion": "Un cortafuegos es un sistema de seguridad de red diseñado para prevenir accesos no autorizados desde o hacia una red privada."
     },
     {
       "id": "si-6.1.8-002",
       "enunciado": "¿Cómo se dice cortafuegos en inglés?",
-      "opciones": [
-        "Firewall",
-        "Netwall",
-        "Netguard",
-        "Securenet"
-      ],
-      "correcta": 0,
+      "opciones": ["Netguard", "Securenet", "Netwall", "Firewall"],
+      "correcta": 3,
       "explicacion": "La traducción al inglés de cortafuegos es firewall."
     },
     {
       "id": "si-6.1.8-003",
       "enunciado": "¿Entre qué tipos de redes actúa el cortafuegos como barrera?",
       "opciones": [
+        "Entre redes locales y redes inalámbricas",
         "Entre redes de área local y redes de área metropolitana",
-        "Entre redes confiables y no confiables, como Internet",
         "Entre redes públicas y redes privadas virtuales",
-        "Entre redes locales y redes inalámbricas"
+        "Entre redes confiables y no confiables, como Internet"
       ],
-      "correcta": 1,
+      "correcta": 3,
       "explicacion": "El cortafuegos actúa como una barrera entre redes confiables y no confiables, como Internet."
     },
     {
       "id": "si-6.1.8-004",
       "enunciado": "¿En qué se basa el cortafuegos para monitorear y controlar el tráfico?",
       "opciones": [
+        "En el ancho de banda disponible en cada momento",
         "En la velocidad de conexión de los dispositivos",
         "En el número de usuarios conectados simultáneamente",
-        "En el ancho de banda disponible en cada momento",
         "En reglas de seguridad predeterminadas"
       ],
       "correcta": 3,
@@ -57,33 +52,33 @@
       "id": "si-6.1.8-005",
       "enunciado": "¿Qué tipo de tráfico controla un cortafuegos?",
       "opciones": [
+        "Solo el tráfico entrante",
         "Solo el tráfico saliente",
         "Solo el tráfico interno entre equipos de la red local",
-        "El tráfico de red entrante y saliente",
-        "Solo el tráfico entrante"
+        "El tráfico de red entrante y saliente"
       ],
-      "correcta": 2,
+      "correcta": 3,
       "explicacion": "El cortafuegos monitorea y controla el tráfico de red entrante y saliente."
     },
     {
       "id": "si-6.1.8-006",
       "enunciado": "¿En qué consiste un cortafuegos de hardware?",
       "opciones": [
+        "Un programa instalado en el servidor principal de la red",
         "Un servicio de seguridad contratado a través de Internet",
-        "Un dispositivo físico dedicado",
         "Una función integrada en el sistema operativo del equipo",
-        "Un programa instalado en el servidor principal de la red"
+        "Un dispositivo físico dedicado"
       ],
-      "correcta": 1,
+      "correcta": 3,
       "explicacion": "Los cortafuegos de hardware son dispositivos físicos dedicados."
     },
     {
       "id": "si-6.1.8-007",
       "enunciado": "¿En qué consiste un cortafuegos de software?",
       "opciones": [
-        "Un componente integrado en el hardware del router",
-        "Un servicio de seguridad proporcionado a través de Internet",
         "Un dispositivo físico dedicado a la seguridad de red",
+        "Un servicio de seguridad proporcionado a través de Internet",
+        "Un componente integrado en el hardware del router",
         "Un programa instalado en computadoras o servidores"
       ],
       "correcta": 3,
@@ -93,12 +88,12 @@
       "id": "si-6.1.8-008",
       "enunciado": "¿Cómo se proporcionan los cortafuegos basados en la nube?",
       "opciones": [
-        "Como programas instalados en cada equipo de la red",
-        "Como servicios de seguridad a través de Internet",
         "Como dispositivos físicos instalados en la red local",
-        "Como módulos integrados en el sistema operativo"
+        "Como programas instalados en cada equipo de la red",
+        "Como módulos integrados en el sistema operativo",
+        "Como servicios de seguridad a través de Internet"
       ],
-      "correcta": 1,
+      "correcta": 3,
       "explicacion": "Los cortafuegos basados en la nube son servicios de seguridad proporcionados a través de Internet."
     },
     {
@@ -106,8 +101,8 @@
       "enunciado": "¿Qué son los cortafuegos de próxima generación (NGFW)?",
       "opciones": [
         "Cortafuegos de software gratuitos para uso doméstico",
-        "Dispositivos físicos de red sin capacidades adicionales",
         "Cortafuegos basados exclusivamente en la nube",
+        "Dispositivos físicos de red sin capacidades adicionales",
         "Una evolución avanzada de los cortafuegos tradicionales con capacidades mejoradas"
       ],
       "correcta": 3,
@@ -117,60 +112,60 @@
       "id": "si-6.1.8-010",
       "enunciado": "¿Qué significan las siglas NGFW?",
       "opciones": [
-        "Network Gateway Firewall",
-        "Next-Generation Firewall",
         "Network Guard and Filter Wizard",
-        "New Generation Firewall Web"
+        "New Generation Firewall Web",
+        "Network Gateway Firewall",
+        "Next-Generation Firewall"
       ],
-      "correcta": 1,
+      "correcta": 3,
       "explicacion": "NGFW son las siglas de Next-Generation Firewall (cortafuegos de próxima generación)."
     },
     {
       "id": "si-6.1.8-011",
       "enunciado": "¿Cuál de las siguientes es una capacidad de los NGFW?",
       "opciones": [
-        "Administración de direcciones IP dinámicas",
+        "Gestión de copias de seguridad automáticas",
         "Optimización del ancho de banda de la red",
-        "Inspección profunda de paquetes (DPI)",
-        "Gestión de copias de seguridad automáticas"
+        "Administración de direcciones IP dinámicas",
+        "Inspección profunda de paquetes (DPI)"
       ],
-      "correcta": 2,
+      "correcta": 3,
       "explicacion": "Los NGFW ofrecen capacidades como la inspección profunda de paquetes (DPI), entre otras."
     },
     {
       "id": "si-6.1.8-012",
       "enunciado": "¿Qué significan las siglas DPI?",
       "opciones": [
-        "Deep Packet Inspection",
-        "Distributed Packet Intelligence",
+        "Dynamic Packet Interface",
         "Data Protection Inspection",
-        "Dynamic Packet Interface"
+        "Distributed Packet Intelligence",
+        "Deep Packet Inspection"
       ],
-      "correcta": 0,
+      "correcta": 3,
       "explicacion": "DPI son las siglas de Deep Packet Inspection (inspección profunda de paquetes)."
     },
     {
       "id": "si-6.1.8-013",
       "enunciado": "¿Qué significan las siglas IPS en el contexto de los NGFW?",
       "opciones": [
-        "Intrusion Prevention System",
-        "Integrated Packet Scanner",
         "Internet Protocol Security",
-        "Internal Protection System"
+        "Integrated Packet Scanner",
+        "Internal Protection System",
+        "Intrusion Prevention System"
       ],
-      "correcta": 0,
+      "correcta": 3,
       "explicacion": "IPS son las siglas de Intrusion Prevention System (sistema de prevención de intrusiones)."
     },
     {
       "id": "si-6.1.8-014",
       "enunciado": "¿Cuál de las siguientes NO es una capacidad mencionada de los NGFW?",
       "opciones": [
-        "Antivirus y anti-malware integrados",
-        "Gestión de copias de seguridad en la nube",
+        "Control de aplicaciones",
         "Filtrado de contenido web",
-        "Control de aplicaciones"
+        "Antivirus y anti-malware integrados",
+        "Gestión de copias de seguridad en la nube"
       ],
-      "correcta": 1,
+      "correcta": 3,
       "explicacion": "Las capacidades de los NGFW incluyen DPI, IPS, control de aplicaciones, filtrado de contenido web, antivirus/anti-malware y gestión de identidades. La gestión de copias de seguridad no es una de ellas."
     },
     {
@@ -179,58 +174,58 @@
       "opciones": [
         "Para proteger los dispositivos físicos de la red",
         "Para gestionar el tráfico entre redes locales",
-        "Para proteger las aplicaciones web de ataques en la capa de aplicación",
-        "Para cifrar las comunicaciones entre servidores"
+        "Para cifrar las comunicaciones entre servidores",
+        "Para proteger las aplicaciones web de ataques en la capa de aplicación"
       ],
-      "correcta": 2,
+      "correcta": 3,
       "explicacion": "El WAF protege las aplicaciones web de ataques en la capa de aplicación."
     },
     {
       "id": "si-6.1.8-016",
       "enunciado": "¿Qué significan las siglas WAF?",
       "opciones": [
-        "Web Application Firewall",
         "Wide Area Firewall",
+        "Wireless Application Filter",
         "Web Access Filter",
-        "Wireless Application Filter"
+        "Web Application Firewall"
       ],
-      "correcta": 0,
+      "correcta": 3,
       "explicacion": "WAF son las siglas de Web Application Firewall."
     },
     {
       "id": "si-6.1.8-017",
       "enunciado": "¿Cuál de los siguientes es un tipo de ataque del que protege el WAF?",
       "opciones": [
+        "Ataques de denegación de servicio distribuido (DDoS)",
         "Ataques de fuerza bruta a contraseñas SSH",
-        "Inyección SQL",
         "Ataques de suplantación de identidad por correo electrónico",
-        "Ataques de denegación de servicio distribuido (DDoS)"
+        "Inyección SQL"
       ],
-      "correcta": 1,
+      "correcta": 3,
       "explicacion": "El WAF protege de ataques como XSS, inyección SQL y envenenamiento de cookies, entre otros."
     },
     {
       "id": "si-6.1.8-018",
       "enunciado": "¿Qué tipo de tráfico filtra, monitorea y bloquea el WAF?",
       "opciones": [
-        "Tráfico SSH y Telnet no autorizado",
-        "Tráfico HTTP/HTTPS malicioso hacia y desde la aplicación web",
         "Tráfico FTP y SMTP malicioso",
-        "Tráfico DNS y DHCP sospechoso"
+        "Tráfico SSH y Telnet no autorizado",
+        "Tráfico DNS y DHCP sospechoso",
+        "Tráfico HTTP/HTTPS malicioso hacia y desde la aplicación web"
       ],
-      "correcta": 1,
+      "correcta": 3,
       "explicacion": "El WAF filtra, monitorea y bloquea el tráfico HTTP/HTTPS malicioso hacia y desde la aplicación web."
     },
     {
       "id": "si-6.1.8-019",
       "enunciado": "¿Qué significan las siglas XSS?",
       "opciones": [
-        "Cross-Site Scripting",
-        "Extended Site Scripting",
+        "Extended Security System",
         "External Script Scanner",
-        "Extended Security System"
+        "Extended Site Scripting",
+        "Cross-Site Scripting"
       ],
-      "correcta": 0,
+      "correcta": 3,
       "explicacion": "XSS son las siglas de Cross-Site Scripting, un tipo de ataque de inyección de scripts maliciosos."
     },
     {
@@ -250,11 +245,11 @@
       "enunciado": "¿En qué se basan las decisiones del filtrado de paquetes?",
       "opciones": [
         "En el estado de la conexión y el historial de tráfico",
+        "En el contenido de los datos y las palabras clave",
         "En la identidad del usuario y la hora del día",
-        "En reglas predefinidas como IPs de origen y destino, puertos y protocolos",
-        "En el contenido de los datos y las palabras clave"
+        "En reglas predefinidas como IPs de origen y destino, puertos y protocolos"
       ],
-      "correcta": 2,
+      "correcta": 3,
       "explicacion": "El filtrado de paquetes toma decisiones basadas en reglas predefinidas como direcciones IP de origen y destino, puertos y protocolos."
     },
     {
@@ -262,44 +257,44 @@
       "enunciado": "¿Qué monitorea el método de inspección de estado?",
       "opciones": [
         "El contenido de los paquetes a nivel de aplicación",
-        "El estado de las conexiones activas",
+        "Las palabras clave y tipos de archivos en el tráfico",
         "Los encabezados de los paquetes individuales únicamente",
-        "Las palabras clave y tipos de archivos en el tráfico"
+        "El estado de las conexiones activas"
       ],
-      "correcta": 1,
+      "correcta": 3,
       "explicacion": "La inspección de estado monitorea el estado de las conexiones activas."
     },
     {
       "id": "si-6.1.8-023",
       "enunciado": "¿Qué diferencia la inspección de estado del filtrado de paquetes?",
       "opciones": [
+        "La inspección de estado es más rápida pero menos segura",
         "La inspección de estado solo analiza el tráfico saliente",
-        "La inspección de estado toma decisiones basadas en el contexto de la conexión, no solo en paquetes individuales",
         "La inspección de estado no utiliza reglas predefinidas",
-        "La inspección de estado es más rápida pero menos segura"
+        "La inspección de estado toma decisiones basadas en el contexto de la conexión, no solo en paquetes individuales"
       ],
-      "correcta": 1,
+      "correcta": 3,
       "explicacion": "La inspección de estado toma decisiones basadas en el contexto de la conexión, no solo en la información de los paquetes individuales."
     },
     {
       "id": "si-6.1.8-024",
       "enunciado": "Según la inspección de estado, ¿qué paquetes pueden ser bloqueados?",
       "opciones": [
-        "Los paquetes que contengan palabras clave prohibidas",
-        "Los paquetes que intenten iniciar una nueva conexión no solicitada",
         "Los paquetes que superen un tamaño máximo predefinido",
-        "Los paquetes que provengan de direcciones IP desconocidas"
+        "Los paquetes que provengan de direcciones IP desconocidas",
+        "Los paquetes que contengan palabras clave prohibidas",
+        "Los paquetes que intenten iniciar una nueva conexión no solicitada"
       ],
-      "correcta": 1,
+      "correcta": 3,
       "explicacion": "Los paquetes que intenten iniciar una nueva conexión no solicitada pueden ser bloqueados por la inspección de estado."
     },
     {
       "id": "si-6.1.8-025",
       "enunciado": "¿A qué nivel inspecciona el contenido de los paquetes el filtrado de aplicaciones?",
       "opciones": [
-        "A nivel de estado de conexión",
         "A nivel de encabezado de red",
         "A nivel de protocolo de transporte",
+        "A nivel de estado de conexión",
         "A nivel de aplicación"
       ],
       "correcta": 3,
@@ -309,48 +304,48 @@
       "id": "si-6.1.8-026",
       "enunciado": "¿En qué se basan las decisiones del filtrado de aplicaciones?",
       "opciones": [
-        "En el estado de la conexión activa",
-        "En reglas específicas de la aplicación",
         "En las direcciones IP de origen y destino",
-        "En las palabras clave y tipos de archivos"
+        "En el estado de la conexión activa",
+        "En las palabras clave y tipos de archivos",
+        "En reglas específicas de la aplicación"
       ],
-      "correcta": 1,
+      "correcta": 3,
       "explicacion": "El filtrado de aplicaciones permite o bloquea el tráfico basado en reglas específicas de la aplicación."
     },
     {
       "id": "si-6.1.8-027",
       "enunciado": "¿En qué se basa el filtrado de contenido para bloquear o permitir tráfico?",
       "opciones": [
-        "En el contenido de los datos: palabras clave, tipos de archivos o patrones",
-        "En la identidad del usuario y el tipo de dispositivo",
+        "En el estado de la conexión y el protocolo utilizado",
         "En la dirección IP de origen y el puerto de destino",
-        "En el estado de la conexión y el protocolo utilizado"
+        "En la identidad del usuario y el tipo de dispositivo",
+        "En el contenido de los datos: palabras clave, tipos de archivos o patrones"
       ],
-      "correcta": 0,
+      "correcta": 3,
       "explicacion": "El filtrado de contenido bloquea o permite el tráfico basado en el contenido de los datos, como palabras clave, tipos de archivos o patrones de datos."
     },
     {
       "id": "si-6.1.8-028",
       "enunciado": "¿Cuál de los siguientes sería un ejemplo de filtrado de contenido?",
       "opciones": [
-        "Bloquear paquetes de una IP concreta",
-        "Bloquear el tráfico relacionado con facebook.com",
         "Bloquear conexiones por el puerto 23",
-        "Bloquear conexiones de Mozilla Firefox"
+        "Bloquear paquetes de una IP concreta",
+        "Bloquear conexiones de Mozilla Firefox",
+        "Bloquear el tráfico relacionado con facebook.com"
       ],
-      "correcta": 1,
+      "correcta": 3,
       "explicacion": "El filtrado de contenido puede bloquear tráfico relacionado con un sitio web como facebook.com."
     },
     {
       "id": "si-6.1.8-029",
       "enunciado": "¿En qué criterios pueden basarse las políticas del filtrado basado en políticas?",
       "opciones": [
-        "En la identidad del usuario, la hora del día o el tipo de dispositivo",
-        "En el puerto de destino y la dirección IP de origen",
         "En el tamaño de los paquetes y el protocolo utilizado",
-        "En el tipo de cifrado y el nivel de compresión"
+        "En el puerto de destino y la dirección IP de origen",
+        "En el tipo de cifrado y el nivel de compresión",
+        "En la identidad del usuario, la hora del día o el tipo de dispositivo"
       ],
-      "correcta": 0,
+      "correcta": 3,
       "explicacion": "Las políticas del filtrado basado en políticas pueden basarse en criterios como la identidad del usuario, la hora del día o el tipo de dispositivo."
     },
     {
@@ -369,12 +364,12 @@
       "id": "si-6.1.8-031",
       "enunciado": "¿Qué significan las siglas NAT?",
       "opciones": [
-        "Network Allocation Table",
         "Network Access Technology",
-        "Network Address Translation",
-        "Node Address Transfer"
+        "Node Address Transfer",
+        "Network Allocation Table",
+        "Network Address Translation"
       ],
-      "correcta": 2,
+      "correcta": 3,
       "explicacion": "NAT son las siglas de Network Address Translation (traducción de direcciones de red)."
     },
     {
@@ -382,11 +377,11 @@
       "enunciado": "¿Qué hace la técnica NAT con las direcciones IP?",
       "opciones": [
         "Las cifra para evitar que sean interceptadas",
-        "Las modifica en los paquetes de datos mientras están en tránsito",
+        "Las asigna dinámicamente a los dispositivos de la red",
         "Las filtra según las reglas de seguridad predefinidas",
-        "Las asigna dinámicamente a los dispositivos de la red"
+        "Las modifica en los paquetes de datos mientras están en tránsito"
       ],
-      "correcta": 1,
+      "correcta": 3,
       "explicacion": "NAT modifica las direcciones IP en los paquetes de datos mientras están en tránsito."
     },
     {
@@ -405,21 +400,21 @@
       "id": "si-6.1.8-034",
       "enunciado": "¿Qué beneficio de seguridad aporta NAT?",
       "opciones": [
-        "Bloquea automáticamente los ataques de denegación de servicio",
-        "Oculta las direcciones IP internas de la red pública",
         "Cifra el tráfico entre la red privada e Internet",
-        "Detecta y elimina el malware en los paquetes de datos"
+        "Bloquea automáticamente los ataques de denegación de servicio",
+        "Detecta y elimina el malware en los paquetes de datos",
+        "Oculta las direcciones IP internas de la red pública"
       ],
-      "correcta": 1,
+      "correcta": 3,
       "explicacion": "NAT oculta las direcciones IP internas de la red pública, añadiendo una capa de seguridad."
     },
     {
       "id": "si-6.1.8-035",
       "enunciado": "¿Qué permite el registro y monitoreo de tráfico en un cortafuegos?",
       "opciones": [
+        "Bloquear automáticamente conexiones sospechosas",
         "Cifrar el tráfico almacenado en los registros",
         "Filtrar el tráfico según palabras clave",
-        "Bloquear automáticamente conexiones sospechosas",
         "Almacenar un registro de las conexiones con el nivel de detalle deseado"
       ],
       "correcta": 3,
@@ -429,20 +424,20 @@
       "id": "si-6.1.8-036",
       "enunciado": "¿Qué hace la característica de prevención de intrusiones?",
       "opciones": [
+        "Gestiona las direcciones IP de los dispositivos de la red",
         "Almacena copias de seguridad del tráfico de red",
         "Optimiza el rendimiento del tráfico de red",
-        "Monitorea el tráfico en busca de actividades sospechosas y bloquea amenazas en tiempo real",
-        "Gestiona las direcciones IP de los dispositivos de la red"
+        "Monitorea el tráfico en busca de actividades sospechosas y bloquea amenazas en tiempo real"
       ],
-      "correcta": 2,
+      "correcta": 3,
       "explicacion": "La prevención de intrusiones monitorea el tráfico de red en busca de actividades sospechosas, detecta y bloquea amenazas conocidas y desconocidas en tiempo real."
     },
     {
       "id": "si-6.1.8-037",
       "enunciado": "¿Cuándo actúa la prevención de intrusiones respecto a los ataques?",
       "opciones": [
-        "Solo cuando el administrador lo activa manualmente",
         "Después de que el ataque haya causado daño, para registrarlo",
+        "Solo cuando el administrador lo activa manualmente",
         "Solo frente a amenazas ya conocidas y catalogadas",
         "Antes de que puedan causar daño a los sistemas"
       ],
@@ -454,8 +449,8 @@
       "enunciado": "¿Qué hace el cortafuegos con el tráfico VPN en la característica VPN pass-through?",
       "opciones": [
         "Lo bloquea por considerarlo tráfico cifrado no autorizado",
-        "Lo redirige a un servidor de seguridad externo",
         "Lo descifra para inspeccionarlo antes de permitirlo",
+        "Lo redirige a un servidor de seguridad externo",
         "Lo reconoce y permite que pase a través de la red sin bloquearlo"
       ],
       "correcta": 3,
@@ -465,45 +460,45 @@
       "id": "si-6.1.8-039",
       "enunciado": "¿En qué sistemas operativos está incluido Windows Defender Firewall?",
       "opciones": [
-        "Solo en Windows 10 y Windows 11",
         "Solo en Windows Server",
-        "En todos los sistemas operativos Windows",
-        "Solo en ediciones profesionales de Windows"
+        "Solo en Windows 10 y Windows 11",
+        "Solo en ediciones profesionales de Windows",
+        "En todos los sistemas operativos Windows"
       ],
-      "correcta": 2,
+      "correcta": 3,
       "explicacion": "Windows Defender Firewall está incluido en todos los sistemas operativos Windows."
     },
     {
       "id": "si-6.1.8-040",
       "enunciado": "¿En qué tipo de sistema está incluido iptables?",
       "opciones": [
-        "En sistemas Linux, incluido en el núcleo del sistema operativo",
+        "En sistemas macOS",
         "En sistemas Windows Server",
         "En sistemas BSD",
-        "En sistemas macOS"
+        "En sistemas Linux, incluido en el núcleo del sistema operativo"
       ],
-      "correcta": 0,
+      "correcta": 3,
       "explicacion": "iptables es un cortafuegos popular en sistemas Linux, incluido en el núcleo del sistema operativo."
     },
     {
       "id": "si-6.1.8-041",
       "enunciado": "¿Qué es UFW?",
       "opciones": [
-        "Una interfaz simplificada para iptables en Ubuntu",
-        "Una distribución Linux destinada a usarse como cortafuegos",
         "Un cortafuegos de hardware para entornos empresariales",
-        "Un cortafuegos basado en la nube de Microsoft"
+        "Una distribución Linux destinada a usarse como cortafuegos",
+        "Un cortafuegos basado en la nube de Microsoft",
+        "Una interfaz simplificada para iptables en Ubuntu"
       ],
-      "correcta": 0,
+      "correcta": 3,
       "explicacion": "UFW (Uncomplicated Firewall) es una interfaz simplificada para iptables en Ubuntu."
     },
     {
       "id": "si-6.1.8-042",
       "enunciado": "¿Qué significan las siglas UFW?",
       "opciones": [
-        "Unified Firewall Web",
-        "Universal Filter Wizard",
         "Unix Firewall Wrapper",
+        "Universal Filter Wizard",
+        "Unified Firewall Web",
         "Uncomplicated Firewall"
       ],
       "correcta": 3,
@@ -513,60 +508,49 @@
       "id": "si-6.1.8-043",
       "enunciado": "¿En qué sistemas se utiliza PF (Packet Filter)?",
       "opciones": [
-        "En sistemas BSD y macOS",
+        "En sistemas Windows y Linux",
         "En sistemas Linux únicamente",
         "En sistemas Android e iOS",
-        "En sistemas Windows y Linux"
+        "En sistemas BSD y macOS"
       ],
-      "correcta": 0,
+      "correcta": 3,
       "explicacion": "PF (Packet Filter) se utiliza en sistemas BSD y macOS."
     },
     {
       "id": "si-6.1.8-044",
       "enunciado": "¿Qué es Zentyal?",
       "opciones": [
-        "Una distribución Linux española basada en Ubuntu que implementa un gateway con funciones de cortafuegos administrado por interfaz web",
         "Un cortafuegos de hardware de Cisco",
+        "Un cortafuegos basado en la nube de Amazon",
         "Una interfaz simplificada para iptables en Debian",
-        "Un cortafuegos basado en la nube de Amazon"
+        "Una distribución Linux española basada en Ubuntu que implementa un gateway con funciones de cortafuegos administrado por interfaz web"
       ],
-      "correcta": 0,
+      "correcta": 3,
       "explicacion": "Zentyal es una distribución Linux española, basada en Ubuntu, que implementa un gateway con funciones de cortafuegos administrado a través de una interfaz web."
     },
     {
       "id": "si-6.1.8-045",
       "enunciado": "¿Cuál de los siguientes es un ejemplo de cortafuegos de hardware?",
       "opciones": [
-        "iptables",
         "Windows Defender Firewall",
-        "Cisco ASA",
-        "UFW"
+        "iptables",
+        "UFW",
+        "Cisco ASA"
       ],
-      "correcta": 2,
+      "correcta": 3,
       "explicacion": "Cisco ASA (Adaptive Security Appliance) es un ejemplo de cortafuegos de hardware."
     },
     {
       "id": "si-6.1.8-046",
       "enunciado": "¿Qué es ModSecurity?",
       "opciones": [
-        "Una distribución Linux destinada a usarse como cortafuegos",
         "Un cortafuegos de hardware de próxima generación",
-        "Un WAF de código abierto que monitoriza el tráfico directamente en el servidor Apache",
-        "Un cortafuegos basado en la nube de Microsoft"
+        "Un cortafuegos basado en la nube de Microsoft",
+        "Una distribución Linux destinada a usarse como cortafuegos",
+        "Un WAF de código abierto que monitoriza el tráfico directamente en el servidor Apache"
       ],
-      "correcta": 2,
+      "correcta": 3,
       "explicacion": "ModSecurity es un WAF de código abierto, módulo de Apache, que monitoriza el tráfico directamente en el servidor."
-    },
-    {
-      "id": "si-6.1.8-047",
-      "enunciado": "¿Cuál de las siguientes afirmaciones describe mejor la función de un cortafuegos en una red informática?",
-      "opciones": [
-	  	"Un cortafuegos se utiliza para almacenar copias de seguridad de datos críticos.",
-	  	"Un cortafuegos es un dispositivo que permite o bloquea el tráfico de red basado en un conjunto de reglas de seguridad predefinidas",
-	  	"Un cortafuegos es una herramienta de software que optimiza el rendimiento de la red al comprimir los datos.",
-	  	"Un cortafuegos se encarga de gestionar las direcciones IP de los dispositivos en una red."      ],
-      "correcta": 1,
-      "explicacion": ""
     }
   ]
 }

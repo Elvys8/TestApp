@@ -215,7 +215,7 @@ export function getAsignatura(name) {
         masteredCount: storage.countMastered(ids, threshold),
         isValidated: storage.isFileValidated(t.id),
       };
-    }).sort((a, b) => a.tema.localeCompare(b.tema, "es")),
+    }).sort((a, b) => a.tema.localeCompare(b.tema, "es", { numeric: true })),
   };
 }
 

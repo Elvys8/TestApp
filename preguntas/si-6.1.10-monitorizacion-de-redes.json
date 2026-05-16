@@ -1,0 +1,417 @@
+{
+  "schema_version": 1,
+  "id": "si-6.1.10-monitorizacion-de-redes",
+  "asignatura": "Sistemas Informáticos",
+  "asignatura_color": "#1C3C6F",
+  "tema": "6.1.10 Monitorización de redes",
+  "preguntas": [
+    {
+      "id": "si-6.1.10-001",
+      "enunciado": "¿Cuál es el principal motivo que lleva a un administrador a monitorizar el tráfico de red?",
+      "opciones": [
+        "Aumentar el número de equipos conectados",
+        "Detectar causas de reducción del rendimiento de la red",
+        "Configurar la dirección IP de los equipos",
+        "Instalar actualizaciones de software"
+      ],
+      "correcta": 1,
+      "explicacion": "En ocasiones la velocidad de la red decrece, siendo necesario averiguar el motivo. La monitorización permite detectar si hay usuarios ajenos aprovechándose del ancho de banda o si se está siendo víctima de algún tipo de ataque."
+    },
+    {
+      "id": "si-6.1.10-002",
+      "enunciado": "La monitorización de redes se considera una tarea de mantenimiento preventivo. ¿En qué dos ámbitos?",
+      "opciones": [
+        "Seguridad y dimensionamiento de red",
+        "Inventario y facturación",
+        "Copias de seguridad y antivirus",
+        "Diseño gráfico y rendimiento del procesador"
+      ],
+      "correcta": 0,
+      "explicacion": "La monitorización se considera una tarea de mantenimiento preventivo tanto a nivel de seguridad como de dimensionamiento de red: puede ocurrir que el ancho de banda sea insuficiente o, por el contrario, esté sobredimensionado."
+    },
+    {
+      "id": "si-6.1.10-003",
+      "enunciado": "¿Qué tipo de estudio realizan las herramientas de análisis de red?",
+      "opciones": [
+        "Un análisis general del sistema operativo",
+        "Un estudio detallado y pormenorizado del tráfico que circula por la red",
+        "Un análisis del consumo eléctrico de los equipos",
+        "Un informe sobre el hardware instalado en cada equipo"
+      ],
+      "correcta": 1,
+      "explicacion": "La solución es incrementar el control sobre la red utilizando herramientas de análisis de red. Estas herramientas realizan un estudio detallado y pormenorizado del tráfico que circula por la red."
+    },
+    {
+      "id": "si-6.1.10-004",
+      "enunciado": "¿Cuál de los siguientes NO es un problema que puede llevar a monitorizar una red?",
+      "opciones": [
+        "Sospecha de sniffing",
+        "Sospecha de spoofing IP",
+        "Reducción del ancho de banda disponible",
+        "Actualización del sistema operativo del servidor"
+      ],
+      "correcta": 3,
+      "explicacion": "Los problemas que motivan la monitorización son: usuarios ajenos aprovechándose del ancho de banda y ataques como sniffing, spoofing IP o DoS. La actualización del sistema operativo no es un motivo de monitorización de tráfico."
+    },
+    {
+      "id": "si-6.1.10-005",
+      "enunciado": "¿En qué consiste el sniffing?",
+      "opciones": [
+        "Falsificar la dirección IP del remitente para disfrazar el origen del tráfico",
+        "Sobrecargar una máquina o red para hacerla inaccesible",
+        "Capturar paquetes de datos que circulan por la red mediante software o hardware especializado",
+        "Escanear los puertos abiertos de un equipo remoto"
+      ],
+      "correcta": 2,
+      "explicacion": "El proceso de sniffing implica el uso de herramientas de software o hardware, conocidas como sniffers, que capturan los paquetes de datos que circulan por la red. Estos paquetes pueden contener información crítica, como credenciales de acceso, datos bancarios y otros datos personales."
+    },
+    {
+      "id": "si-6.1.10-006",
+      "enunciado": "Los sniffers pueden operar de dos modos. ¿Cuáles son?",
+      "opciones": [
+        "Activo y reactivo",
+        "Pasivo y activo",
+        "Local y remoto",
+        "Cifrado y en claro"
+      ],
+      "correcta": 1,
+      "explicacion": "Los sniffers pueden operar de manera pasiva, donde el hacker simplemente observa el tráfico sin intervenir, o de manera activa, donde manipulan el tráfico para obtener acceso a información confidencial."
+    },
+    {
+      "id": "si-6.1.10-007",
+      "enunciado": "¿Qué tipo de información puede quedar expuesta ante un ataque de sniffing?",
+      "opciones": [
+        "Solo el nombre de los equipos conectados",
+        "Credenciales de acceso, datos bancarios y otros datos personales",
+        "Únicamente el tráfico web no cifrado",
+        "La configuración de los switches de la red"
+      ],
+      "correcta": 1,
+      "explicacion": "Los paquetes capturados por sniffers pueden contener información crítica, como credenciales de acceso, datos bancarios y otros datos personales."
+    },
+    {
+      "id": "si-6.1.10-008",
+      "enunciado": "El sniffing puede ser utilizado de forma legítima. ¿Por quién?",
+      "opciones": [
+        "Por cualquier usuario de la red",
+        "Por el administrador para analizar paquetes de datos",
+        "Por el proveedor de Internet",
+        "Por el fabricante del router"
+      ],
+      "correcta": 1,
+      "explicacion": "Esta herramienta también puede ser utilizada por el administrador para analizar paquetes de datos de forma legítima."
+    },
+    {
+      "id": "si-6.1.10-009",
+      "enunciado": "¿En qué consiste el spoofing IP?",
+      "opciones": [
+        "Capturar paquetes de datos para analizar su contenido",
+        "Sobrecargar un servidor con más tráfico del que puede manejar",
+        "Falsificar la dirección IP del remitente para disfrazar el origen del tráfico",
+        "Abrir puertos en el cortafuegos sin autorización"
+      ],
+      "correcta": 2,
+      "explicacion": "El spoofing IP es una técnica utilizada para disfrazar el origen del tráfico de red mediante la falsificación de la dirección IP del remitente."
+    },
+    {
+      "id": "si-6.1.10-010",
+      "enunciado": "¿Cuál es el objetivo de un ataque DoS?",
+      "opciones": [
+        "Capturar contraseñas de los usuarios de la red",
+        "Falsificar la identidad de un equipo en la red",
+        "Sobrecargar una máquina o red para hacerla inaccesible a los usuarios legítimos",
+        "Instalar software malicioso en los equipos de la red"
+      ],
+      "correcta": 2,
+      "explicacion": "Un ataque de Denegación de Servicio (DoS) es una táctica utilizada para sobrecargar una máquina o red, haciéndola inaccesible para los usuarios legítimos."
+    },
+    {
+      "id": "si-6.1.10-011",
+      "enunciado": "¿Cómo consiguen los atacantes que un sistema falle en un ataque DoS?",
+      "opciones": [
+        "Cifrando los archivos del servidor",
+        "Enviando más tráfico del que el objetivo puede manejar",
+        "Desconectando físicamente los cables de red",
+        "Modificando las tablas de enrutamiento"
+      ],
+      "correcta": 1,
+      "explicacion": "Los atacantes logran el DoS enviando más tráfico del que el objetivo puede manejar, lo que provoca que falle y no pueda proporcionar servicio a sus usuarios normales."
+    },
+    {
+      "id": "si-6.1.10-012",
+      "enunciado": "¿Qué es Wireshark?",
+      "opciones": [
+        "Un sistema operativo para servidores de red",
+        "Un analizador de protocolos utilizado para análisis y resolución de problemas en redes de comunicaciones",
+        "Un programa de rastreo de puertos de código abierto",
+        "Un software de monitorización exclusivo para Linux"
+      ],
+      "correcta": 1,
+      "explicacion": "Wireshark es un analizador de protocolos utilizado para realizar análisis y solucionar problemas en redes de comunicaciones. Tiene una interfaz gráfica y muchas opciones de organización y filtrado de información."
+    },
+    {
+      "id": "si-6.1.10-013",
+      "enunciado": "¿Qué modo de configuración permite a Wireshark ver todo el tráfico que pasa a través de una red?",
+      "opciones": [
+        "Modo seguro",
+        "Modo promiscuo",
+        "Modo pasivo",
+        "Modo monitor"
+      ],
+      "correcta": 1,
+      "explicacion": "Wireshark permite ver todo el tráfico que pasa a través de una red estableciendo la configuración en modo promiscuo."
+    },
+    {
+      "id": "si-6.1.10-014",
+      "enunciado": "¿Qué capacidad especial incluye Wireshark respecto al protocolo TCP?",
+      "opciones": [
+        "Bloquear conexiones TCP sospechosas automáticamente",
+        "Mostrar el flujo reconstruido de una sesión TCP",
+        "Cifrar el tráfico TCP en tiempo real",
+        "Redirigir el tráfico TCP a otro servidor"
+      ],
+      "correcta": 1,
+      "explicacion": "Wireshark incluye un completo lenguaje para filtrar lo que queremos ver y la habilidad de mostrar el flujo reconstruido de una sesión de TCP."
+    },
+    {
+      "id": "si-6.1.10-015",
+      "enunciado": "¿Cuál de las siguientes afirmaciones sobre Wireshark es correcta?",
+      "opciones": [
+        "Es software de pago y solo funciona en Windows",
+        "Es software libre y se ejecuta en Unix, Linux, macOS y Windows",
+        "Es software propietario que solo funciona en Linux",
+        "Es software libre pero exclusivo para sistemas Unix"
+      ],
+      "correcta": 1,
+      "explicacion": "Wireshark es software libre y se ejecuta sobre la mayoría de sistemas operativos: Unix, Linux, MacOS y Microsoft Windows."
+    },
+    {
+      "id": "si-6.1.10-016",
+      "enunciado": "Wireshark dispone de un lenguaje propio. ¿Para qué sirve?",
+      "opciones": [
+        "Para programar scripts de automatización de red",
+        "Para filtrar el tráfico que se quiere visualizar",
+        "Para cifrar las capturas de paquetes",
+        "Para generar informes automáticos en PDF"
+      ],
+      "correcta": 1,
+      "explicacion": "Wireshark incluye un completo lenguaje para filtrar lo que queremos ver y la habilidad de mostrar el flujo reconstruido de una sesión de TCP."
+    },
+    {
+      "id": "si-6.1.10-017",
+      "enunciado": "¿Para qué sirve Nmap?",
+      "opciones": [
+        "Para analizar el tráfico de red en modo promiscuo",
+        "Para monitorizar el estado de servicios y enviar advertencias al administrador",
+        "Para efectuar rastreo de puertos",
+        "Para reconstruir sesiones TCP capturadas"
+      ],
+      "correcta": 2,
+      "explicacion": "Nmap es un programa de código abierto que sirve para efectuar rastreo de puertos."
+    },
+    {
+      "id": "si-6.1.10-018",
+      "enunciado": "¿Cuál es una característica destacada de Nmap respecto a su detección?",
+      "opciones": [
+        "Es fácilmente detectable por los sistemas IDS",
+        "Es difícilmente detectable y ha sido creado para evadir los sistemas de detección de intrusos",
+        "Envía notificaciones al administrador cuando es detectado",
+        "Se detiene automáticamente si un IDS lo detecta"
+      ],
+      "correcta": 1,
+      "explicacion": "Nmap es difícilmente detectable, ha sido creado para evadir los sistemas de detección de intrusos (IDS) e interfiere lo menos posible con las operaciones normales de las redes y de las computadoras que son analizadas."
+    },
+    {
+      "id": "si-6.1.10-019",
+      "enunciado": "¿Qué significa la sigla IDS en el contexto de Nmap?",
+      "opciones": [
+        "Internet Data System",
+        "Intrusion Detection System",
+        "Internal Domain Service",
+        "Integrated Defense Scanner"
+      ],
+      "correcta": 1,
+      "explicacion": "Nmap ha sido creado para evadir los sistemas de detección de intrusos (IDS, Intrusion Detection System)."
+    },
+    {
+      "id": "si-6.1.10-020",
+      "enunciado": "¿Qué tipo de software es Nmap?",
+      "opciones": [
+        "Software propietario de pago",
+        "Software libre solo para Windows",
+        "Programa de código abierto",
+        "Software de suscripción mensual"
+      ],
+      "correcta": 2,
+      "explicacion": "Nmap es un programa de código abierto que sirve para efectuar rastreo de puertos."
+    },
+    {
+      "id": "si-6.1.10-021",
+      "enunciado": "¿En qué se diferencia Nmap de Wireshark en cuanto a su función principal?",
+      "opciones": [
+        "Nmap analiza protocolos de red y Wireshark rastrea puertos",
+        "Nmap rastrea puertos y Wireshark analiza el tráfico de red",
+        "Ambos realizan exactamente la misma función",
+        "Nmap monitoriza servicios y Wireshark gestiona cortafuegos"
+      ],
+      "correcta": 1,
+      "explicacion": "Nmap es un programa para efectuar rastreo de puertos, mientras que Wireshark es un analizador de protocolos para analizar el tráfico de red."
+    },
+    {
+      "id": "si-6.1.10-022",
+      "enunciado": "¿En qué sistema operativo funciona Nagios?",
+      "opciones": [
+        "Exclusivamente en Windows Server",
+        "En Linux",
+        "En macOS",
+        "En cualquier sistema operativo de forma nativa"
+      ],
+      "correcta": 1,
+      "explicacion": "Nagios es software libre para Linux que permite monitorizar la red."
+    },
+    {
+      "id": "si-6.1.10-023",
+      "enunciado": "¿Qué permite hacer Nagios al administrador de red?",
+      "opciones": [
+        "Capturar y analizar paquetes de datos en modo promiscuo",
+        "Escanear puertos abiertos en los equipos de la red",
+        "Configurar advertencias sobre el estado de la red",
+        "Reconstruir sesiones TCP completas"
+      ],
+      "correcta": 2,
+      "explicacion": "Nagios es software libre para Linux que permite monitorizar la red, permitiendo al administrador configurar advertencias."
+    },
+    {
+      "id": "si-6.1.10-024",
+      "enunciado": "¿Cuál de las tres herramientas mencionadas está especialmente orientada a la configuración de alertas para el administrador?",
+      "opciones": [
+        "Wireshark",
+        "Nmap",
+        "Nagios",
+        "Las tres por igual"
+      ],
+      "correcta": 2,
+      "explicacion": "Nagios permite monitorizar la red permitiendo al administrador configurar advertencias, lo que lo orienta específicamente a la gestión de alertas."
+    },
+    {
+      "id": "si-6.1.10-025",
+      "enunciado": "¿Cuál de las siguientes herramientas de monitorización se utiliza para análisis del tráfico en tiempo real con interfaz gráfica?",
+      "opciones": [
+        "Nmap",
+        "Nagios",
+        "Wireshark",
+        "IDS"
+      ],
+      "correcta": 2,
+      "explicacion": "Wireshark es un analizador de protocolos con interfaz gráfica y muchas opciones de organización y filtrado de información, que permite ver todo el tráfico que pasa a través de una red."
+    },
+    {
+      "id": "si-6.1.10-026",
+      "enunciado": "Las herramientas de monitorización informan sobre el número de equipos conectados. ¿Qué otro dato de cada equipo proporcionan?",
+      "opciones": [
+        "El nombre de usuario de cada equipo",
+        "La dirección IP de cada equipo",
+        "El sistema operativo instalado en cada equipo",
+        "El fabricante de la tarjeta de red de cada equipo"
+      ],
+      "correcta": 1,
+      "explicacion": "Las herramientas de monitorización dan información sobre el número de equipos conectados y sus direcciones IP."
+    },
+    {
+      "id": "si-6.1.10-027",
+      "enunciado": "¿Cuál de los siguientes datos NO proporciona directamente una herramienta de monitorización de red según el material?",
+      "opciones": [
+        "Tipo de tráfico predominante",
+        "Puertos abiertos",
+        "Contraseñas de los usuarios",
+        "Conexiones establecidas"
+      ],
+      "correcta": 2,
+      "explicacion": "Las herramientas de monitorización informan sobre: número de equipos y sus IPs, tipo de tráfico predominante, puertos abiertos y conexiones establecidas. Las contraseñas de usuarios no son un dato que proporcionen estas herramientas de forma directa."
+    },
+    {
+      "id": "si-6.1.10-028",
+      "enunciado": "¿Qué información sobre el tráfico de red ofrecen las herramientas de monitorización?",
+      "opciones": [
+        "El contenido cifrado de cada paquete",
+        "El tipo de tráfico predominante",
+        "El historial de navegación de cada usuario",
+        "La velocidad de descarga de cada equipo"
+      ],
+      "correcta": 1,
+      "explicacion": "Las herramientas de monitorización dan información sobre el tipo de tráfico predominante, entre otros datos."
+    },
+    {
+      "id": "si-6.1.10-029",
+      "enunciado": "¿Qué información sobre puertos proporcionan las herramientas de monitorización?",
+      "opciones": [
+        "Cuántos puertos tiene cada equipo en total",
+        "Qué puertos están abiertos",
+        "Qué puertos están bloqueados por el cortafuegos",
+        "Qué puertos han sido atacados anteriormente"
+      ],
+      "correcta": 1,
+      "explicacion": "Las herramientas de monitorización dan información sobre qué puertos están abiertos."
+    },
+    {
+      "id": "si-6.1.10-030",
+      "enunciado": "¿Qué información sobre las comunicaciones activas ofrecen las herramientas de monitorización?",
+      "opciones": [
+        "Qué conexiones establecidas hay",
+        "Cuánto tiempo llevan conectados los usuarios",
+        "Qué aplicaciones han intentado conectarse sin éxito",
+        "Qué conexiones han sido bloqueadas por el firewall"
+      ],
+      "correcta": 0,
+      "explicacion": "Las herramientas de monitorización dan información sobre qué conexiones establecidas hay."
+    },
+    {
+      "id": "si-6.1.10-031",
+      "enunciado": "Algunos programas de monitorización permiten realizar inventarios de la red. ¿Qué elementos pueden inventariar?",
+      "opciones": [
+        "Solo los equipos PC y servidores",
+        "Puntos de red, segmentos, cableado, switches, routers y PC",
+        "Únicamente los dispositivos con dirección IP fija",
+        "Solo los dispositivos conectados por cable, no por WiFi"
+      ],
+      "correcta": 1,
+      "explicacion": "Algunos programas permiten la realización de inventarios de los equipos de la red: puntos de red, segmentos, cableado, switches, routers, PC, etc."
+    },
+    {
+      "id": "si-6.1.10-032",
+      "enunciado": "¿Cuál de las siguientes herramientas puede utilizarse para realizar inventarios de la infraestructura de red?",
+      "opciones": [
+        "Solo Wireshark",
+        "Solo Nmap",
+        "Solo Nagios",
+        "Algunos programas de monitorización de red en general"
+      ],
+      "correcta": 3,
+      "explicacion": "Algunos programas de monitorización permiten la realización de inventarios de los equipos de la red (puntos de red, segmentos, cableado, switches, routers, PC, etc.), sin especificar cuál de las tres herramientas concretas lo hace."
+    },
+    {
+      "id": "si-6.1.10-033",
+      "enunciado": "Además de las herramientas de monitorización específicas, ¿qué otro recurso mencionado en el material sirve para resolver problemas de red y monitorizar redes?",
+      "opciones": [
+        "Los registros del sistema operativo (logs)",
+        "Los comandos TCP/IP estudiados en la unidad anterior",
+        "Los protocolos de enrutamiento dinámico",
+        "Las políticas de grupo del dominio"
+      ],
+      "correcta": 1,
+      "explicacion": "En la unidad anterior se estudiaron los comandos TCP/IP que sirven para resolver problemas de red y monitorizar redes."
+    },
+    {
+      "id": "si-6.1.10-034",
+      "enunciado": "¿Cuál de las siguientes herramientas se utiliza comúnmente para la monitorización de redes y el análisis del tráfico en tiempo real?",
+      "opciones": [
+        "Microsoft Excel",
+        "Adobe Photoshop",
+        "Wireshark",
+        "Visual Studio Code"
+      ],
+      "correcta": 2,
+      "explicacion": "Wireshark es el analizador de protocolos utilizado para realizar análisis y solucionar problemas en redes de comunicaciones, siendo la herramienta de monitorización y análisis de tráfico entre las opciones planteadas."
+    }
+  ]
+}

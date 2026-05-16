@@ -11,6 +11,7 @@
   	"si-6.1.7-acceso-remoto.json",
   	"si-6.1.8-cortafuegos.json",
   	"si-6.1.9-dominios.json",
+  	"si-6.1.10-monitorizacion-de-redes.json",
   	"almacenamiento-de-informacion.json"
   ]
 }
