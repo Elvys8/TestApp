@@ -9,45 +9,45 @@
       "id": "si-6.1.9-001",
       "enunciado": "¿Qué es un dominio o directorio?",
       "opciones": [
-        "Un tipo de cortafuegos para redes corporativas",
+        "Un protocolo de comunicación entre servidores de red",
         "Un sistema de almacenamiento de ficheros en red",
-        "Un entorno de administración centralizada que permite gestionar recursos en red",
-        "Un protocolo de comunicación entre servidores de red"
+        "Un tipo de cortafuegos para redes corporativas",
+        "Un entorno de administración centralizada que permite gestionar recursos en red"
       ],
-      "correcta": 2,
+      "correcta": 3,
       "explicacion": "Un dominio o directorio es un entorno de administración centralizada que permite gestionar recursos en una red de manera eficiente."
     },
     {
       "id": "si-6.1.9-002",
       "enunciado": "¿Desde dónde permite gestionar los recursos de red un dominio?",
       "opciones": [
-        "Desde un único punto",
-        "Desde varios servidores distribuidos sin coordinación central",
         "Desde cada equipo de forma individual",
-        "Desde un equipo cliente designado por el administrador"
+        "Desde un equipo cliente designado por el administrador",
+        "Desde varios servidores distribuidos sin coordinación central",
+        "Desde un único punto"
       ],
-      "correcta": 0,
+      "correcta": 3,
       "explicacion": "Un dominio permite la gestión de todos los recursos de red desde un único punto."
     },
     {
       "id": "si-6.1.9-003",
       "enunciado": "¿Qué elemento realiza la autenticación de usuarios y controla sus accesos en un dominio?",
       "opciones": [
+        "El servidor de ficheros",
         "El servidor web",
-        "El controlador de dominio",
         "El servidor de correo",
-        "El servidor de ficheros"
+        "El controlador de dominio"
       ],
-      "correcta": 1,
+      "correcta": 3,
       "explicacion": "La administración centralizada se realiza a través de un controlador de dominio, que autentica a los usuarios y controla sus accesos a los recursos."
     },
     {
       "id": "si-6.1.9-004",
       "enunciado": "¿Cómo se definen los dominios como componente dentro de una estructura de directorio?",
       "opciones": [
+        "Conjuntos de árboles que no comparten nombre de dominio",
         "Conjuntos de dominios que comparten relaciones de confianza",
         "Estructuras que agrupan recursos y permiten aplicar políticas",
-        "Conjuntos de árboles que no comparten nombre de dominio",
         "Grupos lógicos de recursos administrados centralmente"
       ],
       "correcta": 3,
@@ -57,33 +57,33 @@
       "id": "si-6.1.9-005",
       "enunciado": "¿Qué son los árboles en la estructura de un dominio?",
       "opciones": [
+        "Grupos lógicos de recursos administrados centralmente",
         "Conjuntos de árboles que no comparten el mismo nombre de dominio",
         "Estructuras que agrupan recursos dentro de un dominio",
-        "Conjuntos de dominios que comparten relaciones de confianza",
-        "Grupos lógicos de recursos administrados centralmente"
+        "Conjuntos de dominios que comparten relaciones de confianza"
       ],
-      "correcta": 2,
+      "correcta": 3,
       "explicacion": "Los árboles son conjuntos de dominios que comparten relaciones de confianza."
     },
     {
       "id": "si-6.1.9-006",
       "enunciado": "¿Qué son los bosques en la estructura de un dominio?",
       "opciones": [
+        "Grupos lógicos de recursos administrados centralmente",
         "Conjuntos de dominios que comparten relaciones de confianza",
-        "Conjuntos de árboles que no comparten el mismo nombre de dominio",
         "Estructuras que agrupan recursos dentro de un dominio",
-        "Grupos lógicos de recursos administrados centralmente"
+        "Conjuntos de árboles que no comparten el mismo nombre de dominio"
       ],
-      "correcta": 1,
+      "correcta": 3,
       "explicacion": "Los bosques son conjuntos de árboles que no comparten el mismo nombre de dominio."
     },
     {
       "id": "si-6.1.9-007",
       "enunciado": "¿Qué significan las siglas OU?",
       "opciones": [
-        "Operative Unit",
-        "Object Universe",
         "Open Unit",
+        "Object Universe",
+        "Operative Unit",
         "Organizational Unit"
       ],
       "correcta": 3,
@@ -93,12 +93,12 @@
       "id": "si-6.1.9-008",
       "enunciado": "¿Para qué sirven las Unidades Organizativas (OU)?",
       "opciones": [
-        "Para almacenar las contraseñas de los usuarios del dominio",
-        "Para agrupar recursos dentro de un dominio y aplicar políticas de grupo",
         "Para conectar dominios de distintos bosques entre sí",
-        "Para gestionar la replicación entre controladores de dominio"
+        "Para almacenar las contraseñas de los usuarios del dominio",
+        "Para gestionar la replicación entre controladores de dominio",
+        "Para agrupar recursos dentro de un dominio y aplicar políticas de grupo"
       ],
-      "correcta": 1,
+      "correcta": 3,
       "explicacion": "Las Unidades Organizativas son estructuras que agrupan recursos dentro de un dominio y permiten aplicar políticas de grupo."
     },
     {
@@ -106,8 +106,8 @@
       "enunciado": "¿Qué diferencia hay entre las políticas de grupo del dominio y las directivas locales de un equipo?",
       "opciones": [
         "Las políticas de dominio son menos seguras que las locales",
-        "Las políticas de dominio no pueden aplicarse a Unidades Organizativas",
         "Las políticas de dominio solo afectan al controlador de dominio",
+        "Las políticas de dominio no pueden aplicarse a Unidades Organizativas",
         "Las políticas de dominio se aplican a varios equipos a la vez, facilitando su administración"
       ],
       "correcta": 3,
@@ -117,60 +117,60 @@
       "id": "si-6.1.9-010",
       "enunciado": "¿Qué son los usuarios en el contexto de un dominio?",
       "opciones": [
-        "Estructuras que agrupan recursos dentro del dominio",
-        "Entidades que representan a personas o servicios que necesitan acceder a recursos de la red",
         "Equipos conectados a la red gestionados por el controlador",
-        "Colecciones de cuentas que simplifican la gestión de permisos"
+        "Colecciones de cuentas que simplifican la gestión de permisos",
+        "Estructuras que agrupan recursos dentro del dominio",
+        "Entidades que representan a personas o servicios que necesitan acceder a recursos de la red"
       ],
-      "correcta": 1,
+      "correcta": 3,
       "explicacion": "Los usuarios son entidades que representan a personas o servicios que necesitan acceder a recursos dentro de la red."
     },
     {
       "id": "si-6.1.9-011",
       "enunciado": "¿Qué información tienen los usuarios para autenticarse en el dominio?",
       "opciones": [
-        "Un certificado digital y una clave pública",
+        "Solo un nombre de usuario",
         "Solo una contraseña",
-        "Un nombre y una contraseña, además de derechos y permisos",
-        "Solo un nombre de usuario"
+        "Un certificado digital y una clave pública",
+        "Un nombre y una contraseña, además de derechos y permisos"
       ],
-      "correcta": 2,
+      "correcta": 3,
       "explicacion": "Los usuarios tienen un nombre y una contraseña para autentificarse en el dominio, así como derechos y permisos."
     },
     {
       "id": "si-6.1.9-012",
       "enunciado": "¿De qué dependen en parte los derechos y permisos de un usuario en el dominio?",
       "opciones": [
-        "De su pertenencia a grupos",
-        "Del sistema operativo instalado en su equipo",
+        "Del equipo desde el que inicia sesión",
         "De la hora del día en que se conecta",
-        "Del equipo desde el que inicia sesión"
+        "Del sistema operativo instalado en su equipo",
+        "De su pertenencia a grupos"
       ],
-      "correcta": 0,
+      "correcta": 3,
       "explicacion": "Los derechos y permisos de los usuarios vienen dados en parte por la pertenencia a grupos."
     },
     {
       "id": "si-6.1.9-013",
       "enunciado": "¿Qué son los grupos en un dominio?",
       "opciones": [
-        "Colecciones de cuentas de usuario, equipos y otros grupos gestionados centralmente para simplificar la administración de permisos",
-        "Estructuras que agrupan recursos y permiten aplicar políticas",
         "Conjuntos de dominios que comparten relaciones de confianza",
-        "Entidades que representan a personas que acceden a recursos"
+        "Estructuras que agrupan recursos y permiten aplicar políticas",
+        "Entidades que representan a personas que acceden a recursos",
+        "Colecciones de cuentas de usuario, equipos y otros grupos gestionados centralmente para simplificar la administración de permisos"
       ],
-      "correcta": 0,
+      "correcta": 3,
       "explicacion": "Los grupos son colecciones de cuentas de usuario, equipos y otros grupos que se gestionan de manera centralizada para simplificar la administración de permisos y recursos."
     },
     {
       "id": "si-6.1.9-014",
       "enunciado": "¿Qué son los equipos como componente de un dominio?",
       "opciones": [
-        "Unidades organizativas que agrupan recursos del dominio",
-        "Sistemas informáticos integrados en la red gestionada por el controlador de dominio",
+        "Servidores que replican la información del controlador de dominio",
         "Dispositivos de red que gestionan el tráfico entre dominios",
-        "Servidores que replican la información del controlador de dominio"
+        "Unidades organizativas que agrupan recursos del dominio",
+        "Sistemas informáticos integrados en la red gestionada por el controlador de dominio"
       ],
-      "correcta": 1,
+      "correcta": 3,
       "explicacion": "Los equipos son sistemas informáticos que se integran en la red gestionada por un controlador de dominio."
     },
     {
@@ -179,58 +179,58 @@
       "opciones": [
         "Para que puedan acceder a Internet de forma segura",
         "Para que puedan actuar como controladores de dominio secundarios",
-        "Para poder ser administrados de forma centralizada",
-        "Para que puedan compartir su almacenamiento con otros equipos"
+        "Para que puedan compartir su almacenamiento con otros equipos",
+        "Para poder ser administrados de forma centralizada"
       ],
-      "correcta": 2,
+      "correcta": 3,
       "explicacion": "Los equipos se dan de alta en el dominio para poder ser administrados de forma centralizada."
     },
     {
       "id": "si-6.1.9-016",
       "enunciado": "¿Cómo mejora la seguridad el uso de un dominio?",
       "opciones": [
-        "Al centralizar la administración se reducen errores y se optimizan los procesos de configuración",
         "Cifrando automáticamente todo el tráfico de la red",
+        "Bloqueando el acceso a Internet desde los equipos cliente",
         "Instalando un antivirus centralizado en todos los equipos",
-        "Bloqueando el acceso a Internet desde los equipos cliente"
+        "Al centralizar la administración se reducen errores y se optimizan los procesos de configuración"
       ],
-      "correcta": 0,
+      "correcta": 3,
       "explicacion": "Al centralizar la administración, se reducen los errores y se optimizan los procesos de configuración, lo que mejora la seguridad general de la red."
     },
     {
       "id": "si-6.1.9-017",
       "enunciado": "¿Para qué tipo de organizaciones son ideales los dominios por su escalabilidad?",
       "opciones": [
+        "Solo para pequeñas empresas con pocos equipos",
         "Para empresas con exactamente 50 equipos o menos",
-        "Para organizaciones grandes, al poder manejar un número considerable de equipos y usuarios",
         "Para entornos domésticos con varios usuarios",
-        "Solo para pequeñas empresas con pocos equipos"
+        "Para organizaciones grandes, al poder manejar un número considerable de equipos y usuarios"
       ],
-      "correcta": 1,
+      "correcta": 3,
       "explicacion": "Los dominios pueden manejar un número considerable de equipos y usuarios, lo que los hace ideales para organizaciones grandes."
     },
     {
       "id": "si-6.1.9-018",
       "enunciado": "¿Qué ventaja aporta la facilidad de administración de un dominio?",
       "opciones": [
-        "Elimina la necesidad de tener un administrador de sistemas",
-        "Permite realizar cambios y configuraciones rápidamente sin gestionar cada equipo de forma individual",
         "Permite instalar software en los equipos sin conexión a la red",
-        "Reduce el número de equipos necesarios en la red"
+        "Elimina la necesidad de tener un administrador de sistemas",
+        "Reduce el número de equipos necesarios en la red",
+        "Permite realizar cambios y configuraciones rápidamente sin gestionar cada equipo de forma individual"
       ],
-      "correcta": 1,
+      "correcta": 3,
       "explicacion": "El dominio permite realizar cambios y configuraciones de manera rápida y eficiente, sin necesidad de gestionar cada equipo de forma individual."
     },
     {
       "id": "si-6.1.9-019",
       "enunciado": "¿Qué tipo de elemento es un controlador de dominio?",
       "opciones": [
-        "Un servidor",
-        "Un servicio en la nube contratado externamente",
+        "Un equipo cliente con permisos de administrador",
         "Un dispositivo de red como un switch o router",
-        "Un equipo cliente con permisos de administrador"
+        "Un servicio en la nube contratado externamente",
+        "Un servidor"
       ],
-      "correcta": 0,
+      "correcta": 3,
       "explicacion": "Un controlador de dominio es un servidor que desempeña un papel central en la administración y seguridad de una red basada en dominios."
     },
     {
@@ -250,11 +250,11 @@
       "enunciado": "¿Cómo actúa el controlador de dominio dentro de la red?",
       "opciones": [
         "Como un servidor de ficheros compartidos",
+        "Como un servidor de correo electrónico",
         "Como un servidor web interno",
-        "Como una autoridad central que gestiona la autenticación y el control de acceso",
-        "Como un servidor de correo electrónico"
+        "Como una autoridad central que gestiona la autenticación y el control de acceso"
       ],
-      "correcta": 2,
+      "correcta": 3,
       "explicacion": "El controlador de dominio actúa como una autoridad central dentro del dominio, gestionando la autenticación y el control de acceso para todos los usuarios y dispositivos conectados."
     },
     {
@@ -262,44 +262,44 @@
       "enunciado": "¿Qué hace la función de autenticación centralizada del controlador de dominio?",
       "opciones": [
         "Asigna direcciones IP a los equipos del dominio",
-        "Verifica las credenciales de los usuarios cuando intentan acceder a recursos desde cualquier equipo del dominio",
+        "Cifra el tráfico entre los equipos del dominio",
         "Gestiona las copias de seguridad de las contraseñas",
-        "Cifra el tráfico entre los equipos del dominio"
+        "Verifica las credenciales de los usuarios cuando intentan acceder a recursos desde cualquier equipo del dominio"
       ],
-      "correcta": 1,
+      "correcta": 3,
       "explicacion": "La autenticación centralizada verifica las credenciales de los usuarios cuando intentan acceder a recursos de la red desde cualquier equipo del dominio."
     },
     {
       "id": "si-6.1.9-023",
       "enunciado": "¿Qué contiene la base de datos que mantiene el controlador de dominio?",
       "opciones": [
+        "Los ficheros compartidos y las impresoras de la red",
         "Los registros de tráfico de red y los logs de seguridad",
-        "Información de usuarios, contraseñas y políticas de seguridad",
         "Las aplicaciones instaladas en cada equipo del dominio",
-        "Los ficheros compartidos y las impresoras de la red"
+        "Información de usuarios, contraseñas y políticas de seguridad"
       ],
-      "correcta": 1,
+      "correcta": 3,
       "explicacion": "El controlador de dominio mantiene una base de datos con información de usuarios, contraseñas y políticas de seguridad."
     },
     {
       "id": "si-6.1.9-024",
       "enunciado": "¿Qué hace el controlador de dominio respecto a las políticas de seguridad?",
       "opciones": [
-        "Las almacena pero delega su aplicación a cada equipo individualmente",
-        "Las implementa y hace cumplir en todos los equipos del dominio",
         "Las sugiere al administrador pero no las aplica automáticamente",
-        "Las aplica solo en el propio servidor controlador"
+        "Las aplica solo en el propio servidor controlador",
+        "Las almacena pero delega su aplicación a cada equipo individualmente",
+        "Las implementa y hace cumplir en todos los equipos del dominio"
       ],
-      "correcta": 1,
+      "correcta": 3,
       "explicacion": "El controlador de dominio implementa y hace cumplir las políticas de seguridad en todos los equipos del dominio."
     },
     {
       "id": "si-6.1.9-025",
       "enunciado": "¿Qué recursos compartidos controla el controlador de dominio?",
       "opciones": [
-        "Solo las aplicaciones instaladas en el servidor",
         "Solo los ficheros almacenados en el servidor",
         "Solo las impresoras conectadas al servidor",
+        "Solo las aplicaciones instaladas en el servidor",
         "Archivos, impresoras y aplicaciones"
       ],
       "correcta": 3,
@@ -309,48 +309,48 @@
       "id": "si-6.1.9-026",
       "enunciado": "¿Qué ocurre cuando un usuario intenta iniciar sesión en un equipo del dominio?",
       "opciones": [
-        "El usuario recibe un certificado digital temporal",
-        "El controlador de dominio verifica sus credenciales contra la base de datos almacenada",
         "El equipo local verifica las credenciales sin consultar al servidor",
-        "El equipo bloquea el acceso hasta que el administrador lo autorice manualmente"
+        "El usuario recibe un certificado digital temporal",
+        "El equipo bloquea el acceso hasta que el administrador lo autorice manualmente",
+        "El controlador de dominio verifica sus credenciales contra la base de datos almacenada"
       ],
-      "correcta": 1,
+      "correcta": 3,
       "explicacion": "Cuando un usuario intenta iniciar sesión, el controlador de dominio verifica sus credenciales contra la base de datos almacenada."
     },
     {
       "id": "si-6.1.9-027",
       "enunciado": "¿Qué determina el controlador de dominio una vez autenticado el usuario?",
       "opciones": [
-        "Qué recursos y privilegios tiene el usuario",
-        "El equipo desde el que puede conectarse el usuario",
+        "El sistema operativo que debe usar el usuario",
         "La velocidad de conexión asignada al usuario",
-        "El sistema operativo que debe usar el usuario"
+        "El equipo desde el que puede conectarse el usuario",
+        "Qué recursos y privilegios tiene el usuario"
       ],
-      "correcta": 0,
+      "correcta": 3,
       "explicacion": "Una vez autenticado, el controlador de dominio determina qué recursos y privilegios tiene el usuario."
     },
     {
       "id": "si-6.1.9-028",
       "enunciado": "¿Para qué sirve la replicación entre controladores de dominio?",
       "opciones": [
-        "Para reducir el número de servidores necesarios en la red",
-        "Para mantener la consistencia de la información entre múltiples controladores",
         "Para aumentar la velocidad de autenticación de los usuarios",
-        "Para cifrar la información entre los distintos controladores"
+        "Para reducir el número de servidores necesarios en la red",
+        "Para cifrar la información entre los distintos controladores",
+        "Para mantener la consistencia de la información entre múltiples controladores"
       ],
-      "correcta": 1,
+      "correcta": 3,
       "explicacion": "En redes con múltiples controladores de dominio, la información se replica entre ellos para mantener la consistencia."
     },
     {
       "id": "si-6.1.9-029",
       "enunciado": "¿Cuándo se produce la replicación entre controladores de dominio?",
       "opciones": [
-        "En redes que tienen múltiples controladores de dominio",
-        "Solo durante el proceso de inicio de sesión de los usuarios",
         "Solo cuando el administrador lo solicita manualmente",
-        "Solo cuando falla el controlador de dominio principal"
+        "Solo durante el proceso de inicio de sesión de los usuarios",
+        "Solo cuando falla el controlador de dominio principal",
+        "En redes que tienen múltiples controladores de dominio"
       ],
-      "correcta": 0,
+      "correcta": 3,
       "explicacion": "La replicación se produce en redes con múltiples controladores de dominio, para mantener la consistencia de la información."
     },
     {
@@ -369,24 +369,19 @@
       "id": "si-6.1.9-031",
       "enunciado": "¿Cómo se llama la implementación de dominio de Microsoft?",
       "opciones": [
-        "Microsoft Network Manager",
         "Microsoft Domain Controller",
-        "Microsoft Active Directory (AD) o Directorio Activo",
-        "Microsoft Directory Services"
+        "Microsoft Directory Services",
+        "Microsoft Network Manager",
+        "Microsoft Active Directory (AD) o Directorio Activo"
       ],
-      "correcta": 2,
+      "correcta": 3,
       "explicacion": "La implementación de Microsoft se llama Active Directory (AD) o Directorio Activo."
     },
     {
       "id": "si-6.1.9-032",
       "enunciado": "¿Qué protocolo utiliza Active Directory como protocolo subyacente?",
-      "opciones": [
-        "SMB",
-        "LDAP",
-        "Kerberos",
-        "HTTP"
-      ],
-      "correcta": 1,
+      "opciones": ["SMB", "HTTP", "Kerberos", "LDAP"],
+      "correcta": 3,
       "explicacion": "Active Directory utiliza LDAP como protocolo subyacente."
     },
     {
@@ -405,21 +400,21 @@
       "id": "si-6.1.9-034",
       "enunciado": "¿Qué necesita Active Directory para funcionar?",
       "opciones": [
-        "Un servidor OpenLDAP como base",
-        "Windows Server",
         "Una distribución Linux con Samba instalado",
-        "Cualquier sistema operativo de servidor"
+        "Un servidor OpenLDAP como base",
+        "Cualquier sistema operativo de servidor",
+        "Windows Server"
       ],
-      "correcta": 1,
+      "correcta": 3,
       "explicacion": "Active Directory necesita de Windows Server para su funcionamiento."
     },
     {
       "id": "si-6.1.9-035",
       "enunciado": "¿Qué es Samba AD?",
       "opciones": [
+        "Una implementación de AD exclusiva para macOS",
         "Un protocolo propietario de Microsoft para Linux",
         "Una versión de pago de Active Directory para Linux",
-        "Una implementación de AD exclusiva para macOS",
         "Una implementación de AD que permite a sistemas Unix/Linux actuar como controladores de dominio"
       ],
       "correcta": 3,
@@ -429,20 +424,20 @@
       "id": "si-6.1.9-036",
       "enunciado": "¿Qué tipo de alternativa es Samba AD respecto a Active Directory de Microsoft?",
       "opciones": [
+        "Una alternativa de pago con soporte empresarial",
         "Una alternativa parcial que solo gestiona usuarios",
         "Una alternativa exclusiva para entornos macOS",
-        "Una alternativa libre y gratuita",
-        "Una alternativa de pago con soporte empresarial"
+        "Una alternativa libre y gratuita"
       ],
-      "correcta": 2,
+      "correcta": 3,
       "explicacion": "Samba AD proporciona una alternativa libre y gratuita a la versión de Microsoft."
     },
     {
       "id": "si-6.1.9-037",
       "enunciado": "¿Desde qué tipo de cliente se puede administrar Samba AD?",
       "opciones": [
-        "Solo desde la línea de comandos en Linux",
         "Solo desde clientes Linux con interfaz gráfica",
+        "Solo desde la línea de comandos en Linux",
         "Solo desde el propio servidor Samba",
         "Desde un cliente Windows, prácticamente igual que Windows Server"
       ],
@@ -454,8 +449,8 @@
       "enunciado": "¿Qué es OpenLDAP?",
       "opciones": [
         "Una implementación de AD de Microsoft para Linux",
-        "Un protocolo propietario de gestión de directorios",
         "Una solución empresarial de Red Hat basada en Kerberos",
+        "Un protocolo propietario de gestión de directorios",
         "Una solución de código abierto ampliamente utilizada para directorios"
       ],
       "correcta": 3,
@@ -465,45 +460,45 @@
       "id": "si-6.1.9-039",
       "enunciado": "¿En qué entorno suele implementarse OpenLDAP?",
       "opciones": [
-        "En servidores macOS con clientes Windows",
         "En servidores Windows con clientes Linux",
-        "En servidores Linux con clientes Linux",
-        "En servidores Windows con clientes Windows"
+        "En servidores macOS con clientes Windows",
+        "En servidores Windows con clientes Windows",
+        "En servidores Linux con clientes Linux"
       ],
-      "correcta": 2,
+      "correcta": 3,
       "explicacion": "OpenLDAP suele implementarse en servidores Linux y con clientes Linux."
     },
     {
       "id": "si-6.1.9-040",
       "enunciado": "¿Qué es Red Hat Directory Server?",
       "opciones": [
-        "Una solución empresarial de directorio basada en LDAP",
+        "Una implementación libre de AD para sistemas Unix",
         "Una interfaz gráfica para administrar OpenLDAP",
         "Un servidor de correo electrónico corporativo de Red Hat",
-        "Una implementación libre de AD para sistemas Unix"
+        "Una solución empresarial de directorio basada en LDAP"
       ],
-      "correcta": 0,
+      "correcta": 3,
       "explicacion": "Red Hat Directory Server es una solución empresarial basada en LDAP."
     },
     {
       "id": "si-6.1.9-041",
       "enunciado": "¿Cuál de las siguientes implementaciones de dominio es software libre y permite a Linux actuar como controlador de dominio compatible con Windows?",
       "opciones": [
-        "Samba AD",
-        "OpenLDAP",
         "Active Directory",
-        "Red Hat Directory Server"
+        "OpenLDAP",
+        "Red Hat Directory Server",
+        "Samba AD"
       ],
-      "correcta": 0,
+      "correcta": 3,
       "explicacion": "Samba AD es una implementación libre y gratuita de AD que permite a los sistemas Unix/Linux actuar como controladores de dominio, administrable desde clientes Windows."
     },
     {
       "id": "si-6.1.9-042",
       "enunciado": "¿Cuál de las siguientes implementaciones requiere Windows Server para funcionar?",
       "opciones": [
-        "Red Hat Directory Server",
-        "OpenLDAP",
         "Samba AD",
+        "OpenLDAP",
+        "Red Hat Directory Server",
         "Active Directory"
       ],
       "correcta": 3,
