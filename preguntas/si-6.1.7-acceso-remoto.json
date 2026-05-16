@@ -140,7 +140,12 @@
     {
       "id": "si-6.1.7-012",
       "enunciado": "¿Qué puerto utiliza Telnet por defecto?",
-      "opciones": ["22", "80", "3389", "23"],
+      "opciones": [
+        "22",
+        "80",
+        "3389",
+        "23"
+      ],
       "correcta": 3,
       "explicacion": "Telnet utiliza por defecto el puerto 23."
     },
@@ -243,7 +248,12 @@
     {
       "id": "si-6.1.7-021",
       "enunciado": "¿Qué puerto utiliza SSH por defecto?",
-      "opciones": ["23", "80", "3389", "22"],
+      "opciones": [
+        "23",
+        "80",
+        "3389",
+        "22"
+      ],
       "correcta": 3,
       "explicacion": "SSH utiliza por defecto el puerto 22."
     },
@@ -310,7 +320,12 @@
     {
       "id": "si-6.1.7-027",
       "enunciado": "¿Qué protocolo utiliza el Escritorio remoto de Windows?",
-      "opciones": ["VNC", "SSH", "Telnet", "RDP"],
+      "opciones": [
+        "VNC",
+        "SSH",
+        "Telnet",
+        "RDP"
+      ],
       "correcta": 3,
       "explicacion": "El Escritorio remoto de Windows utiliza el protocolo RDP (Remote Desktop Protocol)."
     },
@@ -329,7 +344,12 @@
     {
       "id": "si-6.1.7-029",
       "enunciado": "¿Qué puerto utiliza RDP por defecto?",
-      "opciones": ["22", "23", "5900", "3389"],
+      "opciones": [
+        "22",
+        "23",
+        "5900",
+        "3389"
+      ],
       "correcta": 3,
       "explicacion": "RDP utiliza por defecto el puerto 3389."
     },
@@ -412,7 +432,7 @@
         "Virtual Network Computing",
         "Visual Network Control",
         "Verified Network Connection",
-        "Visual Network Control"
+        "Virtual Network Control"
       ],
       "correcta": 1,
       "explicacion": "VNC son las siglas de Visual Network Control."
@@ -456,7 +476,12 @@
     {
       "id": "si-6.1.7-040",
       "enunciado": "¿Qué puerto utiliza VNC por defecto?",
-      "opciones": ["22", "23", "3389", "5900"],
+      "opciones": [
+        "22",
+        "23",
+        "3389",
+        "5900"
+      ],
       "correcta": 3,
       "explicacion": "VNC utiliza el puerto 5900."
     },
@@ -511,42 +536,72 @@
     {
       "id": "si-6.1.7-045",
       "enunciado": "¿Cuál de los siguientes servicios de acceso remoto es inseguro por enviar datos en texto plano?",
-      "opciones": ["SSH", "RDP", "VNC", "Telnet"],
+      "opciones": [
+        "SSH",
+        "RDP",
+        "VNC",
+        "Telnet"
+      ],
       "correcta": 3,
       "explicacion": "Telnet es inseguro porque el envío de la información se realiza en texto plano sin codificar."
     },
     {
       "id": "si-6.1.7-046",
       "enunciado": "¿Cuál de los siguientes puertos corresponde a SSH?",
-      "opciones": ["23", "80", "3389", "22"],
+      "opciones": [
+        "23",
+        "80",
+        "3389",
+        "22"
+      ],
       "correcta": 3,
       "explicacion": "SSH utiliza por defecto el puerto 22."
     },
     {
       "id": "si-6.1.7-047",
       "enunciado": "¿Cuál de los siguientes puertos corresponde a Telnet?",
-      "opciones": ["22", "80", "5900", "23"],
+      "opciones": [
+        "22",
+        "80",
+        "5900",
+        "23"
+      ],
       "correcta": 3,
       "explicacion": "Telnet utiliza por defecto el puerto 23."
     },
     {
       "id": "si-6.1.7-048",
       "enunciado": "¿Cuál de los siguientes puertos corresponde a RDP?",
-      "opciones": ["22", "23", "5900", "3389"],
+      "opciones": [
+        "22",
+        "23",
+        "5900",
+        "3389"
+      ],
       "correcta": 3,
       "explicacion": "RDP utiliza por defecto el puerto 3389."
     },
     {
       "id": "si-6.1.7-049",
       "enunciado": "¿Cuál de los siguientes puertos corresponde a VNC?",
-      "opciones": ["22", "23", "3389", "5900"],
+      "opciones": [
+        "22",
+        "23",
+        "3389",
+        "5900"
+      ],
       "correcta": 3,
       "explicacion": "VNC utiliza el puerto 5900."
     },
     {
       "id": "si-6.1.7-050",
       "enunciado": "¿Cuál de los siguientes servicios de acceso remoto NO requiere abrir puertos en el cortafuegos?",
-      "opciones": ["SSH", "RDP", "VNC", "TeamViewer"],
+      "opciones": [
+        "SSH",
+        "RDP",
+        "VNC",
+        "TeamViewer"
+      ],
       "correcta": 3,
       "explicacion": "TeamViewer utiliza un protocolo propietario que no precisa abrir puertos en el cortafuegos."
     },
@@ -565,7 +620,12 @@
     {
       "id": "si-6.1.7-052",
       "enunciado": "¿Cuál de los siguientes servicios de acceso remoto cifra las conexiones?",
-      "opciones": ["Telnet", "VNC", "RDP exclusivamente", "SSH"],
+      "opciones": [
+        "Telnet",
+        "VNC",
+        "RDP exclusivamente",
+        "SSH"
+      ],
       "correcta": 3,
       "explicacion": "SSH cifra las conexiones para evitar que los datos sean interceptados, a diferencia de Telnet."
     },
