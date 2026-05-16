@@ -36,9 +36,41 @@ async function start() {
   theme.init();
   applyFontSizes();
   ui.registerOutsideClickToCloseMenus();
+  setupDataMenu();
   await library.init();
   renderRoute();
   window.addEventListener("hashchange", renderRoute);
+}
+
+/* Cablea el menú de importar/exportar de la cabecera.
+   Se llama una sola vez al arrancar; el menú vive en el HTML estático. */
+function setupDataMenu() {
+  const host = document.getElementById("data-menu-host");
+  if (!host) return;
+  ui.bindMenu(host);
+
+  // Input de fichero oculto, creado dinámicamente y añadido al body
+  const importInput = document.createElement("input");
+  importInput.type = "file";
+  importInput.accept = ".json,application/json";
+  importInput.style.display = "none";
+  document.body.appendChild(importInput);
+
+  host.querySelector("#header-export-btn").addEventListener("click", () => {
+    host.classList.remove("is-open");
+    exportProgress();
+  });
+
+  host.querySelector("#header-import-btn").addEventListener("click", () => {
+    host.classList.remove("is-open");
+    importInput.click();
+  });
+
+  importInput.addEventListener("change", async (e) => {
+    const file = e.target.files && e.target.files[0];
+    e.target.value = "";
+    if (file) await importProgress(file);
+  });
 }
 
 /* Aplica los tamaños de fuente guardados como variables CSS en :root. */
@@ -564,38 +596,12 @@ function renderStats() {
     </div>
     ${topFailedHtml}
 
-    <p class="stats-section-title">Datos</p>
-    <div class="data-actions">
-      <button class="btn btn--ghost" id="export-btn" type="button">⤓ Exportar progreso</button>
-      <input type="file" id="import-input" accept=".json,application/json" style="display:none">
-      <button class="btn btn--ghost" id="import-btn" type="button">⤒ Importar progreso</button>
-    </div>
-    <p class="muted tiny" style="margin-top: 8px;">
-      El archivo exportado guarda tu progreso, validaciones, marcadas, colores personalizados y JSON subidos manualmente.
-      Al importar se sobrescribe todo el estado actual.
-    </p>
   `;
 
   attachStatsHandlers(topFailed);
 }
 
 function attachStatsHandlers(topFailed) {
-  const exportBtn = ROOT.querySelector("#export-btn");
-  const importBtn = ROOT.querySelector("#import-btn");
-  const importInput = ROOT.querySelector("#import-input");
-
-  if (exportBtn) {
-    exportBtn.addEventListener("click", exportProgress);
-  }
-  if (importBtn && importInput) {
-    importBtn.addEventListener("click", () => importInput.click());
-    importInput.addEventListener("change", async (e) => {
-      const file = e.target.files && e.target.files[0];
-      e.target.value = ""; // permitir reimportar el mismo archivo
-      if (file) await importProgress(file);
-    });
-  }
-
   // Reiniciar estadísticas por tema (% acierto + dominadas)
   ROOT.querySelectorAll("[data-reset-tema-stats]").forEach((btn) => {
     btn.addEventListener("click", () => {

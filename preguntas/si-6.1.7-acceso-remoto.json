@@ -1,0 +1,597 @@
+{
+  "schema_version": 1,
+  "id": "si-6.1.7-acceso-remoto",
+  "asignatura": "Sistemas Informáticos",
+  "asignatura_color": "#1C3C6F",
+  "tema": "6.1.7 Acceso remoto",
+  "preguntas": [
+    {
+      "id": "si-6.1.7-001",
+      "enunciado": "¿Para qué sirven los servicios de acceso remoto?",
+      "opciones": [
+        "Para transferir ficheros entre equipos de la red local",
+        "Para gestionar impresoras conectadas en red",
+        "Para enviar mensajes entre usuarios de la red",
+        "Para controlar y administrar otro ordenador a través de la red"
+      ],
+      "correcta": 3,
+      "explicacion": "Los servicios de acceso remoto permiten controlar y administrar otro ordenador a través de la red."
+    },
+    {
+      "id": "si-6.1.7-002",
+      "enunciado": "¿Qué permite hacer el acceso remoto desde casa al equipo del trabajo?",
+      "opciones": [
+        "Solo visualizar los archivos del equipo remoto sin modificarlos",
+        "Solo enviar y recibir correos desde el equipo remoto",
+        "Solo acceder a Internet a través del equipo remoto",
+        "Usar todos sus programas, archivos y recursos de red como si se estuviese físicamente en él"
+      ],
+      "correcta": 3,
+      "explicacion": "El acceso remoto permite usar todos los programas, archivos y recursos de red del equipo remoto como si se estuviese físicamente en él."
+    },
+    {
+      "id": "si-6.1.7-003",
+      "enunciado": "¿Qué software hay que instalar en el equipo que se quiere controlar?",
+      "opciones": [
+        "El software cliente",
+        "El software de monitorización",
+        "El software de transferencia",
+        "El software servidor"
+      ],
+      "correcta": 3,
+      "explicacion": "Es necesario instalar el software servidor en el equipo que se quiere controlar."
+    },
+    {
+      "id": "si-6.1.7-004",
+      "enunciado": "¿Qué software hay que instalar en el equipo desde el que se lleva el control?",
+      "opciones": [
+        "El software servidor",
+        "El software de administración",
+        "El software de monitorización",
+        "El software cliente"
+      ],
+      "correcta": 3,
+      "explicacion": "Es necesario instalar el programa llamado cliente en la máquina desde la que se va a llevar el control."
+    },
+    {
+      "id": "si-6.1.7-005",
+      "enunciado": "¿Cómo se clasifican los servicios de acceso remoto según el material?",
+      "opciones": [
+        "Por el sistema operativo que utilizan",
+        "Por el protocolo de red que emplean",
+        "Por el nivel de seguridad que ofrecen",
+        "Por su interfaz: modo terminal o modo gráfico"
+      ],
+      "correcta": 3,
+      "explicacion": "Los servicios de acceso remoto se clasifican por su interfaz de texto (modo terminal) o interfaz gráfica (modo gráfico)."
+    },
+    {
+      "id": "si-6.1.7-006",
+      "enunciado": "¿Cuáles son los dos servicios de acceso remoto en modo terminal mencionados?",
+      "opciones": [
+        "RDP y VNC",
+        "FTP y SFTP",
+        "HTTP y HTTPS",
+        "Telnet y SSH"
+      ],
+      "correcta": 3,
+      "explicacion": "En modo terminal se utilizan los servicios Telnet y SSH."
+    },
+    {
+      "id": "si-6.1.7-007",
+      "enunciado": "¿Qué tipo de aplicación es Telnet?",
+      "opciones": [
+        "Una aplicación UDP/IP",
+        "Una aplicación HTTP",
+        "Una aplicación SMB",
+        "Una aplicación TCP/IP"
+      ],
+      "correcta": 3,
+      "explicacion": "Telnet es una aplicación TCP/IP."
+    },
+    {
+      "id": "si-6.1.7-008",
+      "enunciado": "¿En qué sistemas operativos está disponible Telnet?",
+      "opciones": [
+        "Solo en Linux",
+        "Solo en Windows",
+        "Solo en macOS y Linux",
+        "En Windows y Linux"
+      ],
+      "correcta": 3,
+      "explicacion": "Telnet se utiliza tanto en Windows como en Linux, incluida en las terminales de ambos sistemas."
+    },
+    {
+      "id": "si-6.1.7-009",
+      "enunciado": "¿Por qué se utiliza muy poco Telnet en la actualidad?",
+      "opciones": [
+        "Porque no es compatible con las versiones modernas de Windows",
+        "Porque requiere mucho ancho de banda",
+        "Porque solo funciona en redes locales",
+        "Porque es inseguro: envía la información en texto plano sin codificar"
+      ],
+      "correcta": 3,
+      "explicacion": "Telnet se utiliza muy poco por ser inseguro, pues el envío de la información se realiza en texto plano sin codificar."
+    },
+    {
+      "id": "si-6.1.7-010",
+      "enunciado": "¿En qué caso concreto se utiliza Telnet hoy en día?",
+      "opciones": [
+        "Para administrar servidores web en producción",
+        "Para transferir ficheros de forma rápida",
+        "Para gestionar impresoras en red",
+        "Para conectarse por primera vez a un dispositivo sin configurar"
+      ],
+      "correcta": 3,
+      "explicacion": "Telnet solo se utiliza cuando se quiere conectar por primera vez a un dispositivo sin configurar."
+    },
+    {
+      "id": "si-6.1.7-011",
+      "enunciado": "¿Qué es lo primero que se hace tras conectarse a un dispositivo sin configurar mediante Telnet?",
+      "opciones": [
+        "Configurar el puerto de escucha",
+        "Activar el cifrado de la conexión",
+        "Cambiar la contraseña de administrador",
+        "Deshabilitarlo"
+      ],
+      "correcta": 3,
+      "explicacion": "Tras conectarse por primera vez a un dispositivo sin configurar mediante Telnet, lo primero que se hace es deshabilitarlo."
+    },
+    {
+      "id": "si-6.1.7-012",
+      "enunciado": "¿Qué puerto utiliza Telnet por defecto?",
+      "opciones": ["22", "80", "3389", "23"],
+      "correcta": 3,
+      "explicacion": "Telnet utiliza por defecto el puerto 23."
+    },
+    {
+      "id": "si-6.1.7-013",
+      "enunciado": "¿Qué significan las siglas SSH?",
+      "opciones": [
+        "Simple Security Host",
+        "Shared Shell Host",
+        "System Secure Handler",
+        "Secure Shell"
+      ],
+      "correcta": 3,
+      "explicacion": "SSH son las siglas de Secure Shell."
+    },
+    {
+      "id": "si-6.1.7-014",
+      "enunciado": "¿Qué tiene SSH en común con Telnet?",
+      "opciones": [
+        "Ambos envían la información en texto plano",
+        "Ambos usan el puerto 23",
+        "Ambos son inseguros y están en desuso",
+        "La misma funcionalidad de acceso remoto en modo terminal"
+      ],
+      "correcta": 3,
+      "explicacion": "SSH tiene la misma funcionalidad que Telnet como servicio de acceso remoto en modo terminal."
+    },
+    {
+      "id": "si-6.1.7-015",
+      "enunciado": "¿Qué mejora principal añade SSH respecto a Telnet?",
+      "opciones": [
+        "Mayor velocidad de conexión",
+        "Compatibilidad con más sistemas operativos",
+        "Menor consumo de ancho de banda",
+        "El cifrado de las conexiones para evitar que los datos sean interceptados"
+      ],
+      "correcta": 3,
+      "explicacion": "SSH añade el cifrado de las conexiones para evitar que los datos sean interceptados, a diferencia de Telnet."
+    },
+    {
+      "id": "si-6.1.7-016",
+      "enunciado": "¿Qué tipo de mecanismos de autenticación emplea SSH respecto a Telnet?",
+      "opciones": [
+        "Más sencillos que Telnet para facilitar el acceso",
+        "Basados exclusivamente en certificados digitales",
+        "Basados en tokens de un solo uso",
+        "Más seguros que Telnet"
+      ],
+      "correcta": 3,
+      "explicacion": "SSH emplea mecanismos de autenticación más seguros para los usuarios que se conectan."
+    },
+    {
+      "id": "si-6.1.7-017",
+      "enunciado": "¿Qué métodos de autenticación permite SSH?",
+      "opciones": [
+        "Solo contraseñas",
+        "Solo claves públicas",
+        "Solo certificados digitales",
+        "Contraseñas o claves públicas"
+      ],
+      "correcta": 3,
+      "explicacion": "SSH permite la autenticación de usuarios mediante contraseñas o claves públicas."
+    },
+    {
+      "id": "si-6.1.7-018",
+      "enunciado": "¿Qué tipo de software es SSH y en qué sistemas funciona?",
+      "opciones": [
+        "Software propietario, solo para Linux",
+        "Software propietario, para Windows y Linux",
+        "Software libre, solo para Linux",
+        "Software libre y multiplataforma, para Windows y Linux"
+      ],
+      "correcta": 3,
+      "explicacion": "SSH es software libre y multiplataforma, utilizado tanto en sistemas Windows como Linux."
+    },
+    {
+      "id": "si-6.1.7-019",
+      "enunciado": "¿Qué capacidad adicional tiene SSH respecto a la transferencia de datos?",
+      "opciones": [
+        "Permite comprimir los datos antes de enviarlos",
+        "Permite cifrar solo las contraseñas, no el resto de datos",
+        "Permite enviar datos sin necesidad de autenticación",
+        "Puede crear túneles seguros para el tráfico de otros protocolos"
+      ],
+      "correcta": 3,
+      "explicacion": "SSH puede crear túneles seguros para el tráfico de otros protocolos, lo que permite la transferencia segura de datos entre aplicaciones."
+    },
+    {
+      "id": "si-6.1.7-020",
+      "enunciado": "¿Qué característica adicional e inesperada permite SSH?",
+      "opciones": [
+        "La gestión de impresoras en red",
+        "La transferencia de ficheros a alta velocidad",
+        "La administración de bases de datos remotas",
+        "El lanzamiento remoto de aplicaciones gráficas"
+      ],
+      "correcta": 3,
+      "explicacion": "SSH incluso permite el lanzamiento remoto de aplicaciones gráficas."
+    },
+    {
+      "id": "si-6.1.7-021",
+      "enunciado": "¿Qué puerto utiliza SSH por defecto?",
+      "opciones": ["23", "80", "3389", "22"],
+      "correcta": 3,
+      "explicacion": "SSH utiliza por defecto el puerto 22."
+    },
+    {
+      "id": "si-6.1.7-022",
+      "enunciado": "¿Por qué se cambia frecuentemente el puerto por defecto de SSH?",
+      "opciones": [
+        "Porque el puerto 22 es demasiado lento",
+        "Porque el puerto 22 no está disponible en todos los sistemas",
+        "Porque SSH no funciona correctamente en el puerto 22",
+        "Como política de seguridad adicional"
+      ],
+      "correcta": 3,
+      "explicacion": "Cambiar el puerto por defecto de SSH es muy sencillo y se hace muy a menudo como política de seguridad adicional."
+    },
+    {
+      "id": "si-6.1.7-023",
+      "enunciado": "¿Qué ventaja tienen los accesos remotos por terminal frente a los gráficos?",
+      "opciones": [
+        "Permiten ver el escritorio completo del equipo remoto",
+        "Son más fáciles de usar para usuarios sin experiencia",
+        "Ofrecen mayor seguridad al cifrar todos los datos",
+        "Mayor fluidez en la comunicación por necesitar poco ancho de banda"
+      ],
+      "correcta": 3,
+      "explicacion": "La ventaja de los accesos remotos por terminal es la fluidez en la comunicación, pues necesitan poco ancho de banda."
+    },
+    {
+      "id": "si-6.1.7-024",
+      "enunciado": "¿Por qué necesitan poco ancho de banda los accesos remotos en modo terminal?",
+      "opciones": [
+        "Porque comprimen los datos antes de enviarlos",
+        "Porque solo transmiten datos de forma cifrada",
+        "Porque limitan la velocidad de transferencia automáticamente",
+        "Porque solo incorporan texto en la comunicación"
+      ],
+      "correcta": 3,
+      "explicacion": "Los accesos remotos por terminal necesitan poco ancho de banda al incorporar solo texto en la comunicación."
+    },
+    {
+      "id": "si-6.1.7-025",
+      "enunciado": "¿Qué versiones de Windows incluyen la herramienta de Escritorio remoto?",
+      "opciones": [
+        "Solo Windows Server",
+        "Todas las versiones de Windows sin excepción",
+        "Solo las ediciones profesionales y empresariales",
+        "Todas las versiones excepto las ediciones Home"
+      ],
+      "correcta": 3,
+      "explicacion": "Todas las versiones de Microsoft Windows excepto ediciones Home incluyen la herramienta de Escritorio remoto."
+    },
+    {
+      "id": "si-6.1.7-026",
+      "enunciado": "¿Qué permite hacer la herramienta de Escritorio remoto de Windows?",
+      "opciones": [
+        "Compartir el escritorio sin necesidad de autenticarse",
+        "Conectarse a un equipo remoto sin instalar ningún software",
+        "Acceder solo a los archivos del equipo remoto, no a las aplicaciones",
+        "Iniciar sesión desde otro equipo con usuario y contraseña como si se estuviese delante"
+      ],
+      "correcta": 3,
+      "explicacion": "El Escritorio remoto permite iniciar sesión desde otro equipo utilizando usuario y contraseña, igual que si se estuviese delante del equipo."
+    },
+    {
+      "id": "si-6.1.7-027",
+      "enunciado": "¿Qué protocolo utiliza el Escritorio remoto de Windows?",
+      "opciones": ["VNC", "SSH", "Telnet", "RDP"],
+      "correcta": 3,
+      "explicacion": "El Escritorio remoto de Windows utiliza el protocolo RDP (Remote Desktop Protocol)."
+    },
+    {
+      "id": "si-6.1.7-028",
+      "enunciado": "¿Qué significan las siglas RDP?",
+      "opciones": [
+        "Remote Data Protocol",
+        "Rapid Desktop Protocol",
+        "Remote Display Protocol",
+        "Remote Desktop Protocol"
+      ],
+      "correcta": 3,
+      "explicacion": "RDP son las siglas de Remote Desktop Protocol."
+    },
+    {
+      "id": "si-6.1.7-029",
+      "enunciado": "¿Qué puerto utiliza RDP por defecto?",
+      "opciones": ["22", "23", "5900", "3389"],
+      "correcta": 3,
+      "explicacion": "RDP utiliza por defecto el puerto 3389."
+    },
+    {
+      "id": "si-6.1.7-030",
+      "enunciado": "¿En qué otros sistemas además de Windows puede utilizarse RDP de forma similar?",
+      "opciones": [
+        "Solo en macOS",
+        "En ninguno, es exclusivo de Windows",
+        "En Android e iOS",
+        "En sistemas Linux"
+      ],
+      "correcta": 3,
+      "explicacion": "RDP también puede utilizarse de forma similar en sistemas Linux."
+    },
+    {
+      "id": "si-6.1.7-031",
+      "enunciado": "¿Qué rol incluye Windows Server relacionado con el acceso remoto gráfico?",
+      "opciones": [
+        "Rol de Escritorio Virtual",
+        "Rol de Acceso Remoto Seguro",
+        "Rol de Administración Gráfica",
+        "Rol de Servicios de escritorio remoto"
+      ],
+      "correcta": 3,
+      "explicacion": "Microsoft Windows Server incluye el rol de Servicios de escritorio remoto."
+    },
+    {
+      "id": "si-6.1.7-032",
+      "enunciado": "¿Qué aporta el rol de Servicios de escritorio remoto de Windows Server?",
+      "opciones": [
+        "Solo acceso remoto mediante SSH",
+        "Solo transferencia de ficheros de forma segura",
+        "Solo gestión de impresoras en red",
+        "Gestión centralizada de escritorio remoto, uso mediante VPN y aplicaciones remotas"
+      ],
+      "correcta": 3,
+      "explicacion": "El rol de Servicios de escritorio remoto aporta gestión centralizada de escritorio remoto, uso del mismo a través de VPN y aplicaciones remotas."
+    },
+    {
+      "id": "si-6.1.7-033",
+      "enunciado": "¿Qué significan las siglas VPN?",
+      "opciones": [
+        "Virtual Public Network",
+        "Verified Private Network",
+        "Virtual Processing Node",
+        "Virtual Private Network"
+      ],
+      "correcta": 3,
+      "explicacion": "VPN son las siglas de Virtual Private Network."
+    },
+    {
+      "id": "si-6.1.7-034",
+      "enunciado": "¿En qué consisten las aplicaciones remotas del rol de Servicios de escritorio remoto?",
+      "opciones": [
+        "En abrir una sesión de escritorio completo en el servidor",
+        "En descargar la aplicación del servidor al equipo cliente",
+        "En ejecutar la aplicación en el cliente usando recursos del servidor",
+        "En iniciar solo una aplicación en el servidor y mostrar su salida en la pantalla del cliente"
+      ],
+      "correcta": 3,
+      "explicacion": "Las aplicaciones remotas inician únicamente una aplicación en el servidor y muestran la salida de la misma en la pantalla del cliente, en lugar de abrir una sesión de escritorio completo."
+    },
+    {
+      "id": "si-6.1.7-035",
+      "enunciado": "¿Qué tipo de software es VNC?",
+      "opciones": [
+        "Software propietario para Windows únicamente",
+        "Software propietario multiplataforma",
+        "Software libre solo para Linux",
+        "Software libre para Windows y Linux"
+      ],
+      "correcta": 3,
+      "explicacion": "VNC es software libre utilizado en máquinas Windows y Linux."
+    },
+    {
+      "id": "si-6.1.7-036",
+      "enunciado": "¿Qué significan las siglas VNC?",
+      "opciones": [
+        "Virtual Network Computing",
+        "Visual Network Control",
+        "Verified Network Connection",
+        "Visual Network Control"
+      ],
+      "correcta": 1,
+      "explicacion": "VNC son las siglas de Visual Network Control."
+    },
+    {
+      "id": "si-6.1.7-037",
+      "enunciado": "¿Sobre qué tipo de sesión se conecta VNC?",
+      "opciones": [
+        "Abre siempre una nueva sesión de escritorio independiente",
+        "Se conecta a una sesión cerrada del usuario",
+        "Crea una sesión virtual sin mostrar el escritorio real",
+        "Sobre una sesión de escritorio ya abierta"
+      ],
+      "correcta": 3,
+      "explicacion": "VNC permite una conexión sobre una sesión de escritorio abierta."
+    },
+    {
+      "id": "si-6.1.7-038",
+      "enunciado": "¿Cuál es la diferencia principal entre VNC y RDP en cuanto a la sesión?",
+      "opciones": [
+        "VNC abre una nueva sesión; RDP comparte el escritorio existente",
+        "VNC es más seguro que RDP al requerir autenticación",
+        "VNC solo funciona en Linux; RDP solo en Windows",
+        "RDP abre una nueva sesión; VNC comparte el escritorio existente sin autenticar usuario"
+      ],
+      "correcta": 3,
+      "explicacion": "A diferencia de RDP, que abre una nueva sesión, VNC se conecta sin autenticar usuario, compartiendo el escritorio existente."
+    },
+    {
+      "id": "si-6.1.7-039",
+      "enunciado": "¿Qué ocurre con la pantalla al usar VNC?",
+      "opciones": [
+        "El usuario remoto ve una pantalla diferente a la del usuario local",
+        "El usuario local ve una pantalla en negro mientras se usa remotamente",
+        "Se crea una pantalla virtual solo visible para el usuario remoto",
+        "La pantalla local y la remota son la misma"
+      ],
+      "correcta": 3,
+      "explicacion": "Con VNC se tendrá la misma pantalla en local que en remoto."
+    },
+    {
+      "id": "si-6.1.7-040",
+      "enunciado": "¿Qué puerto utiliza VNC por defecto?",
+      "opciones": ["22", "23", "3389", "5900"],
+      "correcta": 3,
+      "explicacion": "VNC utiliza el puerto 5900."
+    },
+    {
+      "id": "si-6.1.7-041",
+      "enunciado": "¿Cómo se describe TeamViewer en el material?",
+      "opciones": [
+        "Software libre integrado en Windows Server",
+        "Protocolo estándar de acceso remoto gráfico",
+        "Herramienta de acceso remoto solo para Linux",
+        "Aplicación externa multiplataforma"
+      ],
+      "correcta": 3,
+      "explicacion": "TeamViewer es una aplicación externa multiplataforma."
+    },
+    {
+      "id": "si-6.1.7-042",
+      "enunciado": "¿Para qué se utiliza especialmente TeamViewer?",
+      "opciones": [
+        "Para administrar servidores en entornos empresariales",
+        "Para gestionar conexiones VPN corporativas",
+        "Para el acceso remoto seguro mediante SSH",
+        "Para la solución de problemas por parte de servicios técnicos telefónicos"
+      ],
+      "correcta": 3,
+      "explicacion": "TeamViewer es muy utilizado por los servicios técnicos telefónicos para la solución de problemas."
+    },
+    {
+      "id": "si-6.1.7-043",
+      "enunciado": "¿Qué tipo de protocolo utiliza TeamViewer?",
+      "opciones": [
+        "El protocolo estándar RDP",
+        "El protocolo abierto VNC",
+        "El protocolo SSH con cifrado",
+        "Un protocolo propietario"
+      ],
+      "correcta": 3,
+      "explicacion": "TeamViewer utiliza un protocolo propietario."
+    },
+    {
+      "id": "si-6.1.7-044",
+      "enunciado": "¿Qué ventaja ofrece el protocolo de TeamViewer respecto a los cortafuegos?",
+      "opciones": [
+        "Cifra los datos para evitar bloqueos del cortafuegos",
+        "Utiliza el puerto 80 para evitar ser bloqueado",
+        "Desactiva temporalmente el cortafuegos durante la conexión",
+        "No precisa abrir puertos en el cortafuegos"
+      ],
+      "correcta": 3,
+      "explicacion": "TeamViewer utiliza un protocolo propietario que funciona de forma que no precisa abrir puertos en el cortafuegos."
+    },
+    {
+      "id": "si-6.1.7-045",
+      "enunciado": "¿Cuál de los siguientes servicios de acceso remoto es inseguro por enviar datos en texto plano?",
+      "opciones": ["SSH", "RDP", "VNC", "Telnet"],
+      "correcta": 3,
+      "explicacion": "Telnet es inseguro porque el envío de la información se realiza en texto plano sin codificar."
+    },
+    {
+      "id": "si-6.1.7-046",
+      "enunciado": "¿Cuál de los siguientes puertos corresponde a SSH?",
+      "opciones": ["23", "80", "3389", "22"],
+      "correcta": 3,
+      "explicacion": "SSH utiliza por defecto el puerto 22."
+    },
+    {
+      "id": "si-6.1.7-047",
+      "enunciado": "¿Cuál de los siguientes puertos corresponde a Telnet?",
+      "opciones": ["22", "80", "5900", "23"],
+      "correcta": 3,
+      "explicacion": "Telnet utiliza por defecto el puerto 23."
+    },
+    {
+      "id": "si-6.1.7-048",
+      "enunciado": "¿Cuál de los siguientes puertos corresponde a RDP?",
+      "opciones": ["22", "23", "5900", "3389"],
+      "correcta": 3,
+      "explicacion": "RDP utiliza por defecto el puerto 3389."
+    },
+    {
+      "id": "si-6.1.7-049",
+      "enunciado": "¿Cuál de los siguientes puertos corresponde a VNC?",
+      "opciones": ["22", "23", "3389", "5900"],
+      "correcta": 3,
+      "explicacion": "VNC utiliza el puerto 5900."
+    },
+    {
+      "id": "si-6.1.7-050",
+      "enunciado": "¿Cuál de los siguientes servicios de acceso remoto NO requiere abrir puertos en el cortafuegos?",
+      "opciones": ["SSH", "RDP", "VNC", "TeamViewer"],
+      "correcta": 3,
+      "explicacion": "TeamViewer utiliza un protocolo propietario que no precisa abrir puertos en el cortafuegos."
+    },
+    {
+      "id": "si-6.1.7-051",
+      "enunciado": "¿Cuál de los siguientes servicios de acceso remoto en modo gráfico es software libre?",
+      "opciones": [
+        "Escritorio remoto de Windows",
+        "Servicios de escritorio remoto de Windows Server",
+        "TeamViewer",
+        "VNC"
+      ],
+      "correcta": 3,
+      "explicacion": "VNC es software libre utilizado en máquinas Windows y Linux."
+    },
+    {
+      "id": "si-6.1.7-052",
+      "enunciado": "¿Cuál de los siguientes servicios de acceso remoto cifra las conexiones?",
+      "opciones": ["Telnet", "VNC", "RDP exclusivamente", "SSH"],
+      "correcta": 3,
+      "explicacion": "SSH cifra las conexiones para evitar que los datos sean interceptados, a diferencia de Telnet."
+    },
+    {
+      "id": "si-6.1.7-053",
+      "enunciado": "¿Cuál es la principal ventaja del modo terminal frente al modo gráfico en acceso remoto?",
+      "opciones": [
+        "Permite ver el escritorio completo del equipo remoto",
+        "Es más fácil de usar para cualquier tipo de usuario",
+        "Ofrece mayor seguridad al no transmitir contraseñas",
+        "Necesita menos ancho de banda al transmitir solo texto"
+      ],
+      "correcta": 3,
+      "explicacion": "La ventaja de los accesos remotos por terminal es la fluidez en la comunicación, pues necesitan poco ancho de banda al incorporar solo texto."
+    },
+    {
+      "id": "si-6.1.7-054",
+      "enunciado": "¿Cuál de los siguientes servicios de acceso remoto es multiplataforma y de uso externo?",
+      "opciones": [
+        "Escritorio remoto de Windows",
+        "Servicios de escritorio remoto de Windows Server",
+        "VNC exclusivamente",
+        "TeamViewer"
+      ],
+      "correcta": 3,
+      "explicacion": "TeamViewer es una aplicación externa multiplataforma."
+    }
+  ]
+}
