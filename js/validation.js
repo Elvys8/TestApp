@@ -50,6 +50,8 @@ export function start(fileId, mountEl, onExit) {
     onExit,
     currentIdx: 0,
     edits: { ...(wip.edits || {}) }, // { [questionId]: editedQ }
+    validationMode: storage.getValidationMode(), // "reveal" | "test"
+    answered: false,  // en modo test: ¿ya respondió la pregunta actual?
   };
 
   // Botón "Salir de la validación" en la cabecera de la app
@@ -86,32 +88,32 @@ function advanceToNext() {
    RENDER DE LA PREGUNTA ACTUAL
    ============================================================ */
 function render() {
-  const { file, currentIdx, mountEl, edits } = _state;
+  const { file, currentIdx } = _state;
 
   if (currentIdx >= file.preguntas.length) {
     renderEnd();
     return;
   }
 
+  // Resetea el estado de "respondida" al avanzar a nueva pregunta
+  _state.answered = false;
+
+  if (_state.validationMode === "test") {
+    renderTestMode();
+  } else {
+    renderRevealMode();
+  }
+}
+
+/* Modo "reveal": opciones no clicables, correcta marcada en verde desde el inicio. */
+function renderRevealMode() {
+  const { file, currentIdx, mountEl, edits } = _state;
   const original = file.preguntas[currentIdx];
   const edited = edits[original.id];
   const display = edited || original;
 
-  const jumpOptions = file.preguntas
-    .map((_, i) => `<option value="${i}"${i === currentIdx ? " selected" : ""}>${i + 1}</option>`)
-    .join("");
-
   mountEl.innerHTML = `
-    <p class="muted tiny" style="margin: 0 0 4px; text-transform: uppercase; letter-spacing: 0.4px;">Validación</p>
-    <h2 class="asignatura-name" style="font-size: 22px;">${ui.escapeHtml(file.tema)}</h2>
-
-    <div class="test-header">
-      <span>Pregunta ${currentIdx + 1} / ${file.preguntas.length}</span>
-      <select class="question-jump" id="question-jump" aria-label="Ir a pregunta">
-        ${jumpOptions}
-      </select>
-    </div>
-
+    ${renderValidationHeader(file, currentIdx)}
     <p class="test-question">${ui.escapeHtml(display.enunciado)}</p>
 
     <div class="options validation-options">
@@ -122,23 +124,107 @@ function render() {
       `).join("")}
     </div>
 
-    ${display.explicacion && display.explicacion.trim() ? `
-      <p class="explanation">${ui.escapeHtml(display.explicacion)}</p>
-    ` : ""}
+    ${renderExplicacion(display)}
+    ${renderEditedBadge(edited)}
+    ${renderValidationActions()}
+  `;
 
-    ${edited ? `
-      <p class="muted tiny" style="margin: 12px 0 0;">
-        ✎ Esta pregunta ya tiene correcciones. Se descargarán al finalizar la sesión.
-      </p>
-    ` : ""}
+  attachHandlers();
+}
 
+/* Modo "test": opciones clicables, feedback verde/rojo al seleccionar. */
+function renderTestMode() {
+  const { file, currentIdx, mountEl, edits } = _state;
+  const original = file.preguntas[currentIdx];
+  const edited = edits[original.id];
+  const display = edited || original;
+
+  mountEl.innerHTML = `
+    ${renderValidationHeader(file, currentIdx)}
+    <p class="test-question">${ui.escapeHtml(display.enunciado)}</p>
+
+    <div class="options" id="validation-options">
+      ${display.opciones.map((opt, i) => `
+        <button class="option" type="button" data-opt-idx="${i}">
+          ${ui.escapeHtml(opt)}
+        </button>
+      `).join("")}
+    </div>
+
+    <p class="explanation" id="validation-expl" style="display:none;">
+      ${display.explicacion ? ui.escapeHtml(display.explicacion) : ""}
+    </p>
+
+    ${renderEditedBadge(edited)}
+    ${renderValidationActions()}
+  `;
+
+  // Cablear clics en las opciones
+  mountEl.querySelectorAll("#validation-options .option").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      if (_state.answered) return;
+      _state.answered = true;
+
+      const chosen = parseInt(btn.getAttribute("data-opt-idx"), 10);
+      const correcta = display.correcta;
+
+      mountEl.querySelectorAll("#validation-options .option").forEach((b) => {
+        b.disabled = true;
+        const idx = parseInt(b.getAttribute("data-opt-idx"), 10);
+        if (idx === correcta) b.classList.add("is-correct");
+        if (idx === chosen && chosen !== correcta) b.classList.add("is-wrong");
+      });
+
+      // Mostrar explicación si existe
+      if (display.explicacion && display.explicacion.trim()) {
+        const explEl = mountEl.querySelector("#validation-expl");
+        if (explEl) explEl.style.display = "block";
+      }
+    });
+  });
+
+  attachHandlers();
+}
+
+/* ── helpers de render ── */
+
+function renderValidationHeader(file, currentIdx) {
+  const jumpOptions = file.preguntas
+    .map((_, i) => `<option value="${i}"${i === currentIdx ? " selected" : ""}>${i + 1}</option>`)
+    .join("");
+  return `
+    <p class="muted tiny" style="margin: 0 0 4px; text-transform: uppercase; letter-spacing: 0.4px;">Validación</p>
+    <h2 class="asignatura-name" style="font-size: 22px;">${ui.escapeHtml(file.tema)}</h2>
+    <div class="test-header">
+      <span>Pregunta ${currentIdx + 1} / ${file.preguntas.length}</span>
+      <select class="question-jump" id="question-jump" aria-label="Ir a pregunta">
+        ${jumpOptions}
+      </select>
+    </div>
+  `;
+}
+
+function renderExplicacion(display) {
+  if (!display.explicacion || !display.explicacion.trim()) return "";
+  return `<p class="explanation">${ui.escapeHtml(display.explicacion)}</p>`;
+}
+
+function renderEditedBadge(edited) {
+  if (!edited) return "";
+  return `
+    <p class="muted tiny" style="margin: 12px 0 0;">
+      ✎ Esta pregunta ya tiene correcciones. Se descargarán al finalizar la sesión.
+    </p>
+  `;
+}
+
+function renderValidationActions() {
+  return `
     <div class="validation-actions">
       <button class="btn btn--ghost"   id="btn-fix" type="button">Necesita correcciones</button>
       <button class="btn btn--primary" id="btn-ok"  type="button">Sí, está bien →</button>
     </div>
   `;
-
-  attachHandlers();
 }
 
 function attachHandlers() {

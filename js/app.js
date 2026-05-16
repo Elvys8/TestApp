@@ -34,16 +34,29 @@ const PALETTE = [
    ============================================================ */
 async function start() {
   theme.init();
+  applyFontSizes();
   ui.registerOutsideClickToCloseMenus();
   await library.init();
   renderRoute();
   window.addEventListener("hashchange", renderRoute);
 }
 
+/* Aplica los tamaños de fuente guardados como variables CSS en :root. */
+function applyFontSizes() {
+  const base = storage.getFontSize();
+  const wide = storage.getFontSizeWide();
+  document.documentElement.style.setProperty("--font-size-base", `${base}px`);
+  document.documentElement.style.setProperty("--font-size-wide", `${wide}px`);
+}
+
 function renderRoute() {
   const hash = window.location.hash || "#/";
   if (hash === "#/stats") {
     renderStats();
+    return;
+  }
+  if (hash === "#/settings") {
+    renderSettings();
     return;
   }
   const m = hash.match(/^#\/asignatura\/(.+)$/);
@@ -769,11 +782,253 @@ function summarizeImport(data) {
   if (f) parts.push(`${f} JSON personalizado${f === 1 ? "" : "s"}`);
   if (c) parts.push(`${c} ${c === 1 ? "color personalizado" : "colores personalizados"}`);
   if (data.theme) parts.push(`tema "${data.theme}"`);
+  if (typeof data.mastery_threshold === "number" || safeCount(data.mastery_thresholds)) {
+    parts.push("umbrales de dominio");
+  }
+  if (typeof data.font_size === "number" || typeof data.font_size_wide === "number") {
+    parts.push("tamaños de texto");
+  }
   if (parts.length === 0) {
     return "El archivo no contiene datos reconocibles, pero se intentará importar igualmente.";
   }
   const exported = data.exported_at ? ` (exportado el ${data.exported_at.slice(0, 10)})` : "";
   return `Contiene: ${parts.join(", ")}${exported}.`;
+}
+
+/* ============================================================
+   CONFIGURACIÓN
+   ============================================================ */
+function renderSettings() {
+  ui.clearHeaderLeft();
+  document.body.removeAttribute("data-tinted");
+  clearAccent();
+
+  const asignaturas = library.getAsignaturas();
+  const globalThreshold = storage.getGlobalMasteryThreshold();
+  const allThresholds = storage.getAllMasteryThresholds();
+  const fontSize = storage.getFontSize();
+  const fontSizeWide = storage.getFontSizeWide();
+  const validationMode = storage.getValidationMode();
+  const wrongPenalty = storage.getWrongPenalty();
+
+  /* Opciones del <select> de umbral */
+  function thresholdOptions(selected) {
+    return [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+      .map((n) => `<option value="${n}" ${n === selected ? "selected" : ""}>${n} ${n === 1 ? "acierto" : "aciertos"}</option>`)
+      .join("");
+  }
+
+  /* Filas de override por asignatura */
+  const asigRows = asignaturas.length === 0
+    ? `<p class="muted tiny">No hay asignaturas cargadas todavía.</p>`
+    : asignaturas.map((a) => {
+        const override = allThresholds[a.name];
+        const hasOverride = typeof override === "number";
+        /* Select: primera opción = "igual que el general (N)", luego 1-10 */
+        const opts = `
+          <option value="global" ${!hasOverride ? "selected" : ""}>
+            General (${globalThreshold})
+          </option>
+          ${thresholdOptions(hasOverride ? override : -1)}
+        `;
+        return `
+          <div class="settings-row" data-asig-name="${ui.escapeHtml(a.name)}">
+            <label class="settings-row__label"
+                   style="--subject-color: ${ui.escapeHtml(a.color)};">
+              <span class="settings-row__dot"></span>
+              ${ui.escapeHtml(a.name)}
+            </label>
+            <select class="settings-select asig-threshold-select">
+              ${opts}
+            </select>
+          </div>
+        `;
+      }).join("");
+
+  ROOT.innerHTML = `
+    <h2 class="page-title">Configuración</h2>
+
+    <p class="stats-section-title">Aprendizaje</p>
+
+    <div class="panel">
+      <div class="panel__field">
+        <label class="panel__label">
+          Modo de validación manual
+          <span class="panel__hint">Cómo aparecen las preguntas al validar un tema</span>
+        </label>
+        <div class="settings-radio-group">
+          <label class="settings-radio-row">
+            <input type="radio" name="validation-mode" value="reveal"
+                   ${validationMode === "reveal" ? "checked" : ""}>
+            <span>
+              Mostrar la respuesta correcta
+              <span class="settings-radio-hint">La opción correcta aparece marcada en verde desde el inicio</span>
+            </span>
+          </label>
+          <label class="settings-radio-row">
+            <input type="radio" name="validation-mode" value="test"
+                   ${validationMode === "test" ? "checked" : ""}>
+            <span>
+              Seleccionar la respuesta (modo test)
+              <span class="settings-radio-hint">Las opciones son clicables; se iluminan en verde o rojo al responder</span>
+            </span>
+          </label>
+        </div>
+      </div>
+
+      <div class="panel__field">
+        <label class="panel__label" for="wrong-penalty">
+          Penalización por fallo en el test
+          <span class="panel__hint">Puntos descontados de la nota (sobre 10) por cada respuesta incorrecta</span>
+        </label>
+        <select class="settings-select" id="wrong-penalty">
+          ${[
+            { value: "0",    label: "0 — sin penalización" },
+            { value: "0.25", label: "0,25 puntos" },
+            { value: "0.33", label: "0,33 puntos (1/3)" },
+            { value: "0.5",  label: "0,5 puntos (por defecto)" },
+            { value: "1",    label: "1 punto" },
+          ].map(({ value, label }) =>
+            `<option value="${value}" ${parseFloat(value) === wrongPenalty ? "selected" : ""}>${label}</option>`
+          ).join("")}
+        </select>
+      </div>
+
+      <div class="panel__field">
+        <label class="panel__label" for="global-threshold">
+          Aciertos seguidos para dominar una pregunta
+          <span class="panel__hint">(valor por defecto para todas las asignaturas)</span>
+        </label>
+        <select class="settings-select" id="global-threshold">
+          ${thresholdOptions(globalThreshold)}
+        </select>
+      </div>
+
+      <div class="panel__field">
+        <label class="panel__label">Por asignatura</label>
+        <div class="settings-asig-list">
+          ${asigRows}
+        </div>
+      </div>
+    </div>
+
+    <p class="stats-section-title">Apariencia</p>
+
+    <div class="panel">
+      <div class="panel__field">
+        <label class="panel__label" for="font-size-base">
+          Tamaño de texto
+          <span class="panel__hint">(pantallas normales)</span>
+        </label>
+        <div class="settings-px-row">
+          <input class="settings-input-px" type="number" id="font-size-base"
+                 min="8" max="48" step="1" value="${fontSize}">
+          <span class="muted">px</span>
+        </div>
+      </div>
+
+      <div class="panel__field">
+        <label class="panel__label" for="font-size-wide">
+          Tamaño de texto en pantallas anchas
+          <span class="panel__hint">(más de 1000 px de ancho)</span>
+        </label>
+        <div class="settings-px-row">
+          <input class="settings-input-px" type="number" id="font-size-wide"
+                 min="8" max="48" step="1" value="${fontSizeWide}">
+          <span class="muted">px</span>
+        </div>
+      </div>
+    </div>
+  `;
+
+  attachSettingsHandlers(asignaturas);
+}
+
+function attachSettingsHandlers(asignaturas) {
+  /* Modo de validación */
+  ROOT.querySelectorAll('input[name="validation-mode"]').forEach((radio) => {
+    radio.addEventListener("change", () => {
+      if (!radio.checked) return;
+      storage.setValidationMode(radio.value);
+      const label = radio.value === "test" ? "Modo test" : "Mostrar respuesta";
+      ui.toast(`Validación: ${label}`, "success");
+    });
+  });
+
+  /* Penalización por fallo */
+  const penaltySelect = ROOT.querySelector("#wrong-penalty");
+  if (penaltySelect) {
+    penaltySelect.addEventListener("change", () => {
+      const v = parseFloat(penaltySelect.value);
+      storage.setWrongPenalty(v);
+      const label = penaltySelect.options[penaltySelect.selectedIndex].text;
+      ui.toast(`Penalización: ${label}`, "success");
+    });
+  }
+
+  /* Umbral global */
+  const globalSelect = ROOT.querySelector("#global-threshold");
+  if (globalSelect) {
+    globalSelect.addEventListener("change", () => {
+      const n = parseInt(globalSelect.value, 10);
+      storage.setGlobalMasteryThreshold(n);
+      /* Refresca las opciones "General (N)" de cada asignatura */
+      ROOT.querySelectorAll(".asig-threshold-select").forEach((sel) => {
+        const opt = sel.querySelector('option[value="global"]');
+        if (opt) opt.textContent = `General (${n})`;
+      });
+      ui.toast("Umbral global actualizado", "success");
+    });
+  }
+
+  /* Umbral por asignatura */
+  ROOT.querySelectorAll(".settings-row[data-asig-name]").forEach((row) => {
+    const name = row.getAttribute("data-asig-name");
+    const sel = row.querySelector(".asig-threshold-select");
+    if (!sel) return;
+    sel.addEventListener("change", () => {
+      if (sel.value === "global") {
+        storage.clearAsignaturaMasteryThreshold(name);
+        ui.toast(`"${name}" usará el umbral general`, "success");
+      } else {
+        const n = parseInt(sel.value, 10);
+        storage.setAsignaturaMasteryThreshold(name, n);
+        ui.toast(`Umbral de "${name}" → ${n}`, "success");
+      }
+    });
+  });
+
+  /* Tamaño de fuente base */
+  const fontBaseInput = ROOT.querySelector("#font-size-base");
+  if (fontBaseInput) {
+    fontBaseInput.addEventListener("change", () => {
+      const v = parseInt(fontBaseInput.value, 10);
+      if (!Number.isFinite(v) || v < 8 || v > 48) {
+        ui.toast("Valor fuera de rango (8–48 px)", "danger");
+        fontBaseInput.value = storage.getFontSize();
+        return;
+      }
+      storage.setFontSize(v);
+      document.documentElement.style.setProperty("--font-size-base", `${v}px`);
+      ui.toast(`Tamaño de texto → ${v} px`, "success");
+    });
+  }
+
+  /* Tamaño de fuente ancho */
+  const fontWideInput = ROOT.querySelector("#font-size-wide");
+  if (fontWideInput) {
+    fontWideInput.addEventListener("change", () => {
+      const v = parseInt(fontWideInput.value, 10);
+      if (!Number.isFinite(v) || v < 8 || v > 48) {
+        ui.toast("Valor fuera de rango (8–48 px)", "danger");
+        fontWideInput.value = storage.getFontSizeWide();
+        return;
+      }
+      storage.setFontSizeWide(v);
+      document.documentElement.style.setProperty("--font-size-wide", `${v}px`);
+      ui.toast(`Tamaño en pantalla ancha → ${v} px`, "success");
+    });
+  }
 }
 
 /* ============================================================

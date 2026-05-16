@@ -179,13 +179,14 @@ export function getAsignaturas() {
   return Object.values(grouped).map((g) => {
     const allIds = g.temas.flatMap((t) => t.preguntas.map((q) => q.id));
     const override = storage.getAsignaturaColor(g.name);
+    const threshold = storage.getMasteryThreshold(g.name);
     return {
       name: g.name,
       color: override || g.defaultColor,
       defaultColor: g.defaultColor,
       temaCount: g.temas.length,
       questionCount: allIds.length,
-      masteredCount: storage.countMastered(allIds),
+      masteredCount: storage.countMastered(allIds, threshold),
       hasPending: g.temas.some((t) => !storage.isFileValidated(t.id)),
     };
   }).sort((a, b) => a.name.localeCompare(b.name, "es"));
@@ -199,6 +200,7 @@ export function getAsignatura(name) {
   if (temas.length === 0) return null;
   const override = storage.getAsignaturaColor(name);
   const defaultColor = temas[0].asignatura_color;
+  const threshold = storage.getMasteryThreshold(name);
   return {
     name,
     color: override || defaultColor,
@@ -210,7 +212,7 @@ export function getAsignatura(name) {
         tema: t.tema,
         source: t._source,
         questionCount: ids.length,
-        masteredCount: storage.countMastered(ids),
+        masteredCount: storage.countMastered(ids, threshold),
         isValidated: storage.isFileValidated(t.id),
       };
     }).sort((a, b) => a.tema.localeCompare(b.tema, "es")),

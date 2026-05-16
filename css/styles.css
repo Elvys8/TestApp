@@ -20,12 +20,18 @@ body {
 
 body {
   font-family: var(--font-sans);
-  font-size:18px;
+  font-size: var(--font-size-base, 18px);
   line-height:1.3;
   color: var(--text-primary);
   background: var(--bg-page);
   -webkit-font-smoothing: antialiased;
   transition: background-color 200ms ease;
+}
+
+@media (min-width: 1000px) {
+  body { font-size: var(--font-size-wide, 26px); }
+  .app-header { padding:0.75em 6rem !important; }
+  .app-main { padding:3rem 6rem 6rem !important; }
 }
 
 button {
@@ -80,7 +86,7 @@ ul {
 .app-main {
   flex: 1;
   width: 100%;
-  max-width: 47.5em;
+  max-width:50em;
   margin: 0 auto;
   padding:2rem 1rem 4rem;
 }
@@ -590,7 +596,7 @@ ul {
 }
 
 .panel__field {
-  margin-bottom: 0.875em;
+  margin-bottom:3em;
 }
 
 .panel__label {
@@ -693,13 +699,34 @@ ul {
   border-radius: var(--radius-sm);
   font-size: 0.8125em;
   line-height: 1.55;
-  margin: 0 0 0.75em;
+  margin:.75em 0;
   color: var(--text-primary);
 }
 
 .test-summary {
-  text-align: center;
   padding: 1.75em 1.25em;
+}
+
+/* Contenedor de las dos métricas en fila */
+.test-summary__scores {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+.test-summary__score-block {
+  flex: 1;
+  text-align: center;
+}
+
+/* Separador vertical entre porcentaje y nota */
+.test-summary__divider {
+  width: 0.0625em;
+  align-self: stretch;
+  background: var(--border-default);
+  margin: 0.25em 0;
+  flex-shrink: 0;
 }
 
 .test-summary__metric {
@@ -709,6 +736,20 @@ ul {
   margin: 0;
   color: var(--accent);
   line-height: 1.1;
+}
+
+/* El denominador "/10" en tamaño más pequeño */
+.test-summary__grade-denom {
+  font-size: 0.45em;
+  font-weight: 400;
+  color: var(--text-secondary);
+  vertical-align: middle;
+  margin-left: 0.1em;
+}
+
+.test-summary__label {
+  margin: 0.4em 0 0;
+  font-size: 0.8em;
 }
 
 .test-summary p.muted {
@@ -1092,6 +1133,132 @@ ul {
 .toast--success { border-left: 0.1875em solid var(--success); }
 .toast--danger  { border-left: 0.1875em solid var(--danger);  }
 .toast--info    { border-left: 0.1875em solid var(--accent);  }
+
+/* ============================================================
+   Pantalla de configuración
+   ============================================================ */
+
+/* Subtítulo/hint junto a la etiqueta del panel */
+.panel__hint {
+  display: block;
+  font-size: 0.85em;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--text-tertiary);
+  margin-top: 0.15em;
+}
+
+/* Select reutilizable para umbrales */
+.settings-select {
+  font-family: inherit;
+  font-size: 0.875em;
+  color: var(--text-primary);
+  background: var(--bg-surface);
+  border: 0.0625em solid var(--border-default);
+  border-radius: var(--radius-md);
+  padding: 0.3em 0.6em;
+  cursor: pointer;
+  transition: border-color 150ms ease;
+}
+
+.settings-select:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+/* Lista de filas de asignatura + su select */
+.settings-asig-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  margin-top: 0.25em;
+}
+
+.settings-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75em;
+}
+
+.settings-row__label {
+  display: flex;
+  align-items: center;
+  gap: 0.45em;
+  font-size: 0.875em;
+  color: var(--text-primary);
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.settings-row__dot {
+  display: inline-block;
+  width: 0.6em;
+  height: 0.6em;
+  border-radius: 50%;
+  background-color: var(--subject-color, var(--accent));
+  flex-shrink: 0;
+}
+
+/* Grupo de radios de configuración */
+.settings-radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  margin-top: 0.25em;
+}
+
+.settings-radio-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5em;
+  cursor: pointer;
+  font-size: 0.875em;
+  color: var(--text-primary);
+}
+
+.settings-radio-row input[type="radio"] {
+  flex-shrink: 0;
+  margin-top: 0.15em;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+.settings-radio-hint {
+  display: block;
+  font-size: 0.875em;
+  color: var(--text-tertiary);
+  margin-top: 0.1em;
+}
+
+/* Input numérico de px */
+.settings-px-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+}
+
+.settings-input-px {
+  font-family: inherit;
+  font-size: 0.875em;
+  color: var(--text-primary);
+  background: var(--bg-surface);
+  border: 0.0625em solid var(--border-default);
+  border-radius: var(--radius-md);
+  padding: 0.3em 0.5em;
+  width: 4.5em;
+  text-align: right;
+  transition: border-color 150ms ease;
+}
+
+.settings-input-px:focus {
+  outline: none;
+  border-color: var(--accent);
+}
 
 /* ============================================================
    Utilidades varias

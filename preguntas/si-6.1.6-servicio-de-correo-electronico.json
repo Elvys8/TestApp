@@ -1,0 +1,303 @@
+{
+  "schema_version": 1,
+  "id": "si-6.1.6-servicio-de-correo-electronico",
+  "asignatura": "Sistemas Informáticos",
+  "asignatura_color": "#1C3C6F",
+  "tema": "6.1.6 Servicio de correo electrónico",
+  "preguntas": [
+    {
+      "id": "si-6.1.6-001",
+      "enunciado": "¿Cuáles son los dos servicios de Internet más utilizados a nivel de usuarios?",
+      "opciones": [
+        "El servicio de ficheros y el servicio de impresión",
+        "El servicio de acceso remoto y el servicio web",
+        "El servicio web y el correo electrónico",
+        "El servicio de DNS y el correo electrónico"
+      ],
+      "correcta": 2,
+      "explicacion": "El sistema de correo electrónico es junto al servicio web, los servicios de Internet más utilizados a nivel de usuarios."
+    },
+    {
+      "id": "si-6.1.6-002",
+      "enunciado": "¿Qué es el sistema de correo electrónico?",
+      "opciones": [
+        "Un sistema para la transferencia de ficheros entre servidores",
+        "Un sistema para la gestión de usuarios en red",
+        "Un sistema para el acceso remoto a equipos",
+        "Un sistema para la transferencia de mensajes, rápido y eficiente"
+      ],
+      "correcta": 3,
+      "explicacion": "El servicio de correo electrónico es un sistema para la transferencia de mensajes, rápido y eficiente."
+    },
+    {
+      "id": "si-6.1.6-003",
+      "enunciado": "¿Bajo qué arquitectura fue ideado el servicio de correo electrónico?",
+      "opciones": [
+        "Arquitectura de igual a igual (P2P)",
+        "Arquitectura centralizada",
+        "Arquitectura distribuida en malla",
+        "Arquitectura cliente-servidor"
+      ],
+      "correcta": 3,
+      "explicacion": "El correo electrónico fue ideado bajo la arquitectura cliente-servidor típica de Internet."
+    },
+    {
+      "id": "si-6.1.6-004",
+      "enunciado": "¿Cuántos tipos de servidor intervienen en el sistema de correo electrónico?",
+      "opciones": [
+        "Uno: el servidor central de correo",
+        "Tres: saliente, entrante y de seguridad",
+        "Dos: servidor de correo saliente y servidor de correo entrante",
+        "Cuatro: SMTP, POP, IMAP y web"
+      ],
+      "correcta": 2,
+      "explicacion": "El servidor de correo tiene dos componentes: el servidor de correo saliente y el servidor de correo entrante."
+    },
+    {
+      "id": "si-6.1.6-005",
+      "enunciado": "¿Qué hace el servidor de correo saliente?",
+      "opciones": [
+        "Almacena los correos recibidos en los buzones de los usuarios",
+        "Descarga los correos al equipo del cliente cuando se conecta",
+        "Recibe el email del cliente y lo envía al servidor del destinatario",
+        "Gestiona los contactos y la libreta de direcciones"
+      ],
+      "correcta": 2,
+      "explicacion": "El cliente envía el email al servidor de correo saliente, y a su vez este envía el correo al servidor del destinatario."
+    },
+    {
+      "id": "si-6.1.6-006",
+      "enunciado": "¿Qué protocolo utiliza el servidor de correo saliente?",
+      "opciones": ["POP", "IMAP", "HTTP", "SMTP"],
+      "correcta": 3,
+      "explicacion": "El servidor de correo saliente utiliza el protocolo SMTP."
+    },
+    {
+      "id": "si-6.1.6-007",
+      "enunciado": "¿Qué significan las siglas SMTP?",
+      "opciones": [
+        "Secure Mail Transfer Protocol",
+        "Standard Message Transfer Protocol",
+        "Simple Mail Transfer Protocol",
+        "Simple Message Transmission Protocol"
+      ],
+      "correcta": 2,
+      "explicacion": "SMTP son las siglas de Simple Mail Transfer Protocol."
+    },
+    {
+      "id": "si-6.1.6-008",
+      "enunciado": "¿Qué hace el servidor de correo entrante?",
+      "opciones": [
+        "Envía los correos del cliente al servidor del destinatario",
+        "Gestiona las listas de distribución y grupos de correo",
+        "Filtra el spam antes de que llegue al cliente",
+        "Almacena los correos recibidos en los buzones de los usuarios y los envía al cliente cuando se conecta"
+      ],
+      "correcta": 3,
+      "explicacion": "El servidor de correo entrante almacena los correos electrónicos recibidos en los buzones de los usuarios, y cuando el cliente se conecta, se le envían los correos que ha recibido."
+    },
+    {
+      "id": "si-6.1.6-009",
+      "enunciado": "¿Qué protocolos utiliza el servidor de correo entrante?",
+      "opciones": ["SMTP y HTTP", "SMTP e IMAP", "HTTP y FTP", "POP e IMAP"],
+      "correcta": 3,
+      "explicacion": "El servidor de correo entrante utiliza los protocolos POP e IMAP."
+    },
+    {
+      "id": "si-6.1.6-010",
+      "enunciado": "¿Qué significan las siglas POP?",
+      "opciones": [
+        "Protocol Of Posts",
+        "Postal Office Protocol",
+        "Post Office Protocol",
+        "Primary Output Protocol"
+      ],
+      "correcta": 2,
+      "explicacion": "POP son las siglas de Post Office Protocol."
+    },
+    {
+      "id": "si-6.1.6-011",
+      "enunciado": "¿Qué significan las siglas IMAP?",
+      "opciones": [
+        "Internet Mail Access Port",
+        "Integrated Message Access Protocol",
+        "Internal Mail Application Protocol",
+        "Internet Message Access Protocol"
+      ],
+      "correcta": 3,
+      "explicacion": "IMAP son las siglas de Internet Message Access Protocol."
+    },
+    {
+      "id": "si-6.1.6-012",
+      "enunciado": "¿Cuál de los siguientes protocolos se utiliza para el envío de correo y cuál para la recepción?",
+      "opciones": [
+        "POP para envío, SMTP para recepción",
+        "IMAP para envío, POP para recepción",
+        "SMTP para envío, HTTP para recepción",
+        "SMTP para envío, POP/IMAP para recepción"
+      ],
+      "correcta": 3,
+      "explicacion": "SMTP es el protocolo del servidor de correo saliente (envío), mientras que POP e IMAP son los protocolos del servidor de correo entrante (recepción)."
+    },
+    {
+      "id": "si-6.1.6-013",
+      "enunciado": "¿Qué tipo de correo es el más utilizado a nivel particular en la actualidad?",
+      "opciones": [
+        "El cliente de correo instalado en el equipo",
+        "El correo por línea de comandos",
+        "El cliente de correo empresarial",
+        "El correo web"
+      ],
+      "correcta": 3,
+      "explicacion": "El correo web es el más utilizado en la actualidad a nivel particular."
+    },
+    {
+      "id": "si-6.1.6-014",
+      "enunciado": "¿Cómo se conecta el usuario al servidor en el correo web?",
+      "opciones": [
+        "Mediante un software cliente instalado en el equipo",
+        "Mediante un protocolo de acceso remoto",
+        "Mediante una aplicación de escritorio dedicada",
+        "Mediante un navegador web"
+      ],
+      "correcta": 3,
+      "explicacion": "En el correo web, el usuario se conecta al servidor de correo con un navegador web."
+    },
+    {
+      "id": "si-6.1.6-015",
+      "enunciado": "¿Dónde se almacena la información en el correo web?",
+      "opciones": [
+        "En el equipo local del usuario",
+        "En un disco duro externo del usuario",
+        "Distribuida entre el equipo local y el servidor",
+        "Siempre en el servidor"
+      ],
+      "correcta": 3,
+      "explicacion": "En el correo web la información siempre está en el servidor."
+    },
+    {
+      "id": "si-6.1.6-016",
+      "enunciado": "¿Qué ventaja aporta que la información del correo web esté siempre en el servidor?",
+      "opciones": [
+        "Mayor velocidad de descarga de los mensajes",
+        "Menor consumo de ancho de banda",
+        "Mayor seguridad ante virus en el equipo local",
+        "El usuario puede conectarse desde cualquier ordenador con Internet"
+      ],
+      "correcta": 3,
+      "explicacion": "Al estar la información siempre en el servidor, el usuario se puede conectar desde cualquier ordenador con Internet."
+    },
+    {
+      "id": "si-6.1.6-017",
+      "enunciado": "¿Qué acciones permite realizar el correo web al usuario?",
+      "opciones": [
+        "Solo leer y responder mensajes",
+        "Solo crear y borrar mensajes",
+        "Solo organizar mensajes en carpetas",
+        "Crear mensajes, borrar, organizar en bandejas y administrar contactos"
+      ],
+      "correcta": 3,
+      "explicacion": "El correo web permite crear mensajes, borrar, organizar en bandejas y administrar los contactos."
+    },
+    {
+      "id": "si-6.1.6-018",
+      "enunciado": "¿Cómo funciona un cliente de correo instalado en el equipo?",
+      "opciones": [
+        "El usuario accede al correo a través del navegador web",
+        "Los correos permanecen siempre en el servidor sin descargarse",
+        "El usuario necesita conexión permanente a Internet para leer los mensajes",
+        "El cliente conecta al servidor y descarga todos los correos en el propio equipo"
+      ],
+      "correcta": 3,
+      "explicacion": "Con un cliente de correo, se instala un software en el ordenador que conecta al servidor descargándose todos los correos en el propio equipo."
+    },
+    {
+      "id": "si-6.1.6-019",
+      "enunciado": "¿Dónde tiene el usuario la bandeja de entrada, salida y contactos al usar un cliente de correo?",
+      "opciones": [
+        "En el servidor de correo",
+        "En la nube del proveedor de correo",
+        "En un servidor externo compartido",
+        "En el propio equipo del usuario"
+      ],
+      "correcta": 3,
+      "explicacion": "Con el cliente de correo, la bandeja de entrada, salida y contactos las tendrá el usuario en el propio equipo."
+    },
+    {
+      "id": "si-6.1.6-020",
+      "enunciado": "¿En qué tipo de entorno se suele utilizar el cliente de correo instalado en el equipo?",
+      "opciones": [
+        "En uso particular y doméstico",
+        "En dispositivos móviles exclusivamente",
+        "En redes de acceso público",
+        "En empresas"
+      ],
+      "correcta": 3,
+      "explicacion": "En las empresas el correo electrónico se suele utilizar con clientes de correo, y es la forma más habitual de conexión en entornos empresariales."
+    },
+    {
+      "id": "si-6.1.6-021",
+      "enunciado": "¿Qué ventaja ofrece el cliente de correo respecto a la conexión a Internet?",
+      "opciones": [
+        "No necesita ningún tipo de conexión a Internet",
+        "Consume menos ancho de banda que el correo web",
+        "Permite enviar correos sin servidor de correo",
+        "Solo necesita conectarse a Internet para actualizar la información"
+      ],
+      "correcta": 3,
+      "explicacion": "Con el cliente de correo, el usuario tiene en su equipo todos los mensajes y contactos anteriores, sin necesidad de conectarse a Internet nada más que para actualizar la información."
+    },
+    {
+      "id": "si-6.1.6-022",
+      "enunciado": "El correo web almacena la información en el equipo local, mientras que el cliente de correo la almacena en el servidor. ¿Verdadero o Falso?",
+      "opciones": ["Verdadero", "Falso"],
+      "correcta": 1,
+      "explicacion": "Es al revés: el correo web almacena la información en el servidor, mientras que el cliente de correo la descarga y almacena en el equipo local del usuario."
+    },
+    {
+      "id": "si-6.1.6-023",
+      "enunciado": "¿Cuál de los siguientes es un cliente de correo mencionado en el material?",
+      "opciones": ["Gmail", "Yahoo Mail", "Apple Mail", "Mozilla Thunderbird"],
+      "correcta": 3,
+      "explicacion": "Mozilla Thunderbird es uno de los clientes de correo más conocidos mencionados en el material."
+    },
+    {
+      "id": "si-6.1.6-024",
+      "enunciado": "¿Cuál de los siguientes NO es un cliente de correo mencionado en el material?",
+      "opciones": ["Evolution", "Microsoft Outlook", "Mozilla Thunderbird", "Gmail"],
+      "correcta": 3,
+      "explicacion": "Los clientes de correo mencionados son Evolution, Microsoft Outlook y Mozilla Thunderbird. Gmail es un servicio de correo web, no un cliente de correo instalado."
+    },
+    {
+      "id": "si-6.1.6-025",
+      "enunciado": "¿Qué empresa desarrolla el cliente de correo Outlook?",
+      "opciones": ["Google", "Mozilla", "Apple", "Microsoft"],
+      "correcta": 3,
+      "explicacion": "Microsoft Outlook es un cliente de correo desarrollado por Microsoft."
+    },
+    {
+      "id": "si-6.1.6-026",
+      "enunciado": "¿Qué funciones comunes presentan los clientes de correo mencionados?",
+      "opciones": [
+        "Videoconferencia, chat y transferencia de ficheros",
+        "Gestión de calendarios, tareas y notas",
+        "Cifrado de mensajes, firma digital y antispam",
+        "Recepción, composición y ordenación mediante carpetas y subcarpetas"
+      ],
+      "correcta": 3,
+      "explicacion": "Todos los clientes de correo presentan funciones similares: recepción, composición y ordenación mediante carpetas y subcarpetas del correo electrónico."
+    },
+    {
+      "id": "si-6.1.6-027",
+      "enunciado": "¿Cómo se organiza el correo en los clientes de correo?",
+      "opciones": [
+        "Mediante etiquetas y colores únicamente",
+        "Mediante una única bandeja de entrada sin subdivisiones",
+        "Mediante filtros automáticos sin intervención del usuario",
+        "Mediante carpetas y subcarpetas"
+      ],
+      "correcta": 3,
+      "explicacion": "Los clientes de correo permiten la ordenación mediante carpetas y subcarpetas del correo electrónico."
+    }
+  ]
+}

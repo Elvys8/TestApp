@@ -1,41 +1,36 @@
 # Estudio · App de tests
 
-App web personal para estudiar exámenes tipo test. Carga preguntas desde archivos JSON,
-los baraja, lleva el progreso (3 aciertos seguidos = pregunta dominada), permite validar
-preguntas, marcar para revisar y consultar estadísticas.
+App web personal para estudiar exámenes tipo test. Carga preguntas desde archivos JSON
+organizados por asignatura y tema, las baraja, lleva el progreso (aciertos seguidos =
+pregunta dominada), permite revisar/validar preguntas, marcarlas para revisar y consultar
+estadísticas.
 
-Funciona sin backend: todo el progreso se guarda en `localStorage` del navegador.
-Se puede exportar e importar como archivo JSON.
+Funciona sin backend: todo el progreso se guarda en `localStorage` del navegador, y se
+puede exportar e importar como archivo JSON.
+
+Especificación técnica completa: ver `ESPECIFICACION.md` (en la carpeta padre del repo).
 
 ---
 
 ## Cómo abrirlo en local
 
-Los navegadores modernos no permiten cargar **ES modules** directamente con `file://`,
-así que necesitas un mini servidor (no se abre con doble clic en `index.html`).
+Los navegadores no permiten cargar **ES modules** con `file://`, así que necesitas un mini
+servidor (no vale doble clic en `index.html`):
 
-Tres maneras fáciles, elige la que tengas a mano:
-
-**Con Python** (preinstalado en macOS y Linux):
-
+**Con Python** (preinstalado en macOS):
 ```
 cd estudio-app
 python3 -m http.server 8000
 ```
-
-Luego abre `http://localhost:8000` en el navegador.
+Abre `http://localhost:8000`.
 
 **Con Node.js**:
-
 ```
 cd estudio-app
 npx serve
 ```
 
-(la primera vez te pedirá instalar `serve`, dile que sí). Te dará una URL.
-
-**Con VS Code**: instala la extensión "Live Server", abre la carpeta `estudio-app`,
-clic derecho en `index.html` → "Open with Live Server".
+**Con VS Code**: extensión "Live Server", clic derecho en `index.html` → "Open with Live Server".
 
 ---
 
@@ -44,48 +39,43 @@ clic derecho en `index.html` → "Open with Live Server".
 ```
 estudio-app/
 ├── index.html
+├── README.md
+├── .github/workflows/update-manifest.yml   (regenera manifest.json en cada push)
 ├── css/
-│   ├── styles.css       (estilos base y componentes)
-│   └── themes.css       (variables y modo claro/oscuro)
+│   ├── styles.css       (reset, layout y componentes)
+│   └── themes.css       (variables, modo claro/oscuro, acento por asignatura)
 ├── js/
-│   ├── app.js           (entrada y orquestación)
+│   ├── app.js           (entrada, router, render de pantallas)
 │   ├── storage.js       (persistencia en localStorage)
 │   ├── library.js       (carga y validación de JSONs)
 │   ├── test.js          (sesión de test)
-│   ├── validation.js    (lógica del modo validación)
+│   ├── validation.js    (sesión de validación + edición de preguntas)
 │   ├── stats.js         (cálculos de estadísticas)
-│   ├── ui.js            (utilidades: modal, toast, escape)
+│   ├── ui.js            (modal, toast, escape, menús, cabecera)
 │   └── theme.js         (claro/oscuro)
-├── preguntas/
-│   ├── manifest.json    (lista de archivos oficiales a cargar)
-│   └── *.json           (un archivo por tema)
-└── README.md
+└── preguntas/
+    ├── manifest.json    (lista de archivos JSON a cargar)
+    └── *.json           (un archivo por tema)
 ```
 
 ---
 
 ## Añadir un tema nuevo
 
-1. Genera el JSON del tema siguiendo el esquema (puedes copiar uno de los existentes
-   como plantilla).
+1. Genera el JSON del tema siguiendo el esquema (copia uno existente como plantilla).
+   El workflow recomendado para crear preguntas a partir de material está en
+   `GENERACION-PREGUNTAS.md`.
 2. Guárdalo en `preguntas/`.
-3. Añade el nombre del archivo a `preguntas/manifest.json`:
-
+3. Añádelo a `preguntas/manifest.json`:
    ```json
-   {
-     "files": [
-       "fol-ipei03-autoevaluacion-a.json",
-       "el-archivo-nuevo.json"
-     ]
-   }
+   { "files": ["si-6.1.1-arquitectura-cliente-servidor.json", "el-archivo-nuevo.json"] }
    ```
+   (Si el repo está en GitHub, la Action `update-manifest.yml` regenera este archivo
+   sola en cada push; en local lo editas a mano.)
+4. Recarga la app. El tema nuevo aparece en su asignatura.
 
-4. Recarga la app. El nuevo tema aparecerá en su asignatura, marcado como
-   "Pendiente de validación".
-
-Alternativamente, sin tocar archivos: abre la app, pulsa **+ Cargar JSON** en
-la pantalla de inicio y sube el archivo. Quedará guardado en localStorage del
-navegador.
+Alternativa sin tocar archivos: en la pantalla de inicio, botón **+ Cargar JSON** sube un
+archivo que queda guardado en `localStorage` (solo en ese navegador).
 
 ### Esquema del JSON
 
@@ -94,8 +84,8 @@ navegador.
   "schema_version": 1,
   "id": "identificador-unico-del-archivo",
   "asignatura": "Nombre completo de la asignatura",
-  "asignatura_color": "#2c4a6b",
-  "tema": "Nombre del tema",
+  "asignatura_color": "#1C3C6F",
+  "tema": "6.1.1 Nombre del tema",
   "preguntas": [
     {
       "id": "prefijo-001",
@@ -108,77 +98,43 @@ navegador.
 }
 ```
 
-- `correcta` es el índice (0–3) de la opción buena en el array `opciones`.
-- `opciones` debe tener **exactamente 4** elementos.
-- `asignatura_color` debe ser un hex `#RRGGBB`. Todos los temas de la misma
-  asignatura deberían usar el mismo color (la app avisa por consola si no).
-- `explicacion` puede quedar vacío. Si tiene contenido, se muestra cuando
-  fallas la pregunta.
+- `opciones`: **2 o 4** elementos (2 = Verdadero/Falso, 4 = opción múltiple). En el test,
+  las de 4 se barajan; las de 2 se muestran en orden.
+- `correcta`: índice (0-based) de la opción correcta dentro de `opciones`.
+- `asignatura_color`: hex `#RRGGBB`. Todos los temas de una misma asignatura deben usar
+  el mismo color (la app avisa por consola si detecta discrepancia).
+- `explicacion`: opcional. Si tiene contenido, se muestra al fallar la pregunta en el
+  test, al pulsar el icono "i" del test, y en la sesión de validación.
 - Los `id` (del archivo y de cada pregunta) deben ser únicos.
 
 ---
 
 ## Subir a GitHub Pages
 
-GitHub Pages sirve archivos estáticos gratis. Ideal para esta app.
+Guía detallada con todos los comandos y resolución de problemas: ver `DESPLIEGUE.md`.
+Resumen:
 
-### 1. Crear un repositorio
-
-En github.com, "New repository". Ponle nombre (por ejemplo `estudio`). Puede ser
-público o privado (Pages funciona en ambos en cuentas Free desde 2024).
-
-### 2. Subir los archivos
-
-Desde una terminal, dentro de la carpeta `estudio-app`:
-
-```
-git init
-git add .
-git commit -m "Versión inicial"
-git branch -M main
-git remote add origin https://github.com/<tu-usuario>/<tu-repo>.git
-git push -u origin main
-```
-
-(O si prefieres GitHub Desktop / la interfaz web, sube los archivos como te
-sea más cómodo).
-
-### 3. Activar Pages
-
-En el repositorio, pestaña **Settings → Pages**:
-
-- **Source**: "Deploy from a branch".
-- **Branch**: `main`, carpeta `/ (root)`.
-- Guarda.
-
-GitHub te dará una URL del tipo `https://<tu-usuario>.github.io/<tu-repo>/`.
-Tarda 1–2 minutos la primera vez.
-
-### 4. Probar
-
-Abre la URL. Debería cargar igual que en local.
-
-### 5. Actualizar
-
-Cada vez que añadas o cambies algo:
-
-```
-git add .
-git commit -m "Lo que sea"
-git push
-```
-
-GitHub Pages republica solo en pocos segundos.
+1. Crear repo en github.com (público o privado, ambos sirven con Pages).
+2. Desde `estudio-app/`:
+   ```
+   git init && git branch -M main
+   git add . && git commit -m "Versión inicial"
+   git remote add origin https://github.com/<usuario>/<repo>.git
+   git push -u origin main
+   ```
+3. Settings → Pages → Source "Deploy from a branch" → Branch `main`, carpeta `/ (root)`.
+4. La URL será `https://<usuario>.github.io/<repo>/`.
+5. Para actualizar: `git add . && git commit -m "..." && git push`.
 
 ---
 
 ## Notas y limitaciones conocidas
 
-- El progreso vive en el navegador. Si cambias de navegador o dispositivo, usa
-  Exportar/Importar progreso desde la pantalla de estadísticas.
-- Si subes un JSON con un `id` que ya existe, la app lo rechaza. Cambia el `id`
-  o borra el anterior antes.
-- El modal de validación obliga a elegir explícitamente entre "Sí, está bien" y
-  "No, hay que corregir". Si dudas, marca "No": la pregunta seguirá apareciendo
-  como pendiente en futuras sesiones y podrás revalidarla más tarde.
-# TestApp
+- El progreso vive en el navegador. Para llevarlo a otro navegador o dispositivo, usa
+  Exportar / Importar progreso desde la pantalla de Estadísticas.
+- Si subes un JSON con un `id` que ya existe, la app lo rechaza. Cambia el `id` o borra
+  el anterior antes.
+- La validación de temas es opcional (opt-in): por defecto los temas se consideran
+  válidos. Se entra a revisar desde el menú "..." de cada tema → "Validar manualmente".
+- GitHub Pages distingue mayúsculas/minúsculas en las rutas; macOS no. Si algo carga en
+  local pero no en Pages, revisa que los nombres de archivo coincidan exactamente.

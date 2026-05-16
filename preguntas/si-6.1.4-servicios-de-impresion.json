@@ -1,0 +1,283 @@
+{
+  "schema_version": 1,
+  "id": "si-6.1.4-servicios-de-impresion",
+  "asignatura": "Sistemas Informáticos",
+  "asignatura_color": "#1C3C6F",
+  "tema": "6.1.4 Servicios de impresión",
+  "preguntas": [
+    {
+      "id": "si-6.1.4-001",
+      "enunciado": "¿Para qué sirven los servicios de impresión en una red?",
+      "opciones": [
+        "Para aumentar la velocidad de impresión local",
+        "Para compartir y gestionar impresoras en una red",
+        "Para convertir documentos a formato PDF",
+        "Para administrar el almacenamiento de documentos"
+      ],
+      "correcta": 1,
+      "explicacion": "Los servicios de impresión permiten compartir y gestionar impresoras en una red."
+    },
+    {
+      "id": "si-6.1.4-002",
+      "enunciado": "¿De qué depende el servicio de impresión que se utiliza en una red?",
+      "opciones": [
+        "Del número de impresoras conectadas",
+        "Del fabricante de las impresoras",
+        "Del sistema operativo de los equipos de la red",
+        "De la velocidad de la conexión a internet"
+      ],
+      "correcta": 2,
+      "explicacion": "Distinguimos diferentes servicios según el sistema operativo que utilicemos en los equipos de la red."
+    },
+    {
+      "id": "si-6.1.4-003",
+      "enunciado": "¿Qué significan las siglas CUPS?",
+      "opciones": [
+        "Common Unified Printing Service",
+        "Central Unix Printer System",
+        "Common Unix Printing System",
+        "Core Unix Printing Suite"
+      ],
+      "correcta": 2,
+      "explicacion": "CUPS son las siglas de Common Unix Printing System."
+    },
+    {
+      "id": "si-6.1.4-004",
+      "enunciado": "¿Cuál es el sistema de impresión estándar en la mayoría de distribuciones Linux?",
+      "opciones": [
+        "SMB/CIFS",
+        "IPP",
+        "Samba",
+        "CUPS"
+      ],
+      "correcta": 3,
+      "explicacion": "CUPS es el sistema de impresión estándar en la mayoría de las distribuciones Linux."
+    },
+    {
+      "id": "si-6.1.4-005",
+      "enunciado": "¿Cuál de las siguientes acciones NO permite realizar CUPS?",
+      "opciones": [
+        "Instalar impresoras",
+        "Configurar impresoras",
+        "Gestionar particiones de disco",
+        "Compartir impresoras"
+      ],
+      "correcta": 2,
+      "explicacion": "CUPS permite instalar, configurar, administrar y compartir impresoras. La gestión de particiones de disco no es una función de CUPS."
+    },
+    {
+      "id": "si-6.1.4-006",
+      "enunciado": "¿Qué protocolo utiliza CUPS para proporcionar impresión de red?",
+      "opciones": [
+        "SMB",
+        "FTP",
+        "HTTP",
+        "IPP"
+      ],
+      "correcta": 3,
+      "explicacion": "CUPS proporciona impresión de red utilizando el Protocolo estándar de Impresión en Internet (IPP)."
+    },
+    {
+      "id": "si-6.1.4-007",
+      "enunciado": "¿Qué significan las siglas IPP?",
+      "opciones": [
+        "Internal Printing Protocol",
+        "Internet Package Protocol",
+        "Internet Printing Protocol",
+        "Integrated Printer Protocol"
+      ],
+      "correcta": 2,
+      "explicacion": "IPP son las siglas de Internet Printing Protocol (Protocolo estándar de Impresión en Internet)."
+    },
+    {
+      "id": "si-6.1.4-008",
+      "enunciado": "¿Cómo se configura típicamente CUPS?",
+      "opciones": [
+        "Mediante comandos exclusivamente en terminal",
+        "A través de archivos de configuración XML",
+        "A través de una interfaz web",
+        "Mediante una aplicación de escritorio dedicada"
+      ],
+      "correcta": 2,
+      "explicacion": "CUPS se configura típicamente a través de una interfaz web."
+    },
+    {
+      "id": "si-6.1.4-009",
+      "enunciado": "¿Qué herramientas proporciona CUPS para la gestión del trabajo de impresión?",
+      "opciones": [
+        "Herramientas de conversión de documentos",
+        "Herramientas para gestionar colas de impresión y trabajos de impresión",
+        "Herramientas de edición de documentos",
+        "Herramientas de monitorización de red"
+      ],
+      "correcta": 1,
+      "explicacion": "CUPS proporciona herramientas para gestionar colas de impresión y trabajos de impresión."
+    },
+    {
+      "id": "si-6.1.4-010",
+      "enunciado": "¿Con qué sistemas operativos es compatible CUPS además de Linux?",
+      "opciones": [
+        "Solo con macOS",
+        "Solo con Windows",
+        "Con ninguno, es exclusivo de Linux",
+        "Con Windows y macOS"
+      ],
+      "correcta": 3,
+      "explicacion": "CUPS es compatible con Windows y macOS, lo que facilita la impresión en redes mixtas."
+    },
+    {
+      "id": "si-6.1.4-011",
+      "enunciado": "¿Qué características de seguridad incluye CUPS?",
+      "opciones": [
+        "Cifrado de documentos y antivirus",
+        "Firewall y filtrado de paquetes",
+        "Autenticación y autorización",
+        "VPN y túneles seguros"
+      ],
+      "correcta": 2,
+      "explicacion": "CUPS incluye características de seguridad como autenticación y autorización para controlar el acceso a las impresoras."
+    },
+    {
+      "id": "si-6.1.4-012",
+      "enunciado": "¿Para qué sirven la autenticación y autorización en CUPS?",
+      "opciones": [
+        "Para cifrar los documentos enviados a imprimir",
+        "Para acelerar la cola de impresión",
+        "Para controlar el acceso a las impresoras",
+        "Para gestionar los drivers de impresora"
+      ],
+      "correcta": 2,
+      "explicacion": "CUPS incluye características de seguridad como autenticación y autorización para controlar el acceso a las impresoras."
+    },
+    {
+      "id": "si-6.1.4-013",
+      "enunciado": "CUPS es compatible con redes mixtas que combinen Linux, Windows y macOS. ¿Verdadero o Falso?",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 0,
+      "explicacion": "CUPS es compatible con Windows y macOS, lo que facilita la impresión en redes mixtas."
+    },
+    {
+      "id": "si-6.1.4-014",
+      "enunciado": "¿Qué protocolo utilizan los clientes Windows para la impresión en red?",
+      "opciones": [
+        "IPP",
+        "FTP",
+        "SMB/CIFS",
+        "CUPS"
+      ],
+      "correcta": 2,
+      "explicacion": "Para los sistemas Windows clientes se utiliza el protocolo SMB/CIFS."
+    },
+    {
+      "id": "si-6.1.4-015",
+      "enunciado": "¿Qué significan las siglas SMB/CIFS?",
+      "opciones": [
+        "Simple Message Block / Common Internet File System",
+        "Server Message Block / Common Interface File System",
+        "Shared Media Block / Central Internet File System",
+        "Server Media Bus / Common Internet File System"
+      ],
+      "correcta": 1,
+      "explicacion": "SMB/CIFS son las siglas de Server Message Block / Common Interface File System."
+    },
+    {
+      "id": "si-6.1.4-016",
+      "enunciado": "¿De qué forma utilizan los clientes Windows el protocolo SMB/CIFS para impresión?",
+      "opciones": [
+        "De forma completamente distinta a como gestionan los ficheros",
+        "Solo para impresoras locales",
+        "De forma similar a como se hace con los ficheros",
+        "Únicamente a través de una interfaz web"
+      ],
+      "correcta": 2,
+      "explicacion": "Para los sistemas Windows clientes se utiliza el protocolo SMB/CIFS de forma similar a como se hace con los ficheros."
+    },
+    {
+      "id": "si-6.1.4-017",
+      "enunciado": "¿Para qué tipo de entornos está orientada la plataforma de impresión de Windows Server?",
+      "opciones": [
+        "Entornos domésticos",
+        "Entornos exclusivamente de desarrollo",
+        "Redes pequeñas sin servidor",
+        "Entornos empresariales"
+      ],
+      "correcta": 3,
+      "explicacion": "Windows Server ofrece una robusta plataforma para gestionar Servicios de Impresión en entornos empresariales."
+    },
+    {
+      "id": "si-6.1.4-018",
+      "enunciado": "¿Cuál de las siguientes es una característica de los Servicios de Impresión de Windows Server?",
+      "opciones": [
+        "Solo permite impresoras conectadas localmente al servidor",
+        "No es compatible con colas de impresión",
+        "Requiere CUPS para funcionar",
+        "Centraliza la administración de impresoras y colas de impresión"
+      ],
+      "correcta": 3,
+      "explicacion": "Windows Server centraliza la administración de impresoras y colas de impresión."
+    },
+    {
+      "id": "si-6.1.4-019",
+      "enunciado": "¿Cómo se llama el rol específico que incluye Windows Server para la gestión de impresión?",
+      "opciones": [
+        "Rol de Impresoras de Red",
+        "Rol de Gestión CUPS",
+        "Rol de Servicios de Impresión",
+        "Rol de Administración SMB"
+      ],
+      "correcta": 2,
+      "explicacion": "Windows Server incluye un rol específico para los Servicios de Impresión."
+    },
+    {
+      "id": "si-6.1.4-020",
+      "enunciado": "¿Qué herramienta incluye Windows Server para configurar y gestionar impresoras y colas?",
+      "opciones": [
+        "Panel de Impresión Avanzada",
+        "Consola de Impresoras SMB",
+        "Gestión de Colas IPP",
+        "Administración de Impresión"
+      ],
+      "correcta": 3,
+      "explicacion": "Windows Server incluye la herramienta 'Administración de Impresión' para configurar y gestionar impresoras y colas de impresión."
+    },
+    {
+      "id": "si-6.1.4-021",
+      "enunciado": "¿Qué protocolos de impresión soporta Windows Server?",
+      "opciones": [
+        "Solo SMB/CIFS",
+        "Solo IPP",
+        "SMB/CIFS pero no IPP",
+        "Una amplia gama incluyendo IPP"
+      ],
+      "correcta": 3,
+      "explicacion": "Windows Server soporta una amplia gama de impresoras y protocolos de impresión, incluyendo IPP."
+    },
+    {
+      "id": "si-6.1.4-022",
+      "enunciado": "¿Con qué sistemas operativos cliente es compatible Windows Server para impresión?",
+      "opciones": [
+        "Solo con clientes Windows",
+        "Con Windows y macOS, pero no con Linux",
+        "Con Windows y Linux, pero no con macOS",
+        "Con Windows, macOS y Linux"
+      ],
+      "correcta": 3,
+      "explicacion": "Windows Server es compatible con clientes Windows, macOS y Linux."
+    },
+    {
+      "id": "si-6.1.4-023",
+      "enunciado": "¿Cuál de las siguientes afirmaciones sobre los servicios de impresión es correcta?",
+      "opciones": [
+        "CUPS solo funciona en entornos Linux puro, sin compatibilidad con otros sistemas",
+        "Windows Server utiliza CUPS como sistema de impresión principal",
+        "SMB/CIFS es el protocolo estándar de impresión en Linux",
+        "Tanto CUPS como Windows Server soportan el protocolo IPP"
+      ],
+      "correcta": 3,
+      "explicacion": "CUPS utiliza IPP para la impresión de red, y Windows Server también soporta IPP entre su amplia gama de protocolos."
+    }
+  ]
+}

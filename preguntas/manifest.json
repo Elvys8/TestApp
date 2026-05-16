@@ -5,6 +5,9 @@
   	"si-6.1.1-arquitectura-cliente-servidor.json",
   	"si-6.1.2-servicios-infraestructura-red.json",
   	"si-6.1.3-servicios-comparticion-ficheros.json",
+  	"si-6.1.4-servicios-de-impresion.json",
+  	"si-6.1.5-servicio-web.json",
+  	"si-6.1.6-servicio-de-correo-electronico.json",
   	"almacenamiento-de-informacion.json"
   ]
 }

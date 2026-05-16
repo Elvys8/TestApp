@@ -40,6 +40,7 @@ export function start(config, mountEl, onExit) {
     return;
   }
 
+  const threshold = storage.getMasteryThreshold(config.asignaturaName);
   _state = {
     config,
     mountEl,
@@ -47,7 +48,8 @@ export function start(config, mountEl, onExit) {
     items: pool,        // [{ q, optionsOrder: [3,1,0,2] }]
     currentIdx: 0,
     answers: [],        // [{ questionId, correct }]
-    masteredBefore: pool.map((it) => storage.isMastered(it.q.id)),
+    masteredBefore: pool.map((it) => storage.isMastered(it.q.id, threshold)),
+    threshold,
   };
 
   renderQuestion();
@@ -67,8 +69,9 @@ function buildPool(config) {
     }
   }
 
-  // Excluir las dominadas (regla de los 3 aciertos seguidos)
-  questions = questions.filter((q) => !storage.isMastered(q.id));
+  // Excluir las dominadas según el umbral configurado para la asignatura
+  const threshold = storage.getMasteryThreshold(config.asignaturaName);
+  questions = questions.filter((q) => !storage.isMastered(q.id, threshold));
 
   if (config.onlyFailed) {
     questions = questions.filter((q) => storage.getProgress(q.id).totalWrong > 0);
@@ -260,18 +263,29 @@ async function handleAnswer(chosenOrig) {
    RESUMEN FINAL
    ============================================================ */
 function renderSummary() {
-  const { items, answers, mountEl, onExit, masteredBefore } = _state;
+  const { items, answers, mountEl, onExit, masteredBefore, threshold } = _state;
 
-  const total = answers.length;
+  const total   = answers.length;
   const correct = answers.filter((a) => a.correct).length;
-  const wrong = total - correct;
-  const pct = total > 0 ? Math.round((correct / total) * 100) : 0;
+  const wrong   = total - correct;
+  const pct     = total > 0 ? Math.round((correct / total) * 100) : 0;
+
+  // Nota sobre 10: cada acierto suma 1, cada fallo resta `penalty`
+  const penalty = storage.getWrongPenalty();
+  const rawGrade = total > 0 ? (correct - wrong * penalty) / total * 10 : 0;
+  const grade = Math.max(0, Math.min(10, rawGrade));
+  const gradeStr = grade % 1 === 0 ? grade.toFixed(0) : grade.toFixed(1);
+
+  // Penalización descrita en texto para el pie de la nota
+  const penaltyDesc = penalty === 0
+    ? "sin penalización por fallos"
+    : `restando ${penalty.toString().replace(".", ",")} por fallo`;
 
   // Cuántas preguntas pasan a estar dominadas en esta sesión
   let newlyMastered = 0;
   items.forEach((it, i) => {
     const wasMastered = masteredBefore[i];
-    const isMasteredNow = storage.isMastered(it.q.id);
+    const isMasteredNow = storage.isMastered(it.q.id, threshold);
     if (!wasMastered && isMasteredNow) newlyMastered++;
   });
 
@@ -279,8 +293,17 @@ function renderSummary() {
     <h2 class="page-title">Resumen del test</h2>
 
     <div class="panel test-summary">
-      <p class="test-summary__metric">${pct}%</p>
-      <p class="muted">${correct} de ${total} preguntas acertadas</p>
+      <div class="test-summary__scores">
+        <div class="test-summary__score-block">
+          <p class="test-summary__metric">${pct}%</p>
+          <p class="muted test-summary__label">${correct} de ${total} acertadas</p>
+        </div>
+        <div class="test-summary__divider" aria-hidden="true"></div>
+        <div class="test-summary__score-block">
+          <p class="test-summary__metric test-summary__metric--grade">${gradeStr}<span class="test-summary__grade-denom">/10</span></p>
+          <p class="muted test-summary__label">${penaltyDesc}</p>
+        </div>
+      </div>
     </div>
 
     <div class="panel">
@@ -288,7 +311,7 @@ function renderSummary() {
       <p class="muted tiny" style="margin: 0;">
         ${newlyMastered === 0
           ? "No has dominado ninguna pregunta nueva en esta sesión."
-          : `Has dominado <strong>${newlyMastered}</strong> ${newlyMastered === 1 ? "pregunta nueva" : "preguntas nuevas"} (3 aciertos seguidos).`}
+          : `Has dominado <strong>${newlyMastered}</strong> ${newlyMastered === 1 ? "pregunta nueva" : "preguntas nuevas"} (${threshold} ${threshold === 1 ? "acierto seguido" : "aciertos seguidos"}).`}
       </p>
     </div>
 

@@ -1,0 +1,534 @@
+{
+  "schema_version": 1,
+  "id": "si-6.1.5-servicio-web",
+  "asignatura": "Sistemas Informáticos",
+  "asignatura_color": "#1C3C6F",
+  "tema": "6.1.5 Servicio Web",
+  "preguntas": [
+    {
+      "id": "si-6.1.5-001",
+      "enunciado": "¿Qué significan las siglas WWW?",
+      "opciones": ["Wide Web World", "Web Wide World", "World Wide Web", "World Web Wide"],
+      "correcta": 2,
+      "explicacion": "WWW son las siglas de World Wide Web, que aparecen en el nombre de prácticamente todos los servidores web."
+    },
+    {
+      "id": "si-6.1.5-002",
+      "enunciado": "¿Cuál es el servicio más utilizado de los que se ofrecen en Internet?",
+      "opciones": ["El servicio de correo electrónico", "El servicio de transferencia de ficheros", "El servicio de impresión en red", "El servicio web"],
+      "correcta": 3,
+      "explicacion": "El servicio web es el servicio más utilizado de los que se ofrecen en Internet."
+    },
+    {
+      "id": "si-6.1.5-003",
+      "enunciado": "¿De qué se encarga un servidor web?",
+      "opciones": ["De gestionar cuentas de correo electrónico", "De almacenar y sincronizar ficheros entre equipos", "De alojar y proporcionar las páginas web solicitadas por los clientes", "De gestionar las impresoras conectadas en red"],
+      "correcta": 2,
+      "explicacion": "Un servidor web se encarga de alojar y proporcionar las páginas web solicitadas por los clientes desde sus navegadores."
+    },
+    {
+      "id": "si-6.1.5-004",
+      "enunciado": "¿Qué protocolo maneja un servidor web?",
+      "opciones": ["FTP", "SMTP", "SMB", "HTTP"],
+      "correcta": 3,
+      "explicacion": "Un servidor web maneja el protocolo HTTP."
+    },
+    {
+      "id": "si-6.1.5-005",
+      "enunciado": "¿Qué significan las siglas HTTP?",
+      "opciones": ["HyperText Transfer Page", "High Transfer Text Protocol", "HyperText Transfer Protocol", "HyperText Transmission Protocol"],
+      "correcta": 2,
+      "explicacion": "HTTP son las siglas de HyperText Transfer Protocol."
+    },
+    {
+      "id": "si-6.1.5-006",
+      "enunciado": "Cuando un servidor web recibe una petición HTTP, ¿con qué responde normalmente?",
+      "opciones": ["Con un fichero de texto plano", "Con un archivo comprimido", "Con una página HTML", "Con un archivo de audio o vídeo"],
+      "correcta": 2,
+      "explicacion": "Cuando el servidor web recibe una petición HTTP, este responde con una respuesta HTTP, normalmente una página HTML."
+    },
+    {
+      "id": "si-6.1.5-007",
+      "enunciado": "¿Cuál de las siguientes NO es una forma en que un servidor web puede responder a una petición?",
+      "opciones": ["Con una página HTML estática", "Con una imagen", "Enviando una redirección", "Enviando un correo electrónico al cliente"],
+      "correcta": 3,
+      "explicacion": "Un servidor web puede responder con una página HTML estática, una imagen, enviando una redirección, o delegando la generación dinámica a otro programa. Enviar correos electrónicos no es una función del servidor web."
+    },
+    {
+      "id": "si-6.1.5-008",
+      "enunciado": "¿Qué significan las siglas HTML?",
+      "opciones": ["HyperText Markup Link", "High Text Markup Language", "HyperText Main Language", "HyperText Markup Language"],
+      "correcta": 3,
+      "explicacion": "HTML son las siglas de HyperText Markup Language."
+    },
+    {
+      "id": "si-6.1.5-009",
+      "enunciado": "¿Qué tipo de página genera un servidor web cuando delega la respuesta a un programa como PHP o JSP?",
+      "opciones": ["Una página HTML estática", "Una página de solo texto", "Una página dinámica del lado del servidor", "Una página de redirección"],
+      "correcta": 2,
+      "explicacion": "Este tipo de programas del lado del servidor generan una página dinámica del lado servidor."
+    },
+    {
+      "id": "si-6.1.5-010",
+      "enunciado": "¿Cómo se envía al navegador del usuario el resultado de una página dinámica generada en el servidor?",
+      "opciones": ["En formato XML", "En formato PDF", "En formato JSON", "En formato HTML"],
+      "correcta": 3,
+      "explicacion": "Los programas del lado del servidor generan la página dinámica enviando la página resultante en HTML, para que pueda ser vista en el navegador web del usuario."
+    },
+    {
+      "id": "si-6.1.5-011",
+      "enunciado": "¿Cómo se denominan las aplicaciones web en inglés?",
+      "opciones": ["Webservices", "Webtools", "Webapps", "Webpages"],
+      "correcta": 2,
+      "explicacion": "Las aplicaciones web se denominan webapps en inglés."
+    },
+    {
+      "id": "si-6.1.5-012",
+      "enunciado": "Cuando un servidor web actúa generando aplicaciones web dinámicas, ¿cómo se considera al protocolo HTTP?",
+      "opciones": ["Como un protocolo de transferencia de ficheros", "Como un protocolo de seguridad", "Como un servidor de aplicaciones", "Como un protocolo de autenticación"],
+      "correcta": 2,
+      "explicacion": "En el caso de las aplicaciones web (webapps), HTTP se consideraría un servidor de aplicaciones."
+    },
+    {
+      "id": "si-6.1.5-013",
+      "enunciado": "¿Cuál de los siguientes es un ejemplo de tecnología para generar páginas dinámicas en el lado del servidor?",
+      "opciones": ["HTML5", "CSS3", "SVG", "JSP"],
+      "correcta": 3,
+      "explicacion": "JSP (Java Server Pages) es una tecnología para generar páginas dinámicas en el lado del servidor."
+    },
+    {
+      "id": "si-6.1.5-014",
+      "enunciado": "¿Qué significan las siglas CGI?",
+      "opciones": ["Common General Interface", "Central Gateway Information", "Common Gateway Interface", "Core Gateway Interface"],
+      "correcta": 2,
+      "explicacion": "CGI son las siglas de Common Gateway Interface."
+    },
+    {
+      "id": "si-6.1.5-015",
+      "enunciado": "¿Qué significan las siglas JSP?",
+      "opciones": ["Java Static Pages", "Java Scripting Protocol", "Java Server Pages", "JavaScript Processing"],
+      "correcta": 2,
+      "explicacion": "JSP son las siglas de Java Server Pages."
+    },
+    {
+      "id": "si-6.1.5-016",
+      "enunciado": "¿Qué significan las siglas ASP?",
+      "opciones": ["Application Script Processing", "Advanced Server Pages", "Active Server Pages", "Automated Scripting Protocol"],
+      "correcta": 2,
+      "explicacion": "ASP son las siglas de Active Server Pages, tecnología de Microsoft para crear aplicaciones web dinámicas."
+    },
+    {
+      "id": "si-6.1.5-017",
+      "enunciado": "¿De qué se encarga el backend en el desarrollo web?",
+      "opciones": ["De la presentación visual de la aplicación al usuario", "De la interactividad en el navegador del cliente", "De la lógica del servidor, la gestión de bases de datos y la seguridad", "De la estructura del contenido HTML"],
+      "correcta": 2,
+      "explicacion": "El backend es la parte del desarrollo web que se encarga de la lógica del servidor, la gestión de bases de datos y la seguridad de una aplicación."
+    },
+    {
+      "id": "si-6.1.5-018",
+      "enunciado": "¿Cómo se denomina al backend en relación con el sitio web?",
+      "opciones": ["El motor de búsqueda", "La interfaz de usuario", "El núcleo visual", "La columna vertebral"],
+      "correcta": 3,
+      "explicacion": "El backend es la 'columna vertebral' de cualquier sitio web o aplicación."
+    },
+    {
+      "id": "si-6.1.5-019",
+      "enunciado": "¿Qué hace el backend con las solicitudes de los usuarios?",
+      "opciones": ["Las muestra directamente en el navegador", "Las convierte a formato HTML", "Las procesa y asegura que se entregue la información correcta al frontend", "Las almacena sin procesarlas"],
+      "correcta": 2,
+      "explicacion": "El backend procesa las solicitudes de los usuarios y asegura que se entregue la información correcta al frontend."
+    },
+    {
+      "id": "si-6.1.5-020",
+      "enunciado": "¿Cuál de los siguientes gestores de bases de datos se menciona como parte del backend?",
+      "opciones": ["MongoDB", "Redis", "SQLite", "PostgreSQL"],
+      "correcta": 3,
+      "explicacion": "PostgreSQL se menciona como uno de los gestores de bases de datos importantes dentro del backend, junto a MySQL, MariaDB y SQL Server."
+    },
+    {
+      "id": "si-6.1.5-021",
+      "enunciado": "¿Cuál de los siguientes NO se menciona como gestor de bases de datos del backend?",
+      "opciones": ["MySQL", "MariaDB", "SQL Server", "Oracle Database"],
+      "correcta": 3,
+      "explicacion": "Los gestores de bases de datos mencionados son MySQL, PostgreSQL, MariaDB y SQL Server. Oracle Database no aparece en el material."
+    },
+    {
+      "id": "si-6.1.5-022",
+      "enunciado": "¿Qué parte del desarrollo web interactúa directamente con el usuario?",
+      "opciones": ["El backend", "La base de datos", "El servidor de aplicaciones", "El frontend"],
+      "correcta": 3,
+      "explicacion": "El frontend es la parte de una aplicación web que interactúa directamente con el usuario."
+    },
+    {
+      "id": "si-6.1.5-023",
+      "enunciado": "¿Para qué se utiliza HTML5 en el frontend?",
+      "opciones": ["Para la interactividad y lógica del cliente", "Para el diseño y el estilo visual", "Para la estructura del contenido", "Para la gestión de bases de datos"],
+      "correcta": 2,
+      "explicacion": "HTML5 se utiliza en el frontend para la estructura del contenido."
+    },
+    {
+      "id": "si-6.1.5-024",
+      "enunciado": "¿Para qué se utiliza CSS3 en el frontend?",
+      "opciones": ["Para la estructura del contenido", "Para la interactividad y lógica del cliente", "Para la gestión de peticiones al servidor", "Para el diseño y el estilo visual"],
+      "correcta": 3,
+      "explicacion": "CSS3 se utiliza en el frontend para el diseño y el estilo visual."
+    },
+    {
+      "id": "si-6.1.5-025",
+      "enunciado": "¿Para qué se utiliza JavaScript en el frontend?",
+      "opciones": ["Para la estructura del contenido", "Para el diseño y el estilo visual", "Para la gestión de bases de datos", "Para la interactividad y la lógica del lado del cliente"],
+      "correcta": 3,
+      "explicacion": "JavaScript se utiliza en el frontend para la interactividad y la lógica del lado del cliente."
+    },
+    {
+      "id": "si-6.1.5-026",
+      "enunciado": "¿Qué significan las siglas CSS?",
+      "opciones": ["Content Style Sheets", "Core Style System", "Cascading Style Sheets", "Central Styling Structure"],
+      "correcta": 2,
+      "explicacion": "CSS son las siglas de Cascading Style Sheets (hojas de estilo en cascada)."
+    },
+    {
+      "id": "si-6.1.5-027",
+      "enunciado": "¿Qué es Node.js?",
+      "opciones": ["Un framework de Python para backend", "Una biblioteca de JavaScript para interfaces de usuario", "Un gestor de bases de datos", "Un entorno de ejecución de JavaScript para el lado del servidor"],
+      "correcta": 3,
+      "explicacion": "Node.js es un entorno de ejecución de JavaScript de código abierto y multiplataforma que permite ejecutar código JavaScript en el lado del servidor."
+    },
+    {
+      "id": "si-6.1.5-028",
+      "enunciado": "¿Cuáles son dos características de Node.js?",
+      "opciones": ["De código cerrado y solo para Windows", "Propietario y exclusivo para macOS", "De código abierto y multiplataforma", "De pago y exclusivo para Linux"],
+      "correcta": 2,
+      "explicacion": "Node.js es de código abierto y multiplataforma."
+    },
+    {
+      "id": "si-6.1.5-029",
+      "enunciado": "¿Quién desarrolló React?",
+      "opciones": ["Google", "Microsoft", "Apple", "Facebook"],
+      "correcta": 3,
+      "explicacion": "React es una biblioteca de JavaScript desarrollada por Facebook."
+    },
+    {
+      "id": "si-6.1.5-030",
+      "enunciado": "¿Para qué es ideal React?",
+      "opciones": ["Para gestionar bases de datos relacionales", "Para aplicaciones empresariales a gran escala", "Para crear interfaces de usuario interactivas y componentes reutilizables", "Para renderizado del lado del servidor"],
+      "correcta": 2,
+      "explicacion": "React es ideal para crear interfaces de usuario interactivas y componentes reutilizables."
+    },
+    {
+      "id": "si-6.1.5-031",
+      "enunciado": "¿Por qué características es conocido React?",
+      "opciones": ["Por su rigidez y seguridad", "Por su complejidad y potencia empresarial", "Por su simplicidad y facilidad de aprendizaje", "Por su flexibilidad y rendimiento"],
+      "correcta": 3,
+      "explicacion": "React es conocido por su flexibilidad y rendimiento."
+    },
+    {
+      "id": "si-6.1.5-032",
+      "enunciado": "¿Quién mantiene Angular?",
+      "opciones": ["Facebook", "Microsoft", "Apple", "Google"],
+      "correcta": 3,
+      "explicacion": "Angular es un framework completo mantenido por Google."
+    },
+    {
+      "id": "si-6.1.5-033",
+      "enunciado": "¿Para qué tipo de proyectos es adecuado Angular?",
+      "opciones": ["Para proyectos pequeños y prototipos rápidos", "Para páginas estáticas sin lógica", "Para aplicaciones empresariales a gran escala", "Para aplicaciones optimizadas para SEO"],
+      "correcta": 2,
+      "explicacion": "Angular es adecuado para aplicaciones empresariales a gran escala."
+    },
+    {
+      "id": "si-6.1.5-034",
+      "enunciado": "¿Qué característica destaca de Vue.js frente a otros frameworks?",
+      "opciones": ["Es el más potente para aplicaciones empresariales", "Compila el código durante la construcción", "Está desarrollado por Google", "Ofrece un equilibrio entre simplicidad y potencia, siendo fácil de aprender"],
+      "correcta": 3,
+      "explicacion": "Vue.js ofrece un equilibrio entre simplicidad y potencia, y es fácil de aprender y usar."
+    },
+    {
+      "id": "si-6.1.5-035",
+      "enunciado": "¿Para qué tipo de proyectos es especialmente versátil Vue.js?",
+      "opciones": ["Para aplicaciones que requieren bases de datos NoSQL", "Para aplicaciones de escritorio multiplataforma", "Para renderizado estático de sitios web", "Para proyectos que precisen interfaces de usuario interactivas"],
+      "correcta": 3,
+      "explicacion": "Vue.js es versátil para diferentes tipos de proyectos, en especial aquellos que precisen interfaces de usuario interactivas."
+    },
+    {
+      "id": "si-6.1.5-036",
+      "enunciado": "¿Qué hace Svelte de forma diferente a otros frameworks de JavaScript?",
+      "opciones": ["Ejecuta todo el código en el servidor", "Utiliza una sintaxis exclusiva muy diferente a HTML", "Requiere más recursos en tiempo de ejecución", "Compila el código durante la construcción en lugar de hacerlo en el navegador"],
+      "correcta": 3,
+      "explicacion": "A diferencia de otros frameworks de JavaScript que hacen gran parte del trabajo en el navegador, Svelte compila el código durante la construcción."
+    },
+    {
+      "id": "si-6.1.5-037",
+      "enunciado": "¿Qué resultado produce la compilación en tiempo de construcción de Svelte?",
+      "opciones": ["Mayor tamaño de la aplicación pero más compatibilidad", "Páginas más lentas pero más seguras", "Aplicaciones más pesadas con mayor interactividad", "Aplicaciones más pequeñas y rápidas con menos sobrecarga en ejecución"],
+      "correcta": 3,
+      "explicacion": "La compilación en tiempo de construcción de Svelte resulta en aplicaciones más pequeñas y rápidas, con menos sobrecarga en el tiempo de ejecución."
+    },
+    {
+      "id": "si-6.1.5-038",
+      "enunciado": "¿Qué sintaxis utiliza Svelte?",
+      "opciones": ["Una sintaxis propia completamente distinta a los estándares web", "Sintaxis basada en XML y JSON", "Sintaxis exclusiva de JavaScript sin HTML ni CSS", "Una sintaxis similar a HTML, CSS y JavaScript"],
+      "correcta": 3,
+      "explicacion": "Svelte utiliza una sintaxis similar a HTML, CSS y JavaScript, lo que facilita su aprendizaje."
+    },
+    {
+      "id": "si-6.1.5-039",
+      "enunciado": "¿Qué capacidades ofrece Next.js?",
+      "opciones": ["Compilación en tiempo de construcción y gestión de bases de datos", "Desarrollo backend con Python y generación de APIs REST", "Gestión de interfaces de usuario y componentes reutilizables", "Renderizado del lado del servidor (SSR) y generación de sitios estáticos (SSG)"],
+      "correcta": 3,
+      "explicacion": "Next.js ofrece renderizado del lado del servidor (SSR) y generación de sitios estáticos (SSG)."
+    },
+    {
+      "id": "si-6.1.5-040",
+      "enunciado": "¿Para qué tipo de aplicaciones es ideal Next.js?",
+      "opciones": ["Para aplicaciones empresariales a gran escala", "Para crear interfaces de usuario con componentes reutilizables", "Para gestionar bases de datos relacionales", "Para aplicaciones optimizadas para SEO"],
+      "correcta": 3,
+      "explicacion": "Next.js es ideal para aplicaciones optimizadas para SEO."
+    },
+    {
+      "id": "si-6.1.5-041",
+      "enunciado": "¿Qué significan las siglas SSR?",
+      "opciones": ["Static Server Response", "Shared Script Rendering", "Server-Side Rendering", "Secure Site Rendering"],
+      "correcta": 2,
+      "explicacion": "SSR son las siglas de Server-Side Rendering (renderizado del lado del servidor)."
+    },
+    {
+      "id": "si-6.1.5-042",
+      "enunciado": "¿Qué significan las siglas SSG?",
+      "opciones": ["Secure Script Generation", "Server-Side Generation", "Shared Static Generator", "Static Site Generation"],
+      "correcta": 3,
+      "explicacion": "SSG son las siglas de Static Site Generation (generación de sitios estáticos)."
+    },
+    {
+      "id": "si-6.1.5-043",
+      "enunciado": "¿Qué significan las siglas SEO?",
+      "opciones": ["Server Engine Optimization", "Static Engine Output", "Secure Encoding Operation", "Search Engine Optimization"],
+      "correcta": 3,
+      "explicacion": "SEO son las siglas de Search Engine Optimization (Optimización para Motores de Búsqueda)."
+    },
+    {
+      "id": "si-6.1.5-044",
+      "enunciado": "¿Con qué lenguaje de programación trabaja Django?",
+      "opciones": ["JavaScript", "PHP", "Java", "Python"],
+      "correcta": 3,
+      "explicacion": "Django es un framework de Python para desarrollo web backend."
+    },
+    {
+      "id": "si-6.1.5-045",
+      "enunciado": "¿Por qué características es conocido Django?",
+      "opciones": ["Por su simplicidad y facilidad de aprendizaje", "Por su flexibilidad y rendimiento en el frontend", "Por compilar el código durante la construcción", "Por su robustez y escalabilidad"],
+      "correcta": 3,
+      "explicacion": "Django es conocido por su robustez y escalabilidad."
+    },
+    {
+      "id": "si-6.1.5-046",
+      "enunciado": "¿Con qué lenguaje de programación trabaja Laravel?",
+      "opciones": ["Python", "JavaScript", "Java", "PHP"],
+      "correcta": 3,
+      "explicacion": "Laravel es un framework de PHP para desarrollo web backend."
+    },
+    {
+      "id": "si-6.1.5-047",
+      "enunciado": "¿Cómo se describe Laravel?",
+      "opciones": ["Framework minimalista y rápido para APIs", "Framework completo para aplicaciones empresariales", "Entorno de ejecución multiplataforma", "Framework elegante y moderno para backend"],
+      "correcta": 3,
+      "explicacion": "Laravel es un framework de PHP elegante y moderno, conocido por su eficacia para desarrollo web backend."
+    },
+    {
+      "id": "si-6.1.5-048",
+      "enunciado": "¿Qué es Express.js?",
+      "opciones": ["Un framework completo de Python para backend", "Una biblioteca de JavaScript para interfaces de usuario", "Un entorno de ejecución multiplataforma", "Un framework minimalista de Node.js para aplicaciones web y APIs"],
+      "correcta": 3,
+      "explicacion": "Express.js es un framework minimalista de Node.js, flexible y rápido para crear aplicaciones web y APIs."
+    },
+    {
+      "id": "si-6.1.5-049",
+      "enunciado": "¿Cuál de las siguientes tecnologías es una biblioteca y no un framework?",
+      "opciones": ["Angular", "Vue.js", "Django", "React"],
+      "correcta": 3,
+      "explicacion": "React se define explícitamente como una biblioteca (library) de JavaScript, no un framework."
+    },
+    {
+      "id": "si-6.1.5-050",
+      "enunciado": "¿Cuál de los siguientes está orientado al desarrollo backend?",
+      "opciones": ["React", "Vue.js", "Svelte", "Django"],
+      "correcta": 3,
+      "explicacion": "Django es un framework de Python para desarrollo web backend."
+    },
+    {
+      "id": "si-6.1.5-051",
+      "enunciado": "¿Qué significa la S de HTTPS?",
+      "opciones": ["System", "Standard", "Server", "Secure"],
+      "correcta": 3,
+      "explicacion": "La S de HTTPS significa Secure (seguro)."
+    },
+    {
+      "id": "si-6.1.5-052",
+      "enunciado": "¿Qué protege el protocolo HTTPS?",
+      "opciones": ["La velocidad y disponibilidad de la conexión", "El rendimiento y la escalabilidad del servidor", "La compatibilidad entre navegadores y servidores", "La integridad y confidencialidad de los datos entre cliente y servidor"],
+      "correcta": 3,
+      "explicacion": "El protocolo HTTPS protege la integridad y confidencialidad de los datos entre el cliente y servidor."
+    },
+    {
+      "id": "si-6.1.5-053",
+      "enunciado": "¿A qué se refiere la integridad en HTTPS?",
+      "opciones": ["A que los datos viajan cifrados y no pueden ser interceptados", "A que el servidor autentica al cliente antes de responder", "A que la página recibida en el cliente sea la realmente enviada por el servidor", "A que la conexión no puede ser interrumpida"],
+      "correcta": 2,
+      "explicacion": "La integridad se refiere a que la página recibida en el cliente sea la realmente enviada por el servidor."
+    },
+    {
+      "id": "si-6.1.5-054",
+      "enunciado": "¿A qué se refiere la confidencialidad en HTTPS?",
+      "opciones": ["A que la página recibida sea exactamente la enviada por el servidor", "A que el servidor verifica la identidad del cliente", "A que la conexión tiene mayor velocidad que HTTP", "A que los datos no pueden ser interceptados por viajar cifrados"],
+      "correcta": 3,
+      "explicacion": "La confidencialidad se refiere a que los datos enviados en la comunicación no puedan ser interceptados por viajar cifrados."
+    },
+    {
+      "id": "si-6.1.5-055",
+      "enunciado": "¿Cuál de los siguientes servidores web es software libre y multiplataforma (Windows, Linux y macOS)?",
+      "opciones": ["IIS", "Nginx únicamente", "Apache", "SQL Server"],
+      "correcta": 2,
+      "explicacion": "Apache es software libre multiplataforma para Windows, Linux y macOS."
+    },
+    {
+      "id": "si-6.1.5-056",
+      "enunciado": "¿Para qué sistemas operativos está disponible IIS?",
+      "opciones": ["Solo para Linux", "Para Windows, Linux y macOS", "Para cualquier sistema operativo", "Solo para Windows"],
+      "correcta": 3,
+      "explicacion": "IIS es un servicio de Microsoft para los sistemas operativos Windows."
+    },
+    {
+      "id": "si-6.1.5-057",
+      "enunciado": "¿Qué significan las siglas IIS?",
+      "opciones": ["Integrated Internet System", "Internal Information Server", "Internet Information Server", "Integrated Information Service"],
+      "correcta": 2,
+      "explicacion": "IIS son las siglas de Internet Information Server."
+    },
+    {
+      "id": "si-6.1.5-058",
+      "enunciado": "¿Qué empresa desarrolla IIS?",
+      "opciones": ["Google", "Apache Foundation", "IBM", "Microsoft"],
+      "correcta": 3,
+      "explicacion": "IIS es un servicio de Microsoft para los sistemas operativos Windows."
+    },
+    {
+      "id": "si-6.1.5-059",
+      "enunciado": "¿Cuál es la cuota de mercado aproximada de Nginx entre los servidores web?",
+      "opciones": ["7%", "31%", "50%", "34%"],
+      "correcta": 3,
+      "explicacion": "Nginx tiene una cuota de mercado del 34%."
+    },
+    {
+      "id": "si-6.1.5-060",
+      "enunciado": "¿Cuál es la cuota de mercado aproximada de Apache entre los servidores web?",
+      "opciones": ["7%", "31%", "34%", "50%"],
+      "correcta": 1,
+      "explicacion": "Apache tiene una cuota de mercado del 31%."
+    },
+    {
+      "id": "si-6.1.5-061",
+      "enunciado": "¿Cuál es la cuota de mercado aproximada de IIS entre los servidores web?",
+      "opciones": ["Casi 7%", "15%", "31%", "34%"],
+      "correcta": 0,
+      "explicacion": "IIS tiene una cuota de mercado de casi el 7%."
+    },
+    {
+      "id": "si-6.1.5-062",
+      "enunciado": "¿Cuál de los tres grandes servidores web tiene mayor cuota de mercado actualmente?",
+      "opciones": ["IIS", "Apache", "Cherokee", "Nginx"],
+      "correcta": 3,
+      "explicacion": "Nginx (34%) ha superado a Apache (31%) en términos de cuota de mercado en los últimos años."
+    },
+    {
+      "id": "si-6.1.5-063",
+      "enunciado": "¿Qué ha ocurrido con Nginx respecto a Apache en los últimos años?",
+      "opciones": ["Apache ha superado a Nginx en cuota de mercado", "Ambos tienen la misma cuota de mercado", "Nginx ha desaparecido del mercado", "Nginx ha superado a Apache en cuota de mercado"],
+      "correcta": 3,
+      "explicacion": "Nginx ha superado a Apache en términos de cuota de mercado en los últimos años."
+    },
+    {
+      "id": "si-6.1.5-064",
+      "enunciado": "¿Qué componentes forman la pila LAMP?",
+      "opciones": ["Linux + Angular + MongoDB + Python", "Linux + Apache + MariaDB + PHP", "Laravel + Apache + MySQL + Python", "Linux + Apache + MySQL + PHP/Python"],
+      "correcta": 3,
+      "explicacion": "La pila LAMP está formada por Linux + Apache + MySQL + PHP/Python."
+    },
+    {
+      "id": "si-6.1.5-065",
+      "enunciado": "¿Qué es Docker?",
+      "opciones": ["Un framework de JavaScript para frontend", "Un gestor de bases de datos relacional", "Un servidor web alternativo a Apache", "Una plataforma de código abierto para crear, implementar y ejecutar aplicaciones"],
+      "correcta": 3,
+      "explicacion": "Docker es una plataforma de código abierto diseñada para facilitar la creación, implementación y ejecución de aplicaciones."
+    },
+    {
+      "id": "si-6.1.5-066",
+      "enunciado": "¿Qué utiliza Docker para empaquetar aplicaciones?",
+      "opciones": ["Máquinas virtuales", "Archivos ZIP con dependencias", "Imágenes de disco completas", "Contenedores"],
+      "correcta": 3,
+      "explicacion": "Docker utiliza contenedores para empaquetar una aplicación y todas sus dependencias en una unidad estandarizada."
+    },
+    {
+      "id": "si-6.1.5-067",
+      "enunciado": "¿Qué incluye un contenedor Docker?",
+      "opciones": ["Solo el código fuente de la aplicación", "El sistema operativo completo y el hardware virtualizado", "Únicamente las bibliotecas del sistema", "Código, runtime, herramientas del sistema, bibliotecas y configuraciones"],
+      "correcta": 3,
+      "explicacion": "Los contenedores contienen todo lo necesario para ejecutar una aplicación, incluyendo código, runtime, herramientas del sistema, bibliotecas y configuraciones."
+    },
+    {
+      "id": "si-6.1.5-068",
+      "enunciado": "¿En qué entornos pueden ejecutarse de forma consistente las aplicaciones en contenedores Docker?",
+      "opciones": ["Solo en entornos de producción", "Solo en entornos de desarrollo y pruebas", "Solo en servidores Linux", "En cualquier entorno que soporte Docker: desarrollo, pruebas o producción"],
+      "correcta": 3,
+      "explicacion": "Las aplicaciones en contenedores pueden ejecutarse de manera consistente en cualquier entorno que soporte Docker, ya sea en desarrollo, pruebas o producción."
+    },
+    {
+      "id": "si-6.1.5-069",
+      "enunciado": "¿Qué facilita Docker en cuanto a la escalabilidad?",
+      "opciones": ["Aumentar automáticamente el número de servidores físicos", "Reducir el tamaño del código fuente de la aplicación", "Compartir bases de datos entre diferentes aplicaciones", "Iniciar y detener contenedores rápidamente según sea necesario"],
+      "correcta": 3,
+      "explicacion": "Docker facilita la escalabilidad de aplicaciones, permitiendo iniciar y detener contenedores rápidamente según sea necesario."
+    },
+    {
+      "id": "si-6.1.5-070",
+      "enunciado": "¿Qué son los clientes web?",
+      "opciones": ["Los servidores que alojan las páginas web", "Los programas que generan páginas dinámicas", "Los frameworks de desarrollo frontend", "Los navegadores web"],
+      "correcta": 3,
+      "explicacion": "Los clientes son los navegadores web como Mozilla Firefox, Google Chrome, Microsoft Edge, Safari, etcétera."
+    },
+    {
+      "id": "si-6.1.5-071",
+      "enunciado": "¿Cuál de los siguientes NO es un navegador web mencionado en el material?",
+      "opciones": ["Mozilla Firefox", "Google Chrome", "Microsoft Edge", "Opera"],
+      "correcta": 3,
+      "explicacion": "Los navegadores mencionados son Mozilla Firefox, Google Chrome, Microsoft Edge y Safari. Opera no aparece en el material."
+    },
+    {
+      "id": "si-6.1.5-072",
+      "enunciado": "¿En qué residen las principales diferencias entre los clientes web?",
+      "opciones": ["En su velocidad de descarga y precio", "En el sistema operativo en que se ejecutan y su consumo de memoria", "En los lenguajes de programación que soportan en el backend", "En las vulnerabilidades que presentan y la interpretación del código HTML"],
+      "correcta": 3,
+      "explicacion": "Las principales diferencias entre los clientes web residen en el número e importancia de vulnerabilidades que presentan, así como en las matizaciones en cuanto a la interpretación del código HTML."
+    },
+    {
+      "id": "si-6.1.5-073",
+      "enunciado": "¿Qué problema puede causar que distintos navegadores interpreten el código HTML de forma diferente?",
+      "opciones": ["Que el servidor no pueda responder a las peticiones", "Que la base de datos no se conecte correctamente", "Que el protocolo HTTP falle en la transmisión", "Que algunas páginas no se visualicen correctamente en determinados clientes"],
+      "correcta": 3,
+      "explicacion": "Las diferencias en la interpretación del código HTML pueden impedir la correcta visualización de algunas páginas en determinados clientes."
+    },
+    {
+      "id": "si-6.1.5-074",
+      "enunciado": "¿Qué tipo de scripts interpretan también los navegadores web?",
+      "opciones": ["Scripts del lado del servidor como PHP", "Scripts de gestión de bases de datos", "Scripts de configuración de red", "Scripts del lado del cliente, como JavaScript"],
+      "correcta": 3,
+      "explicacion": "Los clientes web también incluyen la interpretación de scripts del lado cliente, como Javascript."
+    },
+    {
+      "id": "si-6.1.5-075",
+      "enunciado": "¿Cuál de las siguientes funciones es típica de un servidor web como Apache o Nginx?",
+      "opciones": ["Compilar código fuente de aplicaciones.", "Servir contenido estático y dinámico a través de HTTP/HTTPS.", "Gestionar bases de datos relacionales.", "Proporcionar servicios de correo electrónico."],
+      "correcta": 1,
+      "explicacion": ""
+    }
+  ]
+}

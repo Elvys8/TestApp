@@ -3,20 +3,30 @@
    Persistencia en localStorage para toda la app.
 
    Claves utilizadas (todas con prefijo "estudio:"):
-     - estudio:theme               → "light" | "dark"
-     - estudio:progress            → { [questionId]: { streak, totalCorrect, totalWrong } }
-     - estudio:starred             → { [questionId]: true }
-     - estudio:validation          → { [fileId]: { status, validatedQuestions: { [qId]: true|false } } }
-     - estudio:colors              → { [asignaturaName]: "#hex" }   (override del color del JSON)
-     - estudio:files               → { [fileId]: fileObject }       (JSONs subidos manualmente)
+     - estudio:theme                  → "light" | "dark"
+     - estudio:progress               → { [questionId]: { streak, totalCorrect, totalWrong } }
+     - estudio:starred                → { [questionId]: true }
+     - estudio:validation             → { [fileId]: { status, validatedQuestions: { [qId]: true|false } } }
+     - estudio:colors                 → { [asignaturaName]: "#hex" }   (override del color del JSON)
+     - estudio:files                  → { [fileId]: fileObject }       (JSONs subidos manualmente)
+     - estudio:mastery_threshold      → número global de aciertos para dominar (default 3)
+     - estudio:mastery_thresholds     → { [asignaturaName]: número }  (overrides por asignatura)
+     - estudio:font_size              → número en px para el body (default 18)
+     - estudio:font_size_wide         → número en px para pantallas ≥ 1000px (default 26)
 
-   La regla "3 aciertos y desaparece" se evalúa con el campo `streak`
-   del objeto de progreso. Cada acierto incrementa streak en 1; cada
-   fallo lo resetea a 0. Una pregunta está "dominada" cuando streak >= 3.
+   La regla "N aciertos seguidos y desaparece" se evalúa con el campo
+   `streak` del objeto de progreso. El umbral N es configurable global-
+   mente y puede sobreescribirse por asignatura.
    ============================================================ */
 
 const NS = "estudio:";
-const MASTERY_THRESHOLD = 3;
+const DEFAULT_MASTERY_THRESHOLD = 3;
+const DEFAULT_FONT_SIZE       = 18;
+const DEFAULT_FONT_SIZE_WIDE  = 26;
+
+/* Kept for backward-compat (test.js importa este símbolo si lo
+   necesita, pero ahora se recomienda usar getMasteryThreshold). */
+const MASTERY_THRESHOLD = DEFAULT_MASTERY_THRESHOLD;
 
 /* ---------- helpers internos ---------- */
 
@@ -165,16 +175,21 @@ export function resetAllWrongCounts() {
   if (changed) saveAllProgress(all);
 }
 
-export function isMastered(questionId) {
-  return getProgress(questionId).streak >= MASTERY_THRESHOLD;
+/* threshold es opcional; si se omite se usa el umbral global.
+   Los llamadores que conocen la asignatura deben pasar
+   getMasteryThreshold(asignaturaName) para respetar el override. */
+export function isMastered(questionId, threshold = null) {
+  const t = threshold !== null ? threshold : getMasteryThreshold();
+  return getProgress(questionId).streak >= t;
 }
 
-export function countMastered(questionIds) {
+export function countMastered(questionIds, threshold = null) {
   if (!Array.isArray(questionIds)) return 0;
+  const t = threshold !== null ? threshold : getMasteryThreshold();
   const all = getAllProgress();
   let n = 0;
   for (const id of questionIds) {
-    if ((all[id]?.streak || 0) >= MASTERY_THRESHOLD) n++;
+    if ((all[id]?.streak || 0) >= t) n++;
   }
   return n;
 }
@@ -400,6 +415,121 @@ export function deleteCustomFile(fileId) {
 }
 
 /* ============================================================
+   UMBRAL DE DOMINIO (configurable global + por asignatura)
+   ============================================================ */
+
+/* Devuelve el umbral efectivo para una asignatura dada, o el
+   umbral global si no hay override para esa asignatura.
+   Si asignaturaName se omite o es null, devuelve el global. */
+export function getMasteryThreshold(asignaturaName = null) {
+  if (asignaturaName) {
+    const overrides = readJson("mastery_thresholds", {});
+    if (typeof overrides[asignaturaName] === "number") {
+      return overrides[asignaturaName];
+    }
+  }
+  const global = parseInt(readString("mastery_threshold", ""), 10);
+  return Number.isFinite(global) && global >= 1 ? global : DEFAULT_MASTERY_THRESHOLD;
+}
+
+/* Umbral global (valor por defecto para las asignaturas sin override). */
+export function getGlobalMasteryThreshold() {
+  const v = parseInt(readString("mastery_threshold", ""), 10);
+  return Number.isFinite(v) && v >= 1 ? v : DEFAULT_MASTERY_THRESHOLD;
+}
+
+export function setGlobalMasteryThreshold(n) {
+  const v = Math.max(1, Math.min(20, Math.round(Number(n))));
+  if (!Number.isFinite(v)) return;
+  writeString("mastery_threshold", String(v));
+}
+
+/* Override por asignatura. Pasa null para borrar el override. */
+export function setAsignaturaMasteryThreshold(asignaturaName, n) {
+  if (!asignaturaName) return;
+  const overrides = readJson("mastery_thresholds", {});
+  if (n === null || n === undefined) {
+    delete overrides[asignaturaName];
+  } else {
+    const v = Math.max(1, Math.min(20, Math.round(Number(n))));
+    if (!Number.isFinite(v)) return;
+    overrides[asignaturaName] = v;
+  }
+  writeJson("mastery_thresholds", overrides);
+}
+
+export function clearAsignaturaMasteryThreshold(asignaturaName) {
+  setAsignaturaMasteryThreshold(asignaturaName, null);
+}
+
+export function getAllMasteryThresholds() {
+  return readJson("mastery_thresholds", {});
+}
+
+/* ============================================================
+   PENALIZACIÓN POR FALLO EN EL TEST
+   Descuento aplicado por cada respuesta incorrecta al calcular la
+   nota sobre 10. Valores habituales: 0 (sin penalización), 0.25,
+   0.33, 0.5 (por defecto), 1.
+   ============================================================ */
+
+const DEFAULT_WRONG_PENALTY = 0.5;
+
+export function getWrongPenalty() {
+  const raw = readString("wrong_penalty", "");
+  const v = parseFloat(raw);
+  return Number.isFinite(v) && v >= 0 && v <= 1 ? v : DEFAULT_WRONG_PENALTY;
+}
+
+export function setWrongPenalty(value) {
+  const v = parseFloat(value);
+  if (!Number.isFinite(v) || v < 0 || v > 1) return;
+  writeString("wrong_penalty", String(v));
+}
+
+/* ============================================================
+   MODO DE VALIDACIÓN
+   "reveal" → la respuesta correcta aparece marcada en verde desde el inicio (comportamiento original).
+   "test"   → las opciones son clicables; se iluminan en verde/rojo al seleccionar, igual que en un test.
+   ============================================================ */
+
+export function getValidationMode() {
+  const v = readString("validation_mode", "");
+  return v === "test" ? "test" : "reveal";
+}
+
+export function setValidationMode(mode) {
+  if (mode !== "reveal" && mode !== "test") return;
+  writeString("validation_mode", mode);
+}
+
+/* ============================================================
+   TAMAÑO DE FUENTE (px)
+   ============================================================ */
+
+export function getFontSize() {
+  const v = parseInt(readString("font_size", ""), 10);
+  return Number.isFinite(v) && v >= 8 ? v : DEFAULT_FONT_SIZE;
+}
+
+export function setFontSize(px) {
+  const v = Math.max(8, Math.min(48, Math.round(Number(px))));
+  if (!Number.isFinite(v)) return;
+  writeString("font_size", String(v));
+}
+
+export function getFontSizeWide() {
+  const v = parseInt(readString("font_size_wide", ""), 10);
+  return Number.isFinite(v) && v >= 8 ? v : DEFAULT_FONT_SIZE_WIDE;
+}
+
+export function setFontSizeWide(px) {
+  const v = Math.max(8, Math.min(48, Math.round(Number(px))));
+  if (!Number.isFinite(v)) return;
+  writeString("font_size_wide", String(v));
+}
+
+/* ============================================================
    EXPORTAR / IMPORTAR PROGRESO COMPLETO
    Devuelve / acepta un objeto con todo el estado relevante.
    El propio fichero exportado lleva una versión por si en el futuro
@@ -419,6 +549,12 @@ export function exportAll() {
     validation_wip: getAllValidationWip(),
     colors: getAllColors(),
     files: getAllCustomFiles(),
+    mastery_threshold: getGlobalMasteryThreshold(),
+    mastery_thresholds: getAllMasteryThresholds(),
+    font_size: getFontSize(),
+    font_size_wide: getFontSizeWide(),
+    validation_mode: getValidationMode(),
+    wrong_penalty: getWrongPenalty(),
   };
 }
 
@@ -433,6 +569,12 @@ export function importAll(data) {
   if (data.validation_wip && typeof data.validation_wip === "object") writeJson("validation_wip", data.validation_wip);
   if (data.colors && typeof data.colors === "object") writeJson("colors", data.colors);
   if (data.files && typeof data.files === "object") writeJson("files", data.files);
+  if (typeof data.mastery_threshold === "number") writeString("mastery_threshold", String(data.mastery_threshold));
+  if (data.mastery_thresholds && typeof data.mastery_thresholds === "object") writeJson("mastery_thresholds", data.mastery_thresholds);
+  if (typeof data.font_size === "number") writeString("font_size", String(data.font_size));
+  if (typeof data.font_size_wide === "number") writeString("font_size_wide", String(data.font_size_wide));
+  if (data.validation_mode === "reveal" || data.validation_mode === "test") writeString("validation_mode", data.validation_mode);
+  if (typeof data.wrong_penalty === "number" && data.wrong_penalty >= 0 && data.wrong_penalty <= 1) writeString("wrong_penalty", String(data.wrong_penalty));
 }
 
 /* ============================================================
@@ -447,6 +589,12 @@ export function resetAll() {
   removeKey("validation_wip");
   removeKey("colors");
   removeKey("files");
+  removeKey("mastery_threshold");
+  removeKey("mastery_thresholds");
+  removeKey("font_size");
+  removeKey("font_size_wide");
+  removeKey("validation_mode");
+  removeKey("wrong_penalty");
 }
 
 /* ============================================================
