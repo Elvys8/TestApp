@@ -1,0 +1,613 @@
+{
+  "schema_version": 1,
+  "id": "si-6.3.2-compartir-recursos-linux-windows",
+  "asignatura": "Sistemas Informáticos",
+  "asignatura_color": "#1C3C6F",
+  "tema": "6.3.2 Compartir recursos entre Linux y Windows",
+  "preguntas": [
+    {
+      "id": "si-6.3.2-001",
+      "enunciado": "¿Para qué sirve el servicio Samba?",
+      "opciones": [
+        "Para compartir recursos entre máquinas Linux exclusivamente",
+        "Para compartir recursos entre máquinas Windows y Linux",
+        "Para gestionar dominios en redes Windows",
+        "Para montar sistemas de archivos remotos entre servidores Linux"
+      ],
+      "correcta": 1,
+      "explicacion": "El servicio SAMBA sirve para compartir recursos entre máquinas Windows y Linux."
+    },
+    {
+      "id": "si-6.3.2-002",
+      "enunciado": "¿Qué protocolo utiliza Samba para compartir recursos?",
+      "opciones": [
+        "NFS",
+        "FTP",
+        "SMB",
+        "CIFS"
+      ],
+      "correcta": 2,
+      "explicacion": "Samba utiliza el protocolo SMB (Server Message Block)."
+    },
+    {
+      "id": "si-6.3.2-003",
+      "enunciado": "¿Qué es CIFS en el contexto de Samba?",
+      "opciones": [
+        "El protocolo nativo de Linux para compartir archivos",
+        "Un demonio del servicio Samba",
+        "La implementación de Microsoft del protocolo para compartir recursos en Windows",
+        "El archivo de configuración principal de Samba"
+      ],
+      "correcta": 2,
+      "explicacion": "CIFS (Common Interface File System) es la implementación de Microsoft del protocolo para compartir recursos en Windows. SMB es la implementación libre equivalente usada por Samba."
+    },
+    {
+      "id": "si-6.3.2-004",
+      "enunciado": "SMB es la implementación libre de CIFS. ¿Verdadero o falso?",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 0,
+      "explicacion": "SMB es efectivamente la implementación libre del protocolo CIFS, que es la versión propietaria de Microsoft."
+    },
+    {
+      "id": "si-6.3.2-005",
+      "enunciado": "Si en una red solo hay máquinas Linux y se quieren compartir recursos, ¿qué servicio es el nativo para ese fin?",
+      "opciones": [
+        "Samba",
+        "SMB",
+        "NFS",
+        "CIFS"
+      ],
+      "correcta": 2,
+      "explicacion": "Si solo se comparten recursos entre máquinas Linux, el servicio nativo para ese fin es NFS (Network File System)."
+    },
+    {
+      "id": "si-6.3.2-006",
+      "enunciado": "¿Cuál de las siguientes afirmaciones sobre Samba es correcta?",
+      "opciones": [
+        "Samba usa el protocolo NFS para comunicarse con Windows",
+        "Samba solo puede compartir recursos entre máquinas Linux",
+        "Samba permite la interoperabilidad entre Windows y Linux usando SMB",
+        "Samba es la implementación propietaria de Microsoft del protocolo SMB"
+      ],
+      "correcta": 2,
+      "explicacion": "Samba permite compartir recursos entre máquinas Windows y Linux usando el protocolo SMB, que es la implementación libre de CIFS."
+    },
+    {
+      "id": "si-6.3.2-007",
+      "enunciado": "¿Cuántos puertos utiliza el servicio Samba?",
+      "opciones": [
+        "Dos",
+        "Tres",
+        "Cuatro",
+        "Cinco"
+      ],
+      "correcta": 2,
+      "explicacion": "Samba utiliza cuatro puertos: 137, 138, 139 y 443."
+    },
+    {
+      "id": "si-6.3.2-008",
+      "enunciado": "¿Qué puertos de Samba usan el protocolo UDP?",
+      "opciones": [
+        "139 y 443",
+        "137 y 139",
+        "137 y 138",
+        "138 y 443"
+      ],
+      "correcta": 2,
+      "explicacion": "Los puertos 137 y 138 usan protocolo UDP."
+    },
+    {
+      "id": "si-6.3.2-009",
+      "enunciado": "¿Qué puertos de Samba usan el protocolo TCP?",
+      "opciones": [
+        "139 y 443",
+        "137 y 138",
+        "137 y 139",
+        "138 y 443"
+      ],
+      "correcta": 0,
+      "explicacion": "Los puertos 139 y 443 usan protocolo TCP."
+    },
+    {
+      "id": "si-6.3.2-010",
+      "enunciado": "¿Cuál es la ruta del archivo de configuración de Samba?",
+      "opciones": [
+        "/etc/smb/samba.conf",
+        "/etc/samba/samba.conf",
+        "/etc/samba/smb.conf",
+        "/etc/smbd/smb.conf"
+      ],
+      "correcta": 2,
+      "explicacion": "El archivo de configuración de Samba es /etc/samba/smb.conf."
+    },
+    {
+      "id": "si-6.3.2-011",
+      "enunciado": "Desde un cliente Linux, ¿con qué comando se accede a un recurso compartido por Samba?",
+      "opciones": [
+        "smbclient",
+        "nfs-mount",
+        "mount",
+        "smbmount"
+      ],
+      "correcta": 2,
+      "explicacion": "Desde un cliente Linux se accede al recurso con el comando mount especificando el sistema de ficheros CIFS."
+    },
+    {
+      "id": "si-6.3.2-012",
+      "enunciado": "¿Qué sistema de ficheros se especifica al montar un recurso Samba desde Linux?",
+      "opciones": [
+        "NFS",
+        "EXT4",
+        "CIFS",
+        "SMB"
+      ],
+      "correcta": 2,
+      "explicacion": "Al montar un recurso Samba desde Linux se usa el comando mount con el sistema de ficheros CIFS."
+    },
+    {
+      "id": "si-6.3.2-013",
+      "enunciado": "Desde un cliente Windows, ¿de qué formas se puede acceder a un recurso Samba?",
+      "opciones": [
+        "Mediante el comando mount o la ruta UNC",
+        "Mediante smbclient o el explorador de archivos",
+        "Mediante el explorador en Red o la ruta UNC",
+        "Mediante la ruta UNC o el comando net use únicamente"
+      ],
+      "correcta": 2,
+      "explicacion": "Desde un cliente Windows se puede acceder a través del explorador en Red o con la ruta UNC."
+    },
+    {
+      "id": "si-6.3.2-014",
+      "enunciado": "El puerto 138 de Samba usa protocolo TCP. ¿Verdadero o falso?",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 1,
+      "explicacion": "El puerto 138 usa protocolo UDP, no TCP. Los puertos TCP de Samba son el 139 y el 443."
+    },
+    {
+      "id": "si-6.3.2-015",
+      "enunciado": "¿Cuál es el comando correcto para instalar Samba en Ubuntu?",
+      "opciones": [
+        "apt-get install samba smbd",
+        "apt install samba-server samba-client",
+        "apt-get install samba samba-common",
+        "apt-get install samba nmbd"
+      ],
+      "correcta": 2,
+      "explicacion": "El comando de instalación es: apt-get install samba samba-common."
+    },
+    {
+      "id": "si-6.3.2-016",
+      "enunciado": "¿De cuántos demonios está compuesto el servicio Samba?",
+      "opciones": [
+        "Uno",
+        "Dos",
+        "Tres",
+        "Cuatro"
+      ],
+      "correcta": 1,
+      "explicacion": "Samba está compuesto de dos demonios: smbd y nmbd."
+    },
+    {
+      "id": "si-6.3.2-017",
+      "enunciado": "¿Cuáles son los dos demonios del servicio Samba?",
+      "opciones": [
+        "sambd y nmbd",
+        "smbd y smbclient",
+        "smbd y nmbd",
+        "nmbd y cifsd"
+      ],
+      "correcta": 2,
+      "explicacion": "Los dos demonios de Samba son smbd y nmbd."
+    },
+    {
+      "id": "si-6.3.2-018",
+      "enunciado": "¿Con qué herramientas se puede comprobar el estado de los demonios de Samba?",
+      "opciones": [
+        "ps y top",
+        "netstat y ss",
+        "service o systemctl",
+        "smbstatus y smbclient"
+      ],
+      "correcta": 2,
+      "explicacion": "Se puede comprobar el estado de smbd y nmbd con el comando service o con systemctl."
+    },
+    {
+      "id": "si-6.3.2-019",
+      "enunciado": "¿Qué indica que un demonio de Samba está activo al comprobar su estado?",
+      "opciones": [
+        "Aparece el texto \"active\" en blanco",
+        "Aparece \"running\" en verde",
+        "No aparece ningún mensaje de error",
+        "El comando devuelve el código de salida 0"
+      ],
+      "correcta": 1,
+      "explicacion": "Al comprobar el estado de los demonios de Samba, si están corriendo se verá \"running\" en verde."
+    },
+    {
+      "id": "si-6.3.2-020",
+      "enunciado": "El paquete necesario para instalar Samba incluye únicamente el binario `samba`. ¿Verdadero o falso?",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 1,
+      "explicacion": "La instalación requiere dos paquetes: samba y samba-common."
+    },
+    {
+      "id": "si-6.3.2-021",
+      "enunciado": "¿Qué parámetro de smb.conf se edita para indicar el grupo de trabajo de las máquinas Windows?",
+      "opciones": [
+        "domain",
+        "workgroup",
+        "netbios name",
+        "server name"
+      ],
+      "correcta": 1,
+      "explicacion": "El parámetro workgroup en smb.conf se usa para indicar el nombre del grupo de trabajo de las máquinas Windows."
+    },
+    {
+      "id": "si-6.3.2-022",
+      "enunciado": "¿Dónde se añaden las secciones de recursos compartidos en smb.conf?",
+      "opciones": [
+        "Al principio del archivo, antes de la sección [global]",
+        "Dentro de la sección [global]",
+        "Al final del archivo",
+        "En un archivo separado incluido desde smb.conf"
+      ],
+      "correcta": 2,
+      "explicacion": "Las secciones de recursos compartidos se añaden al final del archivo smb.conf."
+    },
+    {
+      "id": "si-6.3.2-023",
+      "enunciado": "En el ejemplo del material, ¿cuántos recursos compartidos se configuran?",
+      "opciones": [
+        "Uno",
+        "Dos",
+        "Tres",
+        "Cuatro"
+      ],
+      "correcta": 1,
+      "explicacion": "Se configuran dos recursos: [publico] con solo lectura para todos, y [escritura] con lectura y escritura para usuarios del grupo samba."
+    },
+    {
+      "id": "si-6.3.2-024",
+      "enunciado": "¿Qué permisos tiene el recurso compartido [publico] del ejemplo?",
+      "opciones": [
+        "Lectura y escritura para todos los usuarios",
+        "Solo lectura para usuarios autenticados",
+        "Solo lectura para todos, incluidos invitados",
+        "Lectura y escritura para el grupo samba"
+      ],
+      "correcta": 2,
+      "explicacion": "El recurso [publico] tiene read only = yes y guest ok = yes, por lo que es de solo lectura y accesible por invitados."
+    },
+    {
+      "id": "si-6.3.2-025",
+      "enunciado": "¿Qué permisos tiene el recurso compartido [escritura] del ejemplo?",
+      "opciones": [
+        "Solo lectura para usuarios del grupo samba",
+        "Lectura y escritura para usuarios del grupo samba",
+        "Lectura y escritura para todos los usuarios",
+        "Solo lectura para invitados"
+      ],
+      "correcta": 1,
+      "explicacion": "El recurso [escritura] tiene writeable = yes y valid users = @samba, por lo que permite lectura y escritura solo a los usuarios del grupo samba."
+    },
+    {
+      "id": "si-6.3.2-026",
+      "enunciado": "¿Cuál es la ruta (path) del recurso [publico] en el ejemplo?",
+      "opciones": [
+        "/samba/publico",
+        "/etc/samba/lectura",
+        "/samba/lectura",
+        "/home/samba/lectura"
+      ],
+      "correcta": 2,
+      "explicacion": "La ruta del recurso [publico] es /samba/lectura, según la configuración del archivo smb.conf del ejemplo."
+    },
+    {
+      "id": "si-6.3.2-027",
+      "enunciado": "¿Cuál es la ruta (path) del recurso [escritura] en el ejemplo?",
+      "opciones": [
+        "/samba/publico",
+        "/samba/escritura",
+        "/etc/samba/escritura",
+        "/home/samba/escritura"
+      ],
+      "correcta": 1,
+      "explicacion": "La ruta del recurso [escritura] es /samba/escritura."
+    },
+    {
+      "id": "si-6.3.2-028",
+      "enunciado": "En el recurso [publico], ¿qué valor tiene el parámetro `read only`?",
+      "opciones": [
+        "no",
+        "yes",
+        "El parámetro no aparece; por defecto es de lectura",
+        "depends"
+      ],
+      "correcta": 1,
+      "explicacion": "En el recurso [publico] el parámetro read only = yes, lo que impide modificar los archivos."
+    },
+    {
+      "id": "si-6.3.2-029",
+      "enunciado": "En el recurso [escritura], ¿qué parámetro indica que se permite escribir?",
+      "opciones": [
+        "read only = no",
+        "write ok = yes",
+        "writeable = yes",
+        "write access = yes"
+      ],
+      "correcta": 2,
+      "explicacion": "El parámetro writeable = yes en el bloque [escritura] indica que los usuarios autorizados pueden escribir en ese recurso."
+    },
+    {
+      "id": "si-6.3.2-030",
+      "enunciado": "¿Para qué sirve el parámetro `browseable = yes`?",
+      "opciones": [
+        "Para permitir el acceso de invitados al recurso",
+        "Para que el recurso sea visible en el explorador de archivos",
+        "Para habilitar la escritura en el recurso",
+        "Para que el recurso sea accesible sin contraseña"
+      ],
+      "correcta": 1,
+      "explicacion": "browseable = yes sirve para que los usuarios conectados puedan ver el recurso en el explorador. Si no, estaría oculto."
+    },
+    {
+      "id": "si-6.3.2-031",
+      "enunciado": "Si `browseable = no`, ¿qué ocurre con el recurso compartido?",
+      "opciones": [
+        "Se elimina el recurso del servidor",
+        "Los usuarios no pueden escribir en él",
+        "El recurso queda oculto y no aparece en el explorador",
+        "Solo los administradores pueden verlo"
+      ],
+      "correcta": 2,
+      "explicacion": "Con browseable = no el recurso está oculto; no aparece en el explorador, aunque sigue siendo accesible si se conoce su ruta."
+    },
+    {
+      "id": "si-6.3.2-032",
+      "enunciado": "¿Qué valor tiene `guest ok` en el recurso [publico]?",
+      "opciones": [
+        "no",
+        "yes",
+        "El parámetro no está definido",
+        "depends"
+      ],
+      "correcta": 1,
+      "explicacion": "En el recurso [publico] se ha configurado guest ok = yes, permitiendo el acceso a invitados."
+    },
+    {
+      "id": "si-6.3.2-033",
+      "enunciado": "¿Qué valor tiene `guest ok` en el recurso [escritura]?",
+      "opciones": [
+        "no",
+        "yes",
+        "El parámetro no está definido",
+        "inherit"
+      ],
+      "correcta": 0,
+      "explicacion": "En el recurso [escritura] se ha configurado guest ok = no, por lo que no se permite el acceso a invitados."
+    },
+    {
+      "id": "si-6.3.2-034",
+      "enunciado": "¿Qué sintaxis se usa en `valid users` para referirse a un grupo de Linux?",
+      "opciones": [
+        "El nombre del grupo entre corchetes: [samba]",
+        "El nombre del grupo precedido de #: #samba",
+        "El nombre del grupo precedido de @: @samba",
+        "El nombre del grupo en mayúsculas: SAMBA"
+      ],
+      "correcta": 2,
+      "explicacion": "Para referirse a un grupo de Linux en valid users se usa el símbolo @: valid users = @samba."
+    },
+    {
+      "id": "si-6.3.2-035",
+      "enunciado": "¿Cómo se indicaría en `valid users` que pueden acceder el usuario `juan` y todos los usuarios del grupo `samba`?",
+      "opciones": [
+        "valid users = juan + @samba",
+        "valid users = juan; @samba",
+        "valid users = juan, @samba",
+        "valid users = @juan, @samba"
+      ],
+      "correcta": 2,
+      "explicacion": "Para combinar un usuario y un grupo se separan con coma: valid users = juan, @samba."
+    },
+    {
+      "id": "si-6.3.2-036",
+      "enunciado": "Si en `valid users` se escribe un nombre sin `@`, ¿a qué hace referencia?",
+      "opciones": [
+        "A un grupo de Linux",
+        "A un usuario individual",
+        "A un equipo de la red",
+        "A un alias de Samba"
+      ],
+      "correcta": 1,
+      "explicacion": "Sin @, el nombre hace referencia a un usuario individual. Con @, hace referencia a un grupo de Linux."
+    },
+    {
+      "id": "si-6.3.2-037",
+      "enunciado": "¿Cuál de las siguientes afirmaciones sobre `guest ok = yes` es correcta?",
+      "opciones": [
+        "Permite acceso de escritura a cualquier usuario",
+        "Permite el acceso al recurso sin necesidad de autenticación",
+        "Solo permite acceso a usuarios del grupo guest",
+        "Equivale a browseable = yes"
+      ],
+      "correcta": 1,
+      "explicacion": "guest ok = yes permite el acceso al recurso sin autenticación, es decir, como invitado."
+    },
+    {
+      "id": "si-6.3.2-038",
+      "enunciado": "¿Qué comando se usa para crear el usuario `juan` en Linux?",
+      "opciones": [
+        "useradd juan",
+        "adduser juan",
+        "newuser juan",
+        "mkuser juan"
+      ],
+      "correcta": 1,
+      "explicacion": "El comando adduser juan crea el usuario juan en el sistema Linux."
+    },
+    {
+      "id": "si-6.3.2-039",
+      "enunciado": "¿Qué comando crea el grupo `samba` en Linux?",
+      "opciones": [
+        "groupadd samba",
+        "addgroup samba",
+        "newgroup samba",
+        "mkgroup samba"
+      ],
+      "correcta": 1,
+      "explicacion": "El comando addgroup samba crea el grupo samba en el sistema."
+    },
+    {
+      "id": "si-6.3.2-040",
+      "enunciado": "¿Qué comando añade el usuario `juan` al grupo `samba`?",
+      "opciones": [
+        "addgroup juan samba",
+        "usermod -aG samba juan",
+        "adduser juan samba",
+        "groupmod juan samba"
+      ],
+      "correcta": 2,
+      "explicacion": "El comando adduser juan samba añade al usuario juan al grupo samba."
+    },
+    {
+      "id": "si-6.3.2-041",
+      "enunciado": "¿Qué comando cambia el grupo propietario de `/samba` y todo su contenido al grupo `samba`?",
+      "opciones": [
+        "chmod samba -R /samba",
+        "chown samba -R /samba",
+        "chgrp samba -R /samba",
+        "chgrp -R samba"
+      ],
+      "correcta": 2,
+      "explicacion": "El comando chgrp samba -R /samba cambia el grupo propietario de la carpeta /samba y todo su contenido al grupo samba."
+    },
+    {
+      "id": "si-6.3.2-042",
+      "enunciado": "¿Qué permisos se aplican a `/samba` con `chmod 770 -R /samba`?",
+      "opciones": [
+        "Lectura y escritura para el propietario; sin acceso para el grupo y otros",
+        "Acceso total para todos los usuarios",
+        "Acceso total para propietario y grupo; sin acceso para otros",
+        "Solo lectura para propietario y grupo; sin acceso para otros"
+      ],
+      "correcta": 2,
+      "explicacion": "El modo 770 otorga permisos rwx (lectura, escritura y ejecución) al propietario y al grupo, y ningún permiso a otros usuarios."
+    },
+    {
+      "id": "si-6.3.2-043",
+      "enunciado": "¿Para qué sirve el comando `smbpasswd -a juan`?",
+      "opciones": [
+        "Para cambiar la contraseña del usuario juan en Linux",
+        "Para eliminar al usuario juan del servicio Samba",
+        "Para añadir al usuario juan como usuario del servicio Samba",
+        "Para asignar permisos de administrador a juan en Samba"
+      ],
+      "correcta": 2,
+      "explicacion": "El comando smbpasswd -a añade al usuario especificado como usuario del servicio Samba, asignándole una contraseña para acceder a los recursos compartidos."
+    },
+    {
+      "id": "si-6.3.2-044",
+      "enunciado": "Tras modificar el archivo smb.conf, ¿qué hay que hacer para que los cambios surtan efecto?",
+      "opciones": [
+        "Reiniciar el equipo servidor",
+        "Recargar solo el demonio smbd",
+        "Reiniciar ambos demonios: smbd y nmbd",
+        "Los cambios se aplican automáticamente sin reiniciar"
+      ],
+      "correcta": 2,
+      "explicacion": "Tras cualquier cambio en la configuración de Samba hay que reiniciar ambos demonios: smbd y nmbd."
+    },
+    {
+      "id": "si-6.3.2-045",
+      "enunciado": "¿Cuál es el comando para reiniciar el demonio `smbd`?",
+      "opciones": [
+        "systemctl reload smbd",
+        "service smbd stop && service smbd start",
+        "service smbd restart",
+        "smbd --restart"
+      ],
+      "correcta": 2,
+      "explicacion": "El comando service smbd restart reinicia el demonio smbd."
+    },
+    {
+      "id": "si-6.3.2-046",
+      "enunciado": "Las carpetas /samba/lectura y /samba/escritura se crean con el comando `mkdir`. ¿Verdadero o falso?",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 0,
+      "explicacion": "Se utilizan los comandos mkdir /samba/lectura y mkdir /samba/escritura para crear las subcarpetas."
+    },
+    {
+      "id": "si-6.3.2-047",
+      "enunciado": "¿Por qué es necesario configurar el cortafuegos después de instalar Samba?",
+      "opciones": [
+        "Porque Samba no funciona sin reglas de cortafuegos activas",
+        "Porque el cortafuegos bloquearía las conexiones de Samba si no se añaden las reglas",
+        "Porque gufw desactiva Samba al instalarse",
+        "Porque los puertos de Samba están reservados por el sistema"
+      ],
+      "correcta": 1,
+      "explicacion": "Si no se configura el cortafuegos, este bloqueará las conexiones al servicio Samba."
+    },
+    {
+      "id": "si-6.3.2-048",
+      "enunciado": "¿Qué herramienta gráfica se utiliza en el ejemplo para configurar el cortafuegos?",
+      "opciones": [
+        "ufw",
+        "iptables",
+        "gufw",
+        "firewalld"
+      ],
+      "correcta": 2,
+      "explicacion": "Se utiliza gufw, la interfaz gráfica de ufw, para configurar el cortafuegos de forma más sencilla."
+    },
+    {
+      "id": "si-6.3.2-049",
+      "enunciado": "¿Cuál es el comando para instalar gufw?",
+      "opciones": [
+        "apt-get install gufw-manager",
+        "apt install gufw",
+        "apt-get install ufw-gui",
+        "apt install firewall-gui"
+      ],
+      "correcta": 1,
+      "explicacion": "El comando de instalación es: apt install gufw."
+    },
+    {
+      "id": "si-6.3.2-050",
+      "enunciado": "¿Cómo selecciona gufw los puertos al crear una regla para Samba?",
+      "opciones": [
+        "Hay que introducirlos manualmente uno a uno",
+        "Se importan desde el archivo smb.conf",
+        "El asistente los selecciona automáticamente al elegir el servicio",
+        "Los toma del archivo /etc/services sin intervención del usuario"
+      ],
+      "correcta": 2,
+      "explicacion": "El asistente de gufw permite seleccionar el servicio de una lista y selecciona automáticamente los puertos correspondientes."
+    },
+    {
+      "id": "si-6.3.2-051",
+      "enunciado": "¿Qué tipo de tráfico permite la regla que se crea para Samba en gufw?",
+      "opciones": [
+        "Todo el tráfico saliente en los puertos de Samba",
+        "Solo el tráfico TCP entrante en los puertos de Samba",
+        "Todo el tráfico entrante en los puertos de Samba",
+        "El tráfico entrante y saliente en los puertos de Samba"
+      ],
+      "correcta": 2,
+      "explicacion": "La regla creada permite todo el tráfico entrante en los puertos de Samba (137, 138 UDP y 139, 443 TCP)."
+    }
+  ]
+}

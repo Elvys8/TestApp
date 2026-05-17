@@ -125,6 +125,12 @@ function renderQuestion() {
   const isStarred = storage.isStarred(q.id);
   const hasInfo = q.explicacion && q.explicacion.trim();
 
+  // Nombre del tema: solo si el test mezcla más de un tema
+  const multiTema = (_state.config.temaIds || []).length > 1;
+  const temaLabel = multiTema && q._fileId
+    ? (library.getTema(q._fileId)?.tema || "")
+    : "";
+
   mountEl.innerHTML = `
     <div class="test-header">
       <span>Pregunta ${currentIdx + 1} / ${items.length}</span>
@@ -147,6 +153,7 @@ function renderQuestion() {
       </div>
     </div>
 
+    ${temaLabel ? `<p class="test-tema-label">${ui.escapeHtml(temaLabel)}</p>` : ""}
     <p class="test-question">${ui.escapeHtml(q.enunciado)}</p>
 
     <div class="options" id="options-list">

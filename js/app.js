@@ -360,7 +360,10 @@ function renderAsignatura(name) {
       </div>
 
       <div class="panel__field">
-        <label class="panel__label">Temas a incluir</label>
+        <div class="panel__label-row">
+          <label class="panel__label" style="margin:0;">Temas a incluir</label>
+          <button class="btn--link" type="button" id="deselect-all-temas">Desmarcar todos</button>
+        </div>
         ${a.temas.map((t) => `
           <label class="checkbox-row">
             <input type="checkbox" class="tema-include" value="${ui.escapeHtml(t.id)}" checked>
@@ -378,12 +381,12 @@ function renderAsignatura(name) {
     <ul class="tema-list">
       ${a.temas.map((t) => `
         <li class="tema-row">
-          <div class="tema-row__info">
+          <button class="tema-row__info" type="button" data-start-tema="${ui.escapeHtml(t.id)}">
             <p class="tema-row__name">${ui.escapeHtml(t.tema)}</p>
             <p class="tema-row__meta">
               ${t.questionCount} preguntas · ${t.masteredCount} dominadas
             </p>
-          </div>
+          </button>
           <div class="menu-host" data-menu-for-tema="${ui.escapeHtml(t.id)}">
             <button class="icon-btn" type="button" data-menu-trigger aria-label="Opciones del tema">
               <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="18" height="18">
@@ -433,6 +436,27 @@ function attachAsignaturaHandlers() {
       startTest(config);
     });
   }
+
+  // Desmarcar / marcar todos los temas
+  const deselectBtn = ROOT.querySelector("#deselect-all-temas");
+  if (deselectBtn) {
+    deselectBtn.addEventListener("click", () => {
+      const checkboxes = ROOT.querySelectorAll(".tema-include");
+      const allUnchecked = Array.from(checkboxes).every((cb) => !cb.checked);
+      checkboxes.forEach((cb) => { cb.checked = allUnchecked; });
+      deselectBtn.textContent = allUnchecked ? "Desmarcar todos" : "Marcar todos";
+    });
+  }
+
+  // Clic directo en un tema → test rápido con todas sus preguntas
+  ROOT.querySelectorAll("[data-start-tema]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const fileId = btn.getAttribute("data-start-tema");
+      const asigName = ROOT.querySelector(".asignatura-name")?.textContent?.trim();
+      if (!asigName) return;
+      startTest({ asignaturaName: asigName, temaIds: [fileId], size: "all", onlyFailed: false, onlyStarred: false });
+    });
+  });
 
   // Menús "..." de cada tema
   ROOT.querySelectorAll(".menu-host[data-menu-for-tema]").forEach((host) => {
