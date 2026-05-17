@@ -1,0 +1,425 @@
+{
+  "schema_version": 1,
+  "id": "si-6.4.1-instalacion-apache",
+  "asignatura": "Sistemas Informáticos",
+  "asignatura_color": "#1C3C6F",
+  "tema": "6.4.1 Instalación de Apache",
+  "preguntas": [
+    {
+      "id": "si-6.4.1-001",
+      "enunciado": "¿Cuál es el comando para instalar Apache2 en GNU/Linux?",
+      "opciones": [
+        "apt-get install apache2",
+        "sudo install apache2",
+        "sudo yum install apache2",
+        "apt install httpd"
+      ],
+      "correcta": 0,
+      "explicacion": "Para instalar Apache en GNU/Linux se haría de la siguiente manera: apt-get install apache2"
+    },
+    {
+      "id": "si-6.4.1-002",
+      "enunciado": "¿Qué comando permite comprobar el estado del servicio Apache una vez instalado?",
+      "opciones": [
+        "apache2 --status",
+        "service apache2 status",
+        "systemctl check apache2",
+        "apache2ctl check"
+      ],
+      "correcta": 1,
+      "explicacion": "Para comprobar el estado del servicio Apache se ejecuta: service apache2 status"
+    },
+    {
+      "id": "si-6.4.1-003",
+      "enunciado": "¿Qué dirección debe escribir en el navegador un usuario que quiere ver la página de Apache desde el propio equipo servidor?",
+      "opciones": [
+        "http://server.local",
+        "http://IP_servidor",
+        "http://localhost",
+        "http://0.0.0.0"
+      ],
+      "correcta": 2,
+      "explicacion": "Desde el equipo servidor hay que escribir en el navegador lo siguiente: http://localhost"
+    },
+    {
+      "id": "si-6.4.1-004",
+      "enunciado": "¿Qué dirección debe escribir en el navegador un usuario que quiere acceder al servidor Apache desde otra máquina de la red?",
+      "opciones": [
+        "http://localhost",
+        "http://apache2.local",
+        "http://server",
+        "http://IP_servidor"
+      ],
+      "correcta": 3,
+      "explicacion": "Desde otra máquina, habría que escribir en el navegador: http://IP_servidor"
+    },
+    {
+      "id": "si-6.4.1-005",
+      "enunciado": "¿En qué directorio almacena Apache la página por defecto index.html?",
+      "opciones": [
+        "/var/www/html",
+        "/etc/apache2/html",
+        "/srv/www/html",
+        "/var/apache2/www"
+      ],
+      "correcta": 0,
+      "explicacion": "Apache devuelve la página por defecto index.html alojada en el directorio /var/www/html"
+    },
+    {
+      "id": "si-6.4.1-006",
+      "enunciado": "¿Qué puertos TCP hay que abrir en el cortafuegos para que Apache funcione correctamente?",
+      "opciones": [
+        "21 y 22",
+        "80 y 443",
+        "8080 y 8443",
+        "80 y 8080"
+      ],
+      "correcta": 1,
+      "explicacion": "Para que Apache funcione hay que abrir los puertos necesarios: 80 y 443 TCP."
+    },
+    {
+      "id": "si-6.4.1-007",
+      "enunciado": "¿Cuál es el comando para permitir el tráfico de Apache en UFW usando perfiles predefinidos?",
+      "opciones": [
+        "sudo ufw allow Apache",
+        "sudo ufw open 'Apache full'",
+        "sudo ufw allow 'Apache full'",
+        "sudo ufw enable apache2"
+      ],
+      "correcta": 2,
+      "explicacion": "Para abrir los puertos de Apache mediante perfiles UFW se usa: sudo ufw allow 'Apache full'"
+    },
+    {
+      "id": "si-6.4.1-008",
+      "enunciado": "Verdadero o Falso: UFW solo permite abrir los puertos de Apache de forma individual, no mediante perfiles predefinidos.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 1,
+      "explicacion": "UFW permite abrir los puertos necesarios (80 y 443 TCP) de forma individual o también a través de los llamados «perfiles», como 'Apache full'."
+    },
+    {
+      "id": "si-6.4.1-009",
+      "enunciado": "¿En qué directorio se almacena la configuración de Apache?",
+      "opciones": [
+        "/etc/httpd",
+        "/var/apache2/conf",
+        "/usr/share/apache2",
+        "/etc/apache2"
+      ],
+      "correcta": 3,
+      "explicacion": "La configuración de Apache se almacena en el directorio de configuración /etc/apache2."
+    },
+    {
+      "id": "si-6.4.1-010",
+      "enunciado": "¿Qué archivo contiene la configuración global del servidor Apache?",
+      "opciones": [
+        "/etc/apache2/apache2.conf",
+        "/etc/apache2/ports.conf",
+        "/etc/apache2/global.conf",
+        "/etc/apache2/main.conf"
+      ],
+      "correcta": 0,
+      "explicacion": "El archivo /etc/apache2/apache2.conf contiene la configuración global del servidor."
+    },
+    {
+      "id": "si-6.4.1-011",
+      "enunciado": "¿Qué archivo permite establecer los puertos de escucha de Apache?",
+      "opciones": [
+        "/etc/apache2/apache2.conf",
+        "/etc/apache2/listen.conf",
+        "/etc/apache2/ports.conf",
+        "/etc/apache2/network.conf"
+      ],
+      "correcta": 2,
+      "explicacion": "El archivo /etc/apache2/ports.conf permite establecer los puertos de escucha de Apache, por defecto puerto 80 para http y puerto 443 para https."
+    },
+    {
+      "id": "si-6.4.1-012",
+      "enunciado": "¿Cuál es el puerto de escucha predeterminado de Apache para HTTP?",
+      "opciones": [
+        "443",
+        "8080",
+        "8000",
+        "80"
+      ],
+      "correcta": 3,
+      "explicacion": "El archivo ports.conf establece por defecto puerto 80 para http (Listen *:80)."
+    },
+    {
+      "id": "si-6.4.1-013",
+      "enunciado": "¿Cuál es el puerto de escucha predeterminado de Apache para HTTPS?",
+      "opciones": [
+        "80",
+        "443",
+        "8443",
+        "4443"
+      ],
+      "correcta": 1,
+      "explicacion": "El archivo ports.conf establece por defecto puerto 443 para https (Listen *:443)."
+    },
+    {
+      "id": "si-6.4.1-014",
+      "enunciado": "En la directiva `Listen *:80`, ¿qué significa el símbolo `*`?",
+      "opciones": [
+        "Que cualquier ordenador puede realizar la petición",
+        "Que solo se aceptan conexiones desde la red local",
+        "Que solo se aceptan peticiones cifradas",
+        "Que el puerto está bloqueado para acceso externo"
+      ],
+      "correcta": 0,
+      "explicacion": "El * significa que puede realizar la petición cualquier ordenador."
+    },
+    {
+      "id": "si-6.4.1-015",
+      "enunciado": "¿Cuáles son los puertos de escucha definidos por defecto en /etc/apache2/ports.conf?",
+      "opciones": [
+        "80 y 8080",
+        "443 y 8443",
+        "80 y 443",
+        "21 y 22"
+      ],
+      "correcta": 2,
+      "explicacion": "El archivo ports.conf define por defecto Listen *:80 y Listen *:443."
+    },
+    {
+      "id": "si-6.4.1-016",
+      "enunciado": "¿En qué carpeta se guarda la configuración de cada sitio web en Apache?",
+      "opciones": [
+        "/etc/apache2/conf-available",
+        "/etc/apache2/sites-enabled",
+        "/var/www/sites",
+        "/etc/apache2/sites-available"
+      ],
+      "correcta": 3,
+      "explicacion": "En la carpeta /etc/apache2/sites-available se guarda la configuración de cada sitio web en un archivo."
+    },
+    {
+      "id": "si-6.4.1-017",
+      "enunciado": "¿Cuáles son los dos sitios web que se encuentran por defecto en Apache?",
+      "opciones": [
+        "main y main-ssl",
+        "default y default-ssl",
+        "apache y apache-ssl",
+        "http y https"
+      ],
+      "correcta": 1,
+      "explicacion": "Por defecto se encuentran los sitios default y default-ssl."
+    },
+    {
+      "id": "si-6.4.1-018",
+      "enunciado": "¿Qué directiva de un bloque VirtualHost indica el correo electrónico del administrador del sitio web?",
+      "opciones": [
+        "ServerAdmin",
+        "ServerName",
+        "AdminEmail",
+        "DocumentRoot"
+      ],
+      "correcta": 0,
+      "explicacion": "ServerAdmin es el correo electrónico del administrador del sitio web."
+    },
+    {
+      "id": "si-6.4.1-019",
+      "enunciado": "¿Qué directiva de un bloque VirtualHost indica el nombre FQDN del sitio web?",
+      "opciones": [
+        "ServerAdmin",
+        "DocumentRoot",
+        "ServerName",
+        "DirectoryIndex"
+      ],
+      "correcta": 2,
+      "explicacion": "ServerName es el nombre FQDN del sitio web."
+    },
+    {
+      "id": "si-6.4.1-020",
+      "enunciado": "¿Qué directiva de un bloque VirtualHost indica la ubicación en disco donde están almacenados los ficheros del sitio?",
+      "opciones": [
+        "ServerName",
+        "DocumentRoot",
+        "DirectoryIndex",
+        "ServerRoot"
+      ],
+      "correcta": 1,
+      "explicacion": "DocumentRoot indica la ubicación donde se encuentran almacenados los ficheros del sitio."
+    },
+    {
+      "id": "si-6.4.1-021",
+      "enunciado": "¿Qué directiva de un bloque VirtualHost indica el nombre de los ficheros que el servidor envía por defecto?",
+      "opciones": [
+        "DocumentRoot",
+        "ServerName",
+        "ServerAdmin",
+        "DirectoryIndex"
+      ],
+      "correcta": 3,
+      "explicacion": "DirectoryIndex indica el nombre de los ficheros que envía por defecto el servidor web."
+    },
+    {
+      "id": "si-6.4.1-022",
+      "enunciado": "¿Qué ocurre con la directiva ServerName en el archivo de configuración del sitio por defecto (default) de Apache?",
+      "opciones": [
+        "Se deja comentada sin indicar ningún nombre",
+        "Se establece como localhost",
+        "Se establece como la IP del servidor",
+        "Se establece como default.local"
+      ],
+      "correcta": 0,
+      "explicacion": "Para el dominio por defecto (archivo default) no se indica ningún nombre, por lo que la línea se deja comentada."
+    },
+    {
+      "id": "si-6.4.1-023",
+      "enunciado": "¿Cuántos sitios web se pueden alojar en un mismo servidor Apache?",
+      "opciones": [
+        "Solo uno",
+        "Máximo dos: uno HTTP y uno HTTPS",
+        "Varios sitios web distintos",
+        "Máximo cuatro, uno por interfaz de red"
+      ],
+      "correcta": 2,
+      "explicacion": "En un servidor web Apache se pueden alojar distintas páginas web o sitios web."
+    },
+    {
+      "id": "si-6.4.1-024",
+      "enunciado": "Para alojar el dominio www.miempresa.com en la carpeta /portales/miempresa, ¿qué archivo de configuración hay que crear?",
+      "opciones": [
+        "/etc/apache2/conf-available/miempresa.com",
+        "/etc/apache2/sites-available/miempresa.com",
+        "/etc/apache2/sites-enabled/miempresa.com",
+        "/var/www/html/miempresa.com"
+      ],
+      "correcta": 1,
+      "explicacion": "Para añadir el dominio www.miempresa.com hay que crear el fichero /etc/apache2/sites-available/miempresa.com con el contenido del VirtualHost correspondiente."
+    },
+    {
+      "id": "si-6.4.1-025",
+      "enunciado": "¿Qué comando se utiliza para activar un nuevo sitio web en Apache?",
+      "opciones": [
+        "a2ensite miempresa.com",
+        "a2dissite miempresa.com",
+        "apache2ctl enable miempresa.com",
+        "service apache2 enable miempresa.com"
+      ],
+      "correcta": 0,
+      "explicacion": "Para activar el sitio se utiliza el comando: a2ensite miempresa.com"
+    },
+    {
+      "id": "si-6.4.1-026",
+      "enunciado": "¿Qué acción es imprescindible realizar después de terminar todos los cambios en la configuración de Apache?",
+      "opciones": [
+        "Crear de nuevo el archivo de configuración del sitio",
+        "Ejecutar a2ensite nuevamente",
+        "Abrir los puertos en el cortafuegos",
+        "Reiniciar el servidor web"
+      ],
+      "correcta": 3,
+      "explicacion": "Una vez terminemos todos los cambios, es necesario reiniciar el servidor web."
+    },
+    {
+      "id": "si-6.4.1-027",
+      "enunciado": "¿Cuál es el comando de reinicio de Apache que aparece en el ejemplo de creación de un nuevo sitio web?",
+      "opciones": [
+        "systemctl restart apache2",
+        "apache2 restart",
+        "service apache2 restart",
+        "service apache2 reload"
+      ],
+      "correcta": 2,
+      "explicacion": "En el ejemplo de creación de un nuevo sitio, el comando de reinicio es: service apache2 restart"
+    },
+    {
+      "id": "si-6.4.1-028",
+      "enunciado": "¿Cuál es la tecnología de encriptación más utilizada para las comunicaciones cifradas entre clientes y servidor web?",
+      "opciones": [
+        "SSL",
+        "TLS",
+        "IPSec",
+        "WPA2"
+      ],
+      "correcta": 0,
+      "explicacion": "La tecnología de encriptación más utilizada es el SSL (Secure Socket Layer)."
+    },
+    {
+      "id": "si-6.4.1-029",
+      "enunciado": "Verdadero o Falso: El módulo SSL viene instalado en Apache por defecto.",
+      "opciones": [
+        "No, hay que instalarlo manualmente con apt-get install libssl",
+        "Sí, viene instalado por defecto en Apache"
+      ],
+      "correcta": 1,
+      "explicacion": "Por defecto viene instalado en Apache, por lo que para utilizar una página segura bajo https en Apache solo hay que activarlo."
+    },
+    {
+      "id": "si-6.4.1-030",
+      "enunciado": "¿Qué comando se usa para activar el módulo SSL en Apache?",
+      "opciones": [
+        "sudo a2ensite ssl",
+        "sudo apache2 enable ssl",
+        "sudo service apache2 ssl",
+        "sudo a2enmod ssl"
+      ],
+      "correcta": 3,
+      "explicacion": "Para activar el módulo SSL se usa: sudo a2enmod ssl"
+    },
+    {
+      "id": "si-6.4.1-031",
+      "enunciado": "¿Qué comando activa el sitio HTTPS por defecto en Apache?",
+      "opciones": [
+        "sudo a2enmod default-ssl",
+        "sudo a2ensite default-ssl",
+        "sudo a2ensite apache-ssl",
+        "sudo a2enmod https"
+      ],
+      "correcta": 1,
+      "explicacion": "Para activar el sitio HTTPS por defecto se usa: sudo a2ensite default-ssl"
+    },
+    {
+      "id": "si-6.4.1-032",
+      "enunciado": "¿Cómo se accede al servidor Apache con HTTPS una vez activado el módulo y el sitio SSL?",
+      "opciones": [
+        "http://IP_Servidor:443",
+        "ssl://IP_Servidor",
+        "https://IP_Servidor",
+        "ftp://IP_Servidor"
+      ],
+      "correcta": 2,
+      "explicacion": "Una vez reiniciado el servidor, se accede desde el navegador con la dirección https://IP_Servidor."
+    },
+    {
+      "id": "si-6.4.1-033",
+      "enunciado": "¿Por qué el navegador muestra una advertencia de seguridad al acceder a Apache por HTTPS recién configurado?",
+      "opciones": [
+        "Porque no hay un certificado de seguridad instalado",
+        "Porque el módulo SSL no está correctamente activado",
+        "Porque el puerto 443 no está abierto en el cortafuegos",
+        "Porque Apache no admite HTTPS sin reiniciar el sistema operativo"
+      ],
+      "correcta": 0,
+      "explicacion": "Esta conexión da una advertencia de seguridad e indica que la conexión no es segura, ya que no hay un certificado de seguridad instalado."
+    },
+    {
+      "id": "si-6.4.1-034",
+      "enunciado": "¿Cuál es el comando para reiniciar Apache en el proceso de activación de HTTPS?",
+      "opciones": [
+        "service apache2 restart",
+        "sudo a2enmod restart",
+        "apache2ctl restart",
+        "systemctl restart apache2"
+      ],
+      "correcta": 3,
+      "explicacion": "En el proceso de activación de HTTPS, el comando de reinicio es: systemctl restart apache2"
+    },
+    {
+      "id": "si-6.4.1-035",
+      "enunciado": "¿Cuál de las siguientes afirmaciones sobre los puertos por defecto de Apache es INCORRECTA?",
+      "opciones": [
+        "El puerto 80 se utiliza para HTTP por defecto",
+        "El puerto 8080 es el puerto por defecto para HTTP en Apache",
+        "El puerto 443 se utiliza para HTTPS por defecto",
+        "Los puertos de escucha se configuran en /etc/apache2/ports.conf"
+      ],
+      "correcta": 1,
+      "explicacion": "Apache usa el puerto 80 para HTTP y el 443 para HTTPS por defecto, no el 8080. Los puertos de escucha se configuran en /etc/apache2/ports.conf."
+    }
+  ]
+}

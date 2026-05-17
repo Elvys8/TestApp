@@ -71,7 +71,7 @@
       "opciones": [
         "Solo clientes de línea de comandos",
         "Solo navegadores web",
-        "Terminal, FileZilla y navegadores web",
+        "Clientes FTP como terminal, FileZilla y navegadores web",
         "Solo FileZilla"
       ],
       "correcta": 2,

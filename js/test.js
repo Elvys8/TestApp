@@ -146,6 +146,10 @@ function renderQuestion() {
                 title="${isStarred ? "Quitar marca" : "Marcar para revisar"}">
           ${starIcon(isStarred)}
         </button>
+        <button class="test-header__master" id="master-btn" type="button"
+                aria-label="Marcar como dominada" title="Marcar como dominada">
+          ${masterIcon()}
+        </button>
         <button class="test-header__close" id="close-btn" type="button"
                 aria-label="Salir del test" title="Salir del test">
           ${closeIcon()}
@@ -188,6 +192,21 @@ function attachQuestionHandlers() {
     btn.setAttribute("aria-label", newState ? "Quitar marca" : "Marcar para revisar");
     btn.setAttribute("title", newState ? "Quitar marca" : "Marcar para revisar");
     ui.toast(newState ? "Marcada para revisar" : "Marca quitada", "info");
+  });
+
+  // Botón "✓": marca la pregunta como dominada y avanza
+  mountEl.querySelector("#master-btn").addEventListener("click", () => {
+    const { threshold } = _state;
+    storage.forceMarkMastered(q.id, threshold);
+    _state.answers.push({ questionId: q.id, correct: true });
+    // Deshabilitar opciones para que no se pueda responder
+    mountEl.querySelectorAll("#options-list .option").forEach((b) => { b.disabled = true; });
+    ui.toast("Pregunta marcada como dominada", "success");
+    setTimeout(() => {
+      if (document.activeElement) document.activeElement.blur();
+      _state.currentIdx++;
+      renderQuestion();
+    }, 700);
   });
 
   // Icono "i": muestra la explicación de la pregunta en un modal
@@ -361,6 +380,13 @@ function infoIcon() {
     <circle cx="12" cy="12" r="9"/>
     <line x1="12" y1="11" x2="12" y2="16"/>
     <line x1="12" y1="8" x2="12.01" y2="8"/>
+  </svg>`;
+}
+
+function masterIcon() {
+  return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <circle cx="12" cy="12" r="9"/>
+    <polyline points="8.5 12.5 11 15 15.5 10"/>
   </svg>`;
 }
 

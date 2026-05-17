@@ -131,6 +131,16 @@ export function recordWrong(questionId) {
   return all[questionId];
 }
 
+/* Fuerza la racha de una pregunta al umbral indicado, marcándola
+   como dominada sin tocar el histórico de aciertos/fallos. */
+export function forceMarkMastered(questionId, threshold) {
+  const t = threshold != null ? threshold : getMasteryThreshold();
+  const all = getAllProgress();
+  const prev = all[questionId] || defaultProgress();
+  all[questionId] = { ...prev, streak: t };
+  saveAllProgress(all);
+}
+
 /* Resetea solo la racha (deja el histórico de aciertos/fallos intacto)
    para devolver a rotación las preguntas dominadas. */
 export function resetMasteryFor(questionIds) {

@@ -1,0 +1,357 @@
+{
+  "schema_version": 1,
+  "id": "si-6.4.2-apache-php-lamp",
+  "asignatura": "Sistemas Informáticos",
+  "asignatura_color": "#1C3C6F",
+  "tema": "6.4.2 Apache con PHP. Servidor LAMP.",
+  "preguntas": [
+    {
+      "id": "si-6.4.2-001",
+      "enunciado": "¿Para qué se utiliza PHP?",
+      "opciones": [
+        "Para crear páginas web estáticas del lado cliente",
+        "Para configurar el servidor web Apache",
+        "Para crear páginas web dinámicas del lado servidor",
+        "Para gestionar el sistema operativo del servidor"
+      ],
+      "correcta": 2,
+      "explicacion": "PHP es un lenguaje de programación utilizado para crear páginas web dinámicas del lado servidor."
+    },
+    {
+      "id": "si-6.4.2-002",
+      "enunciado": "¿Qué significan las siglas PHP?",
+      "opciones": [
+        "PHP HyperText Preprocessor",
+        "Page Hypertext Processor",
+        "Personal Home Page Processor",
+        "Programming HyperText Protocol"
+      ],
+      "correcta": 0,
+      "explicacion": "PHP son las siglas de PHP HyperText Preprocessor."
+    },
+    {
+      "id": "si-6.4.2-003",
+      "enunciado": "¿Cuál es el ejemplo de uso de PHP que describe el material?",
+      "opciones": [
+        "Generar informes en PDF desde el servidor",
+        "Comprimir archivos estáticos del servidor web",
+        "Cifrar las comunicaciones entre cliente y servidor",
+        "Solicitar usuario y contraseña, acceder a la base de datos y devolver los datos requeridos"
+      ],
+      "correcta": 3,
+      "explicacion": "Un ejemplo de utilización: se solicita usuario y contraseña al usuario del navegador web, el código php accede a la base de datos guardada en el servidor, comprobando si el usuario tiene acceso y devolviendo los datos requeridos."
+    },
+    {
+      "id": "si-6.4.2-004",
+      "enunciado": "¿Qué es LAMP?",
+      "opciones": [
+        "Un lenguaje de programación para aplicaciones web",
+        "Una pila de protocolos/servicios para el desarrollo de aplicaciones web",
+        "Un sistema operativo basado en Linux para servidores web",
+        "Un servidor de bases de datos para entornos Linux"
+      ],
+      "correcta": 1,
+      "explicacion": "LAMP es una pila de protocolos/servicios que se utiliza muchísimo en entornos de desarrollo web, con Linux como sistema base y Apache + MySQL + PHP como servicios de soporte."
+    },
+    {
+      "id": "si-6.4.2-005",
+      "enunciado": "¿Qué significan las siglas LAMP?",
+      "opciones": [
+        "Linux, Apache, MySQL, PHP",
+        "Linux, Apache, MySQL, PostgreSQL",
+        "Linux, Apache, MongoDB, PHP",
+        "Linux, Nginx, MySQL, PHP"
+      ],
+      "correcta": 0,
+      "explicacion": "LAMP son las siglas de Linux, Apache, MySQL, PHP."
+    },
+    {
+      "id": "si-6.4.2-006",
+      "enunciado": "¿Cuál es el sistema base de la pila LAMP?",
+      "opciones": [
+        "Windows Server",
+        "Ubuntu",
+        "macOS",
+        "Linux"
+      ],
+      "correcta": 3,
+      "explicacion": "La pila LAMP utiliza Linux como sistema base y Apache + MySQL + PHP como servicios de soporte."
+    },
+    {
+      "id": "si-6.4.2-007",
+      "enunciado": "¿Cuál es el comando para instalar PHP en el servidor web Apache?",
+      "opciones": [
+        "# apt-get install php8",
+        "# apt install php",
+        "# apt install apache-php",
+        "# apt-get install php-server"
+      ],
+      "correcta": 1,
+      "explicacion": "Para instalar php en el servidor web Apache es necesario ejecutar: # apt install php"
+    },
+    {
+      "id": "si-6.4.2-008",
+      "enunciado": "¿Qué versión de PHP se instala en Ubuntu 24.04?",
+      "opciones": [
+        "7.4",
+        "8.0",
+        "8.3",
+        "8.1"
+      ],
+      "correcta": 2,
+      "explicacion": "En Ubuntu 24.04 se instala la versión 8.3 de php."
+    },
+    {
+      "id": "si-6.4.2-009",
+      "enunciado": "¿Cómo se puede comprobar que PHP se ha instalado con éxito?",
+      "opciones": [
+        "Creando un fichero PHP y ubicándolo en el directorio raíz del servidor web",
+        "Reiniciando el servicio Apache con systemctl",
+        "Ejecutando el comando php --version en la terminal",
+        "Accediendo al archivo de configuración /etc/php/php.ini"
+      ],
+      "correcta": 0,
+      "explicacion": "Para comprobar que PHP se ha instalado con éxito se puede crear un fichero php y ubicarlo en el directorio raíz del servidor web."
+    },
+    {
+      "id": "si-6.4.2-010",
+      "enunciado": "¿En qué ubicación se crea el fichero info.php para comprobar la instalación de PHP?",
+      "opciones": [
+        "/etc/apache2/info.php",
+        "/srv/www/info.php",
+        "/var/apache2/www/info.php",
+        "/var/www/html/info.php"
+      ],
+      "correcta": 3,
+      "explicacion": "Para comprobar PHP se edita el fichero /var/www/html/info.php en el directorio raíz del servidor web."
+    },
+    {
+      "id": "si-6.4.2-011",
+      "enunciado": "¿Qué dirección se escribe en el navegador para acceder al script info.php?",
+      "opciones": [
+        "http://localhost:8080/info.php",
+        "http://localhost/info.php",
+        "http://localhost/php/info.php",
+        "http://127.0.0.1/php/info"
+      ],
+      "correcta": 1,
+      "explicacion": "En el navegador web se escribe en la barra de direcciones http://localhost/info.php."
+    },
+    {
+      "id": "si-6.4.2-012",
+      "enunciado": "¿Qué información devuelve la instrucción phpinfo()?",
+      "opciones": [
+        "Los archivos de configuración de Apache",
+        "Los usuarios conectados al servidor",
+        "La información del servidor utilizado",
+        "La lista de bases de datos disponibles"
+      ],
+      "correcta": 2,
+      "explicacion": "La página info.php devuelve la información del servidor utilizado (instrucción phpinfo)."
+    },
+    {
+      "id": "si-6.4.2-013",
+      "enunciado": "¿Por qué al acceder a info.php es necesario escribir el nombre del archivo en la URL?",
+      "opciones": [
+        "Porque por defecto Apache devolvería index.html, indicado en la directiva DirectoryIndex",
+        "Porque info.php está en un subdirectorio diferente",
+        "Porque el fichero info.php no está en el directorio raíz del servidor",
+        "Porque Apache no puede ejecutar archivos PHP sin especificar el nombre completo"
+      ],
+      "correcta": 0,
+      "explicacion": "Hay que teclear el nombre del archivo, pues por defecto devolvería index.html (al ser el indicado en la directiva DirectoryIndex)."
+    },
+    {
+      "id": "si-6.4.2-014",
+      "enunciado": "¿Cuál es el comando para instalar PHP junto con las librerías necesarias para la pila LAMP?",
+      "opciones": [
+        "# apt install php php-mysql",
+        "# apt install php php-apache2 php-mysql",
+        "# apt install php libapache2-mod-php mariadb",
+        "# apt install php libapache2-mod-php php-mysql"
+      ],
+      "correcta": 3,
+      "explicacion": "Para instalar php y las librerías necesarias para la pila LAMP se ejecuta: # apt install php libapache2-mod-php php-mysql"
+    },
+    {
+      "id": "si-6.4.2-015",
+      "enunciado": "¿Qué herramienta se instala como gestor de bases de datos en el ejemplo de la pila LAMP?",
+      "opciones": [
+        "PostgreSQL",
+        "MariaDB",
+        "Oracle",
+        "MongoDB"
+      ],
+      "correcta": 1,
+      "explicacion": "Se instala MariaDB como herramienta de gestión de bases de datos (aunque podría ser mysql perfectamente)."
+    },
+    {
+      "id": "si-6.4.2-016",
+      "enunciado": "¿Cuál es el comando para instalar MariaDB?",
+      "opciones": [
+        "# apt install mysql-server",
+        "# apt install mariadb",
+        "# apt install mariadb-server",
+        "# apt install mariadb-db"
+      ],
+      "correcta": 2,
+      "explicacion": "Para instalar MariaDB se ejecuta: # apt install mariadb-server"
+    },
+    {
+      "id": "si-6.4.2-017",
+      "enunciado": "¿Qué comando prepara MySQL para que se arranque automáticamente al inicio del sistema?",
+      "opciones": [
+        "# systemctl start mysql",
+        "# systemctl boot mysql",
+        "# systemctl autostart mysql",
+        "# systemctl enable mysql"
+      ],
+      "correcta": 3,
+      "explicacion": "Para activar el servicio y prepararlo para que se arranque en el inicio del sistema se usa: # systemctl enable mysql"
+    },
+    {
+      "id": "si-6.4.2-018",
+      "enunciado": "¿Qué comando inicia el servicio MySQL?",
+      "opciones": [
+        "# systemctl start mysql",
+        "# systemctl enable mysql",
+        "# systemctl run mysql",
+        "# systemctl launch mysql"
+      ],
+      "correcta": 0,
+      "explicacion": "Para iniciar el servicio MySQL se ejecuta: # systemctl start mysql"
+    },
+    {
+      "id": "si-6.4.2-019",
+      "enunciado": "¿Qué hace el comando mysql_secure_installation?",
+      "opciones": [
+        "Instala MariaDB en el servidor",
+        "Inicia el servicio MySQL automáticamente en el arranque",
+        "Configura la seguridad de la base de datos, entre otros estableciendo la contraseña de root",
+        "Crea la base de datos por defecto de la pila LAMP"
+      ],
+      "correcta": 2,
+      "explicacion": "mysql_secure_installation configura la seguridad del servidor de base de datos. Durante la configuración pedirá una contraseña de root para el servicio de base de datos."
+    },
+    {
+      "id": "si-6.4.2-020",
+      "enunciado": "Durante la ejecución de mysql_secure_installation, ¿cómo hay que responder a las cuestiones que se presentan?",
+      "opciones": [
+        "Respondiendo \"no\" a todas para usar la configuración por defecto",
+        "No se presentan preguntas, la configuración es automática",
+        "Seleccionando opciones manualmente según las necesidades",
+        "Respondiendo \"sí\" (y) a todas"
+      ],
+      "correcta": 3,
+      "explicacion": "Tras ejecutar mysql_secure_installation aparecerán una serie de cuestiones a las que responderemos en todas que sí (y)."
+    },
+    {
+      "id": "si-6.4.2-021",
+      "enunciado": "¿Qué puerto hay que abrir en el cortafuegos para conectarse a la base de datos MySQL?",
+      "opciones": [
+        "3306",
+        "3360",
+        "1433",
+        "5432"
+      ],
+      "correcta": 0,
+      "explicacion": "Para poder conectarnos adecuadamente a la base de datos, será necesario abrir el puerto de MySQL en el cortafuegos. Ese puerto es el 3306."
+    },
+    {
+      "id": "si-6.4.2-022",
+      "enunciado": "¿Qué es XAMPP?",
+      "opciones": [
+        "Un sistema operativo para servidores web",
+        "Un paquete que aglutina varios servicios: Apache, MySQL, PHP y Perl",
+        "Un lenguaje de programación web multiplataforma",
+        "Una distribución de Linux para desarrollo web"
+      ],
+      "correcta": 1,
+      "explicacion": "XAMPP es un paquete que aglutina varios servicios y programas: el servidor web Apache, el gestor de bases de datos MySQL y los intérpretes de lenguaje de scripts PHP y Perl."
+    },
+    {
+      "id": "si-6.4.2-023",
+      "enunciado": "¿Por qué los programadores de páginas dinámicas utilizan XAMPP?",
+      "opciones": [
+        "Para acceder de forma remota a servidores de producción",
+        "Para tener todos los servicios instalados en un único proceso con configuración sencilla",
+        "Para desplegar aplicaciones web en entornos de producción",
+        "Para gestionar copias de seguridad de bases de datos"
+      ],
+      "correcta": 1,
+      "explicacion": "Los programadores de páginas dinámicas utilizan XAMPP como una opción simple para tener todos los servicios instalados en un único proceso y con una configuración sencilla."
+    },
+    {
+      "id": "si-6.4.2-024",
+      "enunciado": "¿En qué sistemas operativos se puede instalar XAMPP?",
+      "opciones": [
+        "Solo en GNU/Linux",
+        "Solo en Windows",
+        "En GNU/Linux y en Windows",
+        "En GNU/Linux, Windows y macOS"
+      ],
+      "correcta": 2,
+      "explicacion": "XAMPP se puede instalar tanto en GNU/Linux como en Windows."
+    },
+    {
+      "id": "si-6.4.2-025",
+      "enunciado": "¿En qué directorio se guardan las páginas web en XAMPP bajo Windows?",
+      "opciones": [
+        "C:\\xampp\\www",
+        "C:\\apache\\htdocs",
+        "C:\\htdocs\\xampp",
+        "C:\\xampp\\htdocs"
+      ],
+      "correcta": 3,
+      "explicacion": "El directorio de publicación del servidor web Apache en XAMPP para Windows es C:\\xampp\\htdocs."
+    },
+    {
+      "id": "si-6.4.2-026",
+      "enunciado": "¿Cómo se accede a la página de inicio de XAMPP desde el navegador?",
+      "opciones": [
+        "http://localhost",
+        "http://xampp",
+        "http://127.0.0.1:8080",
+        "http://localhost/xampp"
+      ],
+      "correcta": 0,
+      "explicacion": "Una vez instalado e iniciado Apache, ya se puede visualizar en el navegador la página de inicio de XAMPP escribiendo en el navegador http://localhost."
+    },
+    {
+      "id": "si-6.4.2-027",
+      "enunciado": "¿Qué permite hacer el panel de control de XAMPP?",
+      "opciones": [
+        "Configurar la seguridad del servidor web",
+        "Editar el código fuente de las páginas web",
+        "Iniciar o detener cada servicio",
+        "Gestionar las copias de seguridad de las bases de datos"
+      ],
+      "correcta": 2,
+      "explicacion": "Una vez instalado XAMPP, hay un panel de control para iniciar o detener cada servicio."
+    },
+    {
+      "id": "si-6.4.2-028",
+      "enunciado": "¿Qué tipos de páginas se pueden guardar en el directorio de publicación de XAMPP?",
+      "opciones": [
+        "Solo páginas web estáticas (html)",
+        "Páginas web estáticas (html) y páginas dinámicas (php)",
+        "Solo páginas web dinámicas (php)",
+        "Solo archivos de configuración de Apache"
+      ],
+      "correcta": 1,
+      "explicacion": "En la carpeta de publicación de XAMPP ya se puede guardar cualquier página web estática (html) o página dinámica (php)."
+    },
+    {
+      "id": "si-6.4.2-029",
+      "enunciado": "En Apache, ¿en qué directorio se alojan por defecto las páginas web?",
+      "opciones": [
+        "/www/apache2",
+        "/var/html",
+        "/var/www/html",
+        "/etc/www/html"
+      ],
+      "correcta": 2,
+      "explicacion": "El directorio de publicación por defecto en Apache es /var/www/html."
+    }
+  ]
+}

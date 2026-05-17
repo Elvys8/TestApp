@@ -78,18 +78,6 @@
       "explicacion": "Hay que marcar las opciones de añadir 'Internet Information Services' y 'Servicio FTP'."
     },
     {
-      "id": "si-6.3.7-007",
-      "enunciado": "¿Cómo se accede a la herramienta administrativa de IIS en Windows?",
-      "opciones": [
-        "Panel de control → Herramientas administrativas → IIS",
-        "Buscando \"IIS\" en el buscador de inicio",
-        "Menú inicio → Todos los programas → IIS Manager",
-        "Ejecutar → mmc → complemento IIS"
-      ],
-      "correcta": 1,
-      "explicacion": "Para configurar el servicio FTP se escribe IIS en el buscador de inicio y aparecerá la herramienta administrativa para IIS."
-    },
-    {
       "id": "si-6.3.7-008",
       "enunciado": "¿Qué opción del menú contextual del nombre de equipo en IIS permite crear un nuevo servidor FTP?",
       "opciones": [

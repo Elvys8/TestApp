@@ -353,7 +353,8 @@ ul {
 
 .test-header__star,
 .test-header__close,
-.test-header__info {
+.test-header__info,
+.test-header__master {
   width: 1.75em;
   height: 1.75em;
   display: inline-flex;
@@ -370,7 +371,8 @@ ul {
 
 .test-header__star:hover,
 .test-header__close:hover,
-.test-header__info:hover {
+.test-header__info:hover,
+.test-header__master:hover {
   background: var(--bg-surface-hover);
   color: var(--text-primary);
 }
@@ -381,7 +383,8 @@ ul {
 
 .test-header__star svg,
 .test-header__close svg,
-.test-header__info svg {
+.test-header__info svg,
+.test-header__master svg {
   width: 1em;
   height: 1em;
   display: block;

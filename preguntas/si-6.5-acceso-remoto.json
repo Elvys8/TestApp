@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "id": "si-6.5-acceso-remoto",
+  "asignatura": "Sistemas Informáticos",
+  "asignatura_color": "#1C3C6F",
+  "tema": "6.5 Acceso remoto",
+  "preguntas": [
+    {
+      "id": "si-6.5-001",
+      "enunciado": "¿En qué consiste el servicio de acceso remoto?",
+      "opciones": [
+        "Compartir archivos entre equipos de la red",
+        "Acceder desde un equipo a otro de la red y trabajar como si se estuviera físicamente en él",
+        "Monitorizar el tráfico de red entre equipos",
+        "Enviar mensajes entre equipos conectados a la red"
+      ],
+      "correcta": 1,
+      "explicacion": "El servicio de acceso remoto consiste en acceder desde un equipo a otro de la red, y trabajar como si físicamente se estuviera en él."
+    },
+    {
+      "id": "si-6.5-002",
+      "enunciado": "¿Qué servicio de acceso remoto permite conectarse a un sistema por terminal de forma NO segura?",
+      "opciones": [
+        "SSH",
+        "VNC",
+        "Telnet",
+        "Escritorio remoto"
+      ],
+      "correcta": 2,
+      "explicacion": "Telnet permite acceder al sistema de forma remota por terminal, pero de una manera no segura."
+    },
+    {
+      "id": "si-6.5-003",
+      "enunciado": "¿Qué servicio de acceso remoto permite conectarse a un sistema por terminal cifrando las comunicaciones?",
+      "opciones": [
+        "SSH",
+        "Telnet",
+        "VNC",
+        "Escritorio remoto"
+      ],
+      "correcta": 0,
+      "explicacion": "SSH permite acceder al sistema por terminal, pero de forma segura ya que se cifran las comunicaciones."
+    },
+    {
+      "id": "si-6.5-004",
+      "enunciado": "¿Qué significa el acrónimo SSH?",
+      "opciones": [
+        "System Secure Handler",
+        "Safe Shell Host",
+        "Secure System Host",
+        "Secure Shell"
+      ],
+      "correcta": 3,
+      "explicacion": "SSH son las siglas de Secure Shell."
+    },
+    {
+      "id": "si-6.5-005",
+      "enunciado": "Verdadero o Falso: Telnet permite acceder al sistema de forma remota de manera segura.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 1,
+      "explicacion": "Telnet permite acceder al sistema de forma remota por terminal, pero de una manera NO segura."
+    },
+    {
+      "id": "si-6.5-006",
+      "enunciado": "Además del acceso remoto por terminal seguro, ¿qué otra funcionalidad ofrece SSH?",
+      "opciones": [
+        "Compartir el escritorio en modo gráfico",
+        "Transferir archivos",
+        "Gestionar impresoras en red",
+        "Monitorizar el rendimiento del servidor"
+      ],
+      "correcta": 1,
+      "explicacion": "SSH permite acceder al sistema por terminal de forma segura y, además, permite transferir archivos."
+    },
+    {
+      "id": "si-6.5-007",
+      "enunciado": "¿Qué servicio de acceso remoto permite utilizar el servidor en modo gráfico compartiendo la conexión?",
+      "opciones": [
+        "Telnet",
+        "SSH",
+        "Escritorio remoto",
+        "VNC"
+      ],
+      "correcta": 3,
+      "explicacion": "El servidor VNC permite utilizar el servidor en modo gráfico, compartiendo la conexión."
+    },
+    {
+      "id": "si-6.5-008",
+      "enunciado": "¿Qué significa el acrónimo VNC?",
+      "opciones": [
+        "Video Network Control",
+        "Virtual Node Connection",
+        "Virtual Network Computing",
+        "Virtual Network Controller"
+      ],
+      "correcta": 2,
+      "explicacion": "VNC son las siglas de Virtual Network Computing."
+    },
+    {
+      "id": "si-6.5-009",
+      "enunciado": "¿Qué característica diferencia a VNC de Telnet y SSH?",
+      "opciones": [
+        "VNC permite utilizar el servidor en modo gráfico",
+        "VNC cifra las comunicaciones, al contrario que Telnet y SSH",
+        "VNC solo permite la transferencia de archivos",
+        "VNC solo funciona en sistemas Windows"
+      ],
+      "correcta": 0,
+      "explicacion": "Mientras que Telnet y SSH permiten conectarse al servidor por medio de un terminal, el servidor VNC permite utilizar el servidor en modo gráfico, compartiendo la conexión."
+    },
+    {
+      "id": "si-6.5-010",
+      "enunciado": "¿En qué sistemas está implementado de forma nativa el servicio de Escritorio remoto?",
+      "opciones": [
+        "Linux",
+        "Windows",
+        "macOS",
+        "Android"
+      ],
+      "correcta": 1,
+      "explicacion": "Los sistemas Windows implementan el Escritorio remoto de forma nativa, basada en el protocolo RDP."
+    },
+    {
+      "id": "si-6.5-011",
+      "enunciado": "¿En qué protocolo se basa el servicio de Escritorio remoto de Windows?",
+      "opciones": [
+        "SSH",
+        "VNC",
+        "RDP",
+        "Telnet"
+      ],
+      "correcta": 2,
+      "explicacion": "El Escritorio remoto de Windows está basado en el protocolo RDP (Remote Desktop Protocol)."
+    },
+    {
+      "id": "si-6.5-012",
+      "enunciado": "¿Qué significa el acrónimo RDP?",
+      "opciones": [
+        "Remote Data Protocol",
+        "Remote Desktop Provider",
+        "Remote Display Protocol",
+        "Remote Desktop Protocol"
+      ],
+      "correcta": 3,
+      "explicacion": "RDP son las siglas de Remote Desktop Protocol."
+    },
+    {
+      "id": "si-6.5-013",
+      "enunciado": "Verdadero o Falso: SSH solo permite el acceso remoto por terminal, sin posibilidad de transferir archivos.",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 1,
+      "explicacion": "SSH permite acceder al sistema por terminal de forma segura y, además, permite transferir archivos."
+    },
+    {
+      "id": "si-6.5-014",
+      "enunciado": "¿Cuáles de los servicios mencionados permiten conectarse al servidor por medio de un terminal?",
+      "opciones": [
+        "Solo Telnet permite acceso por terminal",
+        "Solo SSH permite acceso por terminal",
+        "VNC y SSH permiten acceso por terminal",
+        "Tanto Telnet como SSH permiten acceso por terminal"
+      ],
+      "correcta": 3,
+      "explicacion": "Telnet y SSH son los servicios que permiten conectarse al servidor por medio de un terminal (Telnet de forma no segura, SSH de forma segura)."
+    },
+    {
+      "id": "si-6.5-015",
+      "enunciado": "¿Cuál de las siguientes afirmaciones sobre los servicios de acceso remoto es INCORRECTA?",
+      "opciones": [
+        "Telnet permite acceso remoto por terminal de manera no segura",
+        "SSH cifra las comunicaciones para proporcionar acceso seguro por terminal",
+        "VNC es la solución de acceso remoto implementada de forma nativa en Windows",
+        "El Escritorio remoto de Windows se basa en el protocolo RDP"
+      ],
+      "correcta": 2,
+      "explicacion": "La solución implementada de forma nativa en Windows es el Escritorio remoto (basado en RDP), no VNC."
+    }
+  ]
+}

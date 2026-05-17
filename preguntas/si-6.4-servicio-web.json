@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "id": "si-6.4-servicio-web",
+  "asignatura": "Sistemas Informáticos",
+  "asignatura_color": "#1C3C6F",
+  "tema": "6.4 Servicio Web",
+  "preguntas": [
+    {
+      "id": "si-6.4-001",
+      "enunciado": "¿Qué servidor web se utiliza habitualmente en sistemas Windows?",
+      "opciones": [
+        "Apache",
+        "NGINX",
+        "IIS",
+        "vsftpd"
+      ],
+      "correcta": 2,
+      "explicacion": "En los sistemas Windows se utiliza el servicio IIS (Internet Information Services)."
+    },
+    {
+      "id": "si-6.4-002",
+      "enunciado": "¿Qué servidor web se utiliza habitualmente en sistemas Linux?",
+      "opciones": [
+        "IIS",
+        "Apache",
+        "NGINX exclusivamente",
+        "vsftpd"
+      ],
+      "correcta": 1,
+      "explicacion": "En sistemas Linux se utiliza Apache como servidor web habitual."
+    },
+    {
+      "id": "si-6.4-003",
+      "enunciado": "¿En qué sistemas operativos se puede instalar Apache?",
+      "opciones": [
+        "Solo en Linux",
+        "Solo en sistemas Unix y Linux",
+        "Tanto en Windows como en Linux",
+        "Solo en macOS y Linux"
+      ],
+      "correcta": 2,
+      "explicacion": "Apache se puede instalar tanto en Windows como en Linux."
+    },
+    {
+      "id": "si-6.4-004",
+      "enunciado": "¿Qué es la Apache Software Foundation?",
+      "opciones": [
+        "Una empresa comercial que vende licencias del servidor Apache",
+        "Una fundación formada por desarrolladores de software con proyectos de código abierto",
+        "Un organismo gubernamental que regula el uso de servidores web",
+        "Una división de Microsoft para el desarrollo de software libre"
+      ],
+      "correcta": 1,
+      "explicacion": "La Apache Software Foundation la forman desarrolladores de software donde cada uno realiza sus propios proyectos de código abierto."
+    },
+    {
+      "id": "si-6.4-005",
+      "enunciado": "¿Qué tipo de proyectos desarrolla cada miembro de la Apache Software Foundation?",
+      "opciones": [
+        "Proyectos de software propietario bajo licencia Apache",
+        "Proyectos de código abierto propios",
+        "Proyectos exclusivamente relacionados con servidores web",
+        "Proyectos de seguridad informática para entornos empresariales"
+      ],
+      "correcta": 1,
+      "explicacion": "La Apache Software Foundation la forman desarrolladores de software donde cada uno realiza sus propios proyectos de código abierto."
+    },
+    {
+      "id": "si-6.4-006",
+      "enunciado": "¿Qué es NGINX?",
+      "opciones": [
+        "Un servidor FTP de alto rendimiento para Linux",
+        "Un servidor web de alto rendimiento y un proxy inverso",
+        "Una alternativa a IIS exclusiva para sistemas Windows",
+        "Un gestor de bases de datos orientado a la web"
+      ],
+      "correcta": 1,
+      "explicacion": "NGINX es un servidor web de alto rendimiento y un proxy inverso que se utiliza ampliamente para servir contenido web, gestionar tráfico y mejorar la eficiencia de aplicaciones."
+    },
+    {
+      "id": "si-6.4-007",
+      "enunciado": "¿Para qué se utiliza NGINX?",
+      "opciones": [
+        "Solo para gestionar conexiones FTP seguras",
+        "Servir contenido web, gestionar tráfico y mejorar la eficiencia de aplicaciones",
+        "Exclusivamente para cifrar el tráfico web con SSL",
+        "Solo para alojar aplicaciones de escritorio en la nube"
+      ],
+      "correcta": 1,
+      "explicacion": "NGINX se utiliza ampliamente para servir contenido web, gestionar tráfico y mejorar la eficiencia de aplicaciones."
+    },
+    {
+      "id": "si-6.4-008",
+      "enunciado": "¿Qué tipo de contenido puede servir NGINX de manera muy eficiente?",
+      "opciones": [
+        "Contenido dinámico generado por bases de datos",
+        "Contenido estático como HTML, CSS y JavaScript",
+        "Solo ficheros multimedia de vídeo y audio",
+        "Exclusivamente páginas web cifradas con HTTPS"
+      ],
+      "correcta": 1,
+      "explicacion": "Nginx puede servir contenido estático (como HTML, CSS y JavaScript) de manera muy eficiente."
+    },
+    {
+      "id": "si-6.4-009",
+      "enunciado": "¿Qué dos servidores web se disputan hoy día el primer puesto en cuota de mercado?",
+      "opciones": [
+        "IIS y Apache",
+        "IIS y NGINX",
+        "Apache y NGINX",
+        "Apache y vsftpd"
+      ],
+      "correcta": 2,
+      "explicacion": "Hoy día nginx y Apache se disputan el primer puesto de la cuota de mercado para servidores web."
+    },
+    {
+      "id": "si-6.4-010",
+      "enunciado": "¿En qué entornos se utiliza principalmente IIS según el material?",
+      "opciones": [
+        "En servidores Linux de alto rendimiento",
+        "En entornos empresariales Windows",
+        "En servidores de contenido estático",
+        "En entornos de desarrollo web multiplataforma"
+      ],
+      "correcta": 1,
+      "explicacion": "IIS se utiliza en entornos empresariales Windows, mientras que nginx y Apache se disputan el primer puesto en cuota de mercado general."
+    }
+  ]
+}

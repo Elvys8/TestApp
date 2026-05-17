@@ -22,6 +22,10 @@
   	"si-6.3.5-cliente-nfs.json",
   	"si-6.3.6-servicio-ftp-vsftpd.json",
   	"si-6.3.7-servicio-ftp-en-windows-11.json",
+  	"si-6.4-servicio-web.json",
+  	"si-6.4.1-instalacion-apache.json",
+  	"si-6.4.2-apache-php-lamp.json",
+  	"si-6.5-acceso-remoto.json",
   	"almacenamiento-de-informacion.json"
   ]
 }
