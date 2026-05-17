@@ -1,0 +1,309 @@
+{
+  "schema_version": 1,
+  "id": "si-6.3.5-cliente-nfs",
+  "asignatura": "Sistemas Informáticos",
+  "asignatura_color": "#1C3C6F",
+  "tema": "6.3.5 Cliente NFS",
+  "preguntas": [
+    {
+      "id": "si-6.3.5-001",
+      "enunciado": "¿Cuántos paquetes se necesitan para instalar el cliente NFS en Linux?",
+      "opciones": [
+        "Uno",
+        "Dos",
+        "Tres",
+        "Cuatro"
+      ],
+      "correcta": 1,
+      "explicacion": "Para poner en marcha el cliente de NFS se necesitan dos paquetes: nfs-common y rpcbind."
+    },
+    {
+      "id": "si-6.3.5-002",
+      "enunciado": "¿Qué paquetes se instalan para poner en marcha el cliente NFS?",
+      "opciones": [
+        "nfs-kernel-server y rpcbind",
+        "nfs-common y cifs-utils",
+        "nfs-common y rpcbind",
+        "nfs-client y rpcbind"
+      ],
+      "correcta": 2,
+      "explicacion": "Los dos paquetes necesarios para el cliente NFS son nfs-common y rpcbind."
+    },
+    {
+      "id": "si-6.3.5-003",
+      "enunciado": "¿Cuál es el comando completo para instalar el cliente NFS?",
+      "opciones": [
+        "apt install nfs-client rpcbind",
+        "apt install nfs-common nfs-utils",
+        "apt install nfs-common rpcbind",
+        "apt install nfs-kernel-server rpcbind"
+      ],
+      "correcta": 2,
+      "explicacion": "El comando es: apt install nfs-common rpcbind."
+    },
+    {
+      "id": "si-6.3.5-004",
+      "enunciado": "¿Cuántas carpetas de montaje se crean en el cliente antes de montar los recursos NFS del ejemplo?",
+      "opciones": [
+        "Una",
+        "Dos",
+        "Tres",
+        "Cuatro"
+      ],
+      "correcta": 2,
+      "explicacion": "Se crean tres carpetas: /mnt/nfs, /mnt/nfs/lectura y /mnt/nfs/escritura."
+    },
+    {
+      "id": "si-6.3.5-005",
+      "enunciado": "¿Bajo qué ruta padre se crean las carpetas de montaje NFS en el ejemplo?",
+      "opciones": [
+        "/samba",
+        "/media/nfs",
+        "/mnt/nfs",
+        "/home/nfs"
+      ],
+      "correcta": 2,
+      "explicacion": "Las carpetas de montaje se crean dentro de /mnt/nfs: /mnt/nfs/lectura y /mnt/nfs/escritura."
+    },
+    {
+      "id": "si-6.3.5-006",
+      "enunciado": "¿Qué parámetro de `mount` indica que se trata de un sistema de ficheros NFS?",
+      "opciones": [
+        "-o nfs",
+        "-f nfs",
+        "-t nfs",
+        "-s nfs"
+      ],
+      "correcta": 2,
+      "explicacion": "El parámetro -t indica el tipo de sistema de ficheros; para NFS se usa -t nfs."
+    },
+    {
+      "id": "si-6.3.5-007",
+      "enunciado": "¿Cuál es la sintaxis correcta para indicar el recurso remoto en un montaje NFS?",
+      "opciones": [
+        "//192.168.100.1/nfs/lectura",
+        "\\\\192.168.100.1\\nfs\\lectura",
+        "192.168.100.1:/nfs/lectura",
+        "nfs://192.168.100.1/nfs/lectura"
+      ],
+      "correcta": 2,
+      "explicacion": "En NFS el recurso remoto se indica con la IP del servidor seguida de dos puntos y la ruta: 192.168.100.1:/nfs/lectura."
+    },
+    {
+      "id": "si-6.3.5-008",
+      "enunciado": "¿Cuál sería el comando completo para montar el recurso `/nfs/lectura` del servidor `192.168.100.1` en `/mnt/nfs/lectura`?",
+      "opciones": [
+        "mount -t cifs 192.168.100.1:/nfs/lectura /mnt/nfs/lectura",
+        "mount -nfs 192.168.100.1:/nfs/lectura /mnt/nfs/lectura",
+        "mount -t nfs 192.168.100.1:/nfs/lectura /mnt/nfs/lectura",
+        "mount 192.168.100.1:/nfs/lectura /mnt/nfs/lectura -t nfs"
+      ],
+      "correcta": 2,
+      "explicacion": "El comando correcto es: mount -t nfs 192.168.100.1:/nfs/lectura /mnt/nfs/lectura."
+    },
+    {
+      "id": "si-6.3.5-009",
+      "enunciado": "Al intentar escribir en el recurso `lectura` montado por NFS, ¿qué mensaje devuelve el sistema?",
+      "opciones": [
+        "Permission denied",
+        "Operation not permitted",
+        "Sistema de archivos de solo lectura",
+        "No such file or directory"
+      ],
+      "correcta": 2,
+      "explicacion": "Al intentar escribir en el recurso de solo lectura, el sistema devuelve: \"Sistema de archivos de solo lectura\"."
+    },
+    {
+      "id": "si-6.3.5-010",
+      "enunciado": "¿Cómo se comprueba en el ejemplo que el archivo `saludo.txt` existe en el recurso de lectura?",
+      "opciones": [
+        "Con el comando cat y después df",
+        "Con ls -l y después cat",
+        "Con el comando find y después less",
+        "Con el comando stat"
+      ],
+      "correcta": 1,
+      "explicacion": "Se usa ls -l para listar el contenido y después cat para leer el archivo saludo.txt."
+    },
+    {
+      "id": "si-6.3.5-011",
+      "enunciado": "¿Qué comando permite ver el punto de montaje remoto NFS según el material?",
+      "opciones": [
+        "mount -l",
+        "lsblk",
+        "df -h",
+        "findmnt"
+      ],
+      "correcta": 2,
+      "explicacion": "El comando df -h muestra los sistemas de ficheros montados, incluyendo los puntos de montaje remotos NFS."
+    },
+    {
+      "id": "si-6.3.5-012",
+      "enunciado": "¿Qué diferencia hay entre el comando mount para el recurso escritura y el de lectura?",
+      "opciones": [
+        "El recurso escritura usa -o rw y el de lectura usa -o ro",
+        "El recurso escritura requiere credenciales con -o user",
+        "El comando mount es idéntico en estructura; solo cambia la ruta del recurso y el punto de montaje",
+        "El recurso escritura usa -t cifs en lugar de -t nfs"
+      ],
+      "correcta": 2,
+      "explicacion": "Ambos recursos se montan con mount -t nfs; la diferencia es únicamente la ruta remota y el punto de montaje local."
+    },
+    {
+      "id": "si-6.3.5-013",
+      "enunciado": "¿Para qué se añaden líneas en `/etc/fstab` en el cliente NFS?",
+      "opciones": [
+        "Para cifrar las credenciales de acceso al servidor NFS",
+        "Para configurar los permisos del servidor NFS",
+        "Para montar los recursos automáticamente sin ejecutar mount cada vez",
+        "Para registrar el historial de conexiones NFS"
+      ],
+      "correcta": 2,
+      "explicacion": "Añadir las líneas en /etc/fstab evita tener que ejecutar mount manualmente en cada sesión."
+    },
+    {
+      "id": "si-6.3.5-014",
+      "enunciado": "¿Qué sistema de ficheros se especifica en las líneas de fstab para recursos NFS?",
+      "opciones": [
+        "cifs",
+        "samba",
+        "nfs",
+        "ext4"
+      ],
+      "correcta": 2,
+      "explicacion": "Las líneas de fstab para recursos NFS usan nfs como tipo de sistema de ficheros."
+    },
+    {
+      "id": "si-6.3.5-015",
+      "enunciado": "¿Qué opción de fstab se usa para el recurso de solo lectura NFS?",
+      "opciones": [
+        "read",
+        "readonly",
+        "ro",
+        "-r"
+      ],
+      "correcta": 2,
+      "explicacion": "La opción ro (read only) indica montaje en modo solo lectura en fstab."
+    },
+    {
+      "id": "si-6.3.5-016",
+      "enunciado": "¿Qué opción de fstab se usa para el recurso de lectura y escritura NFS?",
+      "opciones": [
+        "write",
+        "readwrite",
+        "rw",
+        "-rw"
+      ],
+      "correcta": 2,
+      "explicacion": "La opción rw (read write) indica montaje en modo lectura y escritura en fstab."
+    },
+    {
+      "id": "si-6.3.5-017",
+      "enunciado": "¿Para qué sirve la opción `intr` en las líneas de fstab para NFS?",
+      "opciones": [
+        "Para habilitar la autenticación integrada con el servidor",
+        "Para evitar el bloqueo del sistema en caso de error de conexión",
+        "Para interrumpir el montaje si el servidor no responde en 5 segundos",
+        "Para montar el recurso en modo interactivo"
+      ],
+      "correcta": 1,
+      "explicacion": "La opción intr evita el bloqueo del sistema en caso de error al conectar con el servidor NFS."
+    },
+    {
+      "id": "si-6.3.5-018",
+      "enunciado": "¿Para qué sirve la opción `x-gvfs-show` en las líneas de fstab para NFS?",
+      "opciones": [
+        "Para mostrar las estadísticas de uso del recurso NFS",
+        "Para habilitar el acceso gráfico solo desde Nautilus",
+        "Para que el recurso se monte también gráficamente, además de en terminal",
+        "Para mostrar notificaciones cuando el recurso se monta correctamente"
+      ],
+      "correcta": 2,
+      "explicacion": "La opción x-gvfs-show hace que el recurso se monte gráficamente, además de en terminal, y aparezca en el explorador Nautilus."
+    },
+    {
+      "id": "si-6.3.5-019",
+      "enunciado": "¿Cuál sería la línea de fstab correcta para montar `/nfs/lectura` del servidor `192.168.100.1` en `/mnt/nfs/lectura` con las opciones del ejemplo?",
+      "opciones": [
+        "192.168.100.1:/nfs/lectura /mnt/nfs/lectura cifs ro,intr,x-gvfs-show 0 0",
+        "192.168.100.1:/nfs/lectura /mnt/nfs/lectura nfs ro,intr,x-gvfs-show 0 0",
+        "/mnt/nfs/lectura 192.168.100.1:/nfs/lectura nfs ro,intr,x-gvfs-show 0 0",
+        "192.168.100.1:/nfs/lectura /mnt/nfs/lectura nfs ro 0 0"
+      ],
+      "correcta": 1,
+      "explicacion": "La línea correcta es: 192.168.100.1:/nfs/lectura /mnt/nfs/lectura nfs ro,intr,x-gvfs-show 0 0."
+    },
+    {
+      "id": "si-6.3.5-020",
+      "enunciado": "¿Cuántas líneas se añaden en fstab en el ejemplo del cliente NFS?",
+      "opciones": [
+        "Una",
+        "Dos",
+        "Tres",
+        "Cuatro"
+      ],
+      "correcta": 1,
+      "explicacion": "Se añaden dos líneas: una para el recurso lectura y otra para el recurso escritura."
+    },
+    {
+      "id": "si-6.3.5-021",
+      "enunciado": "Tras configurar fstab con los recursos NFS, ¿qué ocurre en el explorador Nautilus al iniciar el equipo?",
+      "opciones": [
+        "Aparece una notificación pidiendo montar los recursos manualmente",
+        "Hay un acceso directo a las dos carpetas NFS",
+        "Se abre automáticamente una ventana con el contenido de cada carpeta",
+        "Nautilus muestra los recursos solo si el servidor está en la misma subred"
+      ],
+      "correcta": 1,
+      "explicacion": "Al iniciar el equipo, gracias a x-gvfs-show, aparece en el explorador Nautilus un acceso directo a las dos carpetas NFS."
+    },
+    {
+      "id": "si-6.3.5-022",
+      "enunciado": "¿Cómo se instala el soporte NFS en Windows?",
+      "opciones": [
+        "Descargando e instalando el paquete nfs-client desde Internet",
+        "Ejecutando el comando apt install nfs-common en PowerShell",
+        "Activando las características de Windows relacionadas con el servicio NFS",
+        "Instalando el paquete rpcbind desde el administrador de paquetes de Windows"
+      ],
+      "correcta": 2,
+      "explicacion": "Para instalar el soporte NFS en Windows hay que buscar en las características de Windows las relacionadas con el servicio NFS, marcarlas e instalarlas."
+    },
+    {
+      "id": "si-6.3.5-023",
+      "enunciado": "¿Qué opción ofrece la consola de administración de NFS en Windows?",
+      "opciones": [
+        "Configurar las carpetas compartidas del servidor NFS",
+        "Añadir nuevos recursos NFS montados",
+        "Deshabilitar el servicio encargado de gestionar NFS",
+        "Gestionar los permisos de acceso a los recursos NFS"
+      ],
+      "correcta": 2,
+      "explicacion": "En la consola de administración de NFS de Windows solo se da opción a deshabilitar el servicio encargado de gestionar NFS."
+    },
+    {
+      "id": "si-6.3.5-024",
+      "enunciado": "¿Qué notación se puede usar en Windows para montar carpetas NFS?",
+      "opciones": [
+        "La ruta de red en formato Linux: //192.168.100.1/nfs/lectura",
+        "La notación UNC",
+        "La ruta en formato de montaje NFS: 192.168.100.1:/nfs/lectura",
+        "La ruta de red CIFS: \\\\servidor\\recurso"
+      ],
+      "correcta": 1,
+      "explicacion": "La consola de NFS de Windows indica que se puede utilizar la notación UNC para montar las carpetas NFS."
+    },
+    {
+      "id": "si-6.3.5-025",
+      "enunciado": "¿Cuál es la función principal de NFS en un entorno de red?",
+      "opciones": [
+        "Proporcionar autenticación y autorización de usuarios en una red",
+        "Servir contenido web a través de HTTP/HTTPS",
+        "Gestionar direcciones IP y asignarlas dinámicamente a dispositivos",
+        "Permitir que los sistemas de archivos se compartan a través de una red, de forma que los usuarios accedan a archivos remotos como si estuvieran en su propio sistema"
+      ],
+      "correcta": 3,
+      "explicacion": "La función principal de NFS es permitir que los sistemas de archivos se compartan a través de una red, de modo que los usuarios accedan a archivos remotos como si estuvieran en su propio sistema."
+    }
+  ]
+}

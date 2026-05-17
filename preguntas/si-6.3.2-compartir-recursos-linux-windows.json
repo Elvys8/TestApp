@@ -264,90 +264,6 @@
       "explicacion": "Las secciones de recursos compartidos se añaden al final del archivo smb.conf."
     },
     {
-      "id": "si-6.3.2-023",
-      "enunciado": "En el ejemplo del material, ¿cuántos recursos compartidos se configuran?",
-      "opciones": [
-        "Uno",
-        "Dos",
-        "Tres",
-        "Cuatro"
-      ],
-      "correcta": 1,
-      "explicacion": "Se configuran dos recursos: [publico] con solo lectura para todos, y [escritura] con lectura y escritura para usuarios del grupo samba."
-    },
-    {
-      "id": "si-6.3.2-024",
-      "enunciado": "¿Qué permisos tiene el recurso compartido [publico] del ejemplo?",
-      "opciones": [
-        "Lectura y escritura para todos los usuarios",
-        "Solo lectura para usuarios autenticados",
-        "Solo lectura para todos, incluidos invitados",
-        "Lectura y escritura para el grupo samba"
-      ],
-      "correcta": 2,
-      "explicacion": "El recurso [publico] tiene read only = yes y guest ok = yes, por lo que es de solo lectura y accesible por invitados."
-    },
-    {
-      "id": "si-6.3.2-025",
-      "enunciado": "¿Qué permisos tiene el recurso compartido [escritura] del ejemplo?",
-      "opciones": [
-        "Solo lectura para usuarios del grupo samba",
-        "Lectura y escritura para usuarios del grupo samba",
-        "Lectura y escritura para todos los usuarios",
-        "Solo lectura para invitados"
-      ],
-      "correcta": 1,
-      "explicacion": "El recurso [escritura] tiene writeable = yes y valid users = @samba, por lo que permite lectura y escritura solo a los usuarios del grupo samba."
-    },
-    {
-      "id": "si-6.3.2-026",
-      "enunciado": "¿Cuál es la ruta (path) del recurso [publico] en el ejemplo?",
-      "opciones": [
-        "/samba/publico",
-        "/etc/samba/lectura",
-        "/samba/lectura",
-        "/home/samba/lectura"
-      ],
-      "correcta": 2,
-      "explicacion": "La ruta del recurso [publico] es /samba/lectura, según la configuración del archivo smb.conf del ejemplo."
-    },
-    {
-      "id": "si-6.3.2-027",
-      "enunciado": "¿Cuál es la ruta (path) del recurso [escritura] en el ejemplo?",
-      "opciones": [
-        "/samba/publico",
-        "/samba/escritura",
-        "/etc/samba/escritura",
-        "/home/samba/escritura"
-      ],
-      "correcta": 1,
-      "explicacion": "La ruta del recurso [escritura] es /samba/escritura."
-    },
-    {
-      "id": "si-6.3.2-028",
-      "enunciado": "En el recurso [publico], ¿qué valor tiene el parámetro `read only`?",
-      "opciones": [
-        "no",
-        "yes",
-        "El parámetro no aparece; por defecto es de lectura",
-        "depends"
-      ],
-      "correcta": 1,
-      "explicacion": "En el recurso [publico] el parámetro read only = yes, lo que impide modificar los archivos."
-    },
-    {
-      "id": "si-6.3.2-029",
-      "enunciado": "En el recurso [escritura], ¿qué parámetro indica que se permite escribir?",
-      "opciones": [
-        "read only = no",
-        "write ok = yes",
-        "writeable = yes",
-        "write access = yes"
-      ],
-      "correcta": 2,
-      "explicacion": "El parámetro writeable = yes en el bloque [escritura] indica que los usuarios autorizados pueden escribir en ese recurso."
-    },
-    {
       "id": "si-6.3.2-030",
       "enunciado": "¿Para qué sirve el parámetro `browseable = yes`?",
       "opciones": [
@@ -370,30 +286,6 @@
       ],
       "correcta": 2,
       "explicacion": "Con browseable = no el recurso está oculto; no aparece en el explorador, aunque sigue siendo accesible si se conoce su ruta."
-    },
-    {
-      "id": "si-6.3.2-032",
-      "enunciado": "¿Qué valor tiene `guest ok` en el recurso [publico]?",
-      "opciones": [
-        "no",
-        "yes",
-        "El parámetro no está definido",
-        "depends"
-      ],
-      "correcta": 1,
-      "explicacion": "En el recurso [publico] se ha configurado guest ok = yes, permitiendo el acceso a invitados."
-    },
-    {
-      "id": "si-6.3.2-033",
-      "enunciado": "¿Qué valor tiene `guest ok` en el recurso [escritura]?",
-      "opciones": [
-        "no",
-        "yes",
-        "El parámetro no está definido",
-        "inherit"
-      ],
-      "correcta": 0,
-      "explicacion": "En el recurso [escritura] se ha configurado guest ok = no, por lo que no se permite el acceso a invitados."
     },
     {
       "id": "si-6.3.2-034",

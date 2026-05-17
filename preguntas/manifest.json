@@ -19,6 +19,7 @@
   	"si-6.3.2-compartir-recursos-linux-windows.json",
   	"si-6.3.3-conexion-desde-maquinas-cliente.json",
   	"si-6.3.4-compartir-recursos-linux-nfs.json",
+  	"si-6.3.5-cliente-nfs.json",
   	"almacenamiento-de-informacion.json"
   ]
 }

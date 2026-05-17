@@ -18,18 +18,6 @@
       "explicacion": "Desde un cliente Windows se puede acceder a través del explorador en el apartado Red o con la ruta UNC."
     },
     {
-      "id": "si-6.3.3-002",
-      "enunciado": "¿Cuál es la ruta UNC utilizada en el ejemplo para conectarse al servidor Samba?",
-      "opciones": [
-        "//SistemasUbuntu",
-        "\\\\SistemasUbuntu",
-        "\\\\192.168.100.1\\samba",
-        "//samba/SistemasUbuntu"
-      ],
-      "correcta": 1,
-      "explicacion": "La ruta UNC utilizada en el ejemplo es \\\\SistemasUbuntu, que es el nombre NetBIOS del servidor."
-    },
-    {
       "id": "si-6.3.3-003",
       "enunciado": "¿Qué ocurre al hacer doble clic sobre un recurso compartido Samba desde el explorador de Windows?",
       "opciones": [
@@ -40,18 +28,6 @@
       ],
       "correcta": 1,
       "explicacion": "Al pulsar doble clic para realizar la conexión se solicita usuario y contraseña."
-    },
-    {
-      "id": "si-6.3.3-004",
-      "enunciado": "¿Con qué credenciales se accede al recurso compartido escritura en el ejemplo?",
-      "opciones": [
-        "Con el usuario administrador de Windows",
-        "Con el usuario invitado (guest)",
-        "Con el usuario juan",
-        "Con el usuario root del servidor Linux"
-      ],
-      "correcta": 2,
-      "explicacion": "En el ejemplo se utilizan las credenciales del usuario juan para acceder al recurso escritura."
     },
     {
       "id": "si-6.3.3-005",
@@ -194,18 +170,6 @@
       ],
       "correcta": 2,
       "explicacion": "Antes de ejecutar mount hay que crear la carpeta de montaje local: mkdir /mnt/escritura."
-    },
-    {
-      "id": "si-6.3.3-017",
-      "enunciado": "¿En qué ruta local se monta el recurso escritura en el ejemplo?",
-      "opciones": [
-        "/samba/escritura",
-        "/media/escritura",
-        "/mnt/escritura",
-        "/home/juan/escritura"
-      ],
-      "correcta": 2,
-      "explicacion": "El recurso escritura se monta en la carpeta local /mnt/escritura."
     },
     {
       "id": "si-6.3.3-018",
