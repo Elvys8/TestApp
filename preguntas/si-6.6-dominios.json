@@ -1,0 +1,225 @@
+{
+  "schema_version": 1,
+  "id": "si-6.6-dominios",
+  "asignatura": "Sistemas Informáticos",
+  "asignatura_color": "#1C3C6F",
+  "tema": "6.6 Dominios",
+  "preguntas": [
+    {
+      "id": "si-6.6-001",
+      "enunciado": "¿Cómo se define un dominio o directorio?",
+      "opciones": [
+        "Servidor que gestiona la autenticación de usuarios",
+        "Grupo lógico de recursos administrados centralmente",
+        "Estructura que agrupa recursos dentro de un dominio",
+        "Colección de cuentas de usuario gestionadas de forma descentralizada"
+      ],
+      "correcta": 1,
+      "explicacion": "Dominio o directorio: Grupo lógico de recursos administrados centralmente."
+    },
+    {
+      "id": "si-6.6-002",
+      "enunciado": "¿Qué son las Unidades Organizativas (OU)?",
+      "opciones": [
+        "Grupos de usuarios con los mismos permisos",
+        "Servidores secundarios dentro de un dominio",
+        "Estructuras que agrupan recursos dentro de un dominio y permiten aplicar políticas de grupo",
+        "Equipos conectados al dominio gestionados centralmente"
+      ],
+      "correcta": 2,
+      "explicacion": "Unidades Organizativas (OU): Estructuras que agrupan recursos dentro de un dominio y permiten aplicar políticas de grupo."
+    },
+    {
+      "id": "si-6.6-003",
+      "enunciado": "¿Qué significan las siglas OU?",
+      "opciones": [
+        "Organizational Users",
+        "Organizational Unit",
+        "Operating Unit",
+        "Online Users"
+      ],
+      "correcta": 1,
+      "explicacion": "OU son las siglas de Organizational Unit (Unidad Organizativa)."
+    },
+    {
+      "id": "si-6.6-004",
+      "enunciado": "¿Qué representa una entidad de tipo Usuario en un dominio?",
+      "opciones": [
+        "Un equipo conectado al dominio",
+        "Una persona o servicio que necesita acceder a recursos dentro de la red",
+        "Un servidor con privilegios de administración",
+        "Un grupo de equipos con los mismos permisos"
+      ],
+      "correcta": 1,
+      "explicacion": "Usuarios: Entidades que representan a personas o servicios que necesitan acceder a recursos dentro de la red."
+    },
+    {
+      "id": "si-6.6-005",
+      "enunciado": "¿Qué elementos definen a un usuario en el dominio para autenticarse?",
+      "opciones": [
+        "IP y certificado digital",
+        "Nombre y contraseña",
+        "Nombre de equipo y grupo de trabajo",
+        "Dirección MAC y contraseña"
+      ],
+      "correcta": 1,
+      "explicacion": "Los usuarios tienen un nombre y una contraseña para autentificarse en el dominio."
+    },
+    {
+      "id": "si-6.6-006",
+      "enunciado": "¿De qué dependen en parte los derechos y permisos de un usuario?",
+      "opciones": [
+        "Del sistema operativo instalado en su equipo",
+        "De su pertenencia a grupos",
+        "De la Unidad Organizativa a la que pertenece su equipo",
+        "Del controlador de dominio al que está conectado"
+      ],
+      "correcta": 1,
+      "explicacion": "Los usuarios tienen derechos y permisos, que vienen dados en parte por la pertenencia a grupos."
+    },
+    {
+      "id": "si-6.6-007",
+      "enunciado": "¿Qué son los grupos en un dominio?",
+      "opciones": [
+        "Colecciones de cuentas de usuario, equipos y otros grupos gestionados centralmente para simplificar la administración de permisos y recursos",
+        "Servidores agrupados para distribuir la carga de trabajo",
+        "Estructuras que aplican políticas de grupo a usuarios concretos",
+        "Conjuntos de dominios administrados por el mismo PDC"
+      ],
+      "correcta": 0,
+      "explicacion": "Grupos: Colecciones de cuentas de usuario, equipos y otros grupos que se gestionan de manera centralizada para simplificar la administración de permisos y recursos."
+    },
+    {
+      "id": "si-6.6-008",
+      "enunciado": "¿Para qué se gestionan los grupos de manera centralizada?",
+      "opciones": [
+        "Para facilitar la instalación de software en varios equipos a la vez",
+        "Para simplificar la administración de permisos y recursos",
+        "Para permitir la autenticación sin contraseña",
+        "Para aplicar políticas de grupo a las Unidades Organizativas"
+      ],
+      "correcta": 1,
+      "explicacion": "Los grupos se gestionan de manera centralizada para simplificar la administración de permisos y recursos."
+    },
+    {
+      "id": "si-6.6-009",
+      "enunciado": "¿Qué son los equipos dentro de un dominio?",
+      "opciones": [
+        "Servidores que replican la información del controlador de dominio",
+        "Máquinas virtuales usadas para pruebas de red",
+        "Sistemas informáticos integrados en la red gestionada por un controlador de dominio",
+        "Dispositivos que actúan como controladores secundarios"
+      ],
+      "correcta": 2,
+      "explicacion": "Equipos: Sistemas informáticos que se integran en la red gestionada por un controlador de dominio. Son los equipos conectados al dominio."
+    },
+    {
+      "id": "si-6.6-010",
+      "enunciado": "¿Por qué se dan de alta los equipos en el dominio?",
+      "opciones": [
+        "Para que puedan instalar software de forma autónoma",
+        "Para poder ser administrados de forma centralizada",
+        "Para obtener una dirección IP fija automáticamente",
+        "Para acceder a Internet a través del controlador de dominio"
+      ],
+      "correcta": 1,
+      "explicacion": "Los equipos son dados de alta para así poder ser administrados de forma centralizada."
+    },
+    {
+      "id": "si-6.6-011",
+      "enunciado": "¿Qué es un controlador de dominio?",
+      "opciones": [
+        "Servidor que almacena y gestiona un directorio de cuentas e información de seguridad, actuando como autoridad central para la autenticación y el control de acceso",
+        "Equipo cliente con privilegios elevados dentro del dominio",
+        "Servidor que distribuye direcciones IP a los equipos del dominio",
+        "Servidor que almacena los archivos compartidos del dominio"
+      ],
+      "correcta": 0,
+      "explicacion": "Controlador de dominio: Servidor que almacena y gestiona un directorio de cuentas junto con información de seguridad para un dominio. Actúa como una autoridad central dentro de un dominio de red, gestionando la autenticación y el control de acceso para todos los usuarios y dispositivos conectados."
+    },
+    {
+      "id": "si-6.6-012",
+      "enunciado": "¿Qué gestiona el controlador de dominio para todos los usuarios y dispositivos conectados?",
+      "opciones": [
+        "La asignación de direcciones IP y el acceso a Internet",
+        "La autenticación y el control de acceso",
+        "La instalación remota de aplicaciones",
+        "La sincronización de archivos entre equipos"
+      ],
+      "correcta": 1,
+      "explicacion": "El controlador de dominio actúa como una autoridad central gestionando la autenticación y el control de acceso para todos los usuarios y dispositivos conectados."
+    },
+    {
+      "id": "si-6.6-013",
+      "enunciado": "¿Qué es el PDC?",
+      "opciones": [
+        "Protocolo de distribución de cuentas",
+        "Controlador primario de dominio; el servidor principal de la red",
+        "Servidor secundario que replica los datos del dominio",
+        "Programa cliente para conectarse a un dominio"
+      ],
+      "correcta": 1,
+      "explicacion": "Lo primero que necesitamos para poder trabajar con un dominio es instalar lo que llamamos un controlador primario de dominio (PDC), que sería el servidor principal de la red."
+    },
+    {
+      "id": "si-6.6-014",
+      "enunciado": "¿Qué significan las siglas PDC?",
+      "opciones": [
+        "Primary Data Center",
+        "Primary Domain Controller",
+        "Protocol Domain Configuration",
+        "Primary Directory Control"
+      ],
+      "correcta": 1,
+      "explicacion": "PDC son las siglas de Primary Domain Controller (Controlador primario de dominio)."
+    },
+    {
+      "id": "si-6.6-015",
+      "enunciado": "¿Por qué el material opta por trabajar con Active Directory?",
+      "opciones": [
+        "Porque es el único compatible con Linux",
+        "Por ser el sistema más extendido y sencillo de utilizar",
+        "Porque es gratuito y de código abierto",
+        "Porque no requiere hardware dedicado"
+      ],
+      "correcta": 1,
+      "explicacion": "Asumimos que vamos a trabajar con Active Directory, por ser el sistema más extendido y sencillo de utilizar."
+    },
+    {
+      "id": "si-6.6-016",
+      "enunciado": "¿Cuál es el inconveniente de instalar Windows Server como PDC?",
+      "opciones": [
+        "Tiene un coste de licencia muy elevado",
+        "No es compatible con equipos cliente Linux",
+        "Es un sistema operativo diferente que requiere aprender a trabajar con él",
+        "Solo puede gestionar un número limitado de usuarios"
+      ],
+      "correcta": 2,
+      "explicacion": "Esta opción tiene el inconveniente de que Windows Server es un sistema operativo diferente y tendríamos que aprender a trabajar con él."
+    },
+    {
+      "id": "si-6.6-017",
+      "enunciado": "¿Cuál es la segunda opción que menciona el material para implementar un PDC?",
+      "opciones": [
+        "Instalar un servidor DNS en Linux",
+        "Instalar y configurar el servidor Samba como PDC",
+        "Usar un controlador de dominio en la nube",
+        "Configurar un servidor LDAP en Ubuntu"
+      ],
+      "correcta": 1,
+      "explicacion": "La segunda opción es instalar y configurar el servidor Samba como PDC."
+    },
+    {
+      "id": "si-6.6-018",
+      "enunciado": "¿Cómo califica el material la opción de usar Samba como PDC?",
+      "opciones": [
+        "La más recomendada por su simplicidad",
+        "La más económica pero limitada en funciones",
+        "Más complicada de lo que parece",
+        "Equivalente en dificultad a instalar Windows Server"
+      ],
+      "correcta": 2,
+      "explicacion": "Instalar y configurar el servidor Samba como PDC es una opción más complicada de lo que parece."
+    }
+  ]
+}

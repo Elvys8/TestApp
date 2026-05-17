@@ -42,18 +42,6 @@
       "explicacion": "Dentro de la configuración del sistema hay un apartado dedicado al Escritorio Remoto. Si entramos en él veremos si está o no activado."
     },
     {
-      "id": "si-6.5.2-004",
-      "enunciado": "¿Qué ocurre al activar el Escritorio remoto en Windows?",
-      "opciones": [
-        "El equipo se reinicia automáticamente",
-        "Aparece una pantalla de confirmación",
-        "Se abre automáticamente el puerto en el cortafuegos",
-        "Se crea un usuario específico para conexiones remotas"
-      ],
-      "correcta": 1,
-      "explicacion": "Cuando lo activemos, nos aparecerá una pantalla de confirmación."
-    },
-    {
       "id": "si-6.5.2-005",
       "enunciado": "¿Qué configuración adicional ofrece el apartado de Escritorio remoto en Windows?",
       "opciones": [
@@ -150,18 +138,6 @@
       "explicacion": "Simplemente hay que abrir la configuración de Ubuntu, en el apartado sistema, y entrar en el apartado de Escritorio remoto."
     },
     {
-      "id": "si-6.5.2-013",
-      "enunciado": "¿Cuál de las siguientes acciones NO es posible al configurar el escritorio remoto en Ubuntu?",
-      "opciones": [
-        "Asignar un usuario para la conexión remota",
-        "Asignar una contraseña para la conexión remota",
-        "Deshabilitar el permiso para interactuar con la interfaz remota",
-        "Limitar el número de conexiones simultáneas"
-      ],
-      "correcta": 3,
-      "explicacion": "Al configurar el escritorio remoto en Ubuntu se puede asignar usuario, contraseña, o incluso deshabilitar el permiso para interactuar con la interfaz remota. No se menciona la posibilidad de limitar conexiones simultáneas."
-    },
-    {
       "id": "si-6.5.2-014",
       "enunciado": "Una vez habilitado el escritorio remoto en Ubuntu, ¿desde qué sistemas puede conectarse un cliente?",
       "opciones": [
@@ -187,7 +163,7 @@
     },
     {
       "id": "si-6.5.2-016",
-      "enunciado": "¿Para qué sirven los túneles SSH mencionados en el apartado «Para saber más»?",
+      "enunciado": "¿Para qué sirven los túneles SSH?",
       "opciones": [
         "Para aumentar la velocidad de la conexión SSH",
         "Para cifrar y hacer seguras conexiones de protocolos que habitualmente no lo son",

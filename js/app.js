@@ -343,10 +343,11 @@ function renderAsignatura(name) {
         <label class="panel__label">Tamaño de la sesión</label>
         <div class="choice-group" id="size-group">
           <button class="choice-chip" type="button" data-size="10">10</button>
-          <button class="choice-chip" type="button" data-size="20">20</button>
+          <button class="choice-chip is-active" type="button" data-size="20">20</button>
           <button class="choice-chip" type="button" data-size="50">50</button>
-          <button class="choice-chip is-active" type="button" data-size="all">Todas</button>
-        </div>
+          <button class="choice-chip" type="button" data-size="all">Todas</button>
+        <button class="btn btn--primary" id="start-test" type="button">Empezar test →</button>
+      </div>
       </div>
 
       <div class="panel__field">
@@ -372,9 +373,6 @@ function renderAsignatura(name) {
         `).join("")}
       </div>
 
-      <div style="display:flex; justify-content:flex-end;">
-        <button class="btn btn--primary" id="start-test" type="button">Empezar test →</button>
-      </div>
     </div>
 
     <p class="panel__title" style="margin: 24px 0 10px;">Temas</p>

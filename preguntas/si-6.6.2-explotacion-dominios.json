@@ -1,0 +1,261 @@
+{
+  "schema_version": 1,
+  "id": "si-6.6.2-explotacion-dominios",
+  "asignatura": "Sistemas Informáticos",
+  "asignatura_color": "#1C3C6F",
+  "tema": "6.6.2 Explotación de dominios",
+  "preguntas": [
+    {
+      "id": "si-6.6.2-001",
+      "enunciado": "¿Qué herramienta se usa para crear usuarios y grupos en un dominio con Active Directory?",
+      "opciones": [
+        "Administrador del Servidor",
+        "Usuarios y grupos locales",
+        "Usuarios y grupos de Active Directory",
+        "Directiva de seguridad local"
+      ],
+      "correcta": 2,
+      "explicacion": "La creación de usuarios y grupos es similar a la de Windows 11, aunque se utiliza otra herramienta, 'Usuarios y grupos de Active Directory'."
+    },
+    {
+      "id": "si-6.6.2-002",
+      "enunciado": "¿Desde qué menú del Administrador del Servidor se accede a la herramienta de usuarios y grupos de Active Directory?",
+      "opciones": [
+        "Administrar",
+        "Ver",
+        "Herramientas",
+        "Archivo"
+      ],
+      "correcta": 2,
+      "explicacion": "Para acceder a esa herramienta, sólo tenemos que abrir el menú 'Herramientas' del Administrador del Servidor y buscarla."
+    },
+    {
+      "id": "si-6.6.2-003",
+      "enunciado": "¿Qué privilegios especiales se asignan a los usuarios creados en el ejemplo del material?",
+      "opciones": [
+        "Privilegios de administrador del dominio",
+        "Privilegios de operador de copia de seguridad",
+        "Ninguno; solo se les asigna una contraseña",
+        "Privilegios de administrador local del servidor"
+      ],
+      "correcta": 2,
+      "explicacion": "Estos usuarios no tendrán privilegios especiales, les asignamos una contraseña y ya está."
+    },
+    {
+      "id": "si-6.6.2-004",
+      "enunciado": "¿Por qué no puede haber un Directorio Activo sin un servidor DNS asociado?",
+      "opciones": [
+        "Porque DNS gestiona la autenticación de usuarios en el dominio",
+        "Porque todos los nombres dentro del dominio son nombres DNS",
+        "Porque DNS asigna las direcciones IP a los equipos del dominio",
+        "Porque Active Directory usa DNS para cifrar las comunicaciones"
+      ],
+      "correcta": 1,
+      "explicacion": "AD va ligado al servicio DNS, de forma que no puede haber un Directorio Activo sin un servidor DNS asociado. Esto es así porque todos los nombres dentro del dominio son nombres DNS."
+    },
+    {
+      "id": "si-6.6.2-005",
+      "enunciado": "¿Qué formato tiene el nombre DNS de un usuario del dominio?",
+      "opciones": [
+        "nombre.dominio",
+        "dominio/nombre",
+        "nombre@dominio",
+        "nombre\\dominio"
+      ],
+      "correcta": 2,
+      "explicacion": "Los usuarios tienen un nombre DNS: el usuario administrador se llama administrador@magl.com; juan se llama juan@magl.com."
+    },
+    {
+      "id": "si-6.6.2-006",
+      "enunciado": "Según el ejemplo del material, ¿cómo se llamaría el usuario juan en el dominio magl.com?",
+      "opciones": [
+        "magl.com/juan",
+        "juan.magl.com",
+        "juan@magl.com",
+        "juan\\magl.com"
+      ],
+      "correcta": 2,
+      "explicacion": "Los usuarios tienen un nombre DNS: juan se llama juan@magl.com."
+    },
+    {
+      "id": "si-6.6.2-007",
+      "enunciado": "¿Qué formato tiene el nombre DNS de un equipo dentro del dominio?",
+      "opciones": [
+        "equipo@dominio.com",
+        "equipo.dominio.com",
+        "dominio/equipo",
+        "equipo\\dominio.com"
+      ],
+      "correcta": 1,
+      "explicacion": "Los equipos tienen también nombre dentro de ese espacio DNS: equipo1.magl.com, por ejemplo."
+    },
+    {
+      "id": "si-6.6.2-008",
+      "enunciado": "¿Qué debe incluir el equipo cliente en su configuración IP para poder unirse al dominio?",
+      "opciones": [
+        "La IP del servidor de archivos del dominio",
+        "La IP del PDC como servidor DNS",
+        "La IP del servidor DHCP del dominio",
+        "La dirección de broadcast del dominio"
+      ],
+      "correcta": 1,
+      "explicacion": "Los equipos clientes han de incluir, en su configuración IP, la dirección de nuestro PDC como servidor DNS adicional."
+    },
+    {
+      "id": "si-6.6.2-009",
+      "enunciado": "¿Cuántas opciones menciona el material para asignar el servidor DNS al cliente?",
+      "opciones": [
+        "Una: siempre manualmente",
+        "Tres: manual, DHCP o mediante GPO",
+        "Dos: manualmente o cambiando la configuración del servidor DHCP",
+        "Dos: mediante DHCP o mediante script"
+      ],
+      "correcta": 2,
+      "explicacion": "Para llevar a cabo esto tenemos dos opciones: lo cambiamos a mano, o cambiamos la configuración del servidor DHCP."
+    },
+    {
+      "id": "si-6.6.2-010",
+      "enunciado": "¿Qué opción escoge el material para asignar el DNS al cliente y por qué?",
+      "opciones": [
+        "Manual, por sencillez",
+        "DHCP, por ser más automático",
+        "Script, por ser más rápido en varios equipos",
+        "GPO, por ser la opción recomendada en dominios"
+      ],
+      "correcta": 0,
+      "explicacion": "Por sencillez lo haremos manualmente."
+    },
+    {
+      "id": "si-6.6.2-011",
+      "enunciado": "¿Cómo se verifica que el servidor DNS está correctamente configurado en el cliente antes de unirse al dominio?",
+      "opciones": [
+        "Ejecutando nslookup contra el PDC",
+        "Comprobando la dirección IP del servidor DNS en la configuración de red",
+        "Haciendo un ping al nombre del dominio",
+        "Intentando abrir la herramienta de Active Directory desde el cliente"
+      ],
+      "correcta": 2,
+      "explicacion": "Una vez tenemos asignado el servidor DNS, comprobamos si es correcto o no haciendo simplemente un ping a nuestro dominio."
+    },
+    {
+      "id": "si-6.6.2-012",
+      "enunciado": "¿Qué herramienta de Windows se usa para dar de alta un equipo en el dominio?",
+      "opciones": [
+        "Propiedades del sistema",
+        "Centro de redes y recursos compartidos",
+        "Obtener acceso a trabajo o escuela",
+        "Administrador de equipos"
+      ],
+      "correcta": 2,
+      "explicacion": "Para darnos de alta en el dominio tenemos que buscar la herramienta 'Obtener acceso a trabajo o escuela', que aparecerá en la configuración de Windows."
+    },
+    {
+      "id": "si-6.6.2-013",
+      "enunciado": "Al iniciar el proceso de unión al dominio, ¿qué solicita primero la herramienta?",
+      "opciones": [
+        "El nombre del dominio al que unirse",
+        "Credenciales de usuario Microsoft",
+        "Las credenciales del administrador del dominio",
+        "La dirección IP del PDC"
+      ],
+      "correcta": 1,
+      "explicacion": "Iniciamos el proceso pulsando en conectar, y nos pide en primer lugar unas credenciales de usuario Microsoft."
+    },
+    {
+      "id": "si-6.6.2-014",
+      "enunciado": "¿Qué opción hay que pulsar para ignorar la solicitud de cuenta Microsoft y unirse a un dominio local?",
+      "opciones": [
+        "\"Conectar con un dominio corporativo\"",
+        "\"Configuración avanzada\"",
+        "\"Unir a un dominio local de Active Directory\"",
+        "\"Omitir y continuar\""
+      ],
+      "correcta": 2,
+      "explicacion": "Hacemos caso omiso y pulsamos en donde indica 'unir a un dominio local de Active Directory'."
+    },
+    {
+      "id": "si-6.6.2-015",
+      "enunciado": "¿Qué usuario tiene privilegios para dar de alta un equipo en el dominio?",
+      "opciones": [
+        "Cualquier usuario del dominio",
+        "El usuario local del equipo cliente",
+        "El administrador del dominio",
+        "Cualquier usuario del grupo Operadores de dominio"
+      ],
+      "correcta": 2,
+      "explicacion": "El único usuario con privilegios para darnos de alta en el dominio es el administrador, así que ponemos sus credenciales."
+    },
+    {
+      "id": "si-6.6.2-016",
+      "enunciado": "Tras introducir las credenciales del administrador al unirse al dominio, ¿qué se pregunta a continuación?",
+      "opciones": [
+        "Si se desea instalar las políticas de grupo del dominio",
+        "Si el administrador del dominio también será administrador en el equipo cliente",
+        "Si se desea reiniciar el equipo inmediatamente",
+        "Si se quiere crear un perfil local para el usuario administrador"
+      ],
+      "correcta": 1,
+      "explicacion": "Una vez hayamos introducido las credenciales del administrador se nos pregunta si ese nuevo usuario va a ser administrador también en este equipo cliente o no. Lo normal es que sí."
+    },
+    {
+      "id": "si-6.6.2-017",
+      "enunciado": "¿Qué ocurre automáticamente tras completar el proceso de unión al dominio?",
+      "opciones": [
+        "Se descarga e instala la directiva de grupo",
+        "Se crea un perfil local para cada usuario del dominio",
+        "El equipo se reinicia",
+        "Aparece un mensaje de confirmación y el equipo queda listo sin reinicio"
+      ],
+      "correcta": 2,
+      "explicacion": "Después se reiniciará el equipo y aparecerá la pantalla de inicio pero con cambios que indican que estamos en el dominio."
+    },
+    {
+      "id": "si-6.6.2-018",
+      "enunciado": "¿Qué indica que el equipo ya pertenece al dominio al volver a arrancar tras la unión?",
+      "opciones": [
+        "Aparece el logo del dominio en el escritorio",
+        "La pantalla de inicio muestra cambios que indican que estamos en el dominio",
+        "Se abre automáticamente la herramienta de Active Directory",
+        "El nombre del equipo cambia visiblemente en la barra de tareas"
+      ],
+      "correcta": 1,
+      "explicacion": "Después se reiniciará el equipo y aparecerá la pantalla de inicio pero con cambios que indican que estamos en el dominio."
+    },
+    {
+      "id": "si-6.6.2-019",
+      "enunciado": "¿Cómo se inicia sesión con un usuario del dominio en un equipo cliente?",
+      "opciones": [
+        "Escribiendo directamente el usuario y la contraseña en la pantalla principal",
+        "Pulsando en \"otros usuarios\" e introduciendo sus credenciales",
+        "Abriendo primero la VPN del dominio",
+        "Seleccionando el dominio en un desplegable de la pantalla de inicio"
+      ],
+      "correcta": 1,
+      "explicacion": "Para iniciar sesión con un usuario del dominio, basta con pulsar en 'otros usuarios' e introducir sus credenciales."
+    },
+    {
+      "id": "si-6.6.2-020",
+      "enunciado": "¿Puede un usuario del dominio iniciar sesión en un equipo cliente aunque no exista como usuario local en ese equipo?",
+      "opciones": [
+        "Sí, porque sus credenciales están en el dominio",
+        "No; primero hay que crear el usuario en local",
+        "Solo si el administrador lo ha añadido manualmente al equipo",
+        "Solo si el equipo tiene conexión activa al PDC en ese momento"
+      ],
+      "correcta": 0,
+      "explicacion": "El usuario 'juan' no existe en el equipo en local, pero sí está en el dominio, así que podemos iniciar sesión con él sin problema."
+    },
+    {
+      "id": "si-6.6.2-021",
+      "enunciado": "¿En cuántos equipos del dominio puede iniciar sesión un usuario del dominio?",
+      "opciones": [
+        "Solo en el equipo donde se creó su cuenta",
+        "En un máximo de cinco equipos simultáneamente",
+        "En cualquier equipo dado de alta en el dominio",
+        "Solo en equipos donde el administrador lo haya autorizado expresamente"
+      ],
+      "correcta": 2,
+      "explicacion": "El usuario podrá iniciar sesión en este y en cualquier otro equipo dado de alta en el dominio."
+    }
+  ]
+}

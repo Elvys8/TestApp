@@ -131,7 +131,7 @@
       "opciones": [
         "El paquete ssh-client",
         "El paquete openssh",
-        "Nada; no hay que instalar nada en el cliente",
+        "No hay que instalar nada en el cliente",
         "Un cliente FTP compatible con SSH"
       ],
       "correcta": 2,

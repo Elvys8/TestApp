@@ -209,15 +209,17 @@ function attachQuestionHandlers() {
     }, 700);
   });
 
-  // Icono "i": muestra la explicación de la pregunta en un modal
+  // Icono "i": muestra la explicación inline bajo las opciones
   const infoBtn = mountEl.querySelector("#info-btn");
   if (infoBtn) {
     infoBtn.addEventListener("click", () => {
-      ui.modal({
-        title: "Explicación",
-        body: `<p style="margin: 0;">${ui.escapeHtml(q.explicacion)}</p>`,
-        actions: [{ id: "ok", label: "Cerrar", kind: "btn--ghost" }],
-      });
+      const footer = mountEl.querySelector("#test-footer");
+      if (footer && !footer.querySelector(".explanation")) {
+        footer.insertAdjacentHTML(
+          "afterbegin",
+          `<p class="explanation">${ui.escapeHtml(q.explicacion)}</p>`
+        );
+      }
     });
   }
 
@@ -252,11 +254,10 @@ async function handleAnswer(chosenOrig) {
 
   _state.answers.push({ questionId: q.id, correct: isCorrect });
 
+  const footer = mountEl.querySelector("#test-footer");
+
   if (isCorrect) {
-    // Auto-avance breve para que dé tiempo a ver el verde.
-    // Quitamos el foco del botón antes de re-renderizar para evitar
-    // que iOS Safari "transfiera" el estado táctil a la nueva opción
-    // que caiga en la misma posición.
+    // Acierto: auto-avance siempre (sin mostrar explicación).
     setTimeout(() => {
       if (document.activeElement && document.activeElement.blur) {
         document.activeElement.blur();
@@ -265,12 +266,10 @@ async function handleAnswer(chosenOrig) {
       renderQuestion();
     }, 700);
   } else {
-    // Mostrar explicación (si existe) y botón "Siguiente"
-    const footer = mountEl.querySelector("#test-footer");
-    let explanationHtml = "";
-    if (q.explicacion && q.explicacion.trim()) {
-      explanationHtml = `<p class="explanation">${ui.escapeHtml(q.explicacion)}</p>`;
-    }
+    // Fallo: mostrar explicación si existe y esperar al botón "Siguiente".
+    const explanationHtml = q.explicacion && q.explicacion.trim()
+      ? `<p class="explanation">${ui.escapeHtml(q.explicacion)}</p>`
+      : "";
     footer.innerHTML = `
       ${explanationHtml}
       <div style="display:flex; justify-content:flex-end;">
@@ -278,6 +277,9 @@ async function handleAnswer(chosenOrig) {
       </div>
     `;
     mountEl.querySelector("#next-btn").addEventListener("click", () => {
+      if (document.activeElement && document.activeElement.blur) {
+        document.activeElement.blur();
+      }
       _state.currentIdx++;
       renderQuestion();
     });

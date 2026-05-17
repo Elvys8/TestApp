@@ -1,0 +1,345 @@
+{
+  "schema_version": 1,
+  "id": "si-6.6.1-windows-server-directorio-activo",
+  "asignatura": "Sistemas Informáticos",
+  "asignatura_color": "#1C3C6F",
+  "tema": "6.6.1 Windows Server y Directorio Activo",
+  "preguntas": [
+    {
+      "id": "si-6.6.1-001",
+      "enunciado": "¿Qué versión de Windows Server recomienda instalar el material?",
+      "opciones": [
+        "Windows Server 2016",
+        "Windows Server 2019",
+        "Windows Server 2022",
+        "Windows Server 2025"
+      ],
+      "correcta": 2,
+      "explicacion": "Recomiendo descargar la última versión, Windows Server 2022."
+    },
+    {
+      "id": "si-6.6.1-002",
+      "enunciado": "¿Cuánta RAM mínima debe tener la máquina virtual para instalar Windows Server?",
+      "opciones": [
+        "2 GB",
+        "4 GB",
+        "8 GB",
+        "1 GB"
+      ],
+      "correcta": 1,
+      "explicacion": "Creamos una máquina que tenga por lo menos 4GB de RAM, y dos procesadores."
+    },
+    {
+      "id": "si-6.6.1-003",
+      "enunciado": "¿Cuántos procesadores mínimos se recomiendan para la máquina virtual de Windows Server?",
+      "opciones": [
+        "Uno",
+        "Dos",
+        "Cuatro",
+        "El material no especifica número de procesadores"
+      ],
+      "correcta": 1,
+      "explicacion": "Creamos una máquina que tenga por lo menos 4GB de RAM, y dos procesadores."
+    },
+    {
+      "id": "si-6.6.1-004",
+      "enunciado": "¿Qué versión hay que escoger durante la instalación de Windows Server para obtener interfaz gráfica?",
+      "opciones": [
+        "La primera opción, que viene por defecto",
+        "Server Core con experiencia de escritorio",
+        "La segunda opción: Standard con experiencia de escritorio",
+        "La versión Datacenter"
+      ],
+      "correcta": 2,
+      "explicacion": "Debemos escoger la segunda, que es la versión 'Standard', pero con 'experiencia de escritorio'."
+    },
+    {
+      "id": "si-6.6.1-005",
+      "enunciado": "¿Qué se instala si se escoge la primera opción que aparece por defecto en el instalador de Windows Server?",
+      "opciones": [
+        "La versión con interfaz gráfica completa",
+        "Un servidor sin interfaz gráfica (Server Core)",
+        "La versión Datacenter con escritorio",
+        "Windows Server en modo de evaluación"
+      ],
+      "correcta": 1,
+      "explicacion": "Si escogemos la primera, que viene por defecto, instalaremos un servidor sin interfaz gráfica (Server Core)."
+    },
+    {
+      "id": "si-6.6.1-006",
+      "enunciado": "¿Con qué usuario se inicia sesión al terminar la instalación de Windows Server?",
+      "opciones": [
+        "Usuario",
+        "Administrador",
+        "Root",
+        "Admin"
+      ],
+      "correcta": 1,
+      "explicacion": "Se nos pedirá aportar las credenciales (contraseña) de un usuario, que es el Administrador del sistema."
+    },
+    {
+      "id": "si-6.6.1-007",
+      "enunciado": "¿Qué combinación de teclas se pide al iniciar sesión en Windows Server?",
+      "opciones": [
+        "CTRL+ALT+DEL",
+        "CTRL+ALT+SUPR",
+        "CTRL+SHIFT+ESC",
+        "ALT+F4"
+      ],
+      "correcta": 1,
+      "explicacion": "A la hora de iniciar sesión en Windows Server, se nos pide siempre pulsar CTRL+ALT+SUPR."
+    },
+    {
+      "id": "si-6.6.1-008",
+      "enunciado": "¿Cuál es el equivalente a CTRL+ALT+SUPR en VirtualBox?",
+      "opciones": [
+        "CTRL Izquierdo + ALT",
+        "CTRL Derecho + SUPR",
+        "CTRL Derecho + ALT + SUPR",
+        "ALT Derecho + SUPR"
+      ],
+      "correcta": 1,
+      "explicacion": "Esa combinación con VirtualBox se resume en CTRL Derecho + SUPR, aunque también podemos ejecutarla a través del menú Entrada > teclado."
+    },
+    {
+      "id": "si-6.6.1-009",
+      "enunciado": "¿Qué aplicación arranca automáticamente cada vez que se inicia sesión en Windows Server?",
+      "opciones": [
+        "Panel de control",
+        "Consola de administración de Microsoft",
+        "Administrador del Servidor",
+        "Active Directory Users and Computers"
+      ],
+      "correcta": 2,
+      "explicacion": "Cuando iniciamos sesión en Windows Server siempre arranca de forma automática la aplicación 'Administrador del Servidor'. Es una herramienta imprescindible en la administración de Windows Server."
+    },
+    {
+      "id": "si-6.6.1-010",
+      "enunciado": "¿Por qué el PDC no debe tener IP dinámica?",
+      "opciones": [
+        "Porque DHCP no funciona en Windows Server",
+        "Porque la IP dinámica no es compatible con Active Directory",
+        "Porque un PDC debe tener IP fija para garantizar su localización estable en la red",
+        "Porque la IP dinámica consume más recursos del servidor"
+      ],
+      "correcta": 2,
+      "explicacion": "Tiene IP dinámica, ya que teníamos un servidor de infraestructura con DHCP en nuestra red interna, y un PDC no debe tener esa configuración, debe tener IP fija."
+    },
+    {
+      "id": "si-6.6.1-011",
+      "enunciado": "¿Desde qué sección del Administrador del Servidor se configura la IP y el nombre del equipo?",
+      "opciones": [
+        "Servidor Remoto",
+        "Servidor Local",
+        "Panel de Inicio",
+        "Herramientas"
+      ],
+      "correcta": 1,
+      "explicacion": "Dentro del mismo Administrador del servidor nos vamos a la sección 'Servidor Local' y tenemos acceso directo para modificar tanto la IP como el nombre del equipo en la red."
+    },
+    {
+      "id": "si-6.6.1-012",
+      "enunciado": "¿Qué IP de ejemplo se asigna al PDC en el material?",
+      "opciones": [
+        "192.168.1.1",
+        "192.168.100.1",
+        "192.168.100.10",
+        "10.0.0.1"
+      ],
+      "correcta": 2,
+      "explicacion": "Le asignamos una IP sencilla de recordar, como por ejemplo 192.168.100.10."
+    },
+    {
+      "id": "si-6.6.1-013",
+      "enunciado": "¿Qué formato sigue el nombre del equipo PDC según el material?",
+      "opciones": [
+        "SERVIDOR-nombre",
+        "DC-nombre",
+        "PDC-nombre",
+        "AD-nombre"
+      ],
+      "correcta": 2,
+      "explicacion": "El nombre del equipo va a ser PDC-nombre. En el ejemplo, PDC-MAGL."
+    },
+    {
+      "id": "si-6.6.1-014",
+      "enunciado": "¿Qué ocurre cuando se intenta apagar o reiniciar manualmente Windows Server?",
+      "opciones": [
+        "Se apaga directamente sin ninguna confirmación",
+        "Pregunta por qué se quiere reiniciar, registrando el motivo",
+        "Solicita la contraseña del administrador antes de reiniciar",
+        "Muestra un aviso pero no registra nada"
+      ],
+      "correcta": 1,
+      "explicacion": "Una cosa que pasa con Windows Server cuando queremos apagar o reiniciar manualmente el equipo es que nos pregunta por qué queremos reiniciar. Es una medida interesante, ya que así registra todos los reinicios y apagados con un supuesto motivo asociado."
+    },
+    {
+      "id": "si-6.6.1-015",
+      "enunciado": "¿Qué son los roles en Windows Server?",
+      "opciones": [
+        "Usuarios con privilegios elevados en el sistema",
+        "Conjuntos de funciones y características que permiten al servidor desempeñar tareas específicas",
+        "Módulos de seguridad para proteger el servidor",
+        "Servicios de terceros instalables desde la tienda de Microsoft"
+      ],
+      "correcta": 1,
+      "explicacion": "Los roles en Windows Server son conjuntos de funciones y características que permiten al servidor desempeñar tareas específicas."
+    },
+    {
+      "id": "si-6.6.1-016",
+      "enunciado": "¿Cuál de los siguientes NO se menciona en el material como ejemplo de rol en Windows Server?",
+      "opciones": [
+        "DNS",
+        "DHCP",
+        "Directorio Activo",
+        "FTP"
+      ],
+      "correcta": 3,
+      "explicacion": "Los ejemplos de roles mencionados son DNS, DHCP y Directorio Activo. FTP no se menciona como ejemplo de rol."
+    },
+    {
+      "id": "si-6.6.1-017",
+      "enunciado": "¿Desde qué menú se instala un rol en Windows Server?",
+      "opciones": [
+        "Herramientas",
+        "Ver",
+        "Administrar",
+        "Archivo"
+      ],
+      "correcta": 2,
+      "explicacion": "Para instalar un rol simplemente nos vamos al menú 'Administrar' y escogemos 'Agregar roles y características'."
+    },
+    {
+      "id": "si-6.6.1-018",
+      "enunciado": "¿Qué opción hay que seleccionar en el menú Administrar para instalar un rol?",
+      "opciones": [
+        "Instalar roles del sistema",
+        "Agregar roles y características",
+        "Configurar este servidor local",
+        "Administrar roles activos"
+      ],
+      "correcta": 1,
+      "explicacion": "Para instalar un rol simplemente nos vamos al menú 'Administrar' y escogemos 'Agregar roles y características'."
+    },
+    {
+      "id": "si-6.6.1-019",
+      "enunciado": "¿Qué tipo de instalación hay que escoger en el asistente para instalar Directorio Activo?",
+      "opciones": [
+        "Servicios de escritorio remoto",
+        "Instalación basada en características o en roles",
+        "Instalación en clúster",
+        "Instalación desatendida"
+      ],
+      "correcta": 1,
+      "explicacion": "Hay que escoger instalación basada en características o en roles, en lugar de 'Servicios de escritorio remoto'."
+    },
+    {
+      "id": "si-6.6.1-020",
+      "enunciado": "¿Qué rol hay que seleccionar para instalar el Directorio Activo?",
+      "opciones": [
+        "Active Directory Federation Services",
+        "Active Directory Lightweight Directory Services",
+        "Servicios de Dominio de Active Directory",
+        "Servicios de certificados de Active Directory"
+      ],
+      "correcta": 2,
+      "explicacion": "En la selección del rol a instalar, escogeremos 'Servicios de Dominio de Active Directory'."
+    },
+    {
+      "id": "si-6.6.1-021",
+      "enunciado": "¿Qué enlace importante aparece al finalizar la instalación del rol de Directorio Activo?",
+      "opciones": [
+        "\"Configurar Active Directory\"",
+        "\"Crear nuevo dominio\"",
+        "\"Promover este servidor a controlador de dominio\"",
+        "\"Reiniciar e iniciar configuración\""
+      ],
+      "correcta": 2,
+      "explicacion": "Al final del todo nos aparece la opción de cerrar la ventana, pero no lo haremos. Nos tenemos que fijar en un enlace azul que hay, que dice 'Promover este servidor a controlador de dominio'."
+    },
+    {
+      "id": "si-6.6.1-022",
+      "enunciado": "¿Qué opción hay que escoger en la primera pantalla del asistente de promoción a controlador de dominio?",
+      "opciones": [
+        "Agregar un controlador de dominio a un dominio existente",
+        "Agregar un nuevo dominio a un bosque existente",
+        "Agregar un nuevo bosque",
+        "Instalar en modo solo lectura"
+      ],
+      "correcta": 2,
+      "explicacion": "En la primera ventana nos pregunta si estamos creando 'un nuevo bosque'. Esa es la opción adecuada, ya que estamos creando un bosque con un solo árbol de dominio."
+    },
+    {
+      "id": "si-6.6.1-023",
+      "enunciado": "¿Por qué el nombre del dominio debe ser compatible con DNS?",
+      "opciones": [
+        "Porque la instalación de AD conlleva también la instalación y configuración de DNS",
+        "Porque Windows Server no acepta nombres sin extensión de dominio",
+        "Porque el nombre del dominio se usa como dirección IP del PDC",
+        "Porque DNS es el protocolo de autenticación de Active Directory"
+      ],
+      "correcta": 0,
+      "explicacion": "El nombre del dominio hay que ponerlo aquí, y ha de seguir una nomenclatura adecuada y compatible con DNS, ya que la instalación de AD conlleva también la instalación y configuración de DNS."
+    },
+    {
+      "id": "si-6.6.1-024",
+      "enunciado": "¿Qué formato de nombre de dominio propone el material como ejemplo válido?",
+      "opciones": [
+        "NOMBRE.local",
+        "INICIALES.com",
+        "DOMINIO.lan",
+        "PDC.red"
+      ],
+      "correcta": 1,
+      "explicacion": "Un nombre de dominio DNS válido podría ser 'INICIALES.com', como 'magl.com'."
+    },
+    {
+      "id": "si-6.6.1-025",
+      "enunciado": "La contraseña del administrador del dominio que se introduce durante la promoción, ¿debe ser la misma que la configurada durante la instalación de Windows Server?",
+      "opciones": [
+        "No; no tiene por qué ser la misma",
+        "Sí; debe coincidir obligatoriamente",
+        "Solo si el servidor ya tiene el rol DNS instalado",
+        "El material no menciona nada al respecto"
+      ],
+      "correcta": 0,
+      "explicacion": "Introducimos dos veces la contraseña que queramos utilizar con el usuario administrador del dominio, no tiene por qué ser la misma que teníamos antes de la promoción."
+    },
+    {
+      "id": "si-6.6.1-026",
+      "enunciado": "¿Qué indica el check verde en la ventana «Comprobación de requisitos previos»?",
+      "opciones": [
+        "Que el servidor no tiene ninguna advertencia de configuración",
+        "Que se puede proceder con la instalación a pesar de posibles advertencias",
+        "Que el dominio ya existe y puede unirse a él",
+        "Que la contraseña del administrador es correcta"
+      ],
+      "correcta": 1,
+      "explicacion": "A pesar de algunas advertencias, aparece un check verde y el botón 'instalar' está habilitado; esto indica que podemos proceder con la instalación."
+    },
+    {
+      "id": "si-6.6.1-027",
+      "enunciado": "¿Cómo saber que el dominio se ha creado correctamente tras el reinicio?",
+      "opciones": [
+        "Aparece un mensaje emergente de bienvenida al dominio",
+        "En la sección Servidor Local, donde antes aparecía el grupo de trabajo, ahora aparece el dominio",
+        "El Administrador del Servidor muestra el dominio en la pantalla de inicio",
+        "Se crea automáticamente un acceso directo al dominio en el escritorio"
+      ],
+      "correcta": 1,
+      "explicacion": "Volvemos a la sección 'Servidor Local' del 'Administrador del sistema' y observamos que ahora en el lugar del grupo de trabajo aparece nuestro recién creado dominio."
+    },
+    {
+      "id": "si-6.6.1-028",
+      "enunciado": "¿Cuál es la función principal de Active Directory en un entorno de red de Windows?",
+      "opciones": [
+        "Proporcionar servicios de correo electrónico para usuarios de la red",
+        "Gestionar y almacenar información sobre recursos de red y permitir la autenticación y autorización de usuarios y equipos",
+        "Servir contenido web a través de HTTP/HTTPS",
+        "Ofrecer almacenamiento en la nube para archivos y documentos"
+      ],
+      "correcta": 1,
+      "explicacion": "Gestionar y almacenar información sobre recursos de red y permitir la autenticación y autorización de usuarios y equipos es la función principal de Active Directory."
+    }
+  ]
+}

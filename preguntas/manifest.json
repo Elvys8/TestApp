@@ -28,6 +28,9 @@
   	"si-6.5-acceso-remoto.json",
   	"si-6.5.1-servicio-ssh.json",
   	"si-6.5.2-escritorio-remoto.json",
+  	"si-6.6-dominios.json",
+  	"si-6.6.1-windows-server-directorio-activo.json",
+  	"si-6.6.2-explotacion-dominios.json",
   	"almacenamiento-de-informacion.json"
   ]
 }
