@@ -26,6 +26,8 @@
   	"si-6.4.1-instalacion-apache.json",
   	"si-6.4.2-apache-php-lamp.json",
   	"si-6.5-acceso-remoto.json",
+  	"si-6.5.1-servicio-ssh.json",
+  	"si-6.5.2-escritorio-remoto.json",
   	"almacenamiento-de-informacion.json"
   ]
 }

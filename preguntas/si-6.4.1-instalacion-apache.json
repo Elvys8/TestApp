@@ -265,7 +265,7 @@
         "Se establece como default.local"
       ],
       "correcta": 0,
-      "explicacion": "Para el dominio por defecto (archivo default) no se indica ningún nombre, por lo que la línea se deja comentada."
+      "explicacion": "Para el dominio por defecto (archivo default) no se indica ningún nombre, por lo que la línea se deja comentada. Pero para otros dominios (por ejemplo, www.miempresa.com) sí se debe establecer."
     },
     {
       "id": "si-6.4.1-023",

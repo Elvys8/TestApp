@@ -1,0 +1,201 @@
+{
+  "schema_version": 1,
+  "id": "si-6.5.2-escritorio-remoto",
+  "asignatura": "Sistemas Informáticos",
+  "asignatura_color": "#1C3C6F",
+  "tema": "6.5.2 Escritorio remoto",
+  "preguntas": [
+    {
+      "id": "si-6.5.2-001",
+      "enunciado": "¿Por qué el material opta por estudiar el Escritorio remoto de Windows en lugar del servidor SSH para Windows?",
+      "opciones": [
+        "Porque SSH no está disponible para Windows",
+        "Porque SSH en Windows es inestable",
+        "Porque uno de los puntos fuertes de Windows es su interfaz gráfica",
+        "Porque el Escritorio remoto es más seguro que SSH"
+      ],
+      "correcta": 2,
+      "explicacion": "También está disponible el servidor SSH para Windows, pero no lo vamos a ver ya que uno de los puntos fuertes del sistema de Microsoft es la interfaz gráfica."
+    },
+    {
+      "id": "si-6.5.2-002",
+      "enunciado": "¿Está disponible el servidor SSH para Windows?",
+      "opciones": [
+        "Sí, aunque el material opta por no estudiarlo",
+        "No; SSH solo funciona en Linux",
+        "Sí, y es la opción principal que estudia el material",
+        "Solo en versiones de Windows Server"
+      ],
+      "correcta": 0,
+      "explicacion": "También está disponible el servidor SSH para Windows, pero no lo vamos a ver ya que uno de los puntos fuertes del sistema de Microsoft es la interfaz gráfica."
+    },
+    {
+      "id": "si-6.5.2-003",
+      "enunciado": "¿Dónde se encuentra la opción para activar el Escritorio remoto en Windows?",
+      "opciones": [
+        "En el Panel de control clásico",
+        "En la configuración de red",
+        "En la configuración del sistema, en el apartado dedicado al Escritorio Remoto",
+        "En el administrador de tareas"
+      ],
+      "correcta": 2,
+      "explicacion": "Dentro de la configuración del sistema hay un apartado dedicado al Escritorio Remoto. Si entramos en él veremos si está o no activado."
+    },
+    {
+      "id": "si-6.5.2-004",
+      "enunciado": "¿Qué ocurre al activar el Escritorio remoto en Windows?",
+      "opciones": [
+        "El equipo se reinicia automáticamente",
+        "Aparece una pantalla de confirmación",
+        "Se abre automáticamente el puerto en el cortafuegos",
+        "Se crea un usuario específico para conexiones remotas"
+      ],
+      "correcta": 1,
+      "explicacion": "Cuando lo activemos, nos aparecerá una pantalla de confirmación."
+    },
+    {
+      "id": "si-6.5.2-005",
+      "enunciado": "¿Qué configuración adicional ofrece el apartado de Escritorio remoto en Windows?",
+      "opciones": [
+        "Cambiar el puerto de escucha del servicio",
+        "Configurar qué usuarios tienen o no permiso para usar esta tecnología",
+        "Establecer un límite de sesiones simultáneas",
+        "Cifrar la conexión con un certificado personalizado"
+      ],
+      "correcta": 1,
+      "explicacion": "También se nos da la opción de configurar los usuarios que tienen o no permiso para usar esta tecnología."
+    },
+    {
+      "id": "si-6.5.2-006",
+      "enunciado": "¿Qué aplicación se utiliza en Windows para conectarse a un Escritorio remoto?",
+      "opciones": [
+        "Remote Manager",
+        "Conexión a Escritorio Remoto",
+        "Remmina",
+        "Terminal Server Client"
+      ],
+      "correcta": 1,
+      "explicacion": "Lanzamos desde el cliente la aplicación 'Conexión a Escritorio Remoto' y, tras solicitarnos las credenciales de usuario, tendremos acceso a la interfaz gráfica del equipo que hace las veces de servidor."
+    },
+    {
+      "id": "si-6.5.2-007",
+      "enunciado": "¿Qué proporciona la conexión mediante Escritorio remoto una vez introducidas las credenciales?",
+      "opciones": [
+        "Acceso solo a los archivos compartidos del servidor",
+        "Una línea de comandos en el equipo remoto",
+        "Acceso a la interfaz gráfica del equipo servidor",
+        "Una copia local del escritorio del servidor"
+      ],
+      "correcta": 2,
+      "explicacion": "Lanzamos desde el cliente la aplicación 'Conexión a Escritorio Remoto' y, tras solicitarnos las credenciales de usuario, tendremos acceso a la interfaz gráfica del equipo que hace las veces de servidor."
+    },
+    {
+      "id": "si-6.5.2-008",
+      "enunciado": "¿Qué aplicación se usa en Linux para conectarse a un Escritorio remoto Windows?",
+      "opciones": [
+        "ssh-desktop",
+        "vinagre",
+        "Remmina",
+        "xrdp"
+      ],
+      "correcta": 2,
+      "explicacion": "También podemos conectarnos desde un cliente Linux utilizando la aplicación Remmina, que está preinstalada en el sistema."
+    },
+    {
+      "id": "si-6.5.2-009",
+      "enunciado": "¿Remmina viene instalada por defecto en el sistema Linux del material?",
+      "opciones": [
+        "Sí, está preinstalada",
+        "No, hay que instalarla con apt",
+        "Solo en distribuciones basadas en Red Hat",
+        "Solo si se instala el paquete de escritorio remoto"
+      ],
+      "correcta": 0,
+      "explicacion": "También podemos conectarnos desde un cliente Linux utilizando la aplicación Remmina, que está preinstalada en el sistema."
+    },
+    {
+      "id": "si-6.5.2-010",
+      "enunciado": "¿Cuál es la calidad de pantalla que ofrece Remmina con su configuración por defecto?",
+      "opciones": [
+        "Alta calidad, equivalente a una pantalla local",
+        "Calidad media, ajustable según la red",
+        "Muy escasa calidad, aunque se puede mejorar fácilmente",
+        "No muestra imagen hasta que se configura manualmente"
+      ],
+      "correcta": 2,
+      "explicacion": "Por defecto muestra una pantalla con muy escasa calidad, pero se puede configurar fácilmente para obtener un resultado más vistoso."
+    },
+    {
+      "id": "si-6.5.2-011",
+      "enunciado": "¿Cuál de las siguientes opciones puede configurarse en Remmina?",
+      "opciones": [
+        "El sistema de archivos del servidor remoto",
+        "Los usuarios con permiso de conexión en el servidor",
+        "La resolución de la pantalla remota y el sonido",
+        "El protocolo de cifrado de la conexión"
+      ],
+      "correcta": 2,
+      "explicacion": "La aplicación Remmina permite modificar un buen número de opciones, como la resolución de la pantalla remota, si tiene sonido o no, etc."
+    },
+    {
+      "id": "si-6.5.2-012",
+      "enunciado": "¿Dónde se habilita el escritorio remoto en Ubuntu?",
+      "opciones": [
+        "En el terminal, con un comando específico",
+        "En la configuración de red del sistema",
+        "En la configuración de Ubuntu, apartado Sistema → Escritorio remoto",
+        "Instalando el paquete xrdp desde apt"
+      ],
+      "correcta": 2,
+      "explicacion": "Simplemente hay que abrir la configuración de Ubuntu, en el apartado sistema, y entrar en el apartado de Escritorio remoto."
+    },
+    {
+      "id": "si-6.5.2-013",
+      "enunciado": "¿Cuál de las siguientes acciones NO es posible al configurar el escritorio remoto en Ubuntu?",
+      "opciones": [
+        "Asignar un usuario para la conexión remota",
+        "Asignar una contraseña para la conexión remota",
+        "Deshabilitar el permiso para interactuar con la interfaz remota",
+        "Limitar el número de conexiones simultáneas"
+      ],
+      "correcta": 3,
+      "explicacion": "Al configurar el escritorio remoto en Ubuntu se puede asignar usuario, contraseña, o incluso deshabilitar el permiso para interactuar con la interfaz remota. No se menciona la posibilidad de limitar conexiones simultáneas."
+    },
+    {
+      "id": "si-6.5.2-014",
+      "enunciado": "Una vez habilitado el escritorio remoto en Ubuntu, ¿desde qué sistemas puede conectarse un cliente?",
+      "opciones": [
+        "Solo desde otros equipos Linux con Remmina",
+        "Solo desde equipos Windows con Conexión a Escritorio Remoto",
+        "Tanto desde Linux (Remmina) como desde Windows (Conexión a Escritorio Remoto)",
+        "Solo desde equipos con el mismo sistema operativo"
+      ],
+      "correcta": 2,
+      "explicacion": "Podemos comprobar su funcionamiento desde una máquina remota, tanto Linux (remmina) como Windows (Conexión a Escritorio Remoto)."
+    },
+    {
+      "id": "si-6.5.2-015",
+      "enunciado": "¿Qué paso previo es imprescindible antes de que un cliente pueda conectarse al escritorio remoto de Ubuntu?",
+      "opciones": [
+        "Crear un usuario específico para la conexión remota",
+        "Instalar Remmina en el servidor Ubuntu",
+        "Activar el puerto correspondiente en el cortafuegos",
+        "Reiniciar el servicio de escritorio remoto"
+      ],
+      "correcta": 2,
+      "explicacion": "Por supuesto, antes hay que activar el puerto correspondiente en el cortafuegos."
+    },
+    {
+      "id": "si-6.5.2-016",
+      "enunciado": "¿Para qué sirven los túneles SSH mencionados en el apartado «Para saber más»?",
+      "opciones": [
+        "Para aumentar la velocidad de la conexión SSH",
+        "Para cifrar y hacer seguras conexiones de protocolos que habitualmente no lo son",
+        "Para conectar varios servidores SSH en cadena",
+        "Para redirigir tráfico HTTP a través de SSH sin cifrado"
+      ],
+      "correcta": 1,
+      "explicacion": "Una de las características avanzadas más interesantes de SSH es la posibilidad de crear túneles SSH, capaces de cifrar y convertir en seguras conexiones con otros protocolos que habitualmente no lo son."
+    }
+  ]
+}

@@ -81,13 +81,13 @@
       "id": "si-6.4.2-007",
       "enunciado": "¿Cuál es el comando para instalar PHP en el servidor web Apache?",
       "opciones": [
-        "# apt-get install php8",
-        "# apt install php",
-        "# apt install apache-php",
-        "# apt-get install php-server"
+        "apt-get install php8",
+        "apt install php",
+        "apt install apache-php",
+        "apt-get install php-server"
       ],
       "correcta": 1,
-      "explicacion": "Para instalar php en el servidor web Apache es necesario ejecutar: # apt install php"
+      "explicacion": "Para instalar php en el servidor web Apache es necesario ejecutar: apt install php"
     },
     {
       "id": "si-6.4.2-008",
@@ -165,13 +165,13 @@
       "id": "si-6.4.2-014",
       "enunciado": "¿Cuál es el comando para instalar PHP junto con las librerías necesarias para la pila LAMP?",
       "opciones": [
-        "# apt install php php-mysql",
-        "# apt install php php-apache2 php-mysql",
-        "# apt install php libapache2-mod-php mariadb",
-        "# apt install php libapache2-mod-php php-mysql"
+        "apt install php php-mysql",
+        "apt install php php-apache2 php-mysql",
+        "apt install php libapache2-mod-php mariadb",
+        "apt install php libapache2-mod-php php-mysql"
       ],
       "correcta": 3,
-      "explicacion": "Para instalar php y las librerías necesarias para la pila LAMP se ejecuta: # apt install php libapache2-mod-php php-mysql"
+      "explicacion": "Para instalar php y las librerías necesarias para la pila LAMP se ejecuta: apt install php libapache2-mod-php php-mysql"
     },
     {
       "id": "si-6.4.2-015",
@@ -189,37 +189,37 @@
       "id": "si-6.4.2-016",
       "enunciado": "¿Cuál es el comando para instalar MariaDB?",
       "opciones": [
-        "# apt install mysql-server",
-        "# apt install mariadb",
-        "# apt install mariadb-server",
-        "# apt install mariadb-db"
+        "apt install mysql-server",
+        "apt install mariadb",
+        "apt install mariadb-server",
+        "apt install mariadb-db"
       ],
       "correcta": 2,
-      "explicacion": "Para instalar MariaDB se ejecuta: # apt install mariadb-server"
+      "explicacion": "Para instalar MariaDB se ejecuta: apt install mariadb-server"
     },
     {
       "id": "si-6.4.2-017",
       "enunciado": "¿Qué comando prepara MySQL para que se arranque automáticamente al inicio del sistema?",
       "opciones": [
-        "# systemctl start mysql",
-        "# systemctl boot mysql",
-        "# systemctl autostart mysql",
-        "# systemctl enable mysql"
+        "systemctl start mysql",
+        "systemctl boot mysql",
+        "systemctl autostart mysql",
+        "systemctl enable mysql"
       ],
       "correcta": 3,
-      "explicacion": "Para activar el servicio y prepararlo para que se arranque en el inicio del sistema se usa: # systemctl enable mysql"
+      "explicacion": "Para activar el servicio y prepararlo para que se arranque en el inicio del sistema se usa: systemctl enable mysql"
     },
     {
       "id": "si-6.4.2-018",
       "enunciado": "¿Qué comando inicia el servicio MySQL?",
       "opciones": [
-        "# systemctl start mysql",
-        "# systemctl enable mysql",
-        "# systemctl run mysql",
-        "# systemctl launch mysql"
+        "systemctl start mysql",
+        "systemctl enable mysql",
+        "systemctl run mysql",
+        "systemctl launch mysql"
       ],
       "correcta": 0,
-      "explicacion": "Para iniciar el servicio MySQL se ejecuta: # systemctl start mysql"
+      "explicacion": "Para iniciar el servicio MySQL se ejecuta: systemctl start mysql"
     },
     {
       "id": "si-6.4.2-019",

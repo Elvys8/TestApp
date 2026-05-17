@@ -1,0 +1,321 @@
+{
+  "schema_version": 1,
+  "id": "si-6.5.1-servicio-ssh",
+  "asignatura": "Sistemas Informáticos",
+  "asignatura_color": "#1C3C6F",
+  "tema": "6.5.1 Servicio SSH",
+  "preguntas": [
+    {
+      "id": "si-6.5.1-001",
+      "enunciado": "¿Qué puerto utiliza el servicio SSH por defecto?",
+      "opciones": [
+        "21",
+        "23",
+        "22",
+        "80"
+      ],
+      "correcta": 2,
+      "explicacion": "El servicio ssh utiliza el puerto 22."
+    },
+    {
+      "id": "si-6.5.1-002",
+      "enunciado": "¿Qué usuarios pueden conectarse mediante SSH a un servidor?",
+      "opciones": [
+        "Solo el usuario root",
+        "Solo los usuarios creados específicamente para SSH",
+        "Los propios usuarios de la máquina donde está instalado el servidor",
+        "Cualquier usuario de la red, sin restricción"
+      ],
+      "correcta": 2,
+      "explicacion": "Los usuarios de conexión son los propios de la máquina donde está instalado el servidor."
+    },
+    {
+      "id": "si-6.5.1-003",
+      "enunciado": "¿Qué servicio se menciona expresamente como menos seguro que SSH?",
+      "opciones": [
+        "FTP",
+        "Telnet",
+        "HTTP",
+        "SFTP"
+      ],
+      "correcta": 1,
+      "explicacion": "El servicio ssh es seguro a diferencia de telnet."
+    },
+    {
+      "id": "si-6.5.1-004",
+      "enunciado": "¿En qué sistemas operativos puede instalarse el servicio SSH?",
+      "opciones": [
+        "Solo en Linux",
+        "Solo en Windows",
+        "Tanto en Windows como en Linux",
+        "Solo en sistemas Unix"
+      ],
+      "correcta": 2,
+      "explicacion": "El servicio ssh se puede instalar tanto en Windows como en Linux. Igualmente se puede acceder con clientes de ambos sistemas."
+    },
+    {
+      "id": "si-6.5.1-005",
+      "enunciado": "Además de acceso remoto, ¿qué otra funcionalidad ofrece el servicio SSH?",
+      "opciones": [
+        "Resolución de nombres de dominio",
+        "Gestión de bases de datos",
+        "Transferencia de ficheros mediante scp",
+        "Monitorización del tráfico de red"
+      ],
+      "correcta": 2,
+      "explicacion": "El servicio ssh además de acceso remoto permite la transferencia de ficheros con la utilidad scp."
+    },
+    {
+      "id": "si-6.5.1-006",
+      "enunciado": "¿Qué comando se usa para instalar el servidor SSH en Ubuntu?",
+      "opciones": [
+        "apt install openssh",
+        "apt install ssh",
+        "apt install sshd",
+        "apt-get install ssh-server"
+      ],
+      "correcta": 1,
+      "explicacion": "Para instalar el servidor ssh se ejecuta el comando: apt install ssh"
+    },
+    {
+      "id": "si-6.5.1-007",
+      "enunciado": "¿Qué comando permite comprobar que el servicio SSH está en ejecución?",
+      "opciones": [
+        "ssh --status",
+        "systemctl check ssh",
+        "service ssh status",
+        "ssh -v localhost"
+      ],
+      "correcta": 2,
+      "explicacion": "Para comprobar que el servicio SSH ya se está ejecutando se usa: service ssh status"
+    },
+    {
+      "id": "si-6.5.1-008",
+      "enunciado": "¿En qué archivo se configura qué usuarios y equipos cliente pueden conectarse por SSH?",
+      "opciones": [
+        "/etc/ssh/ssh_config",
+        "/etc/ssh/sshd_config",
+        "/etc/sshd/config",
+        "/etc/network/ssh.conf"
+      ],
+      "correcta": 1,
+      "explicacion": "En el archivo de configuración /etc/ssh/sshd_config se configuran entre otras cosas usuarios y/o equipos cliente a los que se les permite la conexión."
+    },
+    {
+      "id": "si-6.5.1-009",
+      "enunciado": "¿Cuál es el comportamiento por defecto del servidor SSH respecto a quién puede conectarse?",
+      "opciones": [
+        "Solo permite conexiones desde localhost",
+        "Solo permite al usuario root",
+        "Permite la conexión desde toda la red y a todos los usuarios del equipo",
+        "Requiere configuración explícita antes de aceptar cualquier conexión"
+      ],
+      "correcta": 2,
+      "explicacion": "Por defecto se permite conectar desde toda la red y todos los usuarios del equipo."
+    },
+    {
+      "id": "si-6.5.1-010",
+      "enunciado": "¿Qué paso adicional hay que realizar en el sistema para que el servidor SSH sea accesible desde la red?",
+      "opciones": [
+        "Reiniciar el servicio SSH manualmente",
+        "Crear un usuario específico para SSH",
+        "Configurar el cortafuegos para abrir el puerto 22",
+        "Modificar el archivo /etc/hosts"
+      ],
+      "correcta": 2,
+      "explicacion": "Para terminar, habrá que configurar el cortafuegos para que abra el puerto 22."
+    },
+    {
+      "id": "si-6.5.1-011",
+      "enunciado": "¿Qué hay que instalar en el equipo cliente para conectarse a un servidor SSH?",
+      "opciones": [
+        "El paquete ssh-client",
+        "El paquete openssh",
+        "Nada; no hay que instalar nada en el cliente",
+        "Un cliente FTP compatible con SSH"
+      ],
+      "correcta": 2,
+      "explicacion": "En el cliente no hay que instalar nada, simplemente conectarse con: ssh user@IP"
+    },
+    {
+      "id": "si-6.5.1-012",
+      "enunciado": "¿Cuál es la sintaxis básica para conectarse a un servidor SSH especificando usuario e IP?",
+      "opciones": [
+        "ssh IP@user",
+        "connect user@IP",
+        "ssh user@IP",
+        "ssh -u user IP"
+      ],
+      "correcta": 2,
+      "explicacion": "En el cliente no hay que instalar nada, simplemente conectarse con: ssh user@IP o ssh user@Nombre_Equipo"
+    },
+    {
+      "id": "si-6.5.1-013",
+      "enunciado": "Si el mismo usuario y contraseña existen en ambas máquinas, ¿cómo se simplifica la conexión SSH?",
+      "opciones": [
+        "ssh -auto IP",
+        "ssh IP",
+        "ssh --same-user IP",
+        "No se puede simplificar; siempre hay que indicar el usuario"
+      ],
+      "correcta": 1,
+      "explicacion": "Si nos conectamos con un usuario y password configurado en ambas máquinas, bastará para realizar la conexión con: ssh IP"
+    },
+    {
+      "id": "si-6.5.1-014",
+      "enunciado": "¿Qué indica el cambio de prompt tras conectarse con éxito por SSH?",
+      "opciones": [
+        "Que el cliente ha tomado el control del servidor",
+        "Que la máquina activa en ese momento es el servidor remoto",
+        "Que la conexión es cifrada",
+        "Que el usuario tiene privilegios de root en el servidor"
+      ],
+      "correcta": 1,
+      "explicacion": "Se puede observar que el mismo prompt indica que la máquina actual es SistemasUbuntu. Se puede ejecutar cualquier comando como si se estuviera físicamente en SistemasUbuntu."
+    },
+    {
+      "id": "si-6.5.1-015",
+      "enunciado": "¿Qué ocurre al escribir exit dentro de una sesión SSH?",
+      "opciones": [
+        "Se reinicia el servidor SSH",
+        "Se cierra la sesión y el servidor se apaga",
+        "Se cierra la sesión SSH y se vuelve al equipo cliente",
+        "Se guarda la sesión para reanudarla después"
+      ],
+      "correcta": 2,
+      "explicacion": "Al escribir exit, se sale de la sesión, y se vuelve al equipo cliente."
+    },
+    {
+      "id": "si-6.5.1-016",
+      "enunciado": "¿Qué permite comprobar el comando who ejecutado en el servidor durante una sesión SSH?",
+      "opciones": [
+        "Los archivos transferidos durante la sesión SSH",
+        "Las conexiones de red activas en el servidor",
+        "Los usuarios conectados al servidor, tanto locales como remotos con su IP de origen",
+        "El historial de comandos ejecutados en la sesión"
+      ],
+      "correcta": 2,
+      "explicacion": "El comando who devuelve el usuario en la propia máquina SistemasUbuntu y el usuario juan, desde la red, desde la máquina 192.168.100.104"
+    },
+    {
+      "id": "si-6.5.1-017",
+      "enunciado": "¿Es posible usar SSH desde un cliente Windows?",
+      "opciones": [
+        "Sí, y el funcionamiento es muy similar al de Linux",
+        "No; SSH solo está disponible en clientes Linux",
+        "Sí, pero requiere software adicional exclusivo de Windows",
+        "Solo en versiones de Windows Server"
+      ],
+      "correcta": 0,
+      "explicacion": "La captura de pantalla mostrada está hecha desde una máquina cliente Windows con la intención de demostrar que se trabaja de forma muy muy similar."
+    },
+    {
+      "id": "si-6.5.1-018",
+      "enunciado": "¿Qué comando del servicio SSH permite transferir ficheros entre cliente y servidor?",
+      "opciones": [
+        "sftp",
+        "scp",
+        "ssh-copy",
+        "rsync"
+      ],
+      "correcta": 1,
+      "explicacion": "El servicio ssh incorpora el comando scp para copiar ficheros de la máquina servidor a la máquina cliente, o viceversa."
+    },
+    {
+      "id": "si-6.5.1-019",
+      "enunciado": "¿Cómo se denomina el servicio seguro de transferencia de ficheros que incorpora SSH?",
+      "opciones": [
+        "scp",
+        "FTP seguro externo",
+        "sftp",
+        "FTPS"
+      ],
+      "correcta": 2,
+      "explicacion": "El servicio ssh incorpora con el comando scp un servicio FTP que por supuesto es seguro y se conoce como sftp."
+    },
+    {
+      "id": "si-6.5.1-020",
+      "enunciado": "¿Es necesario establecer primero una conexión SSH para poder usar el comando scp?",
+      "opciones": [
+        "Sí, siempre hay que conectarse con ssh antes",
+        "Solo si el servidor está en una red diferente",
+        "No; scp se usa directamente sin conexión previa",
+        "Depende del sistema operativo del cliente"
+      ],
+      "correcta": 2,
+      "explicacion": "El comando scp se utiliza sin necesidad de realizar una conexión previa al servidor."
+    },
+    {
+      "id": "si-6.5.1-021",
+      "enunciado": "¿Cuál es la sintaxis correcta del comando scp?",
+      "opciones": [
+        "scp [origen] [destino] [-r]",
+        "scp [-r] [origen] [destino]",
+        "scp [destino] [origen] [-r]",
+        "scp -copy [origen] [destino]"
+      ],
+      "correcta": 1,
+      "explicacion": "La sintaxis del comando scp es: scp [-r] [origen] [destino]"
+    },
+    {
+      "id": "si-6.5.1-022",
+      "enunciado": "¿Qué formato tiene el argumento origen o destino en el comando scp cuando hace referencia a una máquina remota?",
+      "opciones": [
+        "IP/usuario/archivo",
+        "usuario@maquina:archivo",
+        "usuario:maquina@archivo",
+        "maquina@usuario/archivo"
+      ],
+      "correcta": 1,
+      "explicacion": "Origen o destino lo forman: [usuario@maquina:archivo]"
+    },
+    {
+      "id": "si-6.5.1-023",
+      "enunciado": "¿Para qué sirve la opción -r en el comando scp?",
+      "opciones": [
+        "Para reintentar la transferencia si falla",
+        "Para enviar o recibir una carpeta completa de forma recursiva",
+        "Para transferir solo archivos de solo lectura",
+        "Para cifrar adicionalmente el contenido del fichero"
+      ],
+      "correcta": 1,
+      "explicacion": "La opción –r es de recursiva para enviar o recibir una carpeta completa."
+    },
+    {
+      "id": "si-6.5.1-024",
+      "enunciado": "¿Cuál de los siguientes comandos envía el archivo practica.odt al servidor SSH 192.168.100.1 como usuario juan?",
+      "opciones": [
+        "scp juan@192.168.100.1:/home/juan/practica.odt practica.odt",
+        "scp practica.odt juan@192.168.100.1:/home/juan/practica.odt",
+        "scp practica.odt 192.168.100.1@juan:/practica.odt",
+        "scp -send practica.odt juan@192.168.100.1"
+      ],
+      "correcta": 1,
+      "explicacion": "Para enviar un archivo al servidor: scp practica.odt juan@192.168.100.1:/home/juan/practica.odt. El origen es el archivo local y el destino es usuario@maquina:ruta."
+    },
+    {
+      "id": "si-6.5.1-025",
+      "enunciado": "¿Cuál de los siguientes comandos recibe el archivo practica.odt desde el servidor SSH 192.168.100.1 como usuario juan?",
+      "opciones": [
+        "scp practica.odt juan@192.168.100.1:/home/juan/practica.odt",
+        "scp juan@192.168.100.1:/home/juan/practica.odt nombre.odt",
+        "scp 192.168.100.1:/home/juan/practica.odt",
+        "scp -get juan@192.168.100.1 practica.odt"
+      ],
+      "correcta": 1,
+      "explicacion": "Para recibir un archivo desde el servidor: scp juan@192.168.100.1:/home/juan/practica.odt nombre.odt. El origen es usuario@maquina:ruta y el destino es el archivo local."
+    },
+    {
+      "id": "si-6.5.1-026",
+      "enunciado": "¿Cuál es la función principal del protocolo SSH en la administración de sistemas?",
+      "opciones": [
+        "Proporcionar un entorno gráfico para la gestión de bases de datos",
+        "Permitir la transferencia de archivos sin cifrar entre un cliente y un servidor",
+        "Proporcionar un método seguro para acceder y administrar de forma remota servidores y dispositivos de red",
+        "Ofrecer servicios de resolución de nombres de dominio a direcciones IP"
+      ],
+      "correcta": 2,
+      "explicacion": "Proporcionar un método seguro para acceder y administrar de forma remota servidores y dispositivos de red."
+    }
+  ]
+}
