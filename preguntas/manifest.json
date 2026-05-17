@@ -20,6 +20,8 @@
   	"si-6.3.3-conexion-desde-maquinas-cliente.json",
   	"si-6.3.4-compartir-recursos-linux-nfs.json",
   	"si-6.3.5-cliente-nfs.json",
+  	"si-6.3.6-servicio-ftp-vsftpd.json",
+  	"si-6.3.7-servicio-ftp-en-windows-11.json",
   	"almacenamiento-de-informacion.json"
   ]
 }

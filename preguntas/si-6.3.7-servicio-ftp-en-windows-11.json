@@ -1,0 +1,405 @@
+{
+  "schema_version": 1,
+  "id": "si-6.3.7-servicio-ftp-en-windows-11",
+  "asignatura": "Sistemas Informáticos",
+  "asignatura_color": "#1C3C6F",
+  "tema": "6.3.7 Servicio FTP en Windows 11",
+  "preguntas": [
+    {
+      "id": "si-6.3.7-001",
+      "enunciado": "¿Qué significan las siglas IIS?",
+      "opciones": [
+        "Internal Internet Service",
+        "Internet Information Service",
+        "Integrated Internet System",
+        "Internet Infrastructure Service"
+      ],
+      "correcta": 1,
+      "explicacion": "IIS son las siglas de Internet Information Service, el servicio incluido en los sistemas operativos Windows."
+    },
+    {
+      "id": "si-6.3.7-002",
+      "enunciado": "¿Qué servicios incluye IIS en Windows?",
+      "opciones": [
+        "Solo el servidor FTP",
+        "Solo el servidor web",
+        "Un servidor web y un servidor FTP, entre otros",
+        "Servidor web, FTP y servidor de correo"
+      ],
+      "correcta": 2,
+      "explicacion": "El servicio IIS incluido en los sistemas operativos Windows incluye, entre otros, un servidor web y el servidor FTP de Microsoft."
+    },
+    {
+      "id": "si-6.3.7-003",
+      "enunciado": "¿Cómo denomina Microsoft a los servidores web en IIS?",
+      "opciones": [
+        "Sitios FTP",
+        "Mis sitios web",
+        "Servidores virtuales",
+        "Hosts web"
+      ],
+      "correcta": 1,
+      "explicacion": "Microsoft denomina a los servidores web como 'mis sitios web' y a los servidores FTP como 'sitios FTP'."
+    },
+    {
+      "id": "si-6.3.7-004",
+      "enunciado": "¿Cómo denomina Microsoft a los servidores FTP en IIS?",
+      "opciones": [
+        "Mis sitios web",
+        "Servidores de ficheros",
+        "Sitios FTP",
+        "Hosts FTP"
+      ],
+      "correcta": 2,
+      "explicacion": "Microsoft denomina a los servidores FTP como 'sitios FTP' y a los servidores web como 'mis sitios web'."
+    },
+    {
+      "id": "si-6.3.7-005",
+      "enunciado": "¿Por dónde se accede para instalar IIS y el servidor FTP en Windows?",
+      "opciones": [
+        "Panel de control → Sistema → Instalar servicios",
+        "Panel de control → Programas → Añadir características de Windows",
+        "Configuración → Aplicaciones → Instalar características opcionales",
+        "Administrador de tareas → Servicios → Instalar nuevo servicio"
+      ],
+      "correcta": 1,
+      "explicacion": "Para instalar IIS y el servidor FTP hay que ir a Panel de control / Programas / Añadir características de Windows."
+    },
+    {
+      "id": "si-6.3.7-006",
+      "enunciado": "¿Qué dos opciones hay que marcar al instalar el servidor FTP desde las características de Windows?",
+      "opciones": [
+        "\"Servidor FTP\" y \"Protocolo TCP/IP\"",
+        "\"Internet Information Services\" y \"Servicio FTP\"",
+        "\"IIS\" y \"Windows Server\"",
+        "\"FTP Server\" y \"Web Server IIS\""
+      ],
+      "correcta": 1,
+      "explicacion": "Hay que marcar las opciones de añadir 'Internet Information Services' y 'Servicio FTP'."
+    },
+    {
+      "id": "si-6.3.7-007",
+      "enunciado": "¿Cómo se accede a la herramienta administrativa de IIS en Windows?",
+      "opciones": [
+        "Panel de control → Herramientas administrativas → IIS",
+        "Buscando \"IIS\" en el buscador de inicio",
+        "Menú inicio → Todos los programas → IIS Manager",
+        "Ejecutar → mmc → complemento IIS"
+      ],
+      "correcta": 1,
+      "explicacion": "Para configurar el servicio FTP se escribe IIS en el buscador de inicio y aparecerá la herramienta administrativa para IIS."
+    },
+    {
+      "id": "si-6.3.7-008",
+      "enunciado": "¿Qué opción del menú contextual del nombre de equipo en IIS permite crear un nuevo servidor FTP?",
+      "opciones": [
+        "\"Nuevo sitio web\"",
+        "\"Agregar sitio FTP\"",
+        "\"Crear servicio FTP\"",
+        "\"Añadir servidor virtual\""
+      ],
+      "correcta": 1,
+      "explicacion": "Desde el menú contextual en el nombre de equipo de IIS se selecciona 'Agregar sitio FTP' para crear un nuevo servidor FTP."
+    },
+    {
+      "id": "si-6.3.7-009",
+      "enunciado": "¿Qué dos campos se rellenan en el paso de nombre y ruta del sitio FTP?",
+      "opciones": [
+        "IP del servidor y puerto de escucha",
+        "Nombre del sitio FTP y ruta de acceso física",
+        "Nombre de usuario y contraseña del administrador",
+        "Nombre del dominio y certificado SSL"
+      ],
+      "correcta": 1,
+      "explicacion": "En este paso se rellenan el nombre del sitio FTP y la ruta de acceso física donde se alojarán los ficheros del sitio FTP."
+    },
+    {
+      "id": "si-6.3.7-010",
+      "enunciado": "¿Qué representa la \"ruta de acceso física\" al configurar un sitio FTP en IIS?",
+      "opciones": [
+        "La dirección IP del servidor FTP",
+        "La carpeta donde se alojarán los ficheros del sitio FTP",
+        "La ruta UNC para acceder al servidor desde la red",
+        "El directorio de instalación de IIS"
+      ],
+      "correcta": 1,
+      "explicacion": "La ruta de acceso física es la ruta de la carpeta donde se van a alojar los ficheros del sitio FTP."
+    },
+    {
+      "id": "si-6.3.7-011",
+      "enunciado": "¿Qué puerto se usa por defecto para el sitio FTP en IIS?",
+      "opciones": [
+        "20",
+        "21",
+        "22",
+        "80"
+      ],
+      "correcta": 1,
+      "explicacion": "El puerto 21 es el puerto por defecto para el sitio FTP en IIS."
+    },
+    {
+      "id": "si-6.3.7-012",
+      "enunciado": "¿Para qué sirve la opción \"Habilitar nombres de host virtuales\" en la configuración del sitio FTP?",
+      "opciones": [
+        "Para asignar varias IPs a un mismo sitio FTP",
+        "Para tener varios sitios FTP en un equipo con una sola IP usando nombres distintos",
+        "Para redirigir el tráfico FTP hacia otro servidor",
+        "Para habilitar el acceso FTP desde Internet mediante VPN"
+      ],
+      "correcta": 1,
+      "explicacion": "La opción de nombres de host virtuales permite tener varios servidores virtuales en un único servidor con una sola IP, utilizando nombres distintos como ftp.empresa1.es y ftp.empresa2.es."
+    },
+    {
+      "id": "si-6.3.7-013",
+      "enunciado": "¿Qué permite la opción de inicio automático del sitio FTP?",
+      "opciones": [
+        "Que el servicio FTP se inicie cuando un cliente se conecta",
+        "Que el servicio del sitio FTP se inicie automáticamente al arrancar el equipo",
+        "Que IIS detecte y configure automáticamente nuevos sitios FTP",
+        "Que el servidor FTP reinicie el servicio si detecta un error"
+      ],
+      "correcta": 1,
+      "explicacion": "Dejando marcada la opción de inicio automático, el servicio del sitio FTP se inicia automáticamente al arrancar el equipo."
+    },
+    {
+      "id": "si-6.3.7-014",
+      "enunciado": "¿Cuántas opciones de SSL ofrece IIS al configurar un sitio FTP?",
+      "opciones": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correcta": 1,
+      "explicacion": "IIS ofrece tres opciones de SSL: Sin SSL, Permitir y Requerir SSL."
+    },
+    {
+      "id": "si-6.3.7-015",
+      "enunciado": "¿Qué hace la opción \"Sin SSL\" en la configuración del sitio FTP?",
+      "opciones": [
+        "Permite conexiones con y sin SSL",
+        "Obliga a usar SSL en todas las conexiones",
+        "Desactiva el protocolo SSL",
+        "Genera un certificado SSL autofirmado"
+      ],
+      "correcta": 2,
+      "explicacion": "Seleccionando 'Sin SSL' se desactiva el protocolo Secure Sockets Layer (Protocolo de Capa de Conexión Segura)."
+    },
+    {
+      "id": "si-6.3.7-016",
+      "enunciado": "¿Qué diferencia hay entre las opciones SSL \"Permitir\" y \"Requerir SSL\"?",
+      "opciones": [
+        "\"Permitir\" solo acepta SSL; \"Requerir SSL\" acepta cualquier conexión",
+        "\"Permitir\" acepta conexiones con y sin SSL; \"Requerir SSL\" solo acepta conexiones con SSL",
+        "\"Permitir\" genera un certificado automático; \"Requerir SSL\" exige uno externo",
+        "No hay diferencia práctica entre ambas opciones"
+      ],
+      "correcta": 1,
+      "explicacion": "Con 'Permitir' el usuario se puede conectar con SSL y sin SSL; con 'Requerir SSL' el usuario solo se puede conectar usando SSL."
+    },
+    {
+      "id": "si-6.3.7-017",
+      "enunciado": "¿Por qué en el ejercicio se selecciona \"Sin SSL\" en la configuración del sitio FTP?",
+      "opciones": [
+        "Porque SSL reduce el rendimiento del servidor FTP",
+        "Porque no se tiene instalado ningún certificado de seguridad",
+        "Porque SSL no es compatible con Windows 11",
+        "Porque la red local no necesita cifrado"
+      ],
+      "correcta": 1,
+      "explicacion": "En el ejercicio, al no tener instalado ningún certificado de seguridad, hay que marcar 'Sin SSL'."
+    },
+    {
+      "id": "si-6.3.7-018",
+      "enunciado": "¿Por qué se recomienda que los equipos que actúan como servidores tengan IP estática?",
+      "opciones": [
+        "Para que IIS pueda gestionar más sitios FTP simultáneamente",
+        "Para evitar que la IP cambie y el servidor deje de ser localizable",
+        "Para poder usar nombres de host virtuales",
+        "Para activar el protocolo SSL sin certificado"
+      ],
+      "correcta": 1,
+      "explicacion": "Los equipos que funcionan como servidores deberían tener IP estática siempre, para evitar que la IP cambie al estar configurada como dinámica."
+    },
+    {
+      "id": "si-6.3.7-019",
+      "enunciado": "¿Qué dos tipos de autenticación se pueden configurar en el sitio FTP de IIS?",
+      "opciones": [
+        "Autenticación por certificado y autenticación por clave pública",
+        "Acceso anónimo y autenticación básica",
+        "Autenticación NTLM y autenticación Kerberos",
+        "Autenticación básica y autenticación de dos factores"
+      ],
+      "correcta": 1,
+      "explicacion": "Se configura si se permite el acceso anónimo o basado en autenticación básica, donde los usuarios tienen que proporcionar un nombre de usuario y contraseña válidos de Windows."
+    },
+    {
+      "id": "si-6.3.7-020",
+      "enunciado": "¿Qué deben proporcionar los usuarios cuando se activa la autenticación básica en IIS?",
+      "opciones": [
+        "Solo el nombre de usuario, sin contraseña",
+        "Un certificado digital válido",
+        "Un nombre de usuario y contraseña válidos de Windows",
+        "Una clave SSH generada previamente"
+      ],
+      "correcta": 2,
+      "explicacion": "Con autenticación básica los usuarios tienen que proporcionar un nombre de usuario y contraseña válidos de Windows."
+    },
+    {
+      "id": "si-6.3.7-021",
+      "enunciado": "¿Cómo transmite las contraseñas la autenticación básica en FTP?",
+      "opciones": [
+        "Cifradas con SSL siempre",
+        "Cifradas con MD5",
+        "Sin cifrar, en texto plano por la red",
+        "Cifradas con el protocolo NTLM"
+      ],
+      "correcta": 2,
+      "explicacion": "Es importante saber que la autenticación básica transmite contraseñas no cifradas por la red."
+    },
+    {
+      "id": "si-6.3.7-022",
+      "enunciado": "¿Qué es obligatorio usar en un entorno profesional con autenticación básica FTP?",
+      "opciones": [
+        "Autenticación de dos factores",
+        "SSL",
+        "VPN",
+        "Autenticación por certificado"
+      ],
+      "correcta": 1,
+      "explicacion": "Dado que la autenticación básica transmite contraseñas no cifradas, en un entorno profesional es obligatorio utilizar SSL."
+    },
+    {
+      "id": "si-6.3.7-023",
+      "enunciado": "Con la autorización básica activa, ¿a quiénes se puede dar acceso al sitio FTP?",
+      "opciones": [
+        "Solo al administrador del sistema",
+        "Solo a grupos, nunca a usuarios individuales",
+        "A todos los usuarios o a usuarios y grupos concretos",
+        "Solo a los usuarios del dominio de Active Directory"
+      ],
+      "correcta": 2,
+      "explicacion": "Marcada la autorización básica, se puede seleccionar a 'Todos los usuarios' o a usuarios o grupos concretos."
+    },
+    {
+      "id": "si-6.3.7-024",
+      "enunciado": "¿Cuántos tipos de inicio existen para un servicio en la ventana de servicios de Windows?",
+      "opciones": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correcta": 1,
+      "explicacion": "Existen tres tipos de inicio: Automático, Manual y Deshabilitado."
+    },
+    {
+      "id": "si-6.3.7-025",
+      "enunciado": "¿Qué ocurre con un servicio configurado con tipo de inicio \"Automático\"?",
+      "opciones": [
+        "El servicio se inicia solo cuando un usuario lo solicita",
+        "El servicio se inicia siempre que se inicie el ordenador",
+        "El servicio se inicia solo si otro servicio lo requiere",
+        "El servicio se inicia una vez y luego queda deshabilitado"
+      ],
+      "correcta": 1,
+      "explicacion": "Con tipo de inicio Automático, siempre que se inicie el ordenador se inicia el servicio."
+    },
+    {
+      "id": "si-6.3.7-026",
+      "enunciado": "¿Qué ocurre con un servicio configurado con tipo de inicio \"Manual\"?",
+      "opciones": [
+        "Se inicia automáticamente con el sistema operativo",
+        "No puede iniciarse bajo ninguna circunstancia",
+        "Hay que iniciarlo manualmente",
+        "Se inicia solo si hay conexiones entrantes"
+      ],
+      "correcta": 2,
+      "explicacion": "Con tipo de inicio Manual, hay que iniciar el servicio manualmente."
+    },
+    {
+      "id": "si-6.3.7-027",
+      "enunciado": "¿Qué ocurre con un servicio configurado como \"Deshabilitado\"?",
+      "opciones": [
+        "Se inicia automáticamente pero no acepta conexiones",
+        "No se puede iniciar el servicio",
+        "Solo puede iniciarlo el administrador del sistema",
+        "Se inicia manualmente pero con privilegios reducidos"
+      ],
+      "correcta": 1,
+      "explicacion": "Con tipo de inicio Deshabilitado, no se puede iniciar el servicio."
+    },
+    {
+      "id": "si-6.3.7-028",
+      "enunciado": "¿Qué diferencia hay entre detener el servicio FTP desde la ventana Servicios de Windows y desde la consola IIS?",
+      "opciones": [
+        "No hay ninguna diferencia práctica",
+        "Desde Servicios se detiene el servicio global; desde IIS se controlan sitios FTP individuales",
+        "Desde IIS solo se puede iniciar, no detener",
+        "Desde Servicios se controlan sitios individuales; desde IIS se detiene el servicio global"
+      ],
+      "correcta": 1,
+      "explicacion": "En Servicios se puede detener o iniciar el servicio FTP globalmente, pero si se quieren tener unos sitios activos y otros detenidos hay que configurarlo en la consola de IIS."
+    },
+    {
+      "id": "si-6.3.7-029",
+      "enunciado": "¿Qué opciones ofrece el menú contextual de un sitio FTP en la consola IIS?",
+      "opciones": [
+        "Solo iniciar y detener el sitio",
+        "Iniciar, detener, configuración básica y configuración avanzada",
+        "Solo configurar permisos de usuarios",
+        "Iniciar, detener y eliminar el sitio permanentemente"
+      ],
+      "correcta": 1,
+      "explicacion": "Al pulsar menú contextual en el sitio, se puede iniciar y detener, y también configurar en 'Configuración básica' y 'Configuración avanzada'."
+    },
+    {
+      "id": "si-6.3.7-030",
+      "enunciado": "¿Qué comando se usa para conectarse a un servidor FTP desde la terminal de Windows por IP?",
+      "opciones": [
+        "ftp connect 192.168.100.152",
+        "ftp 192.168.100.152",
+        "connect ftp 192.168.100.152",
+        "ftp --host 192.168.100.152"
+      ],
+      "correcta": 1,
+      "explicacion": "Desde la terminal de Windows se usa el comando ftp seguido de la IP del servidor: ftp 192.168.100.152."
+    },
+    {
+      "id": "si-6.3.7-031",
+      "enunciado": "Al conectarse a un servidor FTP desde la terminal, ¿qué solicita el sistema tras el comando de conexión?",
+      "opciones": [
+        "Solo la contraseña",
+        "El nombre del sitio FTP al que conectarse",
+        "Usuario y contraseña",
+        "La ruta del directorio remoto al que acceder"
+      ],
+      "correcta": 2,
+      "explicacion": "Al conectarse al servidor FTP, el sistema pedirá usuario y contraseña."
+    },
+    {
+      "id": "si-6.3.7-032",
+      "enunciado": "¿Por qué no funciona conectarse al servidor FTP usando el nombre de dominio si no hay servidor DNS?",
+      "opciones": [
+        "Porque el protocolo FTP no soporta nombres de dominio",
+        "Porque Windows no permite usar nombres de dominio en la terminal",
+        "Porque sin servidor DNS no se puede traducir el nombre de dominio a una dirección IP",
+        "Porque IIS requiere un certificado SSL para usar nombres de dominio"
+      ],
+      "correcta": 2,
+      "explicacion": "Sin un servidor DNS que diga a qué IP corresponde el nombre de dominio, no es posible conectarse usando dicho nombre."
+    },
+    {
+      "id": "si-6.3.7-033",
+      "enunciado": "¿Cuál es el propósito principal del protocolo FTP en las redes informáticas?",
+      "opciones": [
+        "Proporcionar un método para enviar correos electrónicos entre servidores",
+        "Permitir la transferencia de archivos entre un cliente y un servidor en una red",
+        "Ofrecer servicios de resolución de nombres de dominio a direcciones IP",
+        "Gestionar la configuración de dispositivos de red de forma remota"
+      ],
+      "correcta": 1,
+      "explicacion": "El propósito principal del protocolo FTP es permitir la transferencia de archivos entre un cliente y un servidor en una red."
+    }
+  ]
+}

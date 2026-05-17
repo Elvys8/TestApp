@@ -42,18 +42,6 @@
       "explicacion": "El comando es: apt install nfs-common rpcbind."
     },
     {
-      "id": "si-6.3.5-004",
-      "enunciado": "¿Cuántas carpetas de montaje se crean en el cliente antes de montar los recursos NFS del ejemplo?",
-      "opciones": [
-        "Una",
-        "Dos",
-        "Tres",
-        "Cuatro"
-      ],
-      "correcta": 2,
-      "explicacion": "Se crean tres carpetas: /mnt/nfs, /mnt/nfs/lectura y /mnt/nfs/escritura."
-    },
-    {
       "id": "si-6.3.5-005",
       "enunciado": "¿Bajo qué ruta padre se crean las carpetas de montaje NFS en el ejemplo?",
       "opciones": [
@@ -127,7 +115,7 @@
     },
     {
       "id": "si-6.3.5-011",
-      "enunciado": "¿Qué comando permite ver el punto de montaje remoto NFS según el material?",
+      "enunciado": "¿Qué comando permite ver el punto de montaje remoto NFS?",
       "opciones": [
         "mount -l",
         "lsblk",
@@ -232,18 +220,6 @@
       ],
       "correcta": 1,
       "explicacion": "La línea correcta es: 192.168.100.1:/nfs/lectura /mnt/nfs/lectura nfs ro,intr,x-gvfs-show 0 0."
-    },
-    {
-      "id": "si-6.3.5-020",
-      "enunciado": "¿Cuántas líneas se añaden en fstab en el ejemplo del cliente NFS?",
-      "opciones": [
-        "Una",
-        "Dos",
-        "Tres",
-        "Cuatro"
-      ],
-      "correcta": 1,
-      "explicacion": "Se añaden dos líneas: una para el recurso lectura y otra para el recurso escritura."
     },
     {
       "id": "si-6.3.5-021",

@@ -1,0 +1,189 @@
+{
+  "schema_version": 1,
+  "id": "si-6.3.6-servicio-ftp-vsftpd",
+  "asignatura": "Sistemas Informáticos",
+  "asignatura_color": "#1C3C6F",
+  "tema": "6.3.6 Servicio FTP: vsftpd",
+  "preguntas": [
+    {
+      "id": "si-6.3.6-001",
+      "enunciado": "¿Qué puertos utiliza el servicio FTP?",
+      "opciones": [
+        "21 y 22",
+        "20 y 21",
+        "80 y 443",
+        "20 y 22"
+      ],
+      "correcta": 1,
+      "explicacion": "El servicio FTP utiliza los puertos 20 y 21."
+    },
+    {
+      "id": "si-6.3.6-002",
+      "enunciado": "¿Cuál es el servidor FTP más utilizado en Linux?",
+      "opciones": [
+        "proftpd",
+        "pureftpd",
+        "vsftpd",
+        "ftpd"
+      ],
+      "correcta": 2,
+      "explicacion": "El servicio FTP más utilizado en Linux se llama vsftpd (Very Secure FTP daemon)."
+    },
+    {
+      "id": "si-6.3.6-003",
+      "enunciado": "¿Qué significan las siglas vsftpd?",
+      "opciones": [
+        "Virtual Secure File Transfer Protocol Daemon",
+        "Very Secure FTP Daemon",
+        "Very Simple FTP Daemon",
+        "Virtual System FTP Daemon"
+      ],
+      "correcta": 1,
+      "explicacion": "vsftpd son las siglas de Very Secure FTP daemon."
+    },
+    {
+      "id": "si-6.3.6-004",
+      "enunciado": "¿Cómo se describe vsftpd en el material?",
+      "opciones": [
+        "Un servidor FTP completo y con muchas funciones",
+        "Un servidor FTP muy pequeño y seguro",
+        "Un servidor FTP de propósito general para cualquier sistema",
+        "Un servidor FTP exclusivo para redes corporativas"
+      ],
+      "correcta": 1,
+      "explicacion": "vsftpd es un servidor FTP muy pequeño y seguro."
+    },
+    {
+      "id": "si-6.3.6-005",
+      "enunciado": "¿Qué comando instala vsftpd en Linux?",
+      "opciones": [
+        "apt install ftp-server",
+        "apt install vsftpd",
+        "apt install ftpd",
+        "apt install proftpd"
+      ],
+      "correcta": 1,
+      "explicacion": "El comando para instalar vsftpd es: apt install vsftpd."
+    },
+    {
+      "id": "si-6.3.6-006",
+      "enunciado": "¿Qué clientes se pueden usar para conectarse al servidor vsftpd?",
+      "opciones": [
+        "Solo clientes de línea de comandos",
+        "Solo navegadores web",
+        "Terminal, FileZilla y navegadores web",
+        "Solo FileZilla"
+      ],
+      "correcta": 2,
+      "explicacion": "Las conexiones se harán con clientes FTP como terminal, FileZilla y navegadores web."
+    },
+    {
+      "id": "si-6.3.6-007",
+      "enunciado": "¿Cómo se llama el fichero de configuración de vsftpd?",
+      "opciones": [
+        "/etc/ftp.conf",
+        "/etc/vsftpd/vsftpd.conf",
+        "/etc/vsftpd.conf",
+        "/etc/ftp/vsftpd.conf"
+      ],
+      "correcta": 2,
+      "explicacion": "El archivo de configuración se llama /etc/vsftpd.conf."
+    },
+    {
+      "id": "si-6.3.6-008",
+      "enunciado": "¿Qué aspectos se configuran en el fichero de configuración de vsftpd?",
+      "opciones": [
+        "Solo los puertos de escucha del servidor",
+        "Usuarios permitidos, acceso anónimo y carpeta de descarga",
+        "Solo los permisos de los ficheros transferidos",
+        "La velocidad máxima de transferencia y el número de conexiones"
+      ],
+      "correcta": 1,
+      "explicacion": "En /etc/vsftpd.conf se configuran los usuarios permitidos, si se permite usuario anónimo o no, y la carpeta de descarga del servidor."
+    },
+    {
+      "id": "si-6.3.6-009",
+      "enunciado": "¿Se permite el acceso al usuario anónimo en vsftpd por defecto?",
+      "opciones": [
+        "Sí, está habilitado por defecto",
+        "No, no se permite por defecto",
+        "Solo desde la red local",
+        "Solo en modo lectura"
+      ],
+      "correcta": 1,
+      "explicacion": "Por defecto, no se permite el acceso al usuario anónimo en vsftpd."
+    },
+    {
+      "id": "si-6.3.6-010",
+      "enunciado": "¿Quiénes son los usuarios permitidos en vsftpd por defecto?",
+      "opciones": [
+        "Solo el usuario root",
+        "Los usuarios creados específicamente para FTP",
+        "Los usuarios propios del sistema",
+        "Cualquier usuario que se autentique con contraseña"
+      ],
+      "correcta": 2,
+      "explicacion": "Los usuarios permitidos son los propios del sistema."
+    },
+    {
+      "id": "si-6.3.6-011",
+      "enunciado": "¿Cuál es el directorio de conexión FTP de un usuario del sistema por defecto?",
+      "opciones": [
+        "/var/ftp",
+        "/srv/ftp",
+        "Su directorio $HOME",
+        "/etc/ftp"
+      ],
+      "correcta": 2,
+      "explicacion": "El directorio de conexión de cada usuario es su $HOME. Por ejemplo, si se conecta el usuario luis, el directorio donde se conecta es /home/luis."
+    },
+    {
+      "id": "si-6.3.6-012",
+      "enunciado": "¿Qué significa que un usuario FTP esté \"enjaulado\" en su directorio?",
+      "opciones": [
+        "Que no puede subir archivos al servidor",
+        "Que no puede salir de su directorio de conexión navegando hacia directorios padre",
+        "Que solo puede conectarse en horario restringido",
+        "Que sus archivos quedan cifrados al transferirse"
+      ],
+      "correcta": 1,
+      "explicacion": "El enjaulamiento consiste en asegurarse de que el usuario no va a poder salir al directorio padre con el comando cd .."
+    },
+    {
+      "id": "si-6.3.6-013",
+      "enunciado": "¿Con qué comando podría un usuario salir de su directorio si no estuviera enjaulado?",
+      "opciones": [
+        "cd /",
+        "cd ~",
+        "cd ..",
+        "ls -la"
+      ],
+      "correcta": 2,
+      "explicacion": "Sin enjaulamiento, el usuario podría usar cd .. para subir al directorio padre y acceder a otras partes del sistema de ficheros."
+    },
+    {
+      "id": "si-6.3.6-014",
+      "enunciado": "¿Están enjaulados los usuarios en vsftpd por defecto?",
+      "opciones": [
+        "Sí, todos los usuarios quedan enjaulados por defecto",
+        "No, por defecto los usuarios no están enjaulados",
+        "Solo el usuario anónimo queda enjaulado por defecto",
+        "Solo los usuarios del grupo ftp quedan enjaulados"
+      ],
+      "correcta": 1,
+      "explicacion": "Por defecto los usuarios no están enjaulados en vsftpd."
+    },
+    {
+      "id": "si-6.3.6-015",
+      "enunciado": "¿Por qué es importante configurar el enjaulamiento de usuarios en vsftpd?",
+      "opciones": [
+        "Para aumentar la velocidad de transferencia de ficheros",
+        "Para evitar que los usuarios accedan a directorios fuera de su $HOME",
+        "Para permitir el acceso a usuarios anónimos",
+        "Para limitar el número de conexiones simultáneas"
+      ],
+      "correcta": 1,
+      "explicacion": "El enjaulamiento es importante para asegurarse de que el usuario no pueda salir de su directorio de conexión y acceder a otras partes del sistema de ficheros."
+    }
+  ]
+}

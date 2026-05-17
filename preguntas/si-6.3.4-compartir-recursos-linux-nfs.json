@@ -76,42 +76,6 @@
       "explicacion": "Tras modificar /etc/exports hay que reiniciar el servicio NFS para que se lean los cambios."
     },
     {
-      "id": "si-6.3.4-007",
-      "enunciado": "En el ejemplo, ¿cuántas carpetas se comparten?",
-      "opciones": [
-        "Una",
-        "Dos",
-        "Tres",
-        "Cuatro"
-      ],
-      "correcta": 1,
-      "explicacion": "En el ejemplo se comparten dos carpetas: /nfs/escritura y /nfs/lectura."
-    },
-    {
-      "id": "si-6.3.4-008",
-      "enunciado": "En el ejemplo, ¿qué restricción de acceso tiene la carpeta escritura?",
-      "opciones": [
-        "Accesible a toda la subred con permisos de escritura",
-        "Accesible solo al servidor con permisos de escritura",
-        "Accesible solo a un cliente Linux concreto con permisos de escritura",
-        "Accesible a toda la subred con permisos de solo lectura"
-      ],
-      "correcta": 2,
-      "explicacion": "La carpeta escritura solo puede utilizarse desde el cliente Linux 192.168.100.194, con permisos de escritura."
-    },
-    {
-      "id": "si-6.3.4-009",
-      "enunciado": "En el ejemplo, ¿qué restricción de acceso tiene la carpeta lectura?",
-      "opciones": [
-        "Accesible solo a un cliente Linux concreto con permisos de lectura",
-        "Accesible a toda la subred con permisos de solo lectura",
-        "Accesible a toda la subred con permisos de escritura",
-        "Accesible solo al servidor con permisos de lectura"
-      ],
-      "correcta": 1,
-      "explicacion": "La carpeta lectura se puede utilizar a lo largo de toda la subred, pero con permisos solo de lectura."
-    },
-    {
       "id": "si-6.3.4-010",
       "enunciado": "¿Cuál es el comando para instalar el servidor NFS en Ubuntu?",
       "opciones": [
@@ -353,7 +317,7 @@
     },
     {
       "id": "si-6.3.4-030",
-      "enunciado": "La configuración del cortafuegos es necesaria para NFS solo si hay un cortafuegos activo en el servidor. ¿Verdadero o falso?",
+      "enunciado": "La configuración del cortafuegos es necesaria para NFS solo si hay un cortafuegos activo. ¿Verdadero o falso?",
       "opciones": [
         "Verdadero",
         "Falso"
