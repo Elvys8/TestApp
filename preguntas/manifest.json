@@ -17,6 +17,7 @@
   	"si-6.3-servidor-de-ficheros.json",
   	"si-6.3.1-compartir-recursos-con-windows.json",
   	"si-6.3.2-compartir-recursos-linux-windows.json",
+  	"si-6.3.3-conexion-desde-maquinas-cliente.json",
   	"almacenamiento-de-informacion.json"
   ]
 }

@@ -1,0 +1,331 @@
+{
+  "schema_version": 1,
+  "id": "si-6.3.3-conexion-desde-maquinas-cliente",
+  "asignatura": "Sistemas Informáticos",
+  "asignatura_color": "#1C3C6F",
+  "tema": "6.3.3 Conexión desde máquinas cliente",
+  "preguntas": [
+    {
+      "id": "si-6.3.3-001",
+      "enunciado": "¿De qué formas se puede acceder a los recursos Samba desde un cliente Windows?",
+      "opciones": [
+        "Mediante el comando mount o la ruta UNC",
+        "Mediante el explorador en Red o la ruta UNC",
+        "Mediante smbclient o el explorador de archivos",
+        "Mediante el comando net use o el Administrador de discos"
+      ],
+      "correcta": 1,
+      "explicacion": "Desde un cliente Windows se puede acceder a través del explorador en el apartado Red o con la ruta UNC."
+    },
+    {
+      "id": "si-6.3.3-002",
+      "enunciado": "¿Cuál es la ruta UNC utilizada en el ejemplo para conectarse al servidor Samba?",
+      "opciones": [
+        "//SistemasUbuntu",
+        "\\\\SistemasUbuntu",
+        "\\\\192.168.100.1\\samba",
+        "//samba/SistemasUbuntu"
+      ],
+      "correcta": 1,
+      "explicacion": "La ruta UNC utilizada en el ejemplo es \\\\SistemasUbuntu, que es el nombre NetBIOS del servidor."
+    },
+    {
+      "id": "si-6.3.3-003",
+      "enunciado": "¿Qué ocurre al hacer doble clic sobre un recurso compartido Samba desde el explorador de Windows?",
+      "opciones": [
+        "Se monta automáticamente sin pedir credenciales",
+        "Se solicitan las credenciales de usuario",
+        "Se abre una terminal para ejecutar el comando mount",
+        "Se descarga el archivo de configuración del recurso"
+      ],
+      "correcta": 1,
+      "explicacion": "Al pulsar doble clic para realizar la conexión se solicita usuario y contraseña."
+    },
+    {
+      "id": "si-6.3.3-004",
+      "enunciado": "¿Con qué credenciales se accede al recurso compartido escritura en el ejemplo?",
+      "opciones": [
+        "Con el usuario administrador de Windows",
+        "Con el usuario invitado (guest)",
+        "Con el usuario juan",
+        "Con el usuario root del servidor Linux"
+      ],
+      "correcta": 2,
+      "explicacion": "En el ejemplo se utilizan las credenciales del usuario juan para acceder al recurso escritura."
+    },
+    {
+      "id": "si-6.3.3-005",
+      "enunciado": "¿Cuántos paquetes se instalan en el cliente Linux para conectarse a Samba?",
+      "opciones": [
+        "Uno",
+        "Dos",
+        "Tres",
+        "Cuatro"
+      ],
+      "correcta": 2,
+      "explicacion": "Se instalan tres paquetes: samba-common, cifs-utils y nautilus-share."
+    },
+    {
+      "id": "si-6.3.3-006",
+      "enunciado": "¿Qué paquetes son imprescindibles para conectar un cliente Linux a Samba?",
+      "opciones": [
+        "samba y samba-common",
+        "cifs-utils y nautilus-share",
+        "samba-common y cifs-utils",
+        "samba-client y cifs-utils"
+      ],
+      "correcta": 2,
+      "explicacion": "Los paquetes samba-common y cifs-utils son imprescindibles. nautilus-share es necesario solo para la interfaz gráfica."
+    },
+    {
+      "id": "si-6.3.3-007",
+      "enunciado": "¿Para qué sirve el paquete `nautilus-share` en el cliente Linux?",
+      "opciones": [
+        "Para montar recursos Samba desde la terminal",
+        "Para gestionar usuarios del servicio Samba",
+        "Para utilizar la interfaz gráfica del explorador de archivos",
+        "Para cifrar las credenciales de acceso a Samba"
+      ],
+      "correcta": 2,
+      "explicacion": "nautilus-share es necesario para poder utilizar la interfaz gráfica del explorador de archivos Nautilus con recursos Samba."
+    },
+    {
+      "id": "si-6.3.3-008",
+      "enunciado": "¿Cuál es el comando completo para instalar los paquetes necesarios en el cliente Linux?",
+      "opciones": [
+        "apt install samba samba-common cifs-utils",
+        "apt install samba-common nautilus-share",
+        "apt install samba-common cifs-utils nautilus-share",
+        "apt install cifs-utils samba nautilus-share"
+      ],
+      "correcta": 2,
+      "explicacion": "El comando es: apt install samba-common cifs-utils nautilus-share."
+    },
+    {
+      "id": "si-6.3.3-009",
+      "enunciado": "El paquete `nautilus-share` es imprescindible para conectarse a Samba desde Linux. ¿Verdadero o falso?",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 1,
+      "explicacion": "nautilus-share no es imprescindible; solo es necesario para usar la interfaz gráfica. Los paquetes imprescindibles son samba-common y cifs-utils."
+    },
+    {
+      "id": "si-6.3.3-010",
+      "enunciado": "¿Desde qué sección del explorador Nautilus se puede ver la máquina SistemasUbuntu?",
+      "opciones": [
+        "Dispositivos locales",
+        "Marcadores",
+        "Otras ubicaciones",
+        "Red local"
+      ],
+      "correcta": 2,
+      "explicacion": "Desde el explorador de archivos Nautilus, yendo a Otras ubicaciones, se ve la máquina SistemasUbuntu."
+    },
+    {
+      "id": "si-6.3.3-011",
+      "enunciado": "¿Qué comando se usa siempre para montar una carpeta de red en Linux?",
+      "opciones": [
+        "smbclient",
+        "cifs-mount",
+        "mount",
+        "netmount"
+      ],
+      "correcta": 2,
+      "explicacion": "Para montar una carpeta, siempre se utiliza el comando mount."
+    },
+    {
+      "id": "si-6.3.3-012",
+      "enunciado": "¿Qué parámetro de `mount` indica el tipo de sistema de ficheros al montar un recurso Samba?",
+      "opciones": [
+        "-f cifs",
+        "-s cifs",
+        "-t cifs",
+        "-o cifs"
+      ],
+      "correcta": 2,
+      "explicacion": "El parámetro -t indica el tipo de sistema de ficheros; en el caso de Samba se usa -t cifs."
+    },
+    {
+      "id": "si-6.3.3-013",
+      "enunciado": "¿Qué parámetro de `mount` se usa para especificar las credenciales de acceso?",
+      "opciones": [
+        "-c user=juan,pass=clave",
+        "-u user=juan,pass=clave",
+        "-o user=juan,pass=clave",
+        "-t user=juan,pass=clave"
+      ],
+      "correcta": 2,
+      "explicacion": "Las credenciales se especifican con el parámetro -o: -o user=juan,pass=clave."
+    },
+    {
+      "id": "si-6.3.3-014",
+      "enunciado": "¿Cómo se indica el equipo remoto en el comando `mount` para recursos Samba?",
+      "opciones": [
+        "Con el nombre NetBIOS entre barras: \\\\SistemasUbuntu\\escritura",
+        "Con la ruta UNC en formato Windows",
+        "Con la IP del servidor: //192.168.100.1/escritura",
+        "Con el nombre del dominio Samba"
+      ],
+      "correcta": 2,
+      "explicacion": "En el comando mount se indica el equipo remoto con su IP en formato: //192.168.100.1/escritura."
+    },
+    {
+      "id": "si-6.3.3-015",
+      "enunciado": "¿Cuál sería el comando completo para montar el recurso escritura del ejemplo?",
+      "opciones": [
+        "mount -t cifs //192.168.100.1/escritura /mnt/escritura -o juan,clave",
+        "mount -t cifs -o user=juan,pass=clave //192.168.100.1/escritura /mnt/escritura",
+        "mount -cifs -u juan -p clave //192.168.100.1/escritura /mnt/escritura",
+        "mount //192.168.100.1/escritura /mnt/escritura -t cifs -u juan"
+      ],
+      "correcta": 1,
+      "explicacion": "El comando correcto es: mount -t cifs -o user=juan,pass=clave //192.168.100.1/escritura /mnt/escritura."
+    },
+    {
+      "id": "si-6.3.3-016",
+      "enunciado": "¿Qué se hace antes de ejecutar el comando `mount` para montar el recurso remoto?",
+      "opciones": [
+        "Instalar el paquete cifs-utils en el servidor",
+        "Reiniciar el servicio Samba en el servidor",
+        "Crear la carpeta de montaje local",
+        "Configurar el archivo /etc/samba/smb.conf en el cliente"
+      ],
+      "correcta": 2,
+      "explicacion": "Antes de ejecutar mount hay que crear la carpeta de montaje local: mkdir /mnt/escritura."
+    },
+    {
+      "id": "si-6.3.3-017",
+      "enunciado": "¿En qué ruta local se monta el recurso escritura en el ejemplo?",
+      "opciones": [
+        "/samba/escritura",
+        "/media/escritura",
+        "/mnt/escritura",
+        "/home/juan/escritura"
+      ],
+      "correcta": 2,
+      "explicacion": "El recurso escritura se monta en la carpeta local /mnt/escritura."
+    },
+    {
+      "id": "si-6.3.3-018",
+      "enunciado": "Tras montar el recurso escritura con `mount`, ¿qué demuestra el ejemplo que es posible hacer?",
+      "opciones": [
+        "Ver las estadísticas de conexión con smbstatus",
+        "Acceder al recurso solo en modo lectura",
+        "Crear carpetas en el servidor Linux de forma remota",
+        "Modificar la configuración de smb.conf remotamente"
+      ],
+      "correcta": 2,
+      "explicacion": "En el ejemplo se crea la carpeta carpeta2 dentro del recurso montado, lo que crea esa carpeta en el servidor Linux."
+    },
+    {
+      "id": "si-6.3.3-019",
+      "enunciado": "¿Cuál es el inconveniente del montaje manual con `mount`?",
+      "opciones": [
+        "No permite montar recursos con contraseña",
+        "Solo funciona con el protocolo NFS",
+        "Hay que repetirlo cada vez que se quiera acceder al recurso",
+        "No es compatible con el sistema de ficheros CIFS"
+      ],
+      "correcta": 2,
+      "explicacion": "El montaje con mount no es persistente: hay que ejecutarlo cada vez que se quiera acceder al recurso tras reiniciar."
+    },
+    {
+      "id": "si-6.3.3-020",
+      "enunciado": "¿En qué archivo se configura el montaje automático de recursos en Linux?",
+      "opciones": [
+        "/etc/samba/smb.conf",
+        "/etc/mount.conf",
+        "/etc/fstab",
+        "/etc/network/interfaces"
+      ],
+      "correcta": 2,
+      "explicacion": "El archivo /etc/fstab permite configurar el montaje automático de sistemas de ficheros y recursos de red."
+    },
+    {
+      "id": "si-6.3.3-021",
+      "enunciado": "¿Qué sistema de ficheros se especifica en la línea de fstab para un recurso Samba?",
+      "opciones": [
+        "nfs",
+        "smb",
+        "cifs",
+        "samba"
+      ],
+      "correcta": 2,
+      "explicacion": "En la línea de fstab se especifica cifs como tipo de sistema de ficheros para recursos Samba."
+    },
+    {
+      "id": "si-6.3.3-022",
+      "enunciado": "¿Qué ventaja tiene añadir el recurso Samba a `/etc/fstab`?",
+      "opciones": [
+        "La contraseña se cifra automáticamente",
+        "El recurso se comparte con otros equipos de la red",
+        "El recurso se monta automáticamente sin que el usuario tenga que usar mount",
+        "El rendimiento de la conexión mejora significativamente"
+      ],
+      "correcta": 2,
+      "explicacion": "Añadir la entrada en /etc/fstab hace que el recurso se monte automáticamente en cada arranque, sin necesidad de ejecutar mount manualmente."
+    },
+    {
+      "id": "si-6.3.3-023",
+      "enunciado": "¿Cuál es el problema de seguridad de añadir el recurso Samba a `/etc/fstab`?",
+      "opciones": [
+        "Cualquier usuario puede desmontar el recurso con umount",
+        "La contraseña queda expuesta porque fstab tiene permisos de lectura para todos los usuarios",
+        "El recurso queda accesible sin autenticación para cualquier equipo de la red",
+        "fstab no permite especificar contraseñas con caracteres especiales"
+      ],
+      "correcta": 1,
+      "explicacion": "Al incluir la contraseña en /etc/fstab, queda expuesta a todos los usuarios del sistema, ya que fstab tiene permisos de lectura para todos."
+    },
+    {
+      "id": "si-6.3.3-024",
+      "enunciado": "¿Qué permisos tiene el archivo `/etc/fstab` que provocan el problema de seguridad?",
+      "opciones": [
+        "Permisos de escritura para todos los usuarios",
+        "Permisos de ejecución para el grupo root",
+        "Permisos de lectura para todos los usuarios",
+        "No tiene permisos de ningún tipo para usuarios no root"
+      ],
+      "correcta": 2,
+      "explicacion": "fstab es un fichero con permisos de lectura para todos los usuarios, por lo que la contraseña almacenada en él queda visible para cualquiera."
+    },
+    {
+      "id": "si-6.3.3-025",
+      "enunciado": "¿Cuál sería la línea correcta para añadir en fstab el montaje automático del recurso escritura del ejemplo?",
+      "opciones": [
+        "//192.168.100.1/escritura /mnt/escritura smb rw,user=juan,pass=clave 0 0",
+        "//192.168.100.1/escritura /mnt/escritura cifs rw,username=juan,password=clave 0 0",
+        "//192.168.100.1/escritura /mnt/escritura cifs user=juan,pass=clave",
+        "/mnt/escritura //192.168.100.1/escritura cifs rw,username=juan,password=clave 0 0"
+      ],
+      "correcta": 1,
+      "explicacion": "La línea correcta es: //192.168.100.1/escritura /mnt/escritura cifs rw,username=juan,password=clave 0 0"
+    },
+    {
+      "id": "si-6.3.3-026",
+      "enunciado": "¿Dónde se añade la línea de montaje automático en `/etc/fstab`?",
+      "opciones": [
+        "Al principio del archivo",
+        "Después de la sección de comentarios",
+        "Al final del archivo",
+        "En la sección marcada como [samba]"
+      ],
+      "correcta": 2,
+      "explicacion": "La línea de montaje automático se añade al final del archivo /etc/fstab."
+    },
+    {
+      "id": "si-6.3.3-027",
+      "enunciado": "¿Cuál de las siguientes afirmaciones sobre Samba es falsa?",
+      "opciones": [
+        "Samba permite compartir recursos entre máquinas Windows y Linux",
+        "El fichero de configuración es /etc/samba/smb.conf",
+        "Utiliza 2 puertos",
+        "Para montar un recurso se utiliza la opción cifs en el comando mount"
+      ],
+      "correcta": 2,
+      "explicacion": "Samba utiliza 4 puertos: 137 y 138 (UDP) y 139 y 443 (TCP). La afirmación de que solo usa 2 puertos es falsa."
+    }
+  ]
+}
