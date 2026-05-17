@@ -109,7 +109,9 @@ function render() {
 function renderRevealMode() {
   const { file, currentIdx, mountEl, edits } = _state;
   const original = file.preguntas[currentIdx];
-  const edited = edits[original.id];
+  const editEntry = edits[original.id];
+  const isDeleted = editEntry?._deleted === true;
+  const edited = isDeleted ? null : editEntry;
   const display = edited || original;
 
   mountEl.innerHTML = `
@@ -125,8 +127,8 @@ function renderRevealMode() {
     </div>
 
     ${renderExplicacion(display)}
-    ${renderEditedBadge(edited)}
-    ${renderValidationActions()}
+    ${renderStatusBadge(editEntry)}
+    ${renderValidationActions(isDeleted)}
   `;
 
   attachHandlers();
@@ -136,7 +138,9 @@ function renderRevealMode() {
 function renderTestMode() {
   const { file, currentIdx, mountEl, edits } = _state;
   const original = file.preguntas[currentIdx];
-  const edited = edits[original.id];
+  const editEntry = edits[original.id];
+  const isDeleted = editEntry?._deleted === true;
+  const edited = isDeleted ? null : editEntry;
   const display = edited || original;
 
   mountEl.innerHTML = `
@@ -155,8 +159,8 @@ function renderTestMode() {
       ${display.explicacion ? ui.escapeHtml(display.explicacion) : ""}
     </p>
 
-    ${renderEditedBadge(edited)}
-    ${renderValidationActions()}
+    ${renderStatusBadge(editEntry)}
+    ${renderValidationActions(isDeleted)}
   `;
 
   // Cablear clics en las opciones
@@ -209,8 +213,15 @@ function renderExplicacion(display) {
   return `<p class="explanation">${ui.escapeHtml(display.explicacion)}</p>`;
 }
 
-function renderEditedBadge(edited) {
-  if (!edited) return "";
+function renderStatusBadge(editEntry) {
+  if (!editEntry) return "";
+  if (editEntry._deleted) {
+    return `
+      <p class="validation-deleted-badge">
+        ✕ Marcada para eliminar. Se omitirá del JSON descargado.
+      </p>
+    `;
+  }
   return `
     <p class="muted tiny" style="margin: 12px 0 0;">
       ✎ Esta pregunta ya tiene correcciones. Se descargarán al finalizar la sesión.
@@ -218,10 +229,21 @@ function renderEditedBadge(edited) {
   `;
 }
 
-function renderValidationActions() {
+function renderValidationActions(isDeleted = false) {
+  if (isDeleted) {
+    return `
+      <div class="validation-actions">
+        <button class="btn btn--ghost" id="btn-restore" type="button">↩ Restaurar pregunta</button>
+        <button class="btn btn--primary" id="btn-ok" type="button">Siguiente →</button>
+      </div>
+    `;
+  }
   return `
     <div class="validation-actions">
-      <button class="btn btn--ghost"   id="btn-fix" type="button">Necesita correcciones</button>
+      <button class="btn btn--ghost btn--danger-text" id="btn-delete" type="button" style="margin-right:auto;">
+        ✕ Eliminar
+      </button>
+      <button class="btn btn--ghost" id="btn-fix" type="button">Necesita correcciones</button>
       <button class="btn btn--primary" id="btn-ok"  type="button">Sí, está bien →</button>
     </div>
   `;
@@ -230,7 +252,15 @@ function renderValidationActions() {
 function attachHandlers() {
   const { mountEl } = _state;
   mountEl.querySelector("#btn-ok").addEventListener("click", handleConfirmOk);
-  mountEl.querySelector("#btn-fix").addEventListener("click", handleNeedsFix);
+
+  const fixBtn = mountEl.querySelector("#btn-fix");
+  if (fixBtn) fixBtn.addEventListener("click", handleNeedsFix);
+
+  const deleteBtn = mountEl.querySelector("#btn-delete");
+  if (deleteBtn) deleteBtn.addEventListener("click", handleDelete);
+
+  const restoreBtn = mountEl.querySelector("#btn-restore");
+  if (restoreBtn) restoreBtn.addEventListener("click", handleRestore);
 
   // Salto directo a una pregunta concreta desde el desplegable
   const jump = mountEl.querySelector("#question-jump");
@@ -265,6 +295,31 @@ async function handleNeedsFix() {
   // La edición confirma que la versión guardada es correcta
   storage.markQuestionValidated(_state.file.id, original.id);
   _state.currentIdx++;
+  render();
+}
+
+/* "Eliminar" → marca la pregunta para ser omitida del JSON y avanza. */
+function handleDelete() {
+  const q = _state.file.preguntas[_state.currentIdx];
+  const yes = window.confirm(
+    `¿Eliminar "${q.enunciado.slice(0, 80)}${q.enunciado.length > 80 ? "…" : ""}"?\n` +
+    `La pregunta se omitirá del JSON descargado al final de la sesión. Podrás restaurarla volviendo a esta posición.`
+  );
+  if (!yes) return;
+  _state.edits[q.id] = { _deleted: true };
+  persistWip();
+  storage.markQuestionValidated(_state.file.id, q.id);
+  _state.currentIdx++;
+  render();
+}
+
+/* "Restaurar" → deshace la eliminación y muestra la pregunta normalmente. */
+function handleRestore() {
+  const q = _state.file.preguntas[_state.currentIdx];
+  delete _state.edits[q.id];
+  persistWip();
+  // Retirar también la marca de validada para que cuente de nuevo en la sesión
+  storage.markQuestionNeedsFix(_state.file.id, q.id);
   render();
 }
 
@@ -373,9 +428,11 @@ function renderEnd() {
     storage.setFileValidationStatus(file.id, "validated");
   }
 
-  const editsCount = Object.keys(edits).length;
+  const deletedCount = Object.values(edits).filter((e) => e._deleted).length;
+  const editsCount   = Object.values(edits).filter((e) => !e._deleted).length;
+  const hasChanges   = deletedCount > 0 || editsCount > 0;
   let download = null;
-  if (editsCount > 0) {
+  if (hasChanges) {
     download = buildCorrectedJson(file, edits);
   }
 
@@ -388,10 +445,14 @@ function renderEnd() {
         "${ui.escapeHtml(file.tema)}".
       </p>
       <p class="muted tiny" style="margin: 0;">
-        ${editsCount === 0
-          ? "No has editado ninguna pregunta."
-          : `${editsCount} ${editsCount === 1 ? "pregunta editada" : "preguntas editadas"} · ` +
-            `${file.preguntas.length - editsCount} confirmadas tal cual.`}
+        ${(() => {
+            const parts = [];
+            if (editsCount)   parts.push(`${editsCount} ${editsCount === 1 ? "editada" : "editadas"}`);
+            if (deletedCount) parts.push(`${deletedCount} ${deletedCount === 1 ? "eliminada" : "eliminadas"}`);
+            const unchanged = file.preguntas.length - editsCount - deletedCount;
+            if (!parts.length) return "No has modificado ninguna pregunta.";
+            return parts.join(" · ") + ` · ${unchanged} confirmadas tal cual.`;
+          })()}
       </p>
       ${allValidated ? `
         <p style="margin: 8px 0 0; color: var(--success);">
@@ -458,17 +519,19 @@ function buildCorrectedJson(file, edits) {
     asignatura: file.asignatura,
     asignatura_color: file.asignatura_color,
     tema: file.tema,
-    preguntas: file.preguntas.map((q) => {
-      const e = edits[q.id];
-      if (!e) return cleanQuestion(q);
-      return {
-        id: q.id,
-        enunciado: e.enunciado,
-        opciones: e.opciones,
-        correcta: e.correcta,
-        explicacion: e.explicacion || "",
-      };
-    }),
+    preguntas: file.preguntas
+      .filter((q) => !edits[q.id]?._deleted)
+      .map((q) => {
+        const e = edits[q.id];
+        if (!e) return cleanQuestion(q);
+        return {
+          id: q.id,
+          enunciado: e.enunciado,
+          opciones: e.opciones,
+          correcta: e.correcta,
+          explicacion: e.explicacion || "",
+        };
+      }),
   };
   const filename = file._filename || `${file.id}.json`;
   return { filename, json: JSON.stringify(corrected, null, 2) };
