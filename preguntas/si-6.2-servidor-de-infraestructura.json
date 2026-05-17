@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "id": "si-6.2-servidor-de-infraestructura",
+  "asignatura": "Sistemas Informáticos",
+  "asignatura_color": "#1C3C6F",
+  "tema": "6.2 Servidor de infraestructura",
+  "preguntas": [
+    {
+      "id": "si-6.2-001",
+      "enunciado": "¿Qué es un servidor de infraestructura?",
+      "opciones": [
+        "Un software que gestiona usuarios y contraseñas en la red",
+        "Un equipo de hardware que proporciona servicios fundamentales a una red de computadoras",
+        "Un dispositivo exclusivo para conexiones inalámbricas",
+        "Un servidor dedicado únicamente al almacenamiento de ficheros"
+      ],
+      "correcta": 1,
+      "explicacion": "Un servidor de infraestructura es un equipo de hardware que proporciona servicios fundamentales a una red de computadoras."
+    },
+    {
+      "id": "si-6.2-002",
+      "enunciado": "¿En qué tipo de componente se basa físicamente un servidor de infraestructura?",
+      "opciones": [
+        "Software de virtualización",
+        "Equipo de hardware",
+        "Dispositivo de almacenamiento óptico",
+        "Módulo de firmware embebido"
+      ],
+      "correcta": 1,
+      "explicacion": "Un servidor de infraestructura es un equipo de hardware que proporciona servicios fundamentales a una red de computadoras."
+    },
+    {
+      "id": "si-6.2-003",
+      "enunciado": "¿Cuántos servicios se consideran fundamentales para el funcionamiento de la red en esta unidad?",
+      "opciones": [
+        "2",
+        "3",
+        "4",
+        "6"
+      ],
+      "correcta": 2,
+      "explicacion": "En esta unidad se han considerado fundamentales para el funcionamiento de la red los siguientes: enrutamiento, servidor DHCP, servidor DNS y punto de acceso inalámbrico."
+    },
+    {
+      "id": "si-6.2-004",
+      "enunciado": "¿Cuál de los siguientes NO es uno de los servicios fundamentales de infraestructura descritos en la unidad?",
+      "opciones": [
+        "Enrutamiento",
+        "Servidor DHCP",
+        "Servidor proxy",
+        "Servidor DNS"
+      ],
+      "correcta": 2,
+      "explicacion": "Los servicios fundamentales descritos son: enrutamiento, servidor DHCP, servidor DNS y punto de acceso inalámbrico. El servidor proxy no se menciona entre ellos."
+    },
+    {
+      "id": "si-6.2-005",
+      "enunciado": "¿Qué función tiene el enrutamiento en un servidor de infraestructura?",
+      "opciones": [
+        "Asignar automáticamente direcciones IP a los clientes",
+        "Traducir nombres de dominio a direcciones IP",
+        "Permitir la comunicación entre dos o más redes",
+        "Gestionar las conexiones inalámbricas de los equipos"
+      ],
+      "correcta": 2,
+      "explicacion": "El enrutamiento permite a un servidor actuar como router para permitir la comunicación entre dos o más redes."
+    },
+    {
+      "id": "si-6.2-006",
+      "enunciado": "¿Por qué se considera esencial el enrutamiento en una red local?",
+      "opciones": [
+        "Porque cifra el tráfico entre equipos",
+        "Porque permite tener salida a Internet desde la red local",
+        "Porque asigna nombres de dominio a los equipos",
+        "Porque distribuye la carga entre servidores"
+      ],
+      "correcta": 1,
+      "explicacion": "El enrutamiento es esencial para tener salida a Internet desde una red local."
+    },
+    {
+      "id": "si-6.2-007",
+      "enunciado": "¿Qué hace un servidor DHCP?",
+      "opciones": [
+        "Traduce direcciones web a direcciones IP",
+        "Enruta el tráfico entre redes distintas",
+        "Proporciona cobertura inalámbrica a los dispositivos móviles",
+        "Asigna automáticamente la configuración IP a los equipos clientes"
+      ],
+      "correcta": 3,
+      "explicacion": "El servidor DHCP permite asignar automáticamente la configuración IP de los equipos clientes de la red."
+    },
+    {
+      "id": "si-6.2-008",
+      "enunciado": "¿En qué situación resulta especialmente útil el servidor DHCP según el material?",
+      "opciones": [
+        "Cuando la red no tiene salida a Internet",
+        "Cuando hay infraestructura inalámbrica en la red",
+        "Cuando se necesita cifrar las comunicaciones",
+        "Cuando el número de equipos es inferior a cinco"
+      ],
+      "correcta": 1,
+      "explicacion": "El servidor DHCP facilita mucho la labor de administración, sobre todo si hay infraestructura inalámbrica."
+    },
+    {
+      "id": "si-6.2-009",
+      "enunciado": "¿Qué traduce un servidor DNS?",
+      "opciones": [
+        "Direcciones IP a nombres de usuario",
+        "Direcciones MAC a direcciones IP",
+        "Direcciones web a direcciones IP",
+        "Nombres de equipo a direcciones MAC"
+      ],
+      "correcta": 2,
+      "explicacion": "Un servidor DNS es un equipo en Internet que traduce las direcciones web, que se utilizan en los navegadores web, a las direcciones IP correspondientes."
+    },
+    {
+      "id": "si-6.2-010",
+      "enunciado": "¿Para qué facilita la navegación web un servidor DNS?",
+      "opciones": [
+        "Porque almacena en caché las páginas más visitadas",
+        "Porque cifra la conexión entre el navegador y el servidor web",
+        "Porque traduce las direcciones web usadas en los navegadores a sus IPs correspondientes",
+        "Porque comprime el tráfico HTTP para agilizar las descargas"
+      ],
+      "correcta": 2,
+      "explicacion": "Un servidor DNS facilita la navegación web porque traduce las direcciones web, que se utilizan en los navegadores web, a las direcciones IP correspondientes."
+    },
+    {
+      "id": "si-6.2-011",
+      "enunciado": "¿Dónde suele estar incluido el punto de acceso inalámbrico habitualmente?",
+      "opciones": [
+        "En el servidor DHCP",
+        "En el servidor DNS",
+        "En el router",
+        "En el switch de la red"
+      ],
+      "correcta": 2,
+      "explicacion": "El punto de acceso inalámbrico suele estar incluido en el router."
+    },
+    {
+      "id": "si-6.2-012",
+      "enunciado": "¿Cuál es la función principal del punto de acceso inalámbrico?",
+      "opciones": [
+        "Asignar IPs a los equipos de forma automática",
+        "Filtrar el tráfico entre la red local e Internet",
+        "Resolver nombres de dominio para dispositivos móviles",
+        "Permitir que los equipos inalámbricos puedan conectarse a la red"
+      ],
+      "correcta": 3,
+      "explicacion": "El punto de acceso inalámbrico es vital para que los equipos inalámbricos puedan conectarse."
+    },
+    {
+      "id": "si-6.2-013",
+      "enunciado": "¿Para qué sistemas operativos se centra la configuración del servidor de infraestructura en esta unidad?",
+      "opciones": [
+        "Windows Server",
+        "macOS Server",
+        "FreeBSD",
+        "Linux"
+      ],
+      "correcta": 3,
+      "explicacion": "La unidad se centra en sistemas Linux, ya que para tecnologías Windows los servicios aquí comentados sólo están disponibles en Windows Server, que escapa al contenido del módulo."
+    },
+    {
+      "id": "si-6.2-014",
+      "enunciado": "¿Por qué no se trabaja con Windows en la configuración del servidor de infraestructura?",
+      "opciones": [
+        "Porque Windows no soporta los servicios de infraestructura",
+        "Porque Windows Server está fuera del contenido del módulo",
+        "Porque Windows no permite configurar servidores DHCP",
+        "Porque Linux ofrece mejor rendimiento en todos los casos"
+      ],
+      "correcta": 1,
+      "explicacion": "Para tecnologías Windows los servicios aquí comentados sólo están disponibles en Windows Server, que escapa al contenido de este módulo."
+    }
+  ]
+}

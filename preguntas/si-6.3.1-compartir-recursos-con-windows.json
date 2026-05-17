@@ -1,0 +1,513 @@
+{
+  "schema_version": 1,
+  "id": "si-6.3.1-compartir-recursos-con-windows",
+  "asignatura": "Sistemas Informáticos",
+  "asignatura_color": "#1C3C6F",
+  "tema": "6.3.1 Compartir recursos con Windows",
+  "preguntas": [
+    {
+      "id": "si-6.3.1-001",
+      "enunciado": "¿Qué tipos de elementos se pueden compartir en Windows?",
+      "opciones": [
+        "Archivos individuales y carpetas",
+        "Carpetas e impresoras",
+        "Carpetas, archivos individuales e impresoras",
+        "Solo carpetas"
+      ],
+      "correcta": 1,
+      "explicacion": "Se pueden compartir carpetas e impresoras. No se pueden compartir archivos de forma individual."
+    },
+    {
+      "id": "si-6.3.1-002",
+      "enunciado": "¿Qué NO se puede compartir de forma individual en Windows?",
+      "opciones": [
+        "Carpetas",
+        "Impresoras",
+        "Archivos",
+        "Dispositivos USB"
+      ],
+      "correcta": 2,
+      "explicacion": "No se pueden compartir archivos de forma individual. Se llama recurso a la carpeta o impresora compartida."
+    },
+    {
+      "id": "si-6.3.1-003",
+      "enunciado": "¿Cómo se llama al elemento que se comparte (carpeta o impresora) una vez puesto en red?",
+      "opciones": [
+        "Directorio compartido",
+        "Recurso",
+        "Unidad de red",
+        "Punto de montaje"
+      ],
+      "correcta": 1,
+      "explicacion": "Se llama recurso a la carpeta o impresora compartida."
+    },
+    {
+      "id": "si-6.3.1-004",
+      "enunciado": "El nombre de un recurso compartido, ¿debe coincidir con el nombre de la carpeta o impresora original?",
+      "opciones": [
+        "Sí, siempre debe ser idéntico",
+        "No, puede ser distinto",
+        "Solo puede diferir en mayúsculas y minúsculas",
+        "Solo puede ser distinto si se usa una ruta UNC"
+      ],
+      "correcta": 1,
+      "explicacion": "Cuando se comparte un recurso, se le pone un nombre que puede ser distinto al nombre de la carpeta o impresora."
+    },
+    {
+      "id": "si-6.3.1-005",
+      "enunciado": "¿Qué icono distingue una carpeta compartida en el Explorador de Windows?",
+      "opciones": [
+        "Un candado sobre la carpeta",
+        "Una flecha azul sobre la carpeta",
+        "Una mano que sostiene una carpeta",
+        "Un globo terráqueo junto a la carpeta"
+      ],
+      "correcta": 2,
+      "explicacion": "Una carpeta compartida se suele distinguir en el Explorador de Windows por un icono de una mano que sostiene una carpeta."
+    },
+    {
+      "id": "si-6.3.1-006",
+      "enunciado": "¿Qué permiso se concede por defecto al grupo Todos cuando se comparte una carpeta?",
+      "opciones": [
+        "Control total",
+        "Cambio",
+        "Sin acceso",
+        "Lectura"
+      ],
+      "correcta": 3,
+      "explicacion": "Cuando se comparte una carpeta, se concede un permiso de lectura al grupo Todos de forma predeterminada."
+    },
+    {
+      "id": "si-6.3.1-007",
+      "enunciado": "¿Qué ocurre si se mueve una carpeta compartida?",
+      "opciones": [
+        "El recurso sigue compartido con la nueva ubicación",
+        "El recurso deja de estar compartido",
+        "Windows actualiza automáticamente la ruta UNC",
+        "Solo se pierde el nombre del recurso, no el acceso"
+      ],
+      "correcta": 1,
+      "explicacion": "Una carpeta compartida no se puede mover. Si se mueve deja de ser compartido el recurso."
+    },
+    {
+      "id": "si-6.3.1-008",
+      "enunciado": "¿Cuál es el formato de la ruta UNC de un recurso compartido?",
+      "opciones": [
+        "//NombreEquipo/NombreRecurso",
+        "\\\\NombreEquipo\\NombreRecurso",
+        "\\\\NombreRecurso\\NombreEquipo",
+        "http://NombreEquipo/NombreRecurso"
+      ],
+      "correcta": 1,
+      "explicacion": "La ruta UNC está formada por \\\\NombreEquipo\\NombreRecurso."
+    },
+    {
+      "id": "si-6.3.1-009",
+      "enunciado": "¿Qué significa UNC?",
+      "opciones": [
+        "Universal Network Connection",
+        "Unified Naming Convention",
+        "Universal Naming Convention",
+        "Unified Network Configuration"
+      ],
+      "correcta": 2,
+      "explicacion": "UNC son las siglas de Universal Naming Convention, es decir, Convención de nomenclatura universal."
+    },
+    {
+      "id": "si-6.3.1-010",
+      "enunciado": "¿Dónde se puede escribir directamente una ruta UNC para acceder a un recurso compartido?",
+      "opciones": [
+        "Solo en el símbolo del sistema",
+        "En el explorador de Windows o en Ejecutar",
+        "Solo en el panel de control de red",
+        "En el navegador web del sistema"
+      ],
+      "correcta": 1,
+      "explicacion": "La ruta UNC es una forma rápida de acceder al recurso, pues se puede escribir directamente en el explorador de Windows o en Ejecutar."
+    },
+    {
+      "id": "si-6.3.1-011",
+      "enunciado": "¿Qué se añade al nombre de un recurso para ocultarlo en la exploración de red?",
+      "opciones": [
+        "Un guion bajo al principio",
+        "Un punto al principio",
+        "Un signo de dólar ($) al final",
+        "Un asterisco (*) al final"
+      ],
+      "correcta": 2,
+      "explicacion": "Se puede ocultar un recurso añadiendo un signo de dólar ($) al final del nombre del recurso."
+    },
+    {
+      "id": "si-6.3.1-012",
+      "enunciado": "Un recurso oculto con `$`, ¿es accesible de alguna forma?",
+      "opciones": [
+        "No, queda completamente inaccesible",
+        "Solo para el administrador del sistema",
+        "Sí, a través de su ruta UNC",
+        "Solo si se reactiva la visibilidad desde el panel de control"
+      ],
+      "correcta": 2,
+      "explicacion": "El recurso oculto no se ve en el explorador de Windows cuando se explora la red, aunque sí se tiene acceso a través de su ruta UNC \\\\NombreEquipo\\NombreRecurso$."
+    },
+    {
+      "id": "si-6.3.1-013",
+      "enunciado": "¿Cuántos usuarios pueden conectarse simultáneamente a una carpeta compartida en Windows 11 como máximo?",
+      "opciones": [
+        "5",
+        "10",
+        "20",
+        "100"
+      ],
+      "correcta": 2,
+      "explicacion": "El límite de usuarios indica el número de usuarios que pueden conectarse simultáneamente. Por defecto son 20, que es el máximo permitido en Windows 11."
+    },
+    {
+      "id": "si-6.3.1-014",
+      "enunciado": "¿Cuántos tipos de permisos existen al compartir un recurso en Windows?",
+      "opciones": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correcta": 1,
+      "explicacion": "Cuando se comparte un recurso existen 3 tipos de permisos: lectura, cambio y control total."
+    },
+    {
+      "id": "si-6.3.1-015",
+      "enunciado": "¿Cuáles son los tres tipos de permisos al compartir?",
+      "opciones": [
+        "Lectura, escritura y administración",
+        "Solo lectura, lectura-escritura y administrador",
+        "Lectura, cambio y control total",
+        "Ver, modificar y propietario"
+      ],
+      "correcta": 2,
+      "explicacion": "Los tres tipos de permisos al compartir son: lectura, cambio y control total."
+    },
+    {
+      "id": "si-6.3.1-016",
+      "enunciado": "¿Cuál de las siguientes acciones permite el permiso de lectura?",
+      "opciones": [
+        "Agregar archivos a la carpeta compartida",
+        "Cambiar datos en archivos existentes",
+        "Ejecutar archivos de programa",
+        "Eliminar subcarpetas"
+      ],
+      "correcta": 2,
+      "explicacion": "El permiso de lectura permite ver nombres de archivos y subcarpetas, recorrer las subcarpetas, ver los datos de los archivos y ejecutar archivos de programa."
+    },
+    {
+      "id": "si-6.3.1-017",
+      "enunciado": "¿Cuál de las siguientes acciones NO permite el permiso de lectura?",
+      "opciones": [
+        "Ver los nombres de archivos y subcarpetas",
+        "Recorrer las subcarpetas",
+        "Ver los datos de los archivos",
+        "Agregar archivos y subcarpetas"
+      ],
+      "correcta": 3,
+      "explicacion": "Agregar archivos y subcarpetas es una acción del permiso de cambio, no del de lectura."
+    },
+    {
+      "id": "si-6.3.1-018",
+      "enunciado": "¿Qué añade el permiso de cambio respecto al de lectura?",
+      "opciones": [
+        "Cambiar permisos y tomar posesión",
+        "Agregar archivos, cambiar datos y eliminar subcarpetas y archivos",
+        "Solo la posibilidad de renombrar archivos",
+        "La posibilidad de cifrar archivos"
+      ],
+      "correcta": 1,
+      "explicacion": "El permiso de cambio proporciona todos los permisos de lectura, y además permite agregar archivos y subcarpetas, cambiar datos en archivos y eliminar subcarpetas y archivos."
+    },
+    {
+      "id": "si-6.3.1-019",
+      "enunciado": "¿Cuál de las siguientes acciones permite el permiso de cambio pero NO el de lectura?",
+      "opciones": [
+        "Ver los nombres de archivos",
+        "Recorrer las subcarpetas",
+        "Eliminar subcarpetas y archivos",
+        "Ejecutar archivos de programa"
+      ],
+      "correcta": 2,
+      "explicacion": "Eliminar subcarpetas y archivos es una acción exclusiva del permiso de cambio; el permiso de lectura no lo permite."
+    },
+    {
+      "id": "si-6.3.1-020",
+      "enunciado": "¿Qué capacidades exclusivas añade el permiso de control total sobre el de cambio?",
+      "opciones": [
+        "Agregar archivos y cambiar datos",
+        "Eliminar archivos y subcarpetas",
+        "Cambiar permisos y tomar posesión",
+        "Ver los datos de los archivos y ejecutar programas"
+      ],
+      "correcta": 2,
+      "explicacion": "El permiso de control total proporciona todos los permisos de lectura y de cambio, y añade la posibilidad de cambiar permisos y tomar posesión."
+    },
+    {
+      "id": "si-6.3.1-021",
+      "enunciado": "Un usuario con permiso de control total, ¿puede cambiar los permisos de otros usuarios sobre el recurso?",
+      "opciones": [
+        "No, eso requiere ser administrador del sistema",
+        "Solo puede cambiar los permisos de lectura",
+        "Sí, el control total incluye cambiar permisos",
+        "Solo si el recurso está en una partición NTFS"
+      ],
+      "correcta": 2,
+      "explicacion": "El permiso de control total incluye la capacidad de cambiar permisos y tomar posesión, además de todos los permisos de lectura y cambio."
+    },
+    {
+      "id": "si-6.3.1-022",
+      "enunciado": "¿Cuál es la ruta habitual para compartir una carpeta desde el Explorador de Windows?",
+      "opciones": [
+        "Menú Inicio → Panel de control → Redes → Compartir",
+        "Menú contextual → Propiedades → solapa Compartir → Uso compartido avanzado",
+        "Menú contextual → Enviar a → Red local",
+        "Menú contextual → Propiedades → solapa Seguridad → Compartir en red"
+      ],
+      "correcta": 1,
+      "explicacion": "La forma más habitual de compartir un recurso es mediante el Explorador de Windows, pulsando en menú contextual en propiedades, solapa Compartir, Uso compartido avanzado."
+    },
+    {
+      "id": "si-6.3.1-023",
+      "enunciado": "¿Qué hay que activar la primera vez que se comparten recursos para que otros equipos puedan acceder?",
+      "opciones": [
+        "El protocolo SMB en el cortafuegos de Windows",
+        "La detección de redes y el uso compartido de archivos",
+        "El servicio de escritorio remoto",
+        "La autenticación de red avanzada"
+      ],
+      "correcta": 1,
+      "explicacion": "La primera vez que se comparten recursos es necesario activar la detección de redes y uso compartido de archivos."
+    },
+    {
+      "id": "si-6.3.1-024",
+      "enunciado": "Si no se activa la detección de redes, ¿qué ocurre aunque se hayan compartido recursos?",
+      "opciones": [
+        "Solo el administrador puede acceder a los recursos",
+        "Los recursos son visibles pero no accesibles",
+        "No se podrá acceder a los equipos en la red",
+        "Los recursos compartidos quedan protegidos con contraseña automáticamente"
+      ],
+      "correcta": 2,
+      "explicacion": "Si no se activa la opción de detección de redes y uso compartido de archivos, no se podrá acceder a los equipos en la red, aunque se hayan compartido recursos."
+    },
+    {
+      "id": "si-6.3.1-025",
+      "enunciado": "¿De cuántas formas se puede acceder a un recurso compartido desde otro equipo en la red?",
+      "opciones": [
+        "Solo de una forma",
+        "De dos formas",
+        "De tres formas",
+        "De cuatro formas"
+      ],
+      "correcta": 1,
+      "explicacion": "Desde un ordenador de la red, se puede acceder a un recurso de otro ordenador de dos formas: ejecutando directamente la ruta UNC o a través del explorador de Windows pulsando en Red."
+    },
+    {
+      "id": "si-6.3.1-026",
+      "enunciado": "¿Cuáles son las dos formas de acceder a un recurso compartido desde otro equipo?",
+      "opciones": [
+        "Por IP directa o por nombre de dominio",
+        "Por ruta UNC o a través del Explorador de Windows pulsando en Red",
+        "Por FTP o por SMB",
+        "Por escritorio remoto o por ruta UNC"
+      ],
+      "correcta": 1,
+      "explicacion": "Se puede acceder ejecutando directamente la ruta UNC (\\\\nombreEquipo\\nombreRecurso) o a través del explorador de Windows pulsando en Red."
+    },
+    {
+      "id": "si-6.3.1-027",
+      "enunciado": "Al acceder mediante ruta UNC a un equipo remoto, ¿qué credenciales hay que usar si se pide identificación?",
+      "opciones": [
+        "Las credenciales del equipo local desde el que se conecta",
+        "Las credenciales del administrador de dominio",
+        "Las credenciales de un usuario válido del equipo destino",
+        "Cualquier usuario y contraseña de la red"
+      ],
+      "correcta": 2,
+      "explicacion": "Para realizar la conexión, hay que utilizar los datos de un usuario y contraseña del equipo al que se intenta acceder."
+    },
+    {
+      "id": "si-6.3.1-028",
+      "enunciado": "¿En qué caso se accede directamente al recurso remoto sin que Windows pida contraseña?",
+      "opciones": [
+        "Cuando el recurso es de solo lectura",
+        "Cuando el usuario tiene el mismo nombre y contraseña en ambos equipos",
+        "Cuando se usa el usuario Administrador",
+        "Cuando la carpeta está oculta con el símbolo $"
+      ],
+      "correcta": 1,
+      "explicacion": "Si el usuario tuviera el mismo nombre y password en los dos equipos, se accedería directamente sin que Windows pida identificación."
+    },
+    {
+      "id": "si-6.3.1-029",
+      "enunciado": "¿Cuáles son las dos normas para calcular los permisos al compartir en Windows?",
+      "opciones": [
+        "El permiso más restrictivo prevalece y los permisos no son heredables",
+        "Los permisos son acumulativos y denegar prevalece sobre otros permisos",
+        "El permiso del grupo prevalece sobre el individual y denegar es ignorado si hay permiso explícito",
+        "Solo cuenta el permiso del usuario individual, no el del grupo"
+      ],
+      "correcta": 1,
+      "explicacion": "El algoritmo para calcular permisos al compartir se basa en dos normas: los permisos compartidos son acumulativos, y denegar prevalece sobre otros permisos."
+    },
+    {
+      "id": "si-6.3.1-030",
+      "enunciado": "Un usuario tiene permiso de lectura sobre una carpeta compartida y pertenece a un grupo con control total. ¿Con qué permiso se conecta?",
+      "opciones": [
+        "Lectura, porque es el permiso individual",
+        "Sin acceso, porque hay conflicto entre permisos",
+        "Control total",
+        "Cambio, como término medio"
+      ],
+      "correcta": 2,
+      "explicacion": "Los permisos son acumulativos: el usuario tiene lectura de forma individual y control total por su grupo, por lo que se conecta con control total."
+    },
+    {
+      "id": "si-6.3.1-031",
+      "enunciado": "Un usuario pertenece a tres grupos: uno sin permiso explícito, otro con lectura y otro con cambio. ¿Con qué permiso se conecta?",
+      "opciones": [
+        "Sin acceso",
+        "Lectura",
+        "Cambio",
+        "Control total"
+      ],
+      "correcta": 2,
+      "explicacion": "Los permisos son acumulativos: sin permiso explícito + lectura + cambio = cambio (el más alto de los concedidos)."
+    },
+    {
+      "id": "si-6.3.1-032",
+      "enunciado": "Un usuario pertenece a tres grupos: uno con lectura denegada, otro con lectura y otro con cambio. ¿Con qué permiso se conecta?",
+      "opciones": [
+        "Lectura",
+        "Cambio",
+        "Control total",
+        "Sin ningún permiso"
+      ],
+      "correcta": 3,
+      "explicacion": "Denegar prevalece sobre otros permisos: la denegación de lectura de un grupo anula el acceso concedido por los otros grupos, dejando al usuario sin ningún permiso."
+    },
+    {
+      "id": "si-6.3.1-033",
+      "enunciado": "¿Por qué hay que ser cuidadoso al denegar permisos al compartir?",
+      "opciones": [
+        "Porque la denegación solo afecta al usuario directamente, no a sus grupos",
+        "Porque la denegación prevalece sobre cualquier otro permiso concedido",
+        "Porque la denegación se hereda siempre a todas las subcarpetas sin excepción",
+        "Porque una denegación no puede revertirse sin reinstalar Windows"
+      ],
+      "correcta": 1,
+      "explicacion": "Debemos denegar permisos de forma cuidadosa al compartir, pues denegar prevalece sobre otros permisos y puede quitar el acceso aunque otros grupos lo concedan."
+    },
+    {
+      "id": "si-6.3.1-034",
+      "enunciado": "¿Qué ocurre con los permisos de red en una partición FAT32?",
+      "opciones": [
+        "Se combinan con los permisos locales FAT32",
+        "Se aplican igual en todas las subcarpetas y ficheros, pues FAT32 no tiene seguridad local",
+        "Son más restrictivos que en NTFS",
+        "No se pueden compartir recursos en particiones FAT32"
+      ],
+      "correcta": 1,
+      "explicacion": "Si la partición es FAT32, los permisos obtenidos al conectar al recurso son los mismos en todas las subcarpetas y ficheros del recurso, pues FAT32 no tiene seguridad local."
+    },
+    {
+      "id": "si-6.3.1-035",
+      "enunciado": "¿Qué ocurre con los permisos de red en una partición NTFS?",
+      "opciones": [
+        "Los permisos de red prevalecen siempre sobre los locales",
+        "Solo se aplican los permisos NTFS, ignorando los permisos de red",
+        "Los permisos de red se ven afectados por los permisos NTFS locales",
+        "Los permisos NTFS se desactivan cuando el acceso es remoto"
+      ],
+      "correcta": 2,
+      "explicacion": "Si la partición es NTFS, los permisos obtenidos al conectar al recurso se ven afectados por los permisos NTFS locales, por lo que puede haber diferencias entre subcarpetas."
+    },
+    {
+      "id": "si-6.3.1-036",
+      "enunciado": "¿Cuál es la regla general cuando un usuario accede desde la red a un recurso en partición NTFS?",
+      "opciones": [
+        "Obtiene los permisos más permisivos entre la solapa Compartir y NTFS",
+        "Obtiene los permisos más restrictivos entre la solapa Compartir y NTFS",
+        "Obtiene solo los permisos de la solapa Compartir",
+        "Obtiene solo los permisos NTFS locales"
+      ],
+      "correcta": 1,
+      "explicacion": "Cuando un usuario conecta desde la red, los permisos que tiene son los más restrictivos entre ambas solapas Compartir y Seguridad."
+    },
+    {
+      "id": "si-6.3.1-037",
+      "enunciado": "Un usuario tiene permiso compartido de cambio y permiso NTFS local de lectura. ¿Con qué permiso accede desde la red?",
+      "opciones": [
+        "Cambio, porque el permiso de red prevalece",
+        "Control total, por acumulación",
+        "Lectura",
+        "Sin acceso, porque hay conflicto"
+      ],
+      "correcta": 2,
+      "explicacion": "El usuario solo tendrá lectura, pues los permisos que se obtienen al acceder desde la red son los más restrictivos entre la solapa Compartir (cambio) y NTFS local (lectura)."
+    },
+    {
+      "id": "si-6.3.1-038",
+      "enunciado": "¿Por qué en una partición FAT32 los permisos de red son los mismos en todo el recurso?",
+      "opciones": [
+        "Porque FAT32 aplica los mismos permisos que NTFS",
+        "Porque FAT32 no tiene seguridad local",
+        "Porque Windows no permite permisos diferenciados por subcarpeta en FAT32",
+        "Porque los permisos de red siempre prevalecen en FAT32"
+      ],
+      "correcta": 1,
+      "explicacion": "FAT32 no tiene seguridad local, por lo que no hay permisos locales que puedan restringir los de red en determinadas subcarpetas."
+    },
+    {
+      "id": "si-6.3.1-039",
+      "enunciado": "¿Cuántas recomendaciones conjuntas se dan para facilitar la administración de permisos?",
+      "opciones": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correcta": 1,
+      "explicacion": "Se dan dos recomendaciones conjuntas para facilitar la administración y evitar conflictos."
+    },
+    {
+      "id": "si-6.3.1-040",
+      "enunciado": "¿Cuál es la primera recomendación para simplificar la administración de permisos?",
+      "opciones": [
+        "Administrar toda la seguridad con los permisos de la solapa Compartir",
+        "Administrar toda la seguridad con los permisos NTFS",
+        "Usar solo grupos, nunca permisos individuales",
+        "Aplicar siempre el permiso de control total a todos los usuarios"
+      ],
+      "correcta": 1,
+      "explicacion": "La primera recomendación es administrar toda la seguridad con los permisos NTFS."
+    },
+    {
+      "id": "si-6.3.1-041",
+      "enunciado": "¿Cuál es la segunda recomendación para simplificar la administración de permisos?",
+      "opciones": [
+        "Compartir el recurso solo a administradores con control total",
+        "Compartir el recurso a Todos con permiso de lectura",
+        "Compartir el recurso a Todos con control total",
+        "No compartir nunca con el grupo Todos"
+      ],
+      "correcta": 2,
+      "explicacion": "La segunda recomendación es compartir el recurso a Todos los usuarios con control total."
+    },
+    {
+      "id": "si-6.3.1-042",
+      "enunciado": "¿Por qué es seguro compartir un recurso a Todos con control total si los permisos NTFS están bien configurados?",
+      "opciones": [
+        "Porque el permiso de control total en red anula los permisos NTFS",
+        "Porque la seguridad local NTFS prevalecerá por ser más restrictiva",
+        "Porque Windows ignora los permisos de red cuando hay permisos NTFS definidos",
+        "Porque el grupo Todos solo incluye usuarios autenticados"
+      ],
+      "correcta": 1,
+      "explicacion": "Si configuramos bien el equipo desde la seguridad local NTFS, ya no importa compartir con control total a Todos, pues la seguridad local se impondrá por ser más restrictiva."
+    }
+  ]
+}

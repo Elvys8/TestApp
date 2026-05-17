@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "id": "si-6.3-servidor-de-ficheros",
+  "asignatura": "Sistemas Informáticos",
+  "asignatura_color": "#1C3C6F",
+  "tema": "6.3 Servidor de ficheros",
+  "preguntas": [
+    {
+      "id": "si-6.3-001",
+      "enunciado": "¿Qué tipos de elementos se incluyen generalmente bajo el concepto de recursos compartidos en red?",
+      "opciones": [
+        "Solo aplicaciones instaladas en el servidor",
+        "Carpetas, ficheros y dispositivos",
+        "Únicamente ficheros de texto y documentos",
+        "Dispositivos de red como switches y routers"
+      ],
+      "correcta": 1,
+      "explicacion": "Cuando hablamos de recursos compartidos en red generalmente estamos tratando de carpetas, de ficheros y de dispositivos que se hallan en un equipo."
+    },
+    {
+      "id": "si-6.3-002",
+      "enunciado": "¿Dónde se hallan físicamente los recursos que se comparten en red?",
+      "opciones": [
+        "En la nube, fuera de la red local",
+        "En todos los equipos de la red simultáneamente",
+        "En un equipo que los pone a disposición de los demás",
+        "En dispositivos de almacenamiento externo sin conexión"
+      ],
+      "correcta": 2,
+      "explicacion": "Los recursos compartidos se hallan en un equipo, pero se ponen a disposición de todos aquellos que se conectan a él a través de una red."
+    },
+    {
+      "id": "si-6.3-003",
+      "enunciado": "¿A quién se pueden poner a disposición los recursos compartidos en red?",
+      "opciones": [
+        "Solo a todos los usuarios de la red sin excepción",
+        "Solo a usuarios externos a la red",
+        "A todos los conectados o solo a algunos, según cómo se compartan",
+        "Únicamente al administrador del sistema"
+      ],
+      "correcta": 2,
+      "explicacion": "Los recursos se ponen a disposición de todos aquellos que se conectan a través de la red, o sólo a disposición de algunos de ellos dependiendo de la forma de compartirlos."
+    },
+    {
+      "id": "si-6.3-004",
+      "enunciado": "¿Qué es necesario hacer para que un recurso pueda ser compartido en red?",
+      "opciones": [
+        "Copiarlo en todos los equipos de la red",
+        "Ponerlo accesible a través de la red",
+        "Instalarlo en el equipo de cada usuario",
+        "Cifrarlo con una clave compartida por todos"
+      ],
+      "correcta": 1,
+      "explicacion": "Para hacer que un recurso sea compartido hay que ponerlo accesible a través de la red."
+    },
+    {
+      "id": "si-6.3-005",
+      "enunciado": "¿Qué condición deben cumplir los usuarios para acceder al contenido de un recurso compartido?",
+      "opciones": [
+        "Estar físicamente en el mismo edificio que el servidor",
+        "Tener instalado el mismo sistema operativo que el servidor",
+        "Disponer de los permisos adecuados",
+        "Ser administradores del sistema"
+      ],
+      "correcta": 2,
+      "explicacion": "Una vez que el recurso está compartido, los usuarios, con los permisos adecuados, podrán acceder a su contenido."
+    },
+    {
+      "id": "si-6.3-006",
+      "enunciado": "¿Qué pueden hacer los usuarios con el contenido de un recurso compartido?",
+      "opciones": [
+        "Solo leer ficheros, nunca ejecutar aplicaciones",
+        "Acceder a aplicaciones o datos, o usar remotamente dispositivos como impresoras",
+        "Únicamente descargar ficheros al equipo local",
+        "Solo modificar datos, no ejecutar aplicaciones remotas"
+      ],
+      "correcta": 1,
+      "explicacion": "Los usuarios podrán acceder a su contenido ya sean aplicaciones o datos, o utilizarlo remotamente si se trata de un dispositivo, tal como una impresora."
+    },
+    {
+      "id": "si-6.3-007",
+      "enunciado": "¿Qué ejemplo de dispositivo compartido se menciona en el material?",
+      "opciones": [
+        "Un escáner",
+        "Un monitor",
+        "Una impresora",
+        "Un teclado"
+      ],
+      "correcta": 2,
+      "explicacion": "El material menciona la impresora como ejemplo de dispositivo que puede utilizarse remotamente una vez compartido en red."
+    },
+    {
+      "id": "si-6.3-008",
+      "enunciado": "¿Por qué es necesario definir permisos sobre los recursos compartidos en red?",
+      "opciones": [
+        "Para aumentar la velocidad de transferencia de datos",
+        "Para mantener cierto nivel de seguridad y controlar quién accede",
+        "Para reducir el espacio de almacenamiento utilizado",
+        "Para que el servidor pueda registrar el tráfico de red"
+      ],
+      "correcta": 1,
+      "explicacion": "En un entorno de red es preciso definir permisos de acceso y privilegios de uso sobre los recursos que se comparten, para mantener cierto nivel de seguridad."
+    },
+    {
+      "id": "si-6.3-009",
+      "enunciado": "¿Qué dos conceptos se deben definir sobre los recursos compartidos según el material?",
+      "opciones": [
+        "Velocidad de acceso y tipo de cifrado",
+        "Permisos de acceso y privilegios de uso",
+        "Nombre del recurso y dirección IP del servidor",
+        "Protocolo de red y puerto de comunicación"
+      ],
+      "correcta": 1,
+      "explicacion": "En un entorno de red es preciso definir permisos de acceso y privilegios de uso sobre los recursos que se comparten."
+    },
+    {
+      "id": "si-6.3-010",
+      "enunciado": "¿Qué garantizan los permisos correctamente configurados sobre un recurso compartido?",
+      "opciones": [
+        "Que el recurso esté siempre disponible sin interrupciones",
+        "Que solo quienes tengan derecho puedan usarlo y se bloquee el acceso a no autorizados",
+        "Que todos los usuarios puedan acceder al recurso sin restricciones",
+        "Que el recurso sea visible pero no modificable por ningún usuario"
+      ],
+      "correcta": 1,
+      "explicacion": "Los permisos aseguran que lo compartido sólo pueda ser utilizado por quien tenga derecho, y bajo las condiciones de uso fijadas sobre el recurso, mientras que se bloquea el acceso a usuarios no autorizados."
+    },
+    {
+      "id": "si-6.3-011",
+      "enunciado": "¿Qué ocurre con los usuarios que no tienen autorización sobre un recurso compartido?",
+      "opciones": [
+        "Ven el recurso pero no pueden modificarlo",
+        "Reciben una advertencia y pueden solicitar acceso",
+        "Se les bloquea el acceso",
+        "Solo pueden acceder fuera del horario laboral"
+      ],
+      "correcta": 2,
+      "explicacion": "Los permisos aseguran que lo compartido sólo pueda ser utilizado por quien tenga derecho, mientras que se bloquea el acceso a usuarios no autorizados."
+    }
+  ]
+}

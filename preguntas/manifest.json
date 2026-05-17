@@ -12,6 +12,10 @@
   	"si-6.1.8-cortafuegos.json",
   	"si-6.1.9-dominios.json",
   	"si-6.1.10-monitorizacion-de-redes.json",
+  	"si-6.2-servidor-de-infraestructura.json",
+  	"si-6.2.1-servidor-de-infraestructura-en-linux.json",
+  	"si-6.3-servidor-de-ficheros.json",
+  	"si-6.3.1-compartir-recursos-con-windows.json",
   	"almacenamiento-de-informacion.json"
   ]
 }

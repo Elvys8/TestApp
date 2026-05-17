@@ -1,0 +1,657 @@
+{
+  "schema_version": 1,
+  "id": "si-6.2.1-servidor-de-infraestructura-en-linux",
+  "asignatura": "Sistemas Informáticos",
+  "asignatura_color": "#1C3C6F",
+  "tema": "6.2.1 Servidor de infraestructura en Linux",
+  "preguntas": [
+    {
+      "id": "si-6.2.1-001",
+      "enunciado": "¿Qué dirección de red se usa para la red interna en el ejercicio?",
+      "opciones": [
+        "10.0.2.0/24",
+        "172.16.0.0/16",
+        "192.168.100.0/24",
+        "192.168.1.0/24"
+      ],
+      "correcta": 2,
+      "explicacion": "Nuestra red interna está configurada en la IP 192.168.100.0/24."
+    },
+    {
+      "id": "si-6.2.1-002",
+      "enunciado": "¿Cuántas tarjetas de red tendrá el equipo servidor en este ejercicio?",
+      "opciones": [
+        "Una",
+        "Dos",
+        "Tres",
+        "Cuatro"
+      ],
+      "correcta": 1,
+      "explicacion": "El equipo servidor tendrá dos tarjetas de red."
+    },
+    {
+      "id": "si-6.2.1-003",
+      "enunciado": "¿Cómo obtiene su configuración la tarjeta de red externa del servidor?",
+      "opciones": [
+        "Se configura manualmente con IP estática",
+        "La asigna el propio servidor dnsmasq",
+        "La proporciona un servidor DHCP externo",
+        "Se configura mediante el fichero /etc/network/interfaces"
+      ],
+      "correcta": 2,
+      "explicacion": "La red externa coge su configuración de otro servidor DHCP externo, por simplificar."
+    },
+    {
+      "id": "si-6.2.1-004",
+      "enunciado": "¿En qué fichero hay que activar el reenvío de paquetes IPv4 para habilitar el enrutamiento?",
+      "opciones": [
+        "/etc/network/interfaces",
+        "/etc/ufw/before.rules",
+        "/etc/default/ufw",
+        "/etc/sysctl.conf"
+      ],
+      "correcta": 3,
+      "explicacion": "Para habilitar el enrutamiento hay que editar /etc/sysctl.conf y descomentar o añadir la línea net.ipv4.ip_forward=1."
+    },
+    {
+      "id": "si-6.2.1-005",
+      "enunciado": "¿Qué línea debe aparecer en `/etc/sysctl.conf` para habilitar el enrutamiento?",
+      "opciones": [
+        "net.ipv4.routing=1",
+        "net.ipv4.ip_forward=1",
+        "net.ipv4.forward=enabled",
+        "ip_forward=true"
+      ],
+      "correcta": 1,
+      "explicacion": "En /etc/sysctl.conf hay que descomentar o modificar para que aparezca la línea net.ipv4.ip_forward=1."
+    },
+    {
+      "id": "si-6.2.1-006",
+      "enunciado": "¿Qué comando aplica los cambios del fichero `/etc/sysctl.conf` sin reiniciar el sistema?",
+      "opciones": [
+        "sudo systemctl restart networking",
+        "sudo sysctl --reload",
+        "sudo sysctl -p",
+        "sudo ufw reload"
+      ],
+      "correcta": 2,
+      "explicacion": "El comando sudo sysctl -p aplica los cambios de /etc/sysctl.conf sin necesidad de reiniciar."
+    },
+    {
+      "id": "si-6.2.1-007",
+      "enunciado": "¿Qué valor debe tener `DEFAULT_FORWARD_POLICY` en `/etc/default/ufw` para permitir el enrutamiento?",
+      "opciones": [
+        "\"DROP\"",
+        "\"REJECT\"",
+        "\"FORWARD\"",
+        "\"ACCEPT\""
+      ],
+      "correcta": 3,
+      "explicacion": "En el fichero /etc/default/ufw hay que hacer que aparezca DEFAULT_FORWARD_POLICY=\"ACCEPT\"."
+    },
+    {
+      "id": "si-6.2.1-008",
+      "enunciado": "¿En qué fichero se añade la tabla NAT con la regla MASQUERADE?",
+      "opciones": [
+        "/etc/sysctl.conf",
+        "/etc/default/ufw",
+        "/etc/ufw/before.rules",
+        "/etc/ufw/after.rules"
+      ],
+      "correcta": 2,
+      "explicacion": "En el fichero /etc/ufw/before.rules hay que añadir la tabla *nat con la regla POSTROUTING y MASQUERADE."
+    },
+    {
+      "id": "si-6.2.1-009",
+      "enunciado": "¿Qué subred se especifica en la regla MASQUERADE del fichero `/etc/ufw/before.rules`?",
+      "opciones": [
+        "10.0.2.0/24",
+        "172.16.0.0/16",
+        "192.168.100.0/24",
+        "0.0.0.0/0"
+      ],
+      "correcta": 2,
+      "explicacion": "La regla es: -A POSTROUTING -s 192.168.100.0/24 -o enp0s3 -j MASQUERADE."
+    },
+    {
+      "id": "si-6.2.1-010",
+      "enunciado": "¿A qué interfaz de red se aplica la regla MASQUERADE en el fichero `/etc/ufw/before.rules`?",
+      "opciones": [
+        "enp0s8",
+        "lo",
+        "enp0s3",
+        "eth0"
+      ],
+      "correcta": 2,
+      "explicacion": "La regla es: -A POSTROUTING -s 192.168.100.0/24 -o enp0s3 -j MASQUERADE, por lo que se aplica a la interfaz enp0s3."
+    },
+    {
+      "id": "si-6.2.1-011",
+      "enunciado": "¿Qué hay que hacer con el cortafuegos UFW tras modificar los ficheros de enrutamiento?",
+      "opciones": [
+        "Ejecutar sudo ufw reload",
+        "Deshabilitarlo y volver a habilitarlo",
+        "Reiniciar el sistema completo",
+        "No es necesario reiniciarlo"
+      ],
+      "correcta": 1,
+      "explicacion": "Tras los cambios se ejecuta sudo ufw disable y sudo ufw enable para reiniciar el cortafuegos."
+    },
+    {
+      "id": "si-6.2.1-012",
+      "enunciado": "¿Qué nombre tiene la tarjeta de red externa del servidor?",
+      "opciones": [
+        "eth0",
+        "enp0s8",
+        "lo",
+        "enp0s3"
+      ],
+      "correcta": 3,
+      "explicacion": "La tarjeta enp0s3 es la interfaz externa, con configuración automática por VirtualBox."
+    },
+    {
+      "id": "si-6.2.1-013",
+      "enunciado": "¿Qué IP tiene la tarjeta externa enp0s3 en el ejemplo del ejercicio?",
+      "opciones": [
+        "192.168.100.1/24",
+        "172.16.0.1/24",
+        "10.0.2.15/24",
+        "10.0.0.1/24"
+      ],
+      "correcta": 2,
+      "explicacion": "La tarjeta enp0s3 (externa) tiene la IP 10.0.2.15/24."
+    },
+    {
+      "id": "si-6.2.1-014",
+      "enunciado": "¿Cuál es la puerta de enlace configurada en la tarjeta externa enp0s3?",
+      "opciones": [
+        "10.0.2.1",
+        "10.0.2.2",
+        "192.168.100.1",
+        "1.1.1.1"
+      ],
+      "correcta": 1,
+      "explicacion": "La tarjeta enp0s3 tiene como puerta de enlace la IP 10.0.2.2."
+    },
+    {
+      "id": "si-6.2.1-015",
+      "enunciado": "¿Qué servidores DNS se configuran en la tarjeta externa enp0s3?",
+      "opciones": [
+        "8.8.8.8 y 9.9.9.9",
+        "192.168.100.1 y 1.1.1.1",
+        "1.1.1.1 y 8.8.8.8",
+        "127.0.0.53 y 8.8.8.8"
+      ],
+      "correcta": 2,
+      "explicacion": "Los servidores DNS configurados en enp0s3 son 1.1.1.1 y 8.8.8.8."
+    },
+    {
+      "id": "si-6.2.1-016",
+      "enunciado": "¿Qué nombre tiene la tarjeta de red interna del servidor?",
+      "opciones": [
+        "enp0s3",
+        "eth1",
+        "enp0s8",
+        "lo"
+      ],
+      "correcta": 2,
+      "explicacion": "La tarjeta enp0s8 es la interfaz de red interna."
+    },
+    {
+      "id": "si-6.2.1-017",
+      "enunciado": "¿Qué IP tiene la tarjeta interna enp0s8?",
+      "opciones": [
+        "10.0.2.15/24",
+        "192.168.100.254/24",
+        "192.168.1.1/24",
+        "192.168.100.1/24"
+      ],
+      "correcta": 3,
+      "explicacion": "La tarjeta enp0s8 (red interna) tiene la IP 192.168.100.1/24."
+    },
+    {
+      "id": "si-6.2.1-018",
+      "enunciado": "¿Qué ocurre con la puerta de enlace y el DNS en la tarjeta interna enp0s8?",
+      "opciones": [
+        "Se configuran con los mismos valores que enp0s3",
+        "Se configuran con la IP del servidor dnsmasq",
+        "Se dejan sin definir",
+        "Se configuran automáticamente por VirtualBox"
+      ],
+      "correcta": 2,
+      "explicacion": "En la tarjeta enp0s8 (red interna), tanto la puerta de enlace como el DNS se dejan sin definir."
+    },
+    {
+      "id": "si-6.2.1-019",
+      "enunciado": "¿Qué tipo de software es dnsmasq?",
+      "opciones": [
+        "Un servidor web completo con soporte para módulos",
+        "Un software ligero que proporciona varios servicios de red",
+        "Un sistema de virtualización de redes",
+        "Un cortafuegos avanzado para Linux"
+      ],
+      "correcta": 1,
+      "explicacion": "Dnsmasq es un software ligero que proporciona varios servicios de red importantes."
+    },
+    {
+      "id": "si-6.2.1-020",
+      "enunciado": "¿Cuáles son los tres servicios que proporciona dnsmasq?",
+      "opciones": [
+        "HTTP, FTP y DNS",
+        "DNS, DHCP y TFTP",
+        "DHCP, SSH y DNS",
+        "DNS, NTP y TFTP"
+      ],
+      "correcta": 1,
+      "explicacion": "Dnsmasq proporciona servicios de DNS (reenvío y caché), DHCP y TFTP para arranque por red."
+    },
+    {
+      "id": "si-6.2.1-021",
+      "enunciado": "¿Cómo actúa dnsmasq como servidor DNS?",
+      "opciones": [
+        "Resuelve todas las consultas de forma autoritativa sin reenviarlas",
+        "Actúa como DNS de reenvío y caché, pudiendo resolver localmente o reenviar a externos",
+        "Solo resuelve nombres del dominio local, sin reenvío externo",
+        "Actúa únicamente como caché, sin capacidad de reenvío"
+      ],
+      "correcta": 1,
+      "explicacion": "Dnsmasq actúa como servidor DNS de reenvío y caché, pudiendo resolver consultas DNS localmente o reenviarlas a servidores DNS externos, y almacena en caché las respuestas para mejorar el rendimiento."
+    },
+    {
+      "id": "si-6.2.1-022",
+      "enunciado": "¿Qué versiones del protocolo DHCP soporta dnsmasq?",
+      "opciones": [
+        "Solo DHCPv4",
+        "Solo DHCPv6",
+        "DHCPv4 y DHCPv6",
+        "DHCPv3 y DHCPv4"
+      ],
+      "correcta": 2,
+      "explicacion": "El servidor DHCP de dnsmasq soporta DHCPv4 y DHCPv6."
+    },
+    {
+      "id": "si-6.2.1-023",
+      "enunciado": "¿Para qué se usa el servidor TFTP que incluye dnsmasq?",
+      "opciones": [
+        "Para transferir ficheros de configuración entre servidores",
+        "Para el arranque por red de los equipos",
+        "Para sincronizar ficheros entre clientes y servidor",
+        "Para actualizar el firmware de los dispositivos de red"
+      ],
+      "correcta": 1,
+      "explicacion": "Dnsmasq proporciona un servidor TFTP básico para arranque por red."
+    },
+    {
+      "id": "si-6.2.1-024",
+      "enunciado": "¿Cuál NO es una característica del servidor DHCP de dnsmasq?",
+      "opciones": [
+        "Asigna direcciones IP dinámicamente",
+        "Soporta reservas de IP estáticas",
+        "Soporta DHCPv4 y DHCPv6",
+        "Requiere una base de datos externa para funcionar"
+      ],
+      "correcta": 3,
+      "explicacion": "Dnsmasq es un servidor ligero y fácil de configurar que no requiere base de datos externa. Asigna IPs dinámicamente, soporta reservas estáticas y es compatible con DHCPv4 y DHCPv6."
+    },
+    {
+      "id": "si-6.2.1-025",
+      "enunciado": "¿Qué comando instala dnsmasq en Ubuntu?",
+      "opciones": [
+        "sudo apt install dns-masq",
+        "sudo apt-get install dnsmasq-server",
+        "sudo apt install dnsmasq",
+        "sudo snap install dnsmasq"
+      ],
+      "correcta": 2,
+      "explicacion": "La instalación se realiza con sudo apt update seguido de sudo apt install dnsmasq."
+    },
+    {
+      "id": "si-6.2.1-026",
+      "enunciado": "¿Qué servicio de Ubuntu 24.04 entra en conflicto con dnsmasq?",
+      "opciones": [
+        "network-manager",
+        "bind9",
+        "systemd-resolved",
+        "avahi-daemon"
+      ],
+      "correcta": 2,
+      "explicacion": "Ubuntu 24.04 utiliza systemd-resolved, que reenvía las peticiones de DNS a través de 127.0.0.53. Si no lo deshabilitamos, no funcionará nuestro servicio dnsmasq."
+    },
+    {
+      "id": "si-6.2.1-027",
+      "enunciado": "¿A través de qué dirección reenvía las peticiones DNS el servicio systemd-resolved?",
+      "opciones": [
+        "127.0.0.1",
+        "0.0.0.0",
+        "192.168.100.1",
+        "127.0.0.53"
+      ],
+      "correcta": 3,
+      "explicacion": "Ubuntu 24.04 utiliza systemd-resolved, que reenvía las peticiones de DNS a través de la dirección de loopback 127.0.0.53."
+    },
+    {
+      "id": "si-6.2.1-028",
+      "enunciado": "¿Qué fichero de configuración DNS está enlazado a otra ubicación en Ubuntu 24.04 con systemd-resolved activo?",
+      "opciones": [
+        "/etc/hosts",
+        "/etc/resolv.conf",
+        "/etc/nsswitch.conf",
+        "/etc/dnsmasq.conf"
+      ],
+      "correcta": 1,
+      "explicacion": "Con systemd-resolved activo, el fichero /etc/resolv.conf está enlazado a otra ubicación y muestra 127.0.0.53 como servidor DNS."
+    },
+    {
+      "id": "si-6.2.1-029",
+      "enunciado": "¿Qué hay que hacer además de usar `systemctl` para deshabilitar correctamente systemd-resolved?",
+      "opciones": [
+        "Desinstalar el paquete systemd-resolved",
+        "Borrar el fichero /etc/resolv.conf",
+        "Romper el enlace simbólico de /etc/resolv.conf",
+        "Modificar el fichero /etc/hosts"
+      ],
+      "correcta": 2,
+      "explicacion": "Para deshabilitar el servicio no basta con ejecutar los comandos de systemctl; es necesario romper ese enlace del /etc/resolv.conf."
+    },
+    {
+      "id": "si-6.2.1-030",
+      "enunciado": "¿Con qué comando se rompe el enlace simbólico de `/etc/resolv.conf`?",
+      "opciones": [
+        "sudo rm /etc/resolv.conf",
+        "sudo unlink /etc/resolv.conf",
+        "sudo chmod 000 /etc/resolv.conf",
+        "sudo mv /etc/resolv.conf /etc/resolv.conf.bak"
+      ],
+      "correcta": 1,
+      "explicacion": "El comando sudo unlink /etc/resolv.conf rompe el enlace simbólico del fichero."
+    },
+    {
+      "id": "si-6.2.1-031",
+      "enunciado": "¿Qué servidor DNS se escribe en el nuevo `/etc/resolv.conf` tras romper el enlace?",
+      "opciones": [
+        "1.1.1.1",
+        "192.168.100.1",
+        "127.0.0.53",
+        "8.8.8.8"
+      ],
+      "correcta": 3,
+      "explicacion": "Tras romper el enlace, se reescribe /etc/resolv.conf con el comando: echo \"nameserver 8.8.8.8\" | sudo tee /etc/resolv.conf."
+    },
+    {
+      "id": "si-6.2.1-032",
+      "enunciado": "¿En qué fichero se configura dnsmasq?",
+      "opciones": [
+        "/etc/dnsmasq/settings.conf",
+        "/etc/network/dnsmasq.conf",
+        "/etc/dnsmasq.conf",
+        "/etc/default/dnsmasq"
+      ],
+      "correcta": 2,
+      "explicacion": "El fichero de configuración de dnsmasq es /etc/dnsmasq.conf."
+    },
+    {
+      "id": "si-6.2.1-033",
+      "enunciado": "¿Qué hace la directiva `domain-needed` en dnsmasq?",
+      "opciones": [
+        "Define el nombre de dominio de la red local",
+        "Impide reenviar nombres simples (sin dominio)",
+        "Obliga a usar un dominio específico para todos los clientes",
+        "Activa la resolución de nombres de dominio locales"
+      ],
+      "correcta": 1,
+      "explicacion": "La directiva domain-needed hace que dnsmasq nunca reenvíe nombres simples (sin componente de dominio)."
+    },
+    {
+      "id": "si-6.2.1-034",
+      "enunciado": "¿Qué hace la directiva `bogus-priv`?",
+      "opciones": [
+        "Bloquea consultas DNS de equipos desconocidos",
+        "Impide reenviar direcciones de espacios no enrutables",
+        "Deshabilita el servidor DHCP para redes privadas",
+        "Marca como no válidas las respuestas DNS externas"
+      ],
+      "correcta": 1,
+      "explicacion": "La directiva bogus-priv hace que dnsmasq nunca reenvíe direcciones en espacios de direcciones no enrutadas."
+    },
+    {
+      "id": "si-6.2.1-035",
+      "enunciado": "¿Qué hace la directiva `strict-order`?",
+      "opciones": [
+        "Ordena alfabéticamente las respuestas DNS",
+        "Obliga a consultar los servidores DNS en el orden de resolv.conf",
+        "Prioriza siempre las respuestas locales sobre las externas",
+        "Impide que dnsmasq cambie el orden de las opciones DHCP"
+      ],
+      "correcta": 1,
+      "explicacion": "La directiva strict-order hace que dnsmasq consulte cada servidor DNS estrictamente en el orden en que aparecen en resolv.conf."
+    },
+    {
+      "id": "si-6.2.1-036",
+      "enunciado": "¿A qué interfaz de red se vincula dnsmasq según la configuración del ejercicio?",
+      "opciones": [
+        "enp0s3",
+        "lo",
+        "enp0s8",
+        "eth0"
+      ],
+      "correcta": 2,
+      "explicacion": "La directiva interface=enp0s8 vincula dnsmasq a la interfaz de red interna."
+    },
+    {
+      "id": "si-6.2.1-037",
+      "enunciado": "¿Qué hace la directiva `bind-interfaces`?",
+      "opciones": [
+        "Vincula dnsmasq a todas las interfaces del sistema",
+        "Deshabilita el modo promiscuo en las interfaces",
+        "Vincula dnsmasq únicamente a las interfaces especificadas",
+        "Obliga a dnsmasq a escuchar solo en IPv6"
+      ],
+      "correcta": 2,
+      "explicacion": "La directiva bind-interfaces hace que dnsmasq se vincule solo a las interfaces especificadas, no a todas."
+    },
+    {
+      "id": "si-6.2.1-038",
+      "enunciado": "¿Qué hace la directiva `expand-hosts`?",
+      "opciones": [
+        "Amplía el número máximo de hosts que puede gestionar dnsmasq",
+        "Expande los nombres de host añadiéndoles automáticamente el dominio",
+        "Permite que los clientes registren sus propios nombres en el DNS",
+        "Aumenta el tiempo de vida de las entradas en la caché DNS"
+      ],
+      "correcta": 1,
+      "explicacion": "La directiva expand-hosts hace que dnsmasq expanda los nombres de host automáticamente añadiéndoles el dominio configurado."
+    },
+    {
+      "id": "si-6.2.1-039",
+      "enunciado": "¿Qué valor tiene la directiva `domain` en el ejemplo del ejercicio?",
+      "opciones": [
+        "local.lan",
+        "mi-red.local",
+        "srv.world",
+        "home.arpa"
+      ],
+      "correcta": 2,
+      "explicacion": "En el ejemplo del ejercicio se configura domain=srv.world, aunque el material indica que se puede poner otro valor sin problemas."
+    },
+    {
+      "id": "si-6.2.1-040",
+      "enunciado": "¿Cuál es el rango de IPs que reparte el servidor DHCP en el ejercicio?",
+      "opciones": [
+        "192.168.100.1 – 192.168.100.100",
+        "192.168.100.100 – 192.168.100.254",
+        "192.168.100.150 – 192.168.100.200",
+        "192.168.100.50 – 192.168.100.150"
+      ],
+      "correcta": 2,
+      "explicacion": "La directiva dhcp-range=192.168.100.150,192.168.100.200,12h define el rango de IPs entre 192.168.100.150 y 192.168.100.200."
+    },
+    {
+      "id": "si-6.2.1-041",
+      "enunciado": "¿Cuántas IPs puede repartir el servidor DHCP con el rango configurado?",
+      "opciones": [
+        "100",
+        "24",
+        "50",
+        "200"
+      ],
+      "correcta": 2,
+      "explicacion": "El rango va de 192.168.100.150 a 192.168.100.200, lo que da 50 equipos posibles."
+    },
+    {
+      "id": "si-6.2.1-042",
+      "enunciado": "¿Durante cuánto tiempo se reservan las direcciones IP asignadas por DHCP en el ejemplo?",
+      "opciones": [
+        "4 horas",
+        "8 horas",
+        "24 horas",
+        "12 horas"
+      ],
+      "correcta": 3,
+      "explicacion": "La directiva dhcp-range=192.168.100.150,192.168.100.200,12h indica que las direcciones se reservan durante 12 horas."
+    },
+    {
+      "id": "si-6.2.1-043",
+      "enunciado": "¿Qué directiva de dnsmasq define el rango de IPs del servidor DHCP?",
+      "opciones": [
+        "dhcp-option",
+        "dhcp-host",
+        "dhcp-range",
+        "dhcp-pool"
+      ],
+      "correcta": 2,
+      "explicacion": "La directiva dhcp-range define el rango de IPs que repartirá el servidor DHCP y el tiempo de reserva."
+    },
+    {
+      "id": "si-6.2.1-044",
+      "enunciado": "¿Qué IP se reparte como puerta de enlace a los clientes DHCP?",
+      "opciones": [
+        "10.0.2.2",
+        "192.168.100.254",
+        "8.8.8.8",
+        "192.168.100.1"
+      ],
+      "correcta": 3,
+      "explicacion": "La directiva dhcp-option=option:router,192.168.100.1 indica que la puerta de enlace repartida a los clientes es 192.168.100.1, que es el propio router."
+    },
+    {
+      "id": "si-6.2.1-045",
+      "enunciado": "¿Qué opción DHCP define la puerta de enlace en dnsmasq?",
+      "opciones": [
+        "option:gateway",
+        "option:default-route",
+        "option:router",
+        "option:nexthop"
+      ],
+      "correcta": 2,
+      "explicacion": "La opción DHCP que define la puerta de enlace en dnsmasq es option:router."
+    },
+    {
+      "id": "si-6.2.1-046",
+      "enunciado": "¿Qué servidores DNS se envían a los clientes DHCP?",
+      "opciones": [
+        "1.1.1.1 y 8.8.8.8",
+        "192.168.100.1 y 1.1.1.1",
+        "192.168.100.1 y 8.8.8.8",
+        "127.0.0.53 y 192.168.100.1"
+      ],
+      "correcta": 2,
+      "explicacion": "La directiva dhcp-option=option:dns-server,192.168.100.1,8.8.8.8 envía como DNS el propio router (192.168.100.1) y como secundario 8.8.8.8."
+    },
+    {
+      "id": "si-6.2.1-047",
+      "enunciado": "¿Qué máscara de red se reparte a los clientes DHCP?",
+      "opciones": [
+        "255.255.0.0",
+        "255.0.0.0",
+        "255.255.255.128",
+        "255.255.255.0"
+      ],
+      "correcta": 3,
+      "explicacion": "La directiva dhcp-option=option:netmask,255.255.255.0 define la máscara de red que se reparte a los clientes."
+    },
+    {
+      "id": "si-6.2.1-048",
+      "enunciado": "¿Qué parámetro identifica a un equipo para asignarle siempre la misma IP mediante una reserva DHCP?",
+      "opciones": [
+        "Su nombre de host",
+        "Su dirección IP actual",
+        "Su dirección MAC",
+        "Su número de serie"
+      ],
+      "correcta": 2,
+      "explicacion": "También es importante saber si las direcciones IP se reservan, es decir, si un mismo equipo (identificado por su MAC) va a usar siempre la misma IP."
+    },
+    {
+      "id": "si-6.2.1-049",
+      "enunciado": "¿Qué comando reinicia el servicio dnsmasq?",
+      "opciones": [
+        "sudo service dnsmasq reload",
+        "sudo dnsmasq --restart",
+        "sudo systemctl restart dnsmasq",
+        "sudo systemctl reload dnsmasq"
+      ],
+      "correcta": 2,
+      "explicacion": "Para reiniciar el servicio se utiliza el comando sudo systemctl restart dnsmasq."
+    },
+    {
+      "id": "si-6.2.1-050",
+      "enunciado": "¿Qué comando activa dnsmasq para que arranque automáticamente en cada inicio del sistema?",
+      "opciones": [
+        "sudo systemctl start dnsmasq",
+        "sudo systemctl enable dnsmasq",
+        "sudo systemctl autostart dnsmasq",
+        "sudo dnsmasq --enable-boot"
+      ],
+      "correcta": 1,
+      "explicacion": "El comando sudo systemctl enable dnsmasq activa el servicio para que arranque automáticamente en posteriores inicios."
+    },
+    {
+      "id": "si-6.2.1-051",
+      "enunciado": "¿Qué puerto usa el servicio DNS y con qué protocolos hay que abrirlo en UFW?",
+      "opciones": [
+        "Puerto 53, solo UDP",
+        "Puerto 53, TCP y UDP",
+        "Puerto 53, solo TCP",
+        "Puerto 5353, TCP y UDP"
+      ],
+      "correcta": 1,
+      "explicacion": "El servicio DNS usa el puerto 53 y hay que abrirlo tanto para TCP como para UDP con sudo ufw allow 53/tcp y sudo ufw allow 53/udp."
+    },
+    {
+      "id": "si-6.2.1-052",
+      "enunciado": "¿Qué puertos usa el servicio DHCP y con qué protocolo hay que abrirlos en UFW?",
+      "opciones": [
+        "Puertos 67 y 68, TCP",
+        "Puerto 68, TCP y UDP",
+        "Puertos 67 y 68, UDP",
+        "Puerto 67, TCP y UDP"
+      ],
+      "correcta": 2,
+      "explicacion": "El servicio DHCP usa los puertos 67 y 68 UDP, que se abren con sudo ufw allow 67/udp y sudo ufw allow 68/udp."
+    },
+    {
+      "id": "si-6.2.1-053",
+      "enunciado": "Además de abrir los puertos 67 y 68 en UFW de forma genérica, ¿qué hay que hacer también?",
+      "opciones": [
+        "Activar el modo promiscuo en enp0s8",
+        "Permitir el tráfico entrante en enp0s8 específicamente para esos puertos",
+        "Abrir los mismos puertos también en enp0s3",
+        "Crear una regla NAT para redirigir el tráfico DHCP"
+      ],
+      "correcta": 1,
+      "explicacion": "También es necesario activar el tráfico de forma específica para la interfaz interna: sudo ufw allow in on enp0s8 to any port 67 proto udp y sudo ufw allow in on enp0s8 to any port 68 proto udp."
+    },
+    {
+      "id": "si-6.2.1-054",
+      "enunciado": "¿Cuál de los siguientes servidores de infraestructura es responsable de traducir nombres de dominio legibles por humanos en direcciones IP?",
+      "opciones": [
+        "Servidor de archivos",
+        "Servidor web",
+        "Servidor DNS",
+        "Servidor de correo"
+      ],
+      "correcta": 2,
+      "explicacion": "El servidor DNS es el encargado de traducir las direcciones web (nombres de dominio) a las direcciones IP correspondientes."
+    }
+  ]
+}
