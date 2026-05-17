@@ -1,0 +1,365 @@
+{
+  "schema_version": 1,
+  "id": "si-6.3.4-compartir-recursos-linux-nfs",
+  "asignatura": "Sistemas Informáticos",
+  "asignatura_color": "#1C3C6F",
+  "tema": "6.3.4 Compartir recursos entre máquinas Linux. NFS",
+  "preguntas": [
+    {
+      "id": "si-6.3.4-001",
+      "enunciado": "¿Para qué tipo de máquinas está pensado principalmente el servicio NFS?",
+      "opciones": [
+        "Para compartir recursos exclusivamente entre máquinas Windows",
+        "Para compartir recursos entre máquinas Linux",
+        "Para compartir recursos entre máquinas Linux y Windows en igualdad de condiciones",
+        "Para compartir recursos en redes heterogéneas con equipos Mac, Linux y Windows"
+      ],
+      "correcta": 1,
+      "explicacion": "El servicio NFS comparte recursos entre máquinas Linux, aunque también es compatible con máquinas Windows."
+    },
+    {
+      "id": "si-6.3.4-002",
+      "enunciado": "El servicio NFS es compatible con máquinas Windows. ¿Verdadero o falso?",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 0,
+      "explicacion": "El servicio NFS comparte recursos entre máquinas Linux, aunque también es compatible con máquinas Windows."
+    },
+    {
+      "id": "si-6.3.4-003",
+      "enunciado": "En términos de seguridad, ¿cómo se compara NFS con Samba?",
+      "opciones": [
+        "NFS es menos seguro que Samba",
+        "NFS y Samba tienen el mismo nivel de seguridad",
+        "NFS es más seguro que Samba",
+        "La seguridad depende exclusivamente de la configuración del cortafuegos"
+      ],
+      "correcta": 2,
+      "explicacion": "El servicio NFS es más seguro que Samba."
+    },
+    {
+      "id": "si-6.3.4-004",
+      "enunciado": "¿En qué archivo se configuran las carpetas compartidas del servidor NFS?",
+      "opciones": [
+        "/etc/nfs/exports.conf",
+        "/etc/nfs-kernel-server/exports",
+        "/etc/exports",
+        "/etc/nfs/shares.conf"
+      ],
+      "correcta": 2,
+      "explicacion": "Las carpetas a compartir se configuran en el archivo de configuración /etc/exports."
+    },
+    {
+      "id": "si-6.3.4-005",
+      "enunciado": "¿Qué comando usan los clientes para conectarse a un recurso NFS?",
+      "opciones": [
+        "nfs-mount",
+        "nfsconnect",
+        "mount",
+        "nfs-client"
+      ],
+      "correcta": 2,
+      "explicacion": "Para la conexión de los clientes se utiliza el comando mount."
+    },
+    {
+      "id": "si-6.3.4-006",
+      "enunciado": "¿Qué hay que hacer tras modificar el archivo `/etc/exports`?",
+      "opciones": [
+        "Recargar el archivo con el comando exportfs",
+        "Reiniciar el equipo servidor",
+        "Reiniciar el servicio NFS",
+        "Los cambios se aplican automáticamente sin ninguna acción"
+      ],
+      "correcta": 2,
+      "explicacion": "Tras modificar /etc/exports hay que reiniciar el servicio NFS para que se lean los cambios."
+    },
+    {
+      "id": "si-6.3.4-007",
+      "enunciado": "En el ejemplo, ¿cuántas carpetas se comparten?",
+      "opciones": [
+        "Una",
+        "Dos",
+        "Tres",
+        "Cuatro"
+      ],
+      "correcta": 1,
+      "explicacion": "En el ejemplo se comparten dos carpetas: /nfs/escritura y /nfs/lectura."
+    },
+    {
+      "id": "si-6.3.4-008",
+      "enunciado": "En el ejemplo, ¿qué restricción de acceso tiene la carpeta escritura?",
+      "opciones": [
+        "Accesible a toda la subred con permisos de escritura",
+        "Accesible solo al servidor con permisos de escritura",
+        "Accesible solo a un cliente Linux concreto con permisos de escritura",
+        "Accesible a toda la subred con permisos de solo lectura"
+      ],
+      "correcta": 2,
+      "explicacion": "La carpeta escritura solo puede utilizarse desde el cliente Linux 192.168.100.194, con permisos de escritura."
+    },
+    {
+      "id": "si-6.3.4-009",
+      "enunciado": "En el ejemplo, ¿qué restricción de acceso tiene la carpeta lectura?",
+      "opciones": [
+        "Accesible solo a un cliente Linux concreto con permisos de lectura",
+        "Accesible a toda la subred con permisos de solo lectura",
+        "Accesible a toda la subred con permisos de escritura",
+        "Accesible solo al servidor con permisos de lectura"
+      ],
+      "correcta": 1,
+      "explicacion": "La carpeta lectura se puede utilizar a lo largo de toda la subred, pero con permisos solo de lectura."
+    },
+    {
+      "id": "si-6.3.4-010",
+      "enunciado": "¿Cuál es el comando para instalar el servidor NFS en Ubuntu?",
+      "opciones": [
+        "apt install nfs-server",
+        "apt install nfs-common",
+        "apt install nfs-kernel-server",
+        "apt install nfs-utils"
+      ],
+      "correcta": 2,
+      "explicacion": "El paquete del servidor NFS se instala con: apt install nfs-kernel-server."
+    },
+    {
+      "id": "si-6.3.4-011",
+      "enunciado": "¿Qué opción se indica entre paréntesis en `/etc/exports` para dar permisos de solo lectura?",
+      "opciones": [
+        "(read)",
+        "(r)",
+        "(ro)",
+        "(readonly)"
+      ],
+      "correcta": 2,
+      "explicacion": "La opción (ro) en /etc/exports indica permisos de solo lectura (read only)."
+    },
+    {
+      "id": "si-6.3.4-012",
+      "enunciado": "¿Qué opción se indica entre paréntesis en `/etc/exports` para dar permisos de lectura y escritura?",
+      "opciones": [
+        "(write)",
+        "(w)",
+        "(rw)",
+        "(readwrite)"
+      ],
+      "correcta": 2,
+      "explicacion": "La opción (rw) en /etc/exports indica permisos de lectura y escritura (read write)."
+    },
+    {
+      "id": "si-6.3.4-013",
+      "enunciado": "¿Cómo se especifica en `/etc/exports` que un recurso solo es accesible desde un equipo concreto?",
+      "opciones": [
+        "Poniendo el nombre del equipo entre paréntesis",
+        "Poniendo la IP del equipo antes de los paréntesis de permisos",
+        "Usando la opción (single) en los paréntesis de permisos",
+        "Indicando la IP dentro de los paréntesis de permisos"
+      ],
+      "correcta": 1,
+      "explicacion": "La IP del equipo autorizado se pone justo antes de los paréntesis de permisos: /nfs/escritura 192.168.100.194(rw)."
+    },
+    {
+      "id": "si-6.3.4-014",
+      "enunciado": "¿Cómo se especifica en `/etc/exports` que un recurso es accesible para toda una subred?",
+      "opciones": [
+        "Usando un asterisco: * antes de los paréntesis",
+        "Poniendo la IP del servidor de la subred antes de los paréntesis",
+        "Poniendo la dirección de red con la máscara: 192.168.100.0/24",
+        "Usando la opción (subnet) en los paréntesis de permisos"
+      ],
+      "correcta": 2,
+      "explicacion": "Para permitir el acceso a toda una subred se indica la dirección de red con los bits de máscara: 192.168.100.0/24."
+    },
+    {
+      "id": "si-6.3.4-015",
+      "enunciado": "¿Qué línea de `/etc/exports` comparte `/nfs/escritura` con permisos de escritura solo para el equipo `192.168.100.194`?",
+      "opciones": [
+        "/nfs/escritura (rw) 192.168.100.194",
+        "/nfs/escritura 192.168.100.194 [rw]",
+        "/nfs/escritura 192.168.100.194(rw)",
+        "/nfs/escritura rw=192.168.100.194"
+      ],
+      "correcta": 2,
+      "explicacion": "La sintaxis correcta es: /nfs/escritura 192.168.100.194(rw)"
+    },
+    {
+      "id": "si-6.3.4-016",
+      "enunciado": "¿Qué línea de `/etc/exports` comparte `/nfs/lectura` en solo lectura para toda la subred `192.168.100.0/24`?",
+      "opciones": [
+        "/nfs/lectura *(ro)",
+        "/nfs/lectura 192.168.100.0(ro/24)",
+        "/nfs/lectura 192.168.100.0/24(ro)",
+        "/nfs/lectura [ro] 192.168.100.0/24"
+      ],
+      "correcta": 2,
+      "explicacion": "La sintaxis correcta es: /nfs/lectura 192.168.100.0/24(ro)"
+    },
+    {
+      "id": "si-6.3.4-017",
+      "enunciado": "¿Dónde se añaden las líneas de recursos compartidos en `/etc/exports`?",
+      "opciones": [
+        "Al principio del archivo",
+        "En la sección [shares]",
+        "Al final del fichero",
+        "En un archivo incluido desde /etc/exports"
+      ],
+      "correcta": 2,
+      "explicacion": "Las líneas de recursos compartidos se añaden al final del fichero /etc/exports."
+    },
+    {
+      "id": "si-6.3.4-018",
+      "enunciado": "Al definir una subred en `/etc/exports`, ¿qué información se combina para especificarla completamente?",
+      "opciones": [
+        "La IP del servidor y el nombre de la subred",
+        "Solo la IP de red sin máscara",
+        "La dirección de red y los bits de la máscara",
+        "El nombre del dominio y la máscara de subred"
+      ],
+      "correcta": 2,
+      "explicacion": "La subred queda totalmente definida poniendo la dirección de red y los bits de la máscara: 192.168.100.0/24."
+    },
+    {
+      "id": "si-6.3.4-019",
+      "enunciado": "¿Por qué se asigna la propiedad de las carpetas NFS al usuario `nobody` y al grupo `nogroup`?",
+      "opciones": [
+        "Porque NFS exige que todas las carpetas pertenezcan a ese usuario",
+        "Porque es el usuario con más privilegios en Linux",
+        "Para evitar que los permisos locales de Linux bloqueen el acceso NFS en el primer nivel de la carpeta compartida",
+        "Porque nobody y nogroup son los únicos que pueden usar el comando mount"
+      ],
+      "correcta": 2,
+      "explicacion": "Los permisos de Linux modifican los de NFS. Para evitar problemas de acceso en el primer nivel de la carpeta compartida, se asigna la propiedad a nobody y nogroup."
+    },
+    {
+      "id": "si-6.3.4-020",
+      "enunciado": "¿Qué son `nobody` y `nogroup` en Linux?",
+      "opciones": [
+        "El superusuario y su grupo primario",
+        "Usuarios creados específicamente para el servicio NFS",
+        "Usuario y grupo genéricos de Linux utilizados para servicios",
+        "Alias del usuario root para operaciones de red"
+      ],
+      "correcta": 2,
+      "explicacion": "nobody y nogroup son el usuario y grupo genéricos de Linux para servicios."
+    },
+    {
+      "id": "si-6.3.4-021",
+      "enunciado": "¿Qué comando asigna el usuario propietario `nobody` a `/nfs` y todo su contenido?",
+      "opciones": [
+        "chown nobody /nfs",
+        "chgrp nobody -R /nfs",
+        "chown -R nobody /nfs",
+        "usermod -R nobody /nfs"
+      ],
+      "correcta": 2,
+      "explicacion": "El comando chown -R nobody /nfs cambia el propietario de /nfs y todo su contenido al usuario nobody."
+    },
+    {
+      "id": "si-6.3.4-022",
+      "enunciado": "¿Qué comando asigna el grupo propietario `nogroup` a `/nfs` y todo su contenido?",
+      "opciones": [
+        "chown -R nogroup /nfs",
+        "chgrp nogroup /nfs",
+        "chgrp -R nogroup /nfs",
+        "groupmod -R nogroup /nfs"
+      ],
+      "correcta": 2,
+      "explicacion": "El comando chgrp -R nogroup /nfs cambia el grupo propietario de /nfs y todo su contenido al grupo nogroup."
+    },
+    {
+      "id": "si-6.3.4-023",
+      "enunciado": "¿Qué permisos se aplican a `/nfs` con `chmod -R 770 /nfs`?",
+      "opciones": [
+        "Lectura y escritura para el propietario; sin acceso para el grupo y otros",
+        "Acceso total para todos los usuarios del sistema",
+        "Acceso total para el propietario y el grupo; sin acceso para otros",
+        "Solo lectura para el propietario y el grupo; sin acceso para otros"
+      ],
+      "correcta": 2,
+      "explicacion": "El modo 770 otorga permisos rwx al propietario y al grupo, y ningún permiso a otros usuarios."
+    },
+    {
+      "id": "si-6.3.4-024",
+      "enunciado": "Si un usuario crea un archivo dentro de una carpeta NFS compartida, ¿a quién se le asigna la propiedad de ese archivo?",
+      "opciones": [
+        "Siempre a nobody",
+        "Siempre al usuario root",
+        "Al usuario que lo ha creado",
+        "Al grupo nogroup"
+      ],
+      "correcta": 2,
+      "explicacion": "Lo que se cree dentro de la carpeta compartida se asignará al usuario que lo haya creado, no a nobody."
+    },
+    {
+      "id": "si-6.3.4-025",
+      "enunciado": "¿Qué comando se usa para reiniciar el servicio NFS tras la configuración?",
+      "opciones": [
+        "service nfs restart",
+        "systemctl restart nfs-server",
+        "systemctl restart nfs-kernel-server",
+        "service nfs-kernel-server reload"
+      ],
+      "correcta": 2,
+      "explicacion": "El comando correcto es: systemctl restart nfs-kernel-server."
+    },
+    {
+      "id": "si-6.3.4-026",
+      "enunciado": "¿Qué efecto tiene reiniciar el servicio NFS?",
+      "opciones": [
+        "Desconecta a todos los clientes actualmente conectados",
+        "Borra la caché de permisos del servidor",
+        "Se lee el archivo /etc/exports y se comprueban los directorios compartidos",
+        "Se regenera el archivo /etc/exports con la configuración actual"
+      ],
+      "correcta": 2,
+      "explicacion": "Al reiniciar el servidor NFS se lee el archivo /etc/exports y se comprueba la existencia de los directorios compartidos."
+    },
+    {
+      "id": "si-6.3.4-027",
+      "enunciado": "¿Qué comando se usa en el ejemplo para crear un archivo de prueba en `/nfs/lectura`?",
+      "opciones": [
+        "touch /nfs/lectura/saludo.txt",
+        "cat > /nfs/lectura/saludo.txt",
+        "echo hola > /nfs/lectura/saludo.txt",
+        "cp saludo.txt /nfs/lectura/"
+      ],
+      "correcta": 2,
+      "explicacion": "Se usa el comando: echo hola > /nfs/lectura/saludo.txt para crear el archivo de prueba."
+    },
+    {
+      "id": "si-6.3.4-028",
+      "enunciado": "¿Qué ocurriría si no se configura el cortafuegos después de instalar NFS?",
+      "opciones": [
+        "NFS funcionaría sin restricciones",
+        "El cortafuegos bloquearía las conexiones NFS",
+        "NFS desactivaría el cortafuegos automáticamente",
+        "El servicio NFS no arrancaría"
+      ],
+      "correcta": 1,
+      "explicacion": "Si no se abren los puertos de NFS en el cortafuegos, este bloqueará las conexiones al servicio."
+    },
+    {
+      "id": "si-6.3.4-029",
+      "enunciado": "¿Qué herramienta de cortafuegos se menciona en el ejemplo para abrir los puertos de NFS?",
+      "opciones": [
+        "iptables",
+        "firewalld",
+        "UFW",
+        "gufw"
+      ],
+      "correcta": 2,
+      "explicacion": "En el ejemplo se usa UFW (Uncomplicated FireWall) para abrir los puertos necesarios para NFS."
+    },
+    {
+      "id": "si-6.3.4-030",
+      "enunciado": "La configuración del cortafuegos es necesaria para NFS solo si hay un cortafuegos activo en el servidor. ¿Verdadero o falso?",
+      "opciones": [
+        "Verdadero",
+        "Falso"
+      ],
+      "correcta": 0,
+      "explicacion": "En el ejemplo se indica que si no se usa cortafuegos la configuración habría terminado antes. Solo es necesario abrir puertos si hay un cortafuegos activo."
+    }
+  ]
+}
